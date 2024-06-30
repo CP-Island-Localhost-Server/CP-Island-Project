@@ -7,4 +7,4 @@ A: NOT profit from it.
 
 and
 
-B: NOT attempt to harm Disney's or any other company's name or/and image.
+B: NOT attempt to harm Disney's or/and any other company's name or/and image.
