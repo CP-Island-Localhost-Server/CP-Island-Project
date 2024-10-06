@@ -20,6 +20,7 @@ Shader "CpRemix/World/Wave Osc Depth (Vertex Alpha)"
             #pragma multi_compile_fog
             
             #include "UnityCG.cginc"
+            
             struct v2f
             {
                 float4 position : SV_POSITION;
@@ -51,37 +52,55 @@ Shader "CpRemix/World/Wave Osc Depth (Vertex Alpha)"
             v2f vert(appdata_full v)
             {
                 v2f o;
+
+                // Oscillation axis transformation
                 float3 worldOscAxis = mul((float3x3)unity_WorldToObject, _OscAxis.xyz);
                 float oscFactor = dot(v.vertex.xyz, worldOscAxis) * _OscAxis.w;
                 oscFactor = sin(_Time.y * _OscSpeed + oscFactor);
 
+                // Apply scaling and oscillation direction
                 float3 worldOscDir = mul((float3x3)unity_WorldToObject, _OscDir);
                 float oscAmount = (1.0 - v.color.w) * oscFactor;
                 float3 oscillatedVertex = v.vertex.xyz + oscAmount * worldOscDir;
 
+                // Transform the oscillated vertex from object to world space
                 float4 worldPos = mul(unity_ObjectToWorld, float4(oscillatedVertex, 1.0));
 
+                // Calculate position in clip space
                 o.position = UnityObjectToClipPos(worldPos);
 
+                // Calculate dynamic surface texture coordinates
                 float2 surfaceMovement = _DynSurfaceTexTile * float2(_SurfaceVelocityX, _SurfaceVelocityZ) * _Time.x;
                 float3 transformedVertex = mul(unity_ObjectToWorld, float4(v.vertex.xyz, 1.0)).xyz;
                 o.texcoord4 = transformedVertex.xz * _DynSurfaceTexTile - surfaceMovement;
 
+                // Pass main texture coordinates
                 o.texcoord = v.texcoord.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
+                // Ensure all texture coordinates are initialized properly
+                o.texcoord2 = float3(0, 0, 0); // Initialize texcoord2
+                o.texcoord3 = float3(0, 0, 0); // Initialize texcoord3
+                o.texcoord1 = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+
+                // Calculate depth factor for coloring
                 float depthFactor = saturate((transformedVertex.y - _DeepestYCoord) / (_SurfaceYCoord - _DeepestYCoord));
                 depthFactor = 1.0 - depthFactor;
                 float depthMultiplier = depthFactor * _DepthMultiply;
                 o.texcoord2 = _DepthColor * depthMultiplier + (1.0 - depthMultiplier);
 
+                // Surface reflection calculation
                 float surfaceYDiff = max(0.0, _SurfaceYCoord - transformedVertex.y);
                 float reflectionFactor = min(surfaceYDiff, 1.0) * _DynSurfaceMultiplier * 0.5;
                 o.texcoord3 = reflectionFactor * _SurfaceReflectionColor;
 
+                // Normal transformation using world-to-object matrix
                 float3 worldNormal = normalize(mul((float3x3)unity_WorldToObject, v.normal));
-                o.texcoord1 = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
 
+                // Handle fog
                 UNITY_TRANSFER_FOG(o, o.position);
+
+                // Set color
+                o.color = v.color.rgb;
 
                 return o;
             }
