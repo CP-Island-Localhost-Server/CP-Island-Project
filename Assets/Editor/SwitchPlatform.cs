@@ -55,10 +55,21 @@ public class PlatformSwitcher : MonoBehaviour
         if (File.Exists(txtFilePath))
         {
             string content = File.ReadAllText(txtFilePath);
-            content = content.Replace("standalonewindows", platform); // Replace platform-specific string
 
-            File.WriteAllText(txtFilePath, content); // Save the modified content
-            Debug.Log("Text file updated with platform: " + platform);
+            if (content.Contains("standalonewindows") || content.Contains("standalonelinux") || content.Contains("standaloneosx"))
+            {
+                // Replace existing platform string with the new one
+                content = content.Replace("standalonewindows", platform);
+                content = content.Replace("standalonelinux", platform);
+                content = content.Replace("standaloneosx", platform);
+
+                File.WriteAllText(txtFilePath, content); // Save the modified content
+                Debug.Log("Text file updated with platform: " + platform);
+            }
+            else
+            {
+                Debug.Log("Platform string not found in the file.");
+            }
         }
         else
         {
