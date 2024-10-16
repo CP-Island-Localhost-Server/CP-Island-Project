@@ -25,6 +25,9 @@ public class PlatformSwitcher : MonoBehaviour
 
         // Modify the embedded_content_manifest.txt file
         ModifyTextFile(platform);
+
+        // Save assets (this will save the client_info.asset and any other modified assets)
+        AssetDatabase.SaveAssets();         
     }
 
     private static void ModifyClientInfoAsset(string platform)
