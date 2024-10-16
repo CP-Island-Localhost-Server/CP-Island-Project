@@ -6,7 +6,7 @@ public class DisclaimerWindow : EditorWindow
     private static bool dontShowAgain = false;
 
     // Create a custom menu item under "Legal" -> "Project Disclaimer"
-    [MenuItem("Legal/Project Disclaimer")]
+    [MenuItem("Project/Legal/Project Disclaimer")]
     public static void ShowWindow()
     {
         // Opens a new window with the specified title
