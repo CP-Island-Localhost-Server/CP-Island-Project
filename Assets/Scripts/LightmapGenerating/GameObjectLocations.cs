@@ -13,8 +13,6 @@ public class GameObjectLocations : MonoBehaviour
     public GameObject funHutSpeakerTowerB;
 	public GameObject LighthouseUpperDoorLightOff;
 	public GameObject LighthouseGlassWallsLightOff;
-	public GameObject EnvironmentBoardwalk;
-	public GameObject FoodTruck;
 	// Lightmap baking skybox
     public Material LightmappingSkybox;
 	public Material PiratePartySkyboxForBakingLightmaps;
