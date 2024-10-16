@@ -16,7 +16,7 @@ public class GitHubCommitViewer : EditorWindow
     private const string ownerKey = "GitHubCommitViewer_RepoOwner";
     private const string repoKey = "GitHubCommitViewer_RepoName";
 
-    [MenuItem("Tools/GitHub Commit Viewer")]
+    [MenuItem("Project/GitHub Commit Viewer")]
     public static void ShowWindow()
     {
         GetWindow<GitHubCommitViewer>("GitHub Commit Viewer");
