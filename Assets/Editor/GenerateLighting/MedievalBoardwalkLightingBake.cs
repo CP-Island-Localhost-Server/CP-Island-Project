@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MedievalBoardwalkLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Medieval Boardwalk")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Medieval Boardwalk")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

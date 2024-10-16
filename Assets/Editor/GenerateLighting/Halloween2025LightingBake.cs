@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Halloween2025LightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Halloween 2025")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Halloween 2025")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

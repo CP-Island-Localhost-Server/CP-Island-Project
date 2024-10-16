@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class PirateExpeditionMazeLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Pirate Expedition Maze")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Pirate Expedition Maze")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

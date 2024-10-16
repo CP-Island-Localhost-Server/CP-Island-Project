@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MtSummitLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Mt. Blizzard Summit")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Mt. Blizzard Summit")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

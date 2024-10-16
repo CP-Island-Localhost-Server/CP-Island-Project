@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class HerbertBaseLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Herbert's Base")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Herbert's Base")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

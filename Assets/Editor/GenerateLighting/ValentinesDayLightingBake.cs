@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class ValentinesDayLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/Valentines Day")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/Valentines Day")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class AprilFoolsBoardwalkLightingBake : MonoBehaviour
 {
 	// Create a new drop-down menu in Editor named "Examples" and a new option called "Open Scene"
-	[MenuItem("Generate lighting/April Fools Boardwalk")]
+	[MenuItem("Project/Generate lighting/Lightmap baking/April Fools Boardwalk")]
 	static void OpenScene()
 	{
 		//Open the Scene in the Editor (do not enter Play Mode)
