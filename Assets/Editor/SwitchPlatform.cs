@@ -5,7 +5,7 @@ using Disney.Kelowna.Common;  // Include the correct namespace
 
 public class PlatformSwitcher : MonoBehaviour
 {
-    [MenuItem("Client-side AssetBundles platform switch/Switch Platform")]
+    [MenuItem("AssetBundles/Generated/Client-side AssetBundles platform switch/Switch Platform")]
     public static void SwitchPlatform()
     {
         string platform = "";

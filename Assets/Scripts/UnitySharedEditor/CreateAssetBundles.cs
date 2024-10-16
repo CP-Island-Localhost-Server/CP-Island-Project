@@ -6,7 +6,7 @@ using System.IO;
 
 public class CreateAssetBundles : MonoBehaviour {
 
-    [MenuItem("Generate client-side AssetBundles/Build StreamAssets (needs to be done on each editor update)")]
+    [MenuItem("AssetBundles/Generated/Generate client-side AssetBundles/Build StreamAssets (needs to be done on each editor update)")]
     static void BuildAllAssetBundles()
     {
 #if UNITY_IOS
