@@ -106,7 +106,7 @@ public class CreateAssetBundles : MonoBehaviour
         BuildPipeline.BuildAssetBundles(assetBundleDirectory, assetsToBuild.ToArray(), BuildAssetBundleOptions.None, target);
     }
 
-    [MenuItem("AssetBundles/Generated/Generate CDN AssetBundles/Step 1: Build ClientBundles and Generate ContentManifest.txt")]
+    [MenuItem("Project/AssetBundles/Generated/Generate CDN AssetBundles/Step 1: Build ClientBundles and Generate ContentManifest.txt")]
     static void GetNames()
     {
         if (Directory.Exists("Export"))
@@ -219,7 +219,7 @@ public class CreateAssetBundles : MonoBehaviour
         }
     }
 
-    [MenuItem("AssetBundles/Generated/Generate CDN AssetBundles/Step 2: Build ContentMainfest.txt and Generate ClientManifestDirectory.json")]
+    [MenuItem("Project/AssetBundles/Generated/Generate CDN AssetBundles/Step 2: Build ContentMainfest.txt and Generate ClientManifestDirectory.json")]
     static void GenerateManifest()
     {
         var clientManifestDirectory = new List<ClientManifest>();
@@ -267,7 +267,7 @@ public class CreateAssetBundles : MonoBehaviour
     }
 
 
-    [MenuItem("AssetBundles/Generated/Generate CDN AssetBundles/Step 3: Generate __manifest cpremix prod")]
+    [MenuItem("Project/AssetBundles/Generated/Generate CDN AssetBundles/Step 3: Generate __manifest cpremix prod")]
     static void GenerateManifest2()
     {
         ClientManifests clientManifestDirectory = new ClientManifests();
