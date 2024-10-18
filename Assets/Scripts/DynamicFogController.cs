@@ -4,7 +4,7 @@ public class DynamicFogController : MonoBehaviour
 {
     // Time parameters for the day-night cycle
     public float dayCycleLengthHours = 0.0f;
-    public float dayCycleLengthMinutes = 1.0f; // Set to 1 minute for testing
+    public float dayCycleLengthMinutes = 15.0f; // Set to 1 minute for testing
     public float dayCycleLengthSeconds = 0.0f;
 
     // Fog colors for each phase
@@ -14,20 +14,20 @@ public class DynamicFogController : MonoBehaviour
     public Color sunriseFogColor = new Color(1.0f, 0.7f, 0.3f);
 
     // Fog density for each phase
-    public float dayFogDensity = 0.01f;
-    public float sunsetFogDensity = 0.02f;
-    public float nightFogDensity = 0.03f;
-    public float sunriseFogDensity = 0.015f;
+    public float dayFogDensity = 0.5f;
+    public float sunsetFogDensity = 0.5f;
+    public float nightFogDensity = 0.5f;
+    public float sunriseFogDensity = 0.5f;
 
     // Fog start and end distances for each phase
-    public float dayFogStart = 0.0f;
-    public float dayFogEnd = 300.0f;
-    public float sunsetFogStart = 0.0f;
-    public float sunsetFogEnd = 250.0f;
+    public float dayFogStart = 5.0f;
+    public float dayFogEnd = 100.0f;
+    public float sunsetFogStart = -35.0f;
+    public float sunsetFogEnd = 120.0f;
     public float nightFogStart = 0.0f;
     public float nightFogEnd = 200.0f;
-    public float sunriseFogStart = 0.0f;
-    public float sunriseFogEnd = 275.0f;
+    public float sunriseFogStart = -35.0f;
+    public float sunriseFogEnd = 120.0f;
 
     // GameObjects to control during certain times of the day
     public GameObject dayObject; // This object is enabled during the day
