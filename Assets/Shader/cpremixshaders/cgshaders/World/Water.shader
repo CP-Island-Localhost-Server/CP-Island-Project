@@ -25,8 +25,8 @@ Shader "CpRemix/World/Water"
 	  _SpecUVDirection("Spec Waves UV direction", Vector) = (1,0,0,0)
 	  _Shininess("Specular Shininess", float) = 5
 	}
-		SubShader
-	  {
+	SubShader
+	{
 		Tags
 		{
 		  "QUEUE" = "Transparent"
@@ -41,14 +41,15 @@ Shader "CpRemix/World/Water"
 		  LOD 200
 		  Blend SrcAlpha OneMinusSrcAlpha
 
-				  CGPROGRAM
+			CGPROGRAM
 
-			  #pragma vertex vert
-			  #pragma fragment frag
+			#pragma vertex vert
+			#pragma fragment frag
+			#pragma multi_compile_fog
 
-			  #include "UnityCG.cginc"
-			  #include "AutoLight.cginc"
-			  #include "Lighting.cginc"
+			#include "UnityCG.cginc"
+			#include "AutoLight.cginc"
+			#include "Lighting.cginc"
 
 			float _Shininess;
 			float _SpecIntensity;
@@ -72,20 +73,23 @@ Shader "CpRemix/World/Water"
 			float4 _DiffuseWavesColor;
 			float _DiffuseWavesOpacity;
 
+			// Declare the fog coordinates
+			UNITY_FOG_COORDS(1)
 
 			struct v2f
 			{
-			float2 xlv_TEXCOORD0 : TEXCOORD0;
-			float2 xlv_TEXCOORD1 : TEXCOORD1;
-			float2 xlv_TEXCOORD2 : TEXCOORD2;
-			float3 xlv_TEXCOORD3 : TEXCOORD3;
-			float3 xlv_TEXCOORD4 : TEXCOORD4;
-			float2 xlv_TEXCOORD5 : TEXCOORD5;
-			float xlv_TEXCOORD6 : TEXCOORD6;
+				float2 xlv_TEXCOORD0 : TEXCOORD0;
+				float2 xlv_TEXCOORD1 : TEXCOORD1;
+				float2 xlv_TEXCOORD2 : TEXCOORD2;
+				float3 xlv_TEXCOORD3 : TEXCOORD3;
+				float3 xlv_TEXCOORD4 : TEXCOORD4;
+				float2 xlv_TEXCOORD5 : TEXCOORD5;
+				float xlv_TEXCOORD6 : TEXCOORD6;
+				UNITY_FOG_COORDS(7) // Fog coordinate for vertex shader output
 			};
 
 			struct fragOutput {
-			float4 gl_FragData : SV_Target;
+				float4 gl_FragData : SV_Target;
 			};
 
 
@@ -175,6 +179,10 @@ Shader "CpRemix/World/Water"
 			  o.xlv_TEXCOORD4 = tmpvar_7;
 			  o.xlv_TEXCOORD5 = tmpvar_27;
 			  o.xlv_TEXCOORD6 = max(max(tmpvar_6.x, tmpvar_6.y), tmpvar_6.z);
+
+			  // Handle fog
+			  UNITY_TRANSFER_FOG(o, gl_Position);
+
 			  return o;
 			}
 
@@ -220,6 +228,10 @@ Shader "CpRemix/World/Water"
 				(i.xlv_TEXCOORD5.x * tmpvar_5)
 			  )));
 			  o.gl_FragData = tmpvar_10;
+
+			  // Apply fog in fragment shader
+			  UNITY_APPLY_FOG(i.fogCoord, o.gl_FragData);
+
 			  return o;
 			}
 
