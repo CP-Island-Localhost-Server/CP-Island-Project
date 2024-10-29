@@ -16,8 +16,6 @@ public class PlatformSwitcher : MonoBehaviour
             platform = "standaloneosx";
         #elif UNITY_STANDALONE_LINUX
             platform = "standalonelinux";
-        #elif UNITY_ANDROID
-            platform = "android";
         #else
             platform = "unknown";
         #endif
@@ -61,13 +59,12 @@ public class PlatformSwitcher : MonoBehaviour
         {
             string content = File.ReadAllText(txtFilePath);
 
-            if (content.Contains("standalonewindows") || content.Contains("standalonelinux") || content.Contains("standaloneosx") || content.Contains("android"))
+            if (content.Contains("standalonewindows") || content.Contains("standalonelinux") || content.Contains("standaloneosx"))
             {
                 // Replace existing platform string with the new one
                 content = content.Replace("standalonewindows", platform);
                 content = content.Replace("standalonelinux", platform);
                 content = content.Replace("standaloneosx", platform);
-                content = content.Replace("android", platform);
 
                 File.WriteAllText(txtFilePath, content); // Save the modified content
                 Debug.Log("Text file updated with platform: " + platform);
