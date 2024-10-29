@@ -18,6 +18,7 @@ namespace ClubPenguin.Core
 			{
 			case RuntimePlatform.IPhonePlayer:
 			case RuntimePlatform.Android:
+			case RuntimePlatform.AndroidEditor:
 			case RuntimePlatform.Switch:
 				return PlatformType.Mobile;
 			case RuntimePlatform.OSXPlayer:
