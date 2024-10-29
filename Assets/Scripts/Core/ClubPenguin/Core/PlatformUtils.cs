@@ -1,8 +1,5 @@
 using Tweaker.Core;
 using UnityEngine;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 namespace ClubPenguin.Core
 {
@@ -17,29 +14,21 @@ namespace ClubPenguin.Core
 			{
 				return TweakerPlatformType;
 			}
-			
-			#if UNITY_EDITOR
-			if (EditorUserBuildSettings.activeBuildTarget == BuildTarget.Android)
-			{
-				return PlatformType.Mobile;
-			}
-			#endif
-
 			switch (Application.platform)
 			{
-				case RuntimePlatform.IPhonePlayer:
-				case RuntimePlatform.Android:
-				case RuntimePlatform.Switch:
-					return PlatformType.Mobile;
-				case RuntimePlatform.OSXPlayer:
-				case RuntimePlatform.WindowsPlayer:
-				case RuntimePlatform.LinuxPlayer:
-				case RuntimePlatform.WindowsEditor:
-				case RuntimePlatform.LinuxEditor:
-				case RuntimePlatform.OSXEditor:
-					return PlatformType.Standalone;
-				default:
-					return PlatformType.None;
+			case RuntimePlatform.IPhonePlayer:
+			case RuntimePlatform.Android:
+			case RuntimePlatform.Switch:
+				return PlatformType.Mobile;
+			case RuntimePlatform.OSXPlayer:
+			case RuntimePlatform.WindowsPlayer:
+			case RuntimePlatform.LinuxPlayer:
+			case RuntimePlatform.WindowsEditor:
+			case RuntimePlatform.LinuxEditor:
+			case RuntimePlatform.OSXEditor:
+				return PlatformType.Standalone;
+			default:
+				return PlatformType.None;
 			}
 		}
 
@@ -47,37 +36,28 @@ namespace ClubPenguin.Core
 		{
 			switch (GetPlatformType())
 			{
-				case PlatformType.Mobile:
-					return AspectRatioType.Portrait;
-				case PlatformType.Standalone:
-					return AspectRatioType.Landscape;
-				default:
-					return AspectRatioType.None;
+			case PlatformType.Mobile:
+				return AspectRatioType.Portrait;
+			case PlatformType.Standalone:
+				return AspectRatioType.Landscape;
+			default:
+				return AspectRatioType.None;
 			}
 		}
 
-		public static TSettings GetPlatformSettingsForType<TSettings, TSettingsComponent, TComponent>(
-			TSettingsComponent component, PlatformType platformType) 
-			where TSettings : AbstractPlatformSpecificSettings 
-			where TSettingsComponent : PlatformSpecificSettingsComponent<TComponent, TSettings> 
-			where TComponent : Component
+		public static TSettings GetPlatformSettingsForType<TSettings, TSettingsComponent, TComponent>(TSettingsComponent component, PlatformType platformType) where TSettings : AbstractPlatformSpecificSettings where TSettingsComponent : PlatformSpecificSettingsComponent<TComponent, TSettings> where TComponent : Component
 		{
 			TSettings[] runtimeSettings = component.runtimeSettings;
 			return getPlatformSettingsForType(runtimeSettings, platformType);
 		}
 
-		public static TSettings GetAspectRatioSettingsForType<TSettings, TSettingsComponent, TComponent>(
-			TSettingsComponent component, AspectRatioType aspectRatioType) 
-			where TSettings : AbstractAspectRatioSpecificSettings 
-			where TSettingsComponent : AspectRatioSpecificSettingsComponent<TComponent, TSettings> 
-			where TComponent : Component
+		public static TSettings GetAspectRatioSettingsForType<TSettings, TSettingsComponent, TComponent>(TSettingsComponent component, AspectRatioType aspectRatioType) where TSettings : AbstractAspectRatioSpecificSettings where TSettingsComponent : AspectRatioSpecificSettingsComponent<TComponent, TSettings> where TComponent : Component
 		{
 			TSettings[] runtimeSettings = component.runtimeSettings;
 			return getAspectRatioSettingsForType(runtimeSettings, aspectRatioType);
 		}
 
-		private static T getPlatformSettingsForType<T>(T[] settings, PlatformType platformType) 
-			where T : AbstractPlatformSpecificSettings
+		private static T getPlatformSettingsForType<T>(T[] settings, PlatformType platformType) where T : AbstractPlatformSpecificSettings
 		{
 			if (settings != null)
 			{
@@ -92,8 +72,7 @@ namespace ClubPenguin.Core
 			return null;
 		}
 
-		private static T getAspectRatioSettingsForType<T>(T[] settings, AspectRatioType aspectRatioType) 
-			where T : AbstractAspectRatioSpecificSettings
+		private static T getAspectRatioSettingsForType<T>(T[] settings, AspectRatioType aspectRatioType) where T : AbstractAspectRatioSpecificSettings
 		{
 			if (settings != null)
 			{
