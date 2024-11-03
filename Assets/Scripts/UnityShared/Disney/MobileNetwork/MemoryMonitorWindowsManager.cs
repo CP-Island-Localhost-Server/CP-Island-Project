@@ -1,32 +1,32 @@
 using System;
-using UnityEngine;
+using System.Runtime.InteropServices;
+using Disney.LaunchPadFramework;
 
 namespace Disney.MobileNetwork
 {
-    public class MemoryMonitorWindowsManager : MemoryMonitorManager
-    {
-#if UNITY_STANDALONE_WIN
-        public static bool Enabled = false;  // Disable this since the DLL is missing
+	public class MemoryMonitorWindowsManager : MemoryMonitorManager
+	{
+		public static bool Enabled = true;
 
-        // Disable the DLL import and any related functionality
-        protected override void Init()
-        {
-            Debug.LogWarning("Memory monitoring disabled for Windows: MemoryMonitorWindows.dll not found.");
-        }
+		[DllImport("MemoryMonitorWindows")]
+		private static extern ulong _getProcessUsedBytes();
 
-        public override ulong GetProcessUsedBytes()
-        {
-            return 0;  // Return a default value
-        }
-#else
-        // Other platforms (if DLL is used elsewhere)
-        public static bool Enabled = true;
+		protected override void Init()
+		{
+			try
+			{
+				GetProcessUsedBytes();
+			}
+			catch (Exception ex)
+			{
+				Enabled = false;
+				Log.LogException(typeof(MemoryMonitorWindowsManager), ex);
+			}
+		}
 
-        public override ulong GetProcessUsedBytes()
-        {
-            // Other platform-specific code if needed
-            return base.GetProcessUsedBytes();
-        }
-#endif
-    }
+		public override ulong GetProcessUsedBytes()
+		{
+			return Enabled ? _getProcessUsedBytes() : base.GetProcessUsedBytes();
+		}
+	}
 }
