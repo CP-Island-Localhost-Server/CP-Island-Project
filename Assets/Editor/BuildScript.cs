@@ -3,6 +3,9 @@ using UnityEngine; // Required for Debug
 using System;
 using System.Reflection;
 
+// Assuming the CreateAssetBundles class is within the namespace where it is defined
+using UnitySharedEditor; // Adjust this based on the actual namespace in CreateAssetBundles.cs
+
 public class BuildScript
 {
     public static void BuildWindows()
@@ -11,7 +14,7 @@ public class BuildScript
         InvokeSwitchPlatform();
         
         // Create Asset Bundles after switching platform for Windows
-        InvokeCreateAssetBundles();
+        InvokeClientSideCreateAssetBundles();
 
         // Build for Windows (64-bit)
         BuildPipeline.BuildPlayer(EditorBuildSettings.scenes, "Build/Windows/Club Penguin Island.exe", BuildTarget.StandaloneWindows64, BuildOptions.None);
@@ -23,7 +26,7 @@ public class BuildScript
         InvokeSwitchPlatform();
         
         // Create Asset Bundles after switching platform for Linux
-        InvokeCreateAssetBundles();
+        InvokeClientSideCreateAssetBundles();
 
         // Build for Linux (64-bit)
         BuildPipeline.BuildPlayer(EditorBuildSettings.scenes, "Build/Linux/Club Penguin Island", BuildTarget.StandaloneLinux64, BuildOptions.None);
@@ -35,7 +38,7 @@ public class BuildScript
         InvokeSwitchPlatform();
         
         // Create Asset Bundles after switching platform for macOS
-        InvokeCreateAssetBundles();
+        InvokeClientSideCreateAssetBundles();
 
         // Build for macOS (Universal)
         BuildPipeline.BuildPlayer(EditorBuildSettings.scenes, "Build/macOS_universal/Club Penguin Island.app", BuildTarget.StandaloneOSX, BuildOptions.None);
@@ -57,10 +60,11 @@ public class BuildScript
         }
     }
 
-    private static void InvokeCreateAssetBundles()
+    private static void InvokeClientSideCreateAssetBundles()
     {
-        // Use reflection to call the BuildAssetBundles method from the CreateAssetBundles class
-        Type createAssetBundlesType = typeof(CreateAssetBundles);
+        // Use reflection to call the BuildAssetBundles method from the CreateAssetBundles class in the specific location
+        // Make sure to use the correct namespace if required
+        Type createAssetBundlesType = typeof(CreateAssetBundles); // Adjust this if CreateAssetBundles is in a namespace
         MethodInfo methodInfo = createAssetBundlesType.GetMethod("BuildAssetBundles", BindingFlags.Public | BindingFlags.Static);
         
         if (methodInfo != null)
