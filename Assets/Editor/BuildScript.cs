@@ -1,6 +1,11 @@
 using UnityEditor;
+using UnityEngine; // Add this to resolve the Debug class
 using System;
 using System.Reflection;
+
+// Use the full namespace if there's a conflict with CreateAssetBundles
+// Assuming the namespace for your script is UnitySharedEditor; adjust as necessary.
+using UnitySharedEditor; 
 
 public class BuildScript
 {
