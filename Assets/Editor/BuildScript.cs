@@ -1,11 +1,7 @@
 using UnityEditor;
-using UnityEngine; // Add this to resolve the Debug class
+using UnityEngine; // Required for Debug
 using System;
 using System.Reflection;
-
-// Use the full namespace if there's a conflict with CreateAssetBundles
-// Assuming the namespace for your script is UnitySharedEditor; adjust as necessary.
-using UnitySharedEditor; 
 
 public class BuildScript
 {
@@ -63,7 +59,7 @@ public class BuildScript
 
     private static void InvokeCreateAssetBundles()
     {
-        // Use reflection to call the BuildAssetBundles method from CreateAssetBundles
+        // Use reflection to call the BuildAssetBundles method from the CreateAssetBundles class
         Type createAssetBundlesType = typeof(CreateAssetBundles);
         MethodInfo methodInfo = createAssetBundlesType.GetMethod("BuildAssetBundles", BindingFlags.Public | BindingFlags.Static);
         
