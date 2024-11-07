@@ -38,54 +38,37 @@ Shader "CpRemix/World/Snow Ramp" {
 			sampler2D _SnowRampTex;
 			sampler2D _BlobShadowTex;
 			
-			// Keywords: 
-			v2f vert(appdata_full v)
-{
-    v2f o;
-    float4 tmp0;
-    float4 tmp1;
-    float4 tmp2;
+			// Optimized vert function
+			v2f vert(appdata_full v) {
+                v2f o;
+                
+                // Calculate world position
+                float4 worldPos = float4(
+                    dot(v.vertex, unity_ObjectToWorld[0]),
+                    dot(v.vertex, unity_ObjectToWorld[1]),
+                    dot(v.vertex, unity_ObjectToWorld[2]),
+                    dot(v.vertex, unity_ObjectToWorld[3])
+                );
 
-    // Transform vertex using ObjectToWorld matrix
-    tmp0 = v.vertex.yyyy * unity_ObjectToWorld._m01_m11_m21_m31;
-    tmp0 = unity_ObjectToWorld._m00_m10_m20_m30 * v.vertex.xxxx + tmp0;
-    tmp0 = unity_ObjectToWorld._m02_m12_m22_m32 * v.vertex.zzzz + tmp0;
-    tmp1 = tmp0 + unity_ObjectToWorld._m03_m13_m23_m33;
-    
-    // Apply World-to-View-Projection matrix for final position
-    tmp2 = tmp1.yyyy * unity_MatrixVP._m01_m11_m21_m31;
-    tmp2 = unity_MatrixVP._m00_m10_m20_m30 * tmp1.xxxx + tmp2;
-    tmp2 = unity_MatrixVP._m02_m12_m22_m32 * tmp1.zzzz + tmp2;
-    o.position = unity_MatrixVP._m03_m13_m23_m33 * tmp1.wwww + tmp2;
+                // Transform world position to clip space
+                o.position = mul(unity_MatrixVP, worldPos);
 
-    // Compute texture coordinates using the lightmap scaling and translation
-    o.texcoord1.xy = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-    
-    // Calculate normalized texture coordinates from vertex normal
-    o.texcoord.xy = v.normal.yy * float2(0.45, 0.45) + float2(0.5, 0.5);
+                // Set texture coordinates
+                o.texcoord1 = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+                o.texcoord = v.normal.yy * float2(0.45, 0.45) + float2(0.5, 0.5);
 
-    // Shadow mapping - adjusting shadow plane
-    tmp0.xz -= _ShadowPlaneWorldPos.xz;
-    o.texcoord3.z = tmp0.y;
-    tmp0.y = _ShadowPlaneDim * 0.5;
-    
-    // Calculate shadow UV coordinates based on shadow plane dimension
-    tmp0.xy = tmp0.xz / tmp0.yy;
-    tmp0.z = _ShadowPlaneDim / _ShadowTextureDim;
-    tmp0.z = tmp0.z / _ShadowPlaneDim;
-    
-    // Final shadow coordinates adjustment
-    tmp0.xy += tmp0.zz;
-    tmp0.xy += float2(1.0, 1.0);
-    o.texcoord3.xy = tmp0.xy * 0.5;
+                // Calculate shadow texture coordinates
+                float2 shadowCoord = (worldPos.xz - _ShadowPlaneWorldPos.xz) / (_ShadowPlaneDim * 0.5);
+                o.texcoord3.xy = (shadowCoord + float2(1.0, 1.0)) * 0.5;
+                o.texcoord3.z = worldPos.y;
 
-    // Apply fog to the output structure
-    UNITY_TRANSFER_FOG(o, o.position);
+                // Transfer fog coordinates
+                UNITY_TRANSFER_FOG(o, o.position);
 
-    return o;
-}
+                return o;
+            }
 
-			// Keywords: 
+			// Fragment function
 			fout frag(v2f inp)
 			{
                 fout o;
