@@ -22,4 +22,5 @@ The latest version for your macOS version of Xcode needs to be installed.
 
 Make sure that your system is up-to-date by running ```sudo apt update && sudo apt upgrade``` in the Terminal.
 
-The latest version of Git needs to be installed. That can be installed by running ```sudo apt install git``` in the Terminal.
+The latest version of Git needs to be installed. That can be installed by running ```sudo apt install git``` in the Terminal. For other distributions, refer to the [official Git installation guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
