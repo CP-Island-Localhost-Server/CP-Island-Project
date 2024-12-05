@@ -2,7 +2,7 @@
 
 ### Current project Unity version:
 
-Unity 2022.3.53f1 LTS
+Unity 2022.3.54f1 LTS
 
 ### General notes:
 
