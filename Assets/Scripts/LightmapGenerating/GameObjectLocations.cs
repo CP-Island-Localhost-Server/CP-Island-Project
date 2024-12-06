@@ -20,6 +20,7 @@ public class GameObjectLocations : MonoBehaviour
 	public GameObject HerbertBaseV2;
     public GameObject WorldArt;
 	public GameObject World;
+	public GameObject LighthouseDoor;
 	public GameObject Halloween;
 	public GameObject Sewer;
 	public GameObject AdditiveWorldArt;

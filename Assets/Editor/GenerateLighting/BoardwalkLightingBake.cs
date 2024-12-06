@@ -68,6 +68,8 @@ public class BoardwalkLightingBake : MonoBehaviour
                 SetStaticRecursively(Gol.funHutSpeakerTowerA, true);
 				Gol.funHutSpeakerTowerB.isStatic = true;
                 SetStaticRecursively(Gol.funHutSpeakerTowerB, true);
+				// Gol.LighthouseDoor.isStatic = true;
+                // SetStaticRecursively(Gol.LighthouseDoor, true);
 
 				Gol.ChangeSource(AmbientMode.Skybox);
 				
@@ -90,8 +92,10 @@ public class BoardwalkLightingBake : MonoBehaviour
 				SetStaticRecursively(Gol.funHutSpeakerTowerA, false);
 				Gol.funHutSpeakerTowerB.isStatic = false;
 				SetStaticRecursively(Gol.funHutSpeakerTowerB, false);
+                // Gol.LighthouseDoor.isStatic = false;
+                // SetStaticRecursively(Gol.LighthouseDoor, false);
 
-				Gol.ChangeSource(AmbientMode.Flat);
+                Gol.ChangeSource(AmbientMode.Flat);
 			}
 			else
 			{
