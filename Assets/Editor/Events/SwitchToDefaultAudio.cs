@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneAudioPathReverter : MonoBehaviour
 {
-    [MenuItem("Project/Events/Default/Revert to Default Audio")]
+    [MenuItem("Project/Events/Default/Revert to the Default Audio")]
     public static void RevertSceneAudioPaths()
     {
         // Define the list of scene asset paths
