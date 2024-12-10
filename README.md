@@ -6,7 +6,7 @@ Unity 2022.3.54f1 LTS
 
 ### General notes:
 
-The project may ask upon opening if you want to use the new input system. Press no.
+The project may ask upon opening if you want to use the new input system. Press no. The penguin data gets stored here in the Windows Registery: ```HKEY_CURRENT_USER\SOFTWARE\OpenCPI\CP Island```
 
 ### Windows:
 
