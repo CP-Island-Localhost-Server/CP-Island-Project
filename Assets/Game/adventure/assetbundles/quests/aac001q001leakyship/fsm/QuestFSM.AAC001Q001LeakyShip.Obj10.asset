@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: QuestFSM.AAC001Q001LeakyShip.Obj10
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: Quest
   fsm:
     dataVersion: 1
@@ -19,7 +20,9 @@ MonoBehaviour:
     startState: Start Objective
     states:
     - name: Start Objective
-      description: NOTE! The extra logic at the beginning of this objective is checking to see if player has come from last objective, or if they are resuming the quest.
+      description: NOTE! The extra logic at the beginning of this objective is checking
+        to see if player has come from last objective, or if they are resuming the
+        quest.
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -38,6 +41,7 @@ MonoBehaviour:
         toState: Is Player in the Change Room Scene?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -47,7 +51,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -72,11 +76,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 4654554537386f626a31302d6372656174652d686f6f646965
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -90,11 +94,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000001900000019000000190000001900000019000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000130000000000000000000000000000000000000000000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000019000000190000001900000019000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000001300000000000000000000000000000000000000
     - name: Clear Waypoint to AA
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -113,6 +116,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -146,15 +150,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Change Obj Text
       description: Talk to Aunt Arctic
       colorIndex: 1
@@ -175,6 +179,7 @@ MonoBehaviour:
         toState: Set Waypoint Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -209,9 +214,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 54616c6b20746f2041756e742041726374696351756573742e546578742e4141433030315130303348617463682e4f626a3046534d2e6931386e4465736372697074696f6e
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0300000003000000
         paramName:
@@ -220,7 +225,7 @@ MonoBehaviour:
         paramDataPos: 0000000013000000
         paramByteDataSize: 1300000032000000
     - name: Set Waypoint Aunt Arctic
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -239,6 +244,7 @@ MonoBehaviour:
         toState: Gameplay Talk to Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -252,8 +258,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -279,9 +285,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 41756e74417263746963426f61726477616c6b0100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -293,7 +299,8 @@ MonoBehaviour:
         paramDataPos: 00000000000000000a0000001300000014000000
         paramByteDataSize: 0a0000000000000009000000010000000d000000
     - name: Gameplay Talk to Aunt Arctic
-      description: If player is resuming the quest here, AA repeats lines from the previous objective.
+      description: If player is resuming the quest here, AA repeats lines from the
+        previous objective.
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -312,6 +319,7 @@ MonoBehaviour:
         toState: Hide Remote Players
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -321,12 +329,12 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: db18ce01
+        actionHashCodes: cd3da903
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -351,12 +359,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 41756e744172637469630100010000000000
-        arrayParamSizes:
+        byteData: 41756e74417263746963010001000000000100
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000010000000100000001000000010000000100000001000000010000000100000013000000
+        paramDataType: 0300000001000000010000000100000001000000010000000100000001000000010000000100000013000000
         paramName:
         - MascotName
         - ZoomIn
@@ -366,10 +374,11 @@ MonoBehaviour:
         - ShowIndicator
         - SuppressQuestNotifier
         - RestoreQuestNotifier
+        - MoveToTalkSpot
         - OverrideInteracteeTxform
         - DesiredInteracteeTxform
-        paramDataPos: 000000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000000000000
-        paramByteDataSize: 0a000000010000000100000001000000010000000100000001000000010000000100000000000000
+        paramDataPos: 000000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000000000000
+        paramByteDataSize: 0a00000001000000010000000100000001000000010000000100000001000000010000000100000000000000
     - name: Set FSM Bool RootSeekingMascot
       description: Set to FALSE
       colorIndex: 6
@@ -390,6 +399,7 @@ MonoBehaviour:
         toState: Clear Waypoint to AA
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -401,15 +411,15 @@ MonoBehaviour:
         actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05719c1c02
+        actionHashCodes: 68fece0529b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -421,14 +431,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootSeekingMascot
@@ -446,11 +456,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000046545545373941412d73706f6b656e2d746f
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 1400000012000000120000001100000001000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - gameObject
         - fsmName
@@ -469,9 +479,8 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 000000000000000001000000000000000200000003000000070000000700000007000000070000000700000007000000090000001500000015000000150000001500000015000000
-        paramByteDataSize: 0000000000000000000000000200000001000000040000000000000000000000000000000000000000000000020000000c0000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000002000000030000000700000007000000070000000700000007000000070000000900000015000000150000001500000015000000
+        paramByteDataSize: 0000000000000000000000000200000001000000040000000000000000000000000000000000000000000000020000000c00000000000000000000000000000000000000
     - name: RESET RootXferedFromPrevObj
       description: Set to FALSE
       colorIndex: 6
@@ -492,6 +501,7 @@ MonoBehaviour:
         toState: AuntArctic Tutorial Dialog 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -508,8 +518,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -521,14 +531,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootXferedFromPrevObj
@@ -546,9 +556,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -560,7 +570,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Finish
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -604,15 +614,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Set FSM Bool RootXferedFromPrevObj
       description: Set to TRUE
       colorIndex: 0
@@ -633,6 +643,7 @@ MonoBehaviour:
         toState: Finish
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -644,15 +655,15 @@ MonoBehaviour:
         actionEnabled: 0101
         actionIsOpen: 0101
         actionStartIndex: 0000000005000000
-        actionHashCodes: 68fece05719c1c02
+        actionHashCodes: 68fece0529b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -664,14 +675,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootXferedFromPrevObj
@@ -689,11 +700,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0100004654554539346f626a31302d636f6d706c657465
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001200000012000000110000000100000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 1400000012000000120000001100000001000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - gameObject
         - fsmName
@@ -712,11 +723,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 000000000000000001000000000000000200000003000000070000000700000007000000070000000700000007000000090000001700000017000000170000001700000017000000
-        paramByteDataSize: 0000000000000000000000000200000001000000040000000000000000000000000000000000000000000000020000000e0000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000010000000000000002000000030000000700000007000000070000000700000007000000070000000900000017000000170000001700000017000000
+        paramByteDataSize: 0000000000000000000000000200000001000000040000000000000000000000000000000000000000000000020000000e00000000000000000000000000000000000000
     - name: Is Player in the Change Room Scene?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -735,6 +745,7 @@ MonoBehaviour:
         toState: Is Player seeking the AuntArctic Mascot?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -743,6 +754,7 @@ MonoBehaviour:
         toState: Has Player completed the Clothing Tutorial?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -777,9 +789,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 436c6f7468696e6744657369676e65725472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001700000017000000
         paramName:
@@ -789,7 +801,7 @@ MonoBehaviour:
         paramDataPos: 000000001000000014000000
         paramByteDataSize: 100000000400000005000000
     - name: Is Player seeking the AuntArctic Mascot?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -808,6 +820,7 @@ MonoBehaviour:
         toState: Do not show Clothing Tutorial
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -816,6 +829,7 @@ MonoBehaviour:
         toState: --- BI --- Show Clothing Tutorial
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -834,8 +848,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -847,14 +861,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootSeekingMascot
@@ -872,9 +886,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f745365656b696e674d6173636f74000001526566526f6f745365656b696e674d6173636f745472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -905,10 +919,10 @@ MonoBehaviour:
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -932,15 +946,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: --- BI --- Show Clothing Tutorial
       description: Player is ready for the Clothing Tutorial
       colorIndex: 0
@@ -961,6 +975,7 @@ MonoBehaviour:
         toState: Create a clothing item
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -970,7 +985,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -995,11 +1010,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453833636c6f7468696e672d7475746f7269616c2d7461707065642d6d792d7374796c65
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -1013,9 +1028,8 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002700000027000000270000002700000027000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000210000000000000000000000000000000000000000000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000027000000270000002700000027000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002100000000000000000000000000000000000000
     - name: Set FSM Bool RootTutorialClothingFinished
       description: Set to TRUE
       colorIndex: 0
@@ -1036,6 +1050,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootXferedFromPrevObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1052,8 +1067,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1065,14 +1080,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootTutorialClothingFinished
@@ -1090,9 +1105,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -1104,7 +1119,8 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Test FSM Bool RootXferedFromPrevObj
-      description: Did the Player transition from the previous objective in this play session?
+      description: Did the Player transition from the previous objective in this
+        play session?
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -1123,6 +1139,7 @@ MonoBehaviour:
         toState: Hide Remote Players 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -1131,6 +1148,7 @@ MonoBehaviour:
         toState: Change Obj Text
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1149,8 +1167,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1162,14 +1180,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootXferedFromPrevObj
@@ -1187,9 +1205,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f7458666572656446726f6d507265764f626a000001526566526f6f7458666572656446726f6d507265764f626a5472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -1205,7 +1223,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000001a0000001b00000035000000390000003e000000
         paramByteDataSize: 0000000000000000000000001a000000010000001a000000040000000500000001000000
     - name: RemoveControls
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -1224,6 +1242,7 @@ MonoBehaviour:
         toState: AuntArctic Tutorial Dialog 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1258,9 +1277,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -1271,7 +1290,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: SuppressQuestNotifier
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1290,6 +1309,7 @@ MonoBehaviour:
         toState: RemoveControls
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1311,11 +1331,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1330,9 +1350,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -1342,7 +1362,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Has Player completed the Clothing Tutorial?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -1361,6 +1381,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootXferedFromPrevObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -1369,6 +1390,7 @@ MonoBehaviour:
         toState: Enable UI
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1387,8 +1409,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1400,14 +1422,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootTutorialClothingFinished
@@ -1425,9 +1447,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f745475746f7269616c436c6f7468696e6746696e6973686564000001526566526f6f745475746f7269616c436c6f7468696e6746696e69736865645472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -1462,6 +1484,7 @@ MonoBehaviour:
         toState: --- BI --- OpenMyStuff
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1477,7 +1500,7 @@ MonoBehaviour:
         actionEnabled: 01010101
         actionIsOpen: 01010101
         actionStartIndex: 00000000010000002100000025000000
-        actionHashCodes: 78c530017d32a3038a487902719c1c02
+        actionHashCodes: 78c530017d32a3038a48790229b3ec00
         unityObjectParams:
         - {fileID: 0}
         fsmGameObjectParams: []
@@ -1490,23 +1513,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/AA/AAC001Q001/Obj10/1
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1521,12 +1544,12 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 41756e74417263746963546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e41756e74417263746963205475746f7269616c204469616c6f6720312e6931386e436f6e74656e74730000000000000100000000000000000000000000000000000000000000000041756e74417263746963010100010102000000030000000000000046545545383041412d6469616c6f672d64657369676e2d6e65772d6974656d
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
         - ClubPenguin.UI.DTextStyle
-        paramDataType: 0300000003000000030000000100000005000000000000000100000003000000010000000000000002000000010000000100000002000000020000000100000003000000280000000300000003000000000000000100000003000000030000000300000001000000010000001200000001000000010000001200000001000000120000000700000007000000070000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 03000000030000000300000001000000050000000000000001000000030000000100000000000000020000000100000001000000020000000200000001000000030000002800000003000000030000000000000001000000030000000300000003000000010000000100000012000000010000000100000012000000010000001200000007000000070000000700000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - MascotName
         - Contents
@@ -1577,9 +1600,8 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 000000000a0000006e000000bf00000000000000c0000000c4000000c5000000c5000000c6000000ca000000ce000000cf000000d0000000d4000000d8000000d900000000000000d9000000d9000000d9000000dd000000de000000de000000e8000000e8000000e900000000000000ea000000eb00000001000000ec00000002000000ed000000f1000000f5000000f9000000f9000000fd000000fd000000fd000000fd000000fd000000fd000000ff0000001801000018010000180100001801000018010000
-        paramByteDataSize: 0a000000640000005100000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a0000000000000001000000010000000000000001000000010000000000000001000000000000000400000004000000040000000000000004000000000000000000000000000000000000000000000002000000190000000000000000000000000000000000000000000000
+        paramDataPos: 000000000a0000006e000000bf00000000000000c0000000c4000000c5000000c5000000c6000000ca000000ce000000cf000000d0000000d4000000d8000000d900000000000000d9000000d9000000d9000000dd000000de000000de000000e8000000e8000000e900000000000000ea000000eb00000001000000ec00000002000000ed000000f1000000f5000000f9000000f9000000fd000000fd000000fd000000fd000000fd000000fd000000ff00000018010000180100001801000018010000
+        paramByteDataSize: 0a000000640000005100000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a00000000000000010000000100000000000000010000000100000000000000010000000000000004000000040000000400000000000000040000000000000000000000000000000000000000000000020000001900000000000000000000000000000000000000
     - name: --- BI --- OpenMyStuff
       description: Tap the My Penguin button
       colorIndex: 4
@@ -1600,6 +1622,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1612,19 +1635,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000000d0000001e000000
-        actionHashCodes: 719c1c02b689660448b35100
+        actionStartIndex: 000000000c00000020000000
+        actionHashCodes: 29b3ec0008b9fa0448b35100
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1635,7 +1658,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1649,12 +1678,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 465455453831636c6f7468696e672d7475746f7269616c2d537461727465644d61696e4e6176427574746f6e5f50726f66696c65000000000000404000000000be420000be42000000000200000000000000000048420000a04200000cc20000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4f70656e4d7953747566662e6931386e427562626c6554657874019a99193f01014d61696e4e6176427574746f6e5f50726f66696c65
-        arrayParamSizes:
+        byteData: 465455453831636c6f7468696e672d7475746f7269616c2d537461727465644d61696e4e6176427574746f6e5f50726f66696c65000000000000404000000000be420000be42000000000200000000000000000048420000a04200000cc20000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4f70656e4d7953747566662e6931386e427562626c6554657874019a99193f010101004d61696e4e6176427574746f6e5f50726f66696c65
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000030000001300000017000000
+        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000030000001300000017000000
         paramName:
         - Context
         - QuestId
@@ -1668,7 +1697,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - TargetName
         - TargetObject
         - HighlightPosition
@@ -1682,15 +1710,18 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000001f0000001f0000001f0000001f0000001f0000001f00000000000000340000003d0000003e000000460000004a0000004e000000560000005e000000660000006a0000006b000000ad000000ae000000b2000000b3000000b400000001000000c9000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000001900000000000000000000000000000000000000000000001500000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000004200000001000000040000000100000001000000150000000000000000000000
+        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000001f0000001f0000001f0000001f0000001f00000000000000340000003d0000003e000000460000004a0000004e000000560000005e000000660000006a0000006b00000000000000ad000000ae000000b2000000b3000000b4000000b5000000b600000001000000cb000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000200000019000000000000000000000000000000000000001500000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000004200000000000000010000000400000001000000010000000100000001000000150000000000000000000000
     - name: OpenMyStyle
       description: Tap My Style to change and design clothes.
       colorIndex: 4
@@ -1715,19 +1746,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000014000000
-        actionHashCodes: b689660448b3510063505301
+        actionStartIndex: 000000001400000017000000
+        actionHashCodes: 08b9fa0448b3510063505301
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1738,7 +1769,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1752,12 +1789,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 427574746f6e4d7953747566660000000000005041000000004d4300004d43000000000200000000000000000070420000a0c20000f0c10000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4f70656e4d795374796c652e6931386e427562626c6554657874019a99193f0101427574746f6e4d795374756666437265617465427574746f6e00
-        arrayParamSizes:
+        byteData: 427574746f6e4d7953747566660000000000005041000000004d4300004d43000000000200000000000000000070420000a0c20000f0c10000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4f70656e4d795374796c652e6931386e427562626c6554657874019a99193f01010100427574746f6e4d795374756666437265617465427574746f6e00
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000010000000200000001000000010000000300000013000000170000000300000001000000
+        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000120000000100000002000000010000000100000001000000010000000300000013000000170000000300000001000000
         paramName:
         - TargetName
         - TargetObject
@@ -1772,19 +1809,22 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
         - UIElementID
         - HideElement
-        paramDataPos: 00000000000000000d00000016000000170000001f00000023000000270000002f000000370000003f000000430000004400000086000000870000008b0000008c0000008d000000010000009a0000009a000000a6000000
-        paramByteDataSize: 0d000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000042000000010000000400000001000000010000000d00000000000000000000000c00000001000000
+        paramDataPos: 00000000000000000d00000016000000170000001f00000023000000270000002f000000370000003f00000043000000440000000000000086000000870000008b0000008c0000008d0000008e0000008f000000010000009c0000009c000000a8000000
+        paramByteDataSize: 0d000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000042000000000000000100000004000000010000000100000001000000010000000d00000000000000000000000c00000001000000
     - name: --- BI --- Hide Overlay
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1803,6 +1843,7 @@ MonoBehaviour:
         toState: WaitForAnimation
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1829,13 +1870,13 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101010101010101
         actionIsOpen: 01010101010101010101
-        actionStartIndex: 000000000d0000000d0000000d0000000f0000001100000013000000130000001500000017000000
-        actionHashCodes: 719c1c020000000000000000635053016350530163505301000000006350530163505301e175e700
+        actionStartIndex: 000000000c0000000c0000000c0000000e0000001000000012000000120000001400000016000000
+        actionHashCodes: 29b3ec000000000000000000635053016350530163505301000000006350530163505301e175e700
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1848,8 +1889,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: ButtonMyStuff
@@ -1867,11 +1908,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453832636c6f7468696e672d7475746f7269616c2d5461707065644d7950656e6775696e4d61696e4e6176427574746f6e730043686174427574746f6e7300436f6e74726f6c73427574746f6e73004d7950726f66696c65427574746f6e004d79467269656e6473427574746f6e000000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000100000003000000010000000300000001000000030000000100000003000000010000001200000002000000020000000100000013000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000100000003000000010000000300000001000000030000000100000003000000010000001200000002000000020000000100000013000000
         paramName:
         - Context
         - QuestId
@@ -1885,7 +1926,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElements
         - UIElementID
@@ -1901,8 +1941,8 @@ MonoBehaviour:
         - CheckInterval
         - HasTimeout
         - OUT_Object
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002700000027000000270000002700000027000000270000003500000036000000410000004200000051000000520000006100000062000000710000000000000072000000760000007a00000000000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002100000000000000000000000000000000000000000000000e000000010000000b000000010000000f000000010000000f000000010000000f000000010000000000000004000000040000000100000000000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000027000000270000002700000027000000270000003500000036000000410000004200000051000000520000006100000062000000710000000000000072000000760000007a00000000000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000200000021000000000000000000000000000000000000000e000000010000000b000000010000000f000000010000000f000000010000000f000000010000000000000004000000040000000100000000000000
     - name: TapCreate
       description: Tap to create an item
       colorIndex: 4
@@ -1923,6 +1963,7 @@ MonoBehaviour:
         toState: Is Player Member
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1935,19 +1976,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000014000000
-        actionHashCodes: b689660448b3510078c53001
+        actionStartIndex: 000000001400000017000000
+        actionHashCodes: 08b9fa0448b3510078c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1958,7 +1999,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1972,12 +2019,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 437265617465427574746f6e0000000000000000000000001643000016430000000002000000000000000000f0410000d242000000000000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e5461704372656174652e6931386e427562626c6554657874019a99193f0101437265617465427574746f6e437265617465427574746f6e
-        arrayParamSizes:
+        byteData: 437265617465427574746f6e0000000000000000000000001643000016430000000002000000000000000000f0410000d242000000000000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e5461704372656174652e6931386e427562626c6554657874019a99193f01010100437265617465427574746f6e437265617465427574746f6e
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000000100000002000000010000000100000003000000130000001700000003000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000003000000130000001700000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -1992,18 +2039,21 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
         - UIElementID
-        paramDataPos: 00000000000000000c00000015000000160000001e00000022000000260000002e000000360000003e0000004200000043000000830000008400000088000000890000008a000000010000009600000096000000
-        paramByteDataSize: 0c000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000040000000010000000400000001000000010000000c00000000000000000000000c000000
+        paramDataPos: 00000000000000000c00000015000000160000001e00000022000000260000002e000000360000003e000000420000004300000000000000830000008400000088000000890000008a0000008b0000008c000000010000009800000098000000
+        paramByteDataSize: 0c000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000040000000000000000100000004000000010000000100000001000000010000000c00000000000000000000000c000000
     - name: --- BI --- Hide Overlay 4
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2022,6 +2072,7 @@ MonoBehaviour:
         toState: WaitForTemplates
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2086,8 +2137,8 @@ MonoBehaviour:
         - 
         actionEnabled: 0101010101010101010101010101010101010101010101010101010101
         actionIsOpen: 0101010101010101010101010101010101010101010101010101010101
-        actionStartIndex: 000000000d0000000d0000000d0000000d0000000f00000011000000130000001500000017000000190000001b0000001d0000001f00000021000000230000002500000027000000290000002b0000002d0000002f00000031000000330000003500000037000000390000003b0000003d000000
-        actionHashCodes: 719c1c0200000000000000000000000063505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301
+        actionStartIndex: 000000000c0000000c0000000c0000000c0000000e00000010000000120000001400000016000000180000001a0000001c0000001e00000020000000220000002400000026000000280000002a0000002c0000002e00000030000000320000003400000036000000380000003a0000003c000000
+        actionHashCodes: 29b3ec0000000000000000000000000063505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301635053016350530163505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2112,11 +2163,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453834636c6f7468696e672d7475746f7269616c2d5461707065644372656174654974656d54656d706c617465427574746f6e5f300054656d706c617465427574746f6e5f310054656d706c617465427574746f6e5f320054656d706c617465427574746f6e5f330054656d706c617465427574746f6e5f340054656d706c617465427574746f6e5f350054656d706c617465427574746f6e5f360054656d706c617465427574746f6e5f370054656d706c617465427574746f6e5f380054656d706c617465427574746f6e5f390054656d706c617465427574746f6e5f31300054656d706c617465427574746f6e5f31310054656d706c617465427574746f6e5f31320054656d706c617465427574746f6e5f31330054656d706c617465427574746f6e5f31340054656d706c617465735363726f6c6c526563740054656d706c61746543617465676f72795363726f6c6c4261720043617465676f7279427574746f6e0043617465676f7279427574746f6e5f300043617465676f7279427574746f6e5f310043617465676f7279427574746f6e5f320043617465676f7279427574746f6e5f330043617465676f7279427574746f6e5f340043617465676f7279427574746f6e5f350043617465676f72795363726f6c6c5265637400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
+        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -2130,7 +2181,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
         - UIElementID
@@ -2181,8 +2231,8 @@ MonoBehaviour:
         - HideElement
         - UIElementID
         - HideElement
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002800000028000000280000002800000028000000280000003800000039000000490000004a0000005a0000005b0000006b0000006c0000007c0000007d0000008d0000008e0000009e0000009f000000af000000b0000000c0000000c1000000d1000000d2000000e3000000e4000000f5000000f60000000701000008010000190100001a0100002b0100002c0100003f01000040010000590100005a0100006801000069010000790100007a0100008a0100008b0100009b0100009c010000ac010000ad010000bd010000be010000ce010000cf010000e1010000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000220000000000000000000000000000000000000000000000100000000100000010000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000011000000010000001100000001000000110000000100000011000000010000001100000001000000130000000100000019000000010000000e000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000010000000010000001200000001000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000028000000280000002800000028000000280000003800000039000000490000004a0000005a0000005b0000006b0000006c0000007c0000007d0000008d0000008e0000009e0000009f000000af000000b0000000c0000000c1000000d1000000d2000000e3000000e4000000f5000000f60000000701000008010000190100001a0100002b0100002c0100003f01000040010000590100005a0100006801000069010000790100007a0100008a0100008b0100009b0100009c010000ac010000ad010000bd010000be010000ce010000cf010000e1010000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002200000000000000000000000000000000000000100000000100000010000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000011000000010000001100000001000000110000000100000011000000010000001100000001000000130000000100000019000000010000000e000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000010000000010000001200000001000000
     - name: TapClothingItem
       description: Choose a blueprint
       colorIndex: 4
@@ -2203,6 +2253,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 5
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2217,19 +2268,19 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101
         actionIsOpen: 01010101
-        actionStartIndex: 00000000000000001100000014000000
-        actionHashCodes: 00000000b689660448b35100dedebc05
+        actionStartIndex: 00000000000000001400000017000000
+        actionHashCodes: 0000000008b9fa0448b35100dedebc05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: TemplateChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: TemplateChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2240,7 +2291,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2254,12 +2311,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000000000004040000000001643000016430000000002000000000000000000f0410000b442000000000000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e546170436c6f7468696e674974656d2e6931386e427562626c6554657874019a99193f010146494e49534845440200000046494e4953484544
-        arrayParamSizes:
+        byteData: 0000000000004040000000001643000016430000000002000000000000000000f0410000b442000000000000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e546170436c6f7468696e674974656d2e6931386e427562626c6554657874019a99193f0101010046494e49534845440200000046494e4953484544
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000000100000002000000010000000100000003000000130000001700000007000000170000001700000017000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000003000000130000001700000007000000170000001700000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -2274,10 +2331,13 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
@@ -2285,10 +2345,10 @@ MonoBehaviour:
         - StartDragEvent
         - EndDragEvent
         - ApplyEvent
-        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a0000003200000036000000370000007d0000007e00000082000000830000008400000001000000840000008c000000900000009000000090000000
-        paramByteDataSize: 000000000000000009000000010000000800000004000000040000000800000008000000080000000400000001000000460000000100000004000000010000000100000000000000000000000800000004000000000000000000000008000000
+        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a000000320000003600000037000000000000007d0000007e000000820000008300000084000000850000008600000001000000860000008e000000920000009200000092000000
+        paramByteDataSize: 000000000000000009000000010000000800000004000000040000000800000008000000080000000400000001000000460000000000000001000000040000000100000001000000010000000100000000000000000000000800000004000000000000000000000008000000
     - name: --- BI --- Hide Overlay 5
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2307,6 +2367,7 @@ MonoBehaviour:
         toState: WaitForChooseButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2316,7 +2377,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2341,11 +2402,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453835636c6f7468696e672d7475746f7269616c2d546170706564426c75655072696e74
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -2359,9 +2420,8 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002700000027000000270000002700000027000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000210000000000000000000000000000000000000000000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000027000000270000002700000027000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002100000000000000000000000000000000000000
     - name: TapChooseItem
       description: Start your design
       colorIndex: 4
@@ -2382,6 +2442,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2392,19 +2453,19 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000011000000
-        actionHashCodes: b689660448b35100
+        actionStartIndex: 0000000014000000
+        actionHashCodes: 08b9fa0448b35100
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2415,7 +2476,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2429,12 +2496,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 43686f6f7365427574746f6e000000000000004000010000a0410000a0410100000002000000000000000000204200000000000020410000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e54617043686f6f73654974656d2e6931386e427562626c6554657874019a99193f010143686f6f7365427574746f6e
-        arrayParamSizes:
+        byteData: 43686f6f7365427574746f6e000000000000004000010000a0410000a0410100000002000000000000000000204200000000000020410000003f00000000000096430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e54617043686f6f73654974656d2e6931386e427562626c6554657874019a99193f0101010043686f6f7365427574746f6e
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000030000001300000017000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000030000001300000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -2449,17 +2516,20 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
-        paramDataPos: 00000000000000000c00000015000000160000001e00000022000000260000002e000000360000003e000000420000004300000087000000880000008c0000008d0000008e000000010000009a000000
-        paramByteDataSize: 0c000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000044000000010000000400000001000000010000000c0000000000000000000000
+        paramDataPos: 00000000000000000c00000015000000160000001e00000022000000260000002e000000360000003e00000042000000430000000000000087000000880000008c0000008d0000008e0000008f00000090000000010000009c000000
+        paramByteDataSize: 0c000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000044000000000000000100000004000000010000000100000001000000010000000c0000000000000000000000
     - name: --- BI --- Hide Overlay 6
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2478,6 +2548,7 @@ MonoBehaviour:
         toState: WaitForButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2500,8 +2571,8 @@ MonoBehaviour:
         - 
         actionEnabled: 0101010101010101
         actionIsOpen: 0101010101010101
-        actionStartIndex: 0000000000000000000000000d0000000d0000000f0000001100000013000000
-        actionHashCodes: 0000000000000000719c1c020000000063505301635053016350530163505301
+        actionStartIndex: 0000000000000000000000000c0000000c0000000e0000001000000012000000
+        actionHashCodes: 000000000000000029b3ec000000000063505301635053016350530163505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2526,11 +2597,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453836636c6f7468696e672d7475746f7269616c2d54617070656443686f6f7365427574746f6e537761746368546f67676c650053617665427574746f6e00437573746f6d697a654261636b427574746f6e004661627269635363726f6c6c5265637400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000030000000100000003000000010000000300000001000000
+        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -2544,7 +2615,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
         - UIElementID
@@ -2553,8 +2623,8 @@ MonoBehaviour:
         - HideElement
         - UIElementID
         - HideElement
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002a0000002a0000002a0000002a0000002a0000002a00000036000000370000004100000042000000550000005600000066000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002400000000000000000000000000000000000000000000000c000000010000000a0000000100000013000000010000001000000001000000
+        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002a0000002a0000002a0000002a0000002a00000036000000370000004100000042000000550000005600000066000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000200000024000000000000000000000000000000000000000c000000010000000a0000000100000013000000010000001000000001000000
     - name: Set FSM Bool RootTutorialClothingFinished 2
       description: Set to TRUE
       colorIndex: 0
@@ -2575,6 +2645,7 @@ MonoBehaviour:
         toState: UpdateObjectiveStep
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2591,8 +2662,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2604,14 +2675,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.AAC001Q001LeakyShip
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootTutorialClothingFinished
@@ -2629,9 +2700,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -2643,7 +2714,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: WaitTapSaveItem
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -2662,6 +2733,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2676,19 +2748,19 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101
         actionIsOpen: 01010101
-        actionStartIndex: 00000000110000001400000015000000
-        actionHashCodes: b689660448b3510078c5300178c53001
+        actionStartIndex: 00000000140000001700000018000000
+        actionHashCodes: 08b9fa0448b3510078c5300178c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2699,7 +2771,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2713,12 +2791,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 53617665427574746f6e0000000000000000000000009642000096420000000002000000000000000000204100000000000016440000003f0000000000009643010000000000010053617665427574746f6e53617665427574746f6e537761746368546f67676c65
-        arrayParamSizes:
+        byteData: 53617665427574746f6e0000000000000000000000009642000096420000000002000000000000000000204100000000000016440000003f00000000000096430100000000000100010053617665427574746f6e53617665427574746f6e537761746368546f67676c65
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000010000000200000001000000010000000300000013000000170000000300000003000000
+        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000120000000100000002000000010000000100000001000000010000000300000013000000170000000300000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -2733,19 +2811,22 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
         - UIElementID
         - UIElementID
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c000000400000004100000041000000420000004600000047000000480000000100000052000000520000005c000000
-        paramByteDataSize: 0a000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000010000000400000001000000010000000a00000000000000000000000a0000000c000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c0000004000000041000000000000004100000042000000460000004700000048000000490000004a0000000100000054000000540000005e000000
+        paramByteDataSize: 0a000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000000000000100000004000000010000000100000001000000010000000a00000000000000000000000a0000000c000000
     - name: --- BI --- Hide Overlay 7
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2764,6 +2845,7 @@ MonoBehaviour:
         toState: WaitForBuyButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2782,8 +2864,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101010101
         actionIsOpen: 010101010101
-        actionStartIndex: 0000000000000000000000000d0000000d0000000f000000
-        actionHashCodes: 0000000000000000719c1c02000000006350530163505301
+        actionStartIndex: 0000000000000000000000000c0000000c0000000e000000
+        actionHashCodes: 000000000000000029b3ec00000000006350530163505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2808,11 +2890,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453930636c6f7468696e672d7475746f7269616c2d546170706564436865636b6d61726b46696e616c43616e63656c427574746f6e0053617665427574746f6e00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000010000000300000001000000
+        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000010000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -2826,13 +2908,12 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
         - UIElementID
         - HideElement
-        paramDataPos: 0000000004000000040000000400000004000000040000000400000006000000270000002700000027000000270000002700000027000000380000003900000043000000
-        paramByteDataSize: 0400000000000000000000000000000000000000000000000200000021000000000000000000000000000000000000000000000011000000010000000a00000001000000
+        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002700000027000000270000002700000027000000380000003900000043000000
+        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000210000000000000000000000000000000000000011000000010000000a00000001000000
     - name: TapConfirm
       description: Finish your design
       colorIndex: 4
@@ -2853,6 +2934,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 8
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2865,19 +2947,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000014000000
-        actionHashCodes: b689660448b3510078c53001
+        actionStartIndex: 000000001400000017000000
+        actionHashCodes: 08b9fa0448b3510078c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2888,7 +2970,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2902,12 +2990,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 42757920262057656172204974204e6f77000000000000004000010000a0410000a04101000000020000000000000000002042000000000000f0c10000003f0000000000007a430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e546170436f6e6669726d2e6931386e427562626c6554657874019a99193f010142757920262057656172204974204e6f7753617665427574746f6e
-        arrayParamSizes:
+        byteData: 42757920262057656172204974204e6f77000000000000004000010000a0410000a04101000000020000000000000000002042000000000000f0c10000003f0000000000007a430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e546170436f6e6669726d2e6931386e427562626c6554657874019a99193f0101010042757920262057656172204974204e6f7753617665427574746f6e
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000000100000002000000010000000100000003000000130000001700000003000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000003000000130000001700000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -2922,16 +3010,19 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
         - UIElementID
-        paramDataPos: 0000000000000000110000001a0000001b00000023000000270000002b000000330000003b000000430000004700000048000000890000008a0000008e0000008f0000009000000001000000a1000000a1000000
-        paramByteDataSize: 11000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000041000000010000000400000001000000010000001100000000000000000000000a000000
+        paramDataPos: 0000000000000000110000001a0000001b00000023000000270000002b000000330000003b00000043000000470000004800000000000000890000008a0000008e0000008f00000090000000910000009200000001000000a3000000a3000000
+        paramByteDataSize: 11000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000041000000000000000100000004000000010000000100000001000000010000001100000000000000000000000a000000
     - name: Create a clothing item
       description: Create a clothing item
       colorIndex: 1
@@ -2952,6 +3043,7 @@ MonoBehaviour:
         toState: WaitForCreateButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3024,9 +3116,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 437265617465206120636c6f7468696e67206974656d51756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e437265617465206120636c6f7468696e67206974656d2e6931386e54657874437265617465427574746f6e00436174616c6f67427574746f6e0045717569706d656e7449636f6e00436c6f7365745363726f6c6c5265637400436c6f73657443617465676f72795363726f6c6c526563740043617465676f7279427574746f6e0043617465676f7279427574746f6e5f300043617465676f7279427574746f6e5f310043617465676f7279427574746f6e5f320043617465676f7279427574746f6e5f330043617465676f7279427574746f6e5f340043617465676f7279427574746f6e5f35004c6f636b65645061636b004c6f636b65645061636b5f30004c6f636b65645061636b5f31004c6f636b65645061636b5f32004c6f636b65645061636b5f330043617465676f72795363726f6c6c5265637400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0300000003000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
@@ -3071,7 +3163,7 @@ MonoBehaviour:
         paramDataPos: 00000000160000005d000000690000006a000000770000007800000085000000860000009600000097000000af000000b0000000be000000bf000000cf000000d0000000e0000000e1000000f1000000f20000000201000003010000130100001401000024010000250100002f010000300100003c0100003d010000490100004a0100005601000057010000630100006401000076010000
         paramByteDataSize: 16000000470000000c000000010000000d000000010000000d00000001000000100000000100000018000000010000000e000000010000001000000001000000100000000100000010000000010000001000000001000000100000000100000010000000010000000a000000010000000c000000010000000c000000010000000c000000010000000c000000010000001200000001000000
     - name: WaitForCreateButton
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3090,6 +3182,7 @@ MonoBehaviour:
         toState: WaitForTutorialOverlay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3103,8 +3196,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3117,8 +3210,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: CreateButton
@@ -3136,9 +3229,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -3150,7 +3243,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: WaitForTemplates
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3169,6 +3262,7 @@ MonoBehaviour:
         toState: WaitForAnimation 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3184,8 +3278,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3198,8 +3292,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: hoodie_button
@@ -3217,9 +3311,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -3231,7 +3325,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: WaitForChooseButton
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3250,6 +3344,7 @@ MonoBehaviour:
         toState: WaitForAnimation 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3271,8 +3366,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3285,8 +3380,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: ChooseButton
@@ -3304,9 +3399,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e0043616e63656c427574746f6e00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 12000000020000000200000001000000130000000300000001000000
         paramName:
@@ -3320,7 +3415,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000400000008000000000000000900000015000000
         paramByteDataSize: 00000000040000000400000001000000000000000c00000001000000
     - name: --- BI --- Wait a beat 4
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3339,6 +3434,7 @@ MonoBehaviour:
         toState: MoreFabrics
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3349,8 +3445,8 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 000000000d000000
-        actionHashCodes: 719c1c0248c01101
+        actionStartIndex: 000000000c000000
+        actionHashCodes: 29b3ec0048c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3375,11 +3471,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453837636c6f7468696e672d7475746f7269616c2d44726167676564436f6c6f724f6e436c6f7468696e670000403f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000f0000001700000001000000
+        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000f0000001700000001000000
         paramName:
         - Context
         - QuestId
@@ -3393,14 +3489,13 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - time
         - finishEvent
         - realTime
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002e0000002e0000002e0000002e0000002e0000002e000000330000003b000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000280000000000000000000000000000000000000000000000050000000800000001000000
+        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002e0000002e0000002e0000002e0000002e000000330000003b000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002800000000000000000000000000000000000000050000000800000001000000
     - name: WaitForBuyButton
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3419,6 +3514,7 @@ MonoBehaviour:
         toState: WaitForAnimation 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3432,8 +3528,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3446,8 +3542,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Buy & Wear It Now
@@ -3465,9 +3561,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -3479,7 +3575,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: --- BI --- Hide Overlay 8
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -3498,6 +3594,7 @@ MonoBehaviour:
         toState: WaitForSave
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3522,8 +3619,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101010101010101
         actionIsOpen: 010101010101010101
-        actionStartIndex: 0000000000000000000000000d0000000d0000000f000000110000001300000015000000
-        actionHashCodes: 0000000000000000719c1c02000000006350530163505301635053016350530163505301
+        actionStartIndex: 0000000000000000000000000c0000000c0000000e000000100000001200000014000000
+        actionHashCodes: 000000000000000029b3ec00000000006350530163505301635053016350530163505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3548,11 +3645,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453931636c6f7468696e672d7475746f7269616c2d546170706564427579437265617465427574746f6e00436174616c6f67427574746f6e0045717569706d656e7449636f6e00436c6f7365745363726f6c6c5265637400436c6f73657443617465676f72795363726f6c6c5265637400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000010000000300000001000000030000000100000003000000010000000300000001000000
+        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000010000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -3566,7 +3663,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
         - UIElementID
@@ -3577,8 +3673,8 @@ MonoBehaviour:
         - HideElement
         - UIElementID
         - HideElement
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002100000021000000210000002100000021000000210000002d0000002e0000003b0000003c000000490000004a0000005a0000005b00000073000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000001b00000000000000000000000000000000000000000000000c000000010000000d000000010000000d0000000100000010000000010000001800000001000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000021000000210000002100000021000000210000002d0000002e0000003b0000003c000000490000004a0000005a0000005b00000073000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000001b000000000000000000000000000000000000000c000000010000000d000000010000000d0000000100000010000000010000001800000001000000
     - name: WearYourItem
       description: Try on your new hoodie!
       colorIndex: 4
@@ -3599,6 +3695,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 9
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3611,19 +3708,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010001
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000014000000
-        actionHashCodes: b689660448b3510000000000
+        actionStartIndex: 000000001400000017000000
+        actionHashCodes: 08b9fa0448b3510000000000
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: InventoryChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3634,7 +3731,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3648,12 +3751,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 000000000000000000000000164300002a43010000000200000000000000000020420000be42000020c20000003f00000000008089430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e57656172596f75724974656d2e6931386e427562626c6554657874019a99193f0101
-        arrayParamSizes:
+        byteData: 000000000000000000000000164300002a43010000000200000000000000000020420000be42000020c20000003f00000000008089430151756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e57656172596f75724974656d2e6931386e427562626c6554657874019a99193f01010100
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000030000001300000017000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000030000001300000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -3668,17 +3771,20 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
-        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a0000003200000036000000370000007a0000007b0000007f00000080000000810000000100000081000000
-        paramByteDataSize: 0000000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000004300000001000000040000000100000001000000000000000000000000000000
+        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a000000320000003600000037000000000000007a0000007b0000007f000000800000008100000082000000830000000100000083000000
+        paramByteDataSize: 0000000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000004300000000000000010000000400000001000000010000000100000001000000000000000000000000000000
     - name: --- BI --- Hide Overlay 9
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -3697,6 +3803,7 @@ MonoBehaviour:
         toState: Wait a beat 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3711,8 +3818,8 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101
         actionIsOpen: 01010101
-        actionStartIndex: 0000000000000000000000000d000000
-        actionHashCodes: 0000000000000000719c1c0263505301
+        actionStartIndex: 0000000000000000000000000c000000
+        actionHashCodes: 000000000000000029b3ec0063505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -3737,11 +3844,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453932636c6f7468696e672d7475746f7269616c2d5461707065644e6577486f6f6469654d656d6265724f6e6c79437265617465427574746f6e00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000
+        paramDataType: 0300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -3755,13 +3862,12 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000003100000031000000310000003100000031000000310000003d000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002b00000000000000000000000000000000000000000000000c00000001000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000031000000310000003100000031000000310000003d000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002b000000000000000000000000000000000000000c00000001000000
     - name: WaitForCreateButton2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3780,6 +3886,7 @@ MonoBehaviour:
         toState: WaitForAnimation 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3793,8 +3900,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3807,8 +3914,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: CreateButton
@@ -3826,9 +3933,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -3840,7 +3947,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: Wait a beat 7
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3859,6 +3966,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootTutorialClothingFinished 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3893,9 +4001,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000c03f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -3924,6 +4032,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3934,19 +4043,19 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000011000000
-        actionHashCodes: b689660448b35100
+        actionStartIndex: 0000000014000000
+        actionHashCodes: 08b9fa0448b35100
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3957,7 +4066,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3971,12 +4086,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 436c6f7365427574746f6e000000000000a04000000000c8420000c842000000000000000000008cc2000020c100000000000000000000003f0000003f0000964301019a99193f0101436c6f7365427574746f6e
-        arrayParamSizes:
+        byteData: 436c6f7365427574746f6e000000000000a04000000000c8420000c842000000000000000000008cc2000020c100000000000000000000003f0000003f0000964301019a99193f01010100436c6f7365427574746f6e
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000030000001300000017000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000030000001300000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -3991,17 +4106,20 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
-        paramDataPos: 00000000000000000b00000014000000150000001d00000021000000250000002d000000350000003d000000410000004200000042000000430000004700000048000000490000000100000054000000
-        paramByteDataSize: 0b000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000010000000400000001000000010000000b0000000000000000000000
+        paramDataPos: 00000000000000000b00000014000000150000001d00000021000000250000002d000000350000003d00000041000000420000000000000042000000430000004700000048000000490000004a0000004b0000000100000056000000
+        paramByteDataSize: 0b000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000000000000100000004000000010000000100000001000000010000000b0000000000000000000000
     - name: --- BI --- Hide Overlay 10
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -4025,7 +4143,7 @@ MonoBehaviour:
         actionEnabled: 010101
         actionIsOpen: 010101
         actionStartIndex: 000000000000000000000000
-        actionHashCodes: 0000000000000000719c1c02
+        actionHashCodes: 000000000000000029b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4050,11 +4168,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453933636c6f7468696e672d7475746f7269616c2d546170706564436c6f7365427574746f6e
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -4068,11 +4186,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002900000029000000290000002900000029000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000002000000230000000000000000000000000000000000000000000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000029000000290000002900000029000000
+        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002300000000000000000000000000000000000000
     - name: WaitForButton
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4091,6 +4208,7 @@ MonoBehaviour:
         toState: WaitForAnimation 5
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4104,8 +4222,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4118,8 +4236,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SaveButton
@@ -4137,9 +4255,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -4151,7 +4269,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: FindParentObj
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4170,6 +4288,7 @@ MonoBehaviour:
         toState: FindChild
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4184,7 +4303,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TemplatePooledParentObject
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4197,14 +4316,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Pool[TemplateIconButton]/Content
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Untagged
@@ -4221,10 +4340,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000
         paramName:
@@ -4234,7 +4353,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000000000000
     - name: FindChild
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4253,6 +4372,7 @@ MonoBehaviour:
         toState: FindButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4267,7 +4387,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TemplateChildIndex0
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4276,7 +4396,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: TemplatePooledParentObject
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4301,9 +4421,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4313,7 +4433,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: FindButton
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4332,6 +4452,7 @@ MonoBehaviour:
         toState: TapClothingItem
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4346,7 +4467,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TemplateChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4355,7 +4476,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: TemplateChildIndex0
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4380,9 +4501,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4392,7 +4513,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: FindParentObj 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4411,6 +4532,7 @@ MonoBehaviour:
         toState: FindChild 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4425,7 +4547,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryPooledParentObject
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4438,14 +4560,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: ScrollContent
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Untagged
@@ -4462,10 +4584,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000
         paramName:
@@ -4475,7 +4597,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000000000000
     - name: FindChild 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4494,6 +4616,7 @@ MonoBehaviour:
         toState: FindChild 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4508,7 +4631,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryChildIndex0_1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4517,7 +4640,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: InventoryPooledParentObject
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4542,9 +4665,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0200000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4554,7 +4677,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: FindChild 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4573,6 +4696,7 @@ MonoBehaviour:
         toState: FindChild 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4587,7 +4711,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryChildIndex0_2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4596,7 +4720,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: InventoryChildIndex0_1
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4621,9 +4745,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4633,7 +4757,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: FindChild 4
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4652,6 +4776,7 @@ MonoBehaviour:
         toState: FindButton 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4666,7 +4791,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryChildIndex0_3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4675,7 +4800,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: InventoryChildIndex0_2
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4700,9 +4825,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4712,7 +4837,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: FindButton 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4731,6 +4856,7 @@ MonoBehaviour:
         toState: WearYourItem
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4745,7 +4871,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: InventoryChildIndexButton
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4754,7 +4880,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: InventoryChildIndex0_3
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4779,9 +4905,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001000000013000000
         paramName:
@@ -4791,7 +4917,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000500000000000000
     - name: WaitForDecalTap
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -4810,6 +4936,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 12
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4822,19 +4949,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000014000000
-        actionHashCodes: b689660448b3510078c53001
+        actionStartIndex: 000000001400000017000000
+        actionHashCodes: 08b9fa0448b3510078c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4845,7 +4972,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4859,12 +4992,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 416374697665537761746368576964676574000000000000484200010000f0c10000f0c101000000020000000000f041000048420000f041000016440000003f00000000000096430100000000000100416374697665537761746368576964676574537761746368546f67676c65
-        arrayParamSizes:
+        byteData: 416374697665537761746368576964676574000000000000484200010000f0c10000f0c101000000020000000000f041000048420000f041000016440000003f000000000000964301000000000001000100416374697665537761746368576964676574537761746368546f67676c65
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000000100000002000000010000000100000003000000130000001700000003000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000003000000130000001700000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -4879,18 +5012,21 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - ButtonName
         - ButtonObject
         - SendEvent
         - UIElementID
-        paramDataPos: 0000000000000000120000001b0000001c00000024000000280000002c000000340000003c000000440000004800000049000000490000004a0000004e0000004f00000050000000010000006200000062000000
-        paramByteDataSize: 12000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000010000000400000001000000010000001200000000000000000000000c000000
+        paramDataPos: 0000000000000000120000001b0000001c00000024000000280000002c000000340000003c00000044000000480000004900000000000000490000004a0000004e0000004f000000500000005100000052000000010000006400000064000000
+        paramByteDataSize: 12000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000000000000000000000100000004000000010000000100000001000000010000001200000000000000000000000c000000
     - name: --- BI --- Hide Overlay 12
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -4909,6 +5045,7 @@ MonoBehaviour:
         toState: Wait a beat 9
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4933,8 +5070,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101010101010101
         actionIsOpen: 010101010101010101
-        actionStartIndex: 0000000000000000000000000d0000000f00000011000000130000001500000017000000
-        actionHashCodes: 0000000000000000719c1c02635053016350530163505301635053016350530163505301
+        actionStartIndex: 0000000000000000000000000c0000000e00000010000000120000001400000016000000
+        actionHashCodes: 000000000000000029b3ec00635053016350530163505301635053016350530163505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -4959,11 +5096,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 465455453838636c6f7468696e672d7475746f7269616c2d546170706564446563616c427574746f6e537761746368546f67676c6500446563616c5363726f6c6c52656374004c6f636b65645061636b004c6f636b65645061636b5f30004c6f636b65645061636b5f31004c6f636b65645061636b5f3200
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
         - Context
         - QuestId
@@ -4977,7 +5114,6 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
         - UIElementID
@@ -4990,10 +5126,10 @@ MonoBehaviour:
         - HideElement
         - UIElementID
         - HideElement
-        paramDataPos: 00000000040000000400000004000000040000000400000004000000060000002900000029000000290000002900000029000000290000003500000036000000450000004600000050000000510000005d0000005e0000006a0000006b00000077000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000020000002300000000000000000000000000000000000000000000000c000000010000000f000000010000000a000000010000000c000000010000000c000000010000000c00000001000000
+        paramDataPos: 000000000400000004000000040000000400000004000000040000000600000029000000290000002900000029000000290000003500000036000000450000004600000050000000510000005d0000005e0000006a0000006b00000077000000
+        paramByteDataSize: 0400000000000000000000000000000000000000000000000200000023000000000000000000000000000000000000000c000000010000000f000000010000000a000000010000000c000000010000000c000000010000000c00000001000000
     - name: Wait a beat 9
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -5012,6 +5148,7 @@ MonoBehaviour:
         toState: DecalHandDrag
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5046,9 +5183,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 3333333f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5058,7 +5195,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: --- BI --- Wait a beat 10
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -5077,6 +5214,7 @@ MonoBehaviour:
         toState: Show Tutorial 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5089,8 +5227,8 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000000300000010000000
-        actionHashCodes: 48c01101719c1c0263505301
+        actionStartIndex: 00000000030000000f000000
+        actionHashCodes: 48c0110129b3ec0063505301
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -5115,11 +5253,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000403f0046494e495348454400465455453839636c6f7468696e672d7475746f7269616c2d44726167676564446563616c4f6e436c6f7468696e67537761746368546f67676c6500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0f0000001700000001000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000
+        paramDataType: 0f00000017000000010000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000001000000
         paramName:
         - time
         - finishEvent
@@ -5136,13 +5274,12 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
         - UIElementID
         - HideElement
-        paramDataPos: 00000000050000000d0000000e000000120000001200000012000000120000001200000012000000140000003c0000003c0000003c0000003c0000003c0000003c00000048000000
-        paramByteDataSize: 050000000800000001000000040000000000000000000000000000000000000000000000020000002800000000000000000000000000000000000000000000000c00000001000000
+        paramDataPos: 00000000050000000d0000000e000000120000001200000012000000120000001200000012000000140000003c0000003c0000003c0000003c0000003c00000048000000
+        paramByteDataSize: 0500000008000000010000000400000000000000000000000000000000000000000000000200000028000000000000000000000000000000000000000c00000001000000
     - name: FabricHandDrag
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -5161,6 +5298,7 @@ MonoBehaviour:
         toState: WaitForFabricApplied
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5173,19 +5311,19 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000019000000
-        actionHashCodes: b68966044d34b400dedebc05
+        actionStartIndex: 00000000140000001c000000
+        actionHashCodes: 08b9fa044d34b400dedebc05
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5198,8 +5336,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: HandDragUI
@@ -5216,12 +5360,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 53617665427574746f6e0000000000000000000000000000000000000200000002000000000000000000000000008cc2000016440000003f0000003f000096430000000000000100507265666162732f465455455f44657369676e65724472616750616e656c0000000000000000000000000000000000000000803f00000000466162726963546170
-        arrayParamSizes:
+        byteData: 53617665427574746f6e0000000000000000000000000000000000000200000002000000000000000000000000008cc2000016440000003f0000003f0000964300000000000001000100507265666162732f465455455f44657369676e65724472616750616e656c0000000000000000000000000000000000000000803f00000000466162726963546170
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000120000000300000001000000030000001300000008000000250000000200000007000000170000001700000017000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000120000000300000001000000030000001300000008000000250000000200000007000000170000001700000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -5236,10 +5380,13 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - PopupID
         - PrefabKey
         - UseTarget
@@ -5252,10 +5399,10 @@ MonoBehaviour:
         - StartDragEvent
         - EndDragEvent
         - ApplyEvent
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c0000004000000041000000410000004200000046000000470000000000000048000000660000006700000001000000670000006f000000780000007c000000800000008900000089000000
-        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000000000000001000000040000000100000001000000000000001e00000001000000000000000000000008000000090000000400000004000000090000000000000000000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c000000400000004100000000000000410000004200000046000000470000004800000049000000010000004a00000068000000690000000100000069000000710000007a0000007e000000820000008b0000008b000000
+        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000000000000000000000010000000400000001000000010000000100000001000000000000001e00000001000000000000000000000008000000090000000400000004000000090000000000000000000000
     - name: WaitForFabricApplied
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5274,6 +5421,7 @@ MonoBehaviour:
         toState: FabricHandDrag
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: FabricApplied
@@ -5282,6 +5430,7 @@ MonoBehaviour:
         toState: --- BI --- Wait a beat 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 6
       actionData:
         actionNames:
@@ -5307,8 +5456,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: HandDragUI
@@ -5326,9 +5475,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000046616272696352656c656173654661627269634170706c696564
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0700000017000000170000001700000012000000
         paramName:
@@ -5340,7 +5489,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000040000001100000000000000
         paramByteDataSize: 04000000000000000d0000000d00000000000000
     - name: DecalHandDrag
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -5359,6 +5508,7 @@ MonoBehaviour:
         toState: HideTutorial
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: DecalTap
@@ -5367,6 +5517,7 @@ MonoBehaviour:
         toState: WaitForDecalApplied
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5383,25 +5534,25 @@ MonoBehaviour:
         - 
         actionEnabled: 0101010101
         actionIsOpen: 0101010101
-        actionStartIndex: 0000000011000000190000001d00000020000000
-        actionHashCodes: b68966044d34b400dedebc0548b3510078c53001
+        actionStartIndex: 00000000140000001c0000002000000023000000
+        actionHashCodes: 08b9fa044d34b400dedebc0548b3510078c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5414,8 +5565,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: HandDragUI
@@ -5432,12 +5589,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 53617665427574746f6e0000000000000000000000000000000000000200000002000000000000000000000000008cc20000fa430000003f0000003f000096430000000000000100507265666162732f465455455f44657369676e65724472616750616e656c0000000000000000000000000000000000000000803f01000000446563616c5461704163746976655377617463685769646765744261636b546f466162726963537761746368546f67676c65
-        arrayParamSizes:
+        byteData: 53617665427574746f6e0000000000000000000000000000000000000200000002000000000000000000000000008cc20000fa430000003f0000003f0000964300000000000001000100507265666162732f465455455f44657369676e65724472616750616e656c0000000000000000000000000000000000000000803f01000000446563616c5461704163746976655377617463685769646765744261636b546f466162726963537761746368546f67676c65
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000000100000002000000010000000100000012000000030000000100000003000000130000000800000025000000020000000700000017000000170000001700000003000000130000001700000003000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000012000000030000000100000003000000130000000800000025000000020000000700000017000000170000001700000003000000130000001700000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -5452,10 +5609,13 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - PopupID
         - PrefabKey
         - UseTarget
@@ -5472,10 +5632,10 @@ MonoBehaviour:
         - ButtonObject
         - SendEvent
         - UIElementID
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c0000004000000041000000410000004200000046000000470000000000000048000000660000006700000001000000670000006f000000780000007c00000080000000880000008800000088000000020000009a000000a6000000
-        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000000000000001000000040000000100000001000000000000001e0000000100000000000000000000000800000009000000040000000400000008000000000000000000000012000000000000000c0000000c000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c000000400000004100000000000000410000004200000046000000470000004800000049000000010000004a00000068000000690000000100000069000000710000007a0000007e000000820000008a0000008a0000008a000000020000009c000000a8000000
+        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000000000000000000000010000000400000001000000010000000100000001000000000000001e0000000100000000000000000000000800000009000000040000000400000008000000000000000000000012000000000000000c0000000c000000
     - name: WaitForDecalApplied
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5494,6 +5654,7 @@ MonoBehaviour:
         toState: DecalHandDrag
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: DecalApplied
@@ -5502,6 +5663,7 @@ MonoBehaviour:
         toState: --- BI --- Wait a beat 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5527,8 +5689,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: HandDragUI
@@ -5546,9 +5708,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01000000446563616c52656c65617365446563616c4170706c696564
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0700000017000000170000001700000012000000
         paramName:
@@ -5579,6 +5741,7 @@ MonoBehaviour:
         toState: TapExit
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5613,9 +5776,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 476f207365652041756e742041726374696351756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e5570646174654f626a656374697665537465702e6931386e54657874
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0300000003000000
         paramName:
@@ -5624,7 +5787,7 @@ MonoBehaviour:
         paramDataPos: 0000000012000000
         paramByteDataSize: 1200000044000000
     - name: isMember?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -5643,6 +5806,7 @@ MonoBehaviour:
         toState: FindParentObj 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -5651,6 +5815,7 @@ MonoBehaviour:
         toState: Non member msg
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5685,9 +5850,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 5472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1700000017000000
         paramName:
@@ -5696,7 +5861,8 @@ MonoBehaviour:
         paramDataPos: 0000000004000000
         paramByteDataSize: 0400000005000000
     - name: Non member msg
-      description: Items are saved to your closet. Members can wear the items they create.
+      description: Items are saved to your closet. Members can wear the items they
+        create.
       colorIndex: 2
       position:
         serializedVersion: 2
@@ -5715,6 +5881,7 @@ MonoBehaviour:
         toState: Hide Overlay 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5725,13 +5892,13 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000011000000
-        actionHashCodes: b6896604422e5005
+        actionStartIndex: 0000000014000000
+        actionHashCodes: 08b9fa04422e5005
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5742,7 +5909,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -5756,12 +5929,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f000000000000c8430051756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4e6f6e206d656d626572206d73672e6931386e427562626c6554657874009a99193f000101000000
-        arrayParamSizes:
+        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f000000000000c8430051756573742e546578742e414143303031513030314c65616b79536869702e4f626a313046534d2e4e6f6e206d656d626572206d73672e6931386e427562626c6554657874009a99193f0001010001000000
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000010000000200000001000000010000000700000017000000
+        paramDataType: 03000000130000002500000001000000080000000700000007000000080000000800000008000000020000000100000003000000120000000100000002000000010000000100000001000000010000000700000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -5776,16 +5949,19 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - TouchType
         - FinishEvent
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c000000400000004100000086000000870000008b0000008c0000008d00000091000000
-        paramByteDataSize: 0a000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000045000000010000000400000001000000010000000400000000000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c00000040000000410000000000000086000000870000008b0000008c0000008d0000008e0000008f00000093000000
+        paramByteDataSize: 0a000000000000000900000001000000080000000400000004000000080000000800000008000000040000000100000045000000000000000100000004000000010000000100000001000000010000000400000000000000
     - name: Hide Overlay 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -5804,6 +5980,7 @@ MonoBehaviour:
         toState: Wait a beat 8
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5842,9 +6019,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01437265617465427574746f6e00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000300000001000000
         paramName:
@@ -5854,7 +6031,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000d000000
         paramByteDataSize: 010000000c00000001000000
     - name: SuppressQuestNotifier 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -5873,6 +6050,7 @@ MonoBehaviour:
         toState: isMember?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5894,11 +6072,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -5913,9 +6091,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -5944,6 +6122,7 @@ MonoBehaviour:
         toState: Wait a beat 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5956,13 +6135,13 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000013000000
-        actionHashCodes: b6896604422e500578c53001
+        actionStartIndex: 000000001400000016000000
+        actionHashCodes: 08b9fa04422e500578c53001
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5973,7 +6152,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -5987,12 +6172,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f0000003f0000c8430051756573742e546578742e414143303031513030314c65616b79536869702e537761705475746f7269616c009a99193f0001010000004661627269635363726f6c6c52656374
-        arrayParamSizes:
+        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f0000003f0000c8430051756573742e546578742e414143303031513030314c65616b79536869702e537761705475746f7269616c009a99193f00010100010000004661627269635363726f6c6c52656374
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000070000001700000003000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000070000001700000003000000
         paramName:
         - TargetName
         - TargetObject
@@ -6007,15 +6192,18 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - TouchType
         - FinishEvent
         - UIElementID
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c00000040000000410000006c0000006d0000007100000072000000730000007700000077000000
-        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002b00000001000000040000000100000001000000040000000000000010000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c0000004000000041000000000000006c0000006d00000071000000720000007300000074000000750000007900000079000000
+        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002b00000000000000010000000400000001000000010000000100000001000000040000000000000010000000
     - name: Show Tutorial 2
       description: Looking good! Tap Save when you're done.
       colorIndex: 2
@@ -6036,6 +6224,7 @@ MonoBehaviour:
         toState: Wait a beat 12
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6048,13 +6237,13 @@ MonoBehaviour:
         - 
         actionEnabled: 010101
         actionIsOpen: 010101
-        actionStartIndex: 000000001100000012000000
-        actionHashCodes: b689660478c53001422e5005
+        actionStartIndex: 000000001400000015000000
+        actionHashCodes: 08b9fa0478c53001422e5005
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -6065,7 +6254,13 @@ MonoBehaviour:
         fsmEventTargetParams: []
         fsmPropertyParams: []
         layoutOptionParams: []
-        fsmStringParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -6079,12 +6274,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f0000003f0000c8430051756573742e546578742e414143303031513030314c65616b79536869702e446f6e655475746f7269616c009a99193f0001446563616c5363726f6c6c5265637401000000
-        arrayParamSizes:
+        byteData: 4d656e75427574746f6e0000003fcdcccc3e000000000000000000000200000002000000000000000000000000000000000048c30000003f0000003f0000c8430051756573742e546578742e414143303031513030314c65616b79536869702e446f6e655475746f7269616c009a99193f00010100446563616c5363726f6c6c5265637401000000
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000001000000020000000100000001000000030000000700000017000000
+        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000001000000030000000700000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -6099,17 +6294,20 @@ MonoBehaviour:
         - MaxTextBoxSize
         - ShowHighlightOutline
         - i18nBubbleText
+        - i18TranslatedArg0
         - ShowArrow
         - Opacity
         - UseTarget
         - DisableUI
+        - EnableTarget
+        - BlocksRaycast
         - UIElementID
         - TouchType
         - FinishEvent
-        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c00000040000000410000006c0000006d0000007100000072000000730000008200000086000000
-        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002b000000010000000400000001000000010000000f0000000400000000000000
+        paramDataPos: 00000000000000000a00000013000000140000001c00000020000000240000002c000000340000003c0000004000000041000000000000006c0000006d00000071000000720000007300000074000000750000008400000088000000
+        paramByteDataSize: 0a00000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002b000000000000000100000004000000010000000100000001000000010000000f0000000400000000000000
     - name: HideTutorial
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -6128,6 +6326,7 @@ MonoBehaviour:
         toState: Wait a beat 11
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6153,8 +6352,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: HandDragUI
@@ -6172,9 +6371,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 537761746368546f67676c6500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000000300000001000000
         paramName:
@@ -6184,7 +6383,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000c000000
         paramByteDataSize: 000000000c00000001000000
     - name: Wait a beat 11
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6203,6 +6402,7 @@ MonoBehaviour:
         toState: WaitForDecalTap
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6237,9 +6437,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6249,7 +6449,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: Wait a beat 10
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6268,6 +6468,7 @@ MonoBehaviour:
         toState: WaitForDecalTap
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6302,9 +6503,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803e0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6314,7 +6515,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: Wait a beat 12
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6333,6 +6534,7 @@ MonoBehaviour:
         toState: WaitTapSaveItem
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6367,9 +6569,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803e0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6379,7 +6581,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: Hide Remote Players
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6398,6 +6600,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootSeekingMascot
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6431,17 +6634,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Hide Remote Players 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6460,6 +6663,7 @@ MonoBehaviour:
         toState: RESET RootXferedFromPrevObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6493,17 +6697,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: WaitForAnimation
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6522,6 +6726,7 @@ MonoBehaviour:
         toState: OpenMyStyle
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6556,9 +6761,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6568,7 +6773,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6587,6 +6792,7 @@ MonoBehaviour:
         toState: TapCreate
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6621,9 +6827,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6633,7 +6839,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 3
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6652,6 +6858,7 @@ MonoBehaviour:
         toState: FindParentObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6686,9 +6893,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6698,7 +6905,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 4
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6717,6 +6924,7 @@ MonoBehaviour:
         toState: TapChooseItem
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6751,9 +6959,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6763,7 +6971,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 5
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6782,6 +6990,7 @@ MonoBehaviour:
         toState: FabricHandDrag
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6816,9 +7025,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6828,7 +7037,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 6
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6847,6 +7056,7 @@ MonoBehaviour:
         toState: TapConfirm
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6881,9 +7091,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6893,7 +7103,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForAnimation 7
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6912,6 +7122,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6946,9 +7157,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -6958,7 +7169,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: WaitForSave
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -6977,6 +7188,7 @@ MonoBehaviour:
         toState: WaitForCreateButton2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7010,17 +7222,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: DisableMyStyle
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -7039,6 +7251,7 @@ MonoBehaviour:
         toState: Test FSM Bool RootXferedFromPrevObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7073,9 +7286,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 4d795374756666427574746f6e00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0300000001000000
         paramName:
@@ -7084,7 +7297,7 @@ MonoBehaviour:
         paramDataPos: 000000000d000000
         paramByteDataSize: 0d00000001000000
     - name: Show Member Notification
-      description:
+      description: 
       colorIndex: 2
       position:
         serializedVersion: 2
@@ -7103,6 +7316,7 @@ MonoBehaviour:
         toState: Suppress Quest Notifier
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7137,9 +7351,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 507265666162732f4e6f74696669636174696f6e732f4d656d626572736869704e6f74696669636174696f6e50616e656c4d656d6265724e6f74696669636174696f6e2e465455452e45717569706d656e745465787400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000300000001000000010000000200000001000000
         paramName:
@@ -7152,7 +7366,7 @@ MonoBehaviour:
         paramDataPos: 00000000310000005600000057000000580000005c000000
         paramByteDataSize: 310000002500000001000000010000000400000001000000
     - name: Is Player Member
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -7171,6 +7385,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -7179,6 +7394,7 @@ MonoBehaviour:
         toState: Show Member Notification
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7213,9 +7429,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 5472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1700000017000000
         paramName:
@@ -7224,7 +7440,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000
         paramByteDataSize: 0400000005000000
     - name: Suppress Quest Notifier
-      description:
+      description: 
       colorIndex: 2
       position:
         serializedVersion: 2
@@ -7243,6 +7459,7 @@ MonoBehaviour:
         toState: --- BI --- Hide Overlay 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7264,11 +7481,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -7283,9 +7500,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -7295,7 +7512,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Wait a beat 8
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -7314,6 +7531,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootTutorialClothingFinished 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7348,9 +7566,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -7360,7 +7578,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: Enable UI
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -7379,6 +7597,7 @@ MonoBehaviour:
         toState: DisableMyStyle
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7412,17 +7631,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: WaitForTutorialOverlay
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -7441,6 +7660,7 @@ MonoBehaviour:
         toState: WaitForAnimation 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7454,8 +7674,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -7468,8 +7688,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: TutorialOverlay
@@ -7487,9 +7707,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -7541,19 +7761,19 @@ MonoBehaviour:
       boolVariables:
       - useVariable: 1
         name: RefRootSeekingMascot
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootTutorialClothingFinished
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootXferedFromPrevObj
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
@@ -7566,55 +7786,55 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: CreateButton
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: InventoryChildIndex0_1
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: InventoryChildIndex0_2
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: InventoryChildIndex0_3
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: InventoryChildIndexButton
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: InventoryPooledParentObject
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TemplateChildIndex0
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TemplateChildIndexButton
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TemplatePooledParentObject
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -7625,23 +7845,26 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs:
-    description:
-    docUrl:
+      variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    description: 
+    docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -7662,6 +7885,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

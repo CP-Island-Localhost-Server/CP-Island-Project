@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: QuestFSM.RHC001Q006CursedTrail.Obj4
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: General
   fsm:
     dataVersion: 1
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: Start Objective
     states:
     - name: Has Player Finished Beach Trail?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -38,6 +39,7 @@ MonoBehaviour:
         toState: Find Objects 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -46,6 +48,7 @@ MonoBehaviour:
         toState: Waypoint to Beach
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -64,8 +67,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -77,14 +80,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RHC001Q006CursedTrail
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootFinishedBeachPath
@@ -102,9 +105,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f7446696e6973686564426561636850617468000001526566526f6f7446696e69736865644265616368506174685472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -120,7 +123,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000001a0000001b00000035000000390000003e000000
         paramByteDataSize: 0000000000000000000000001a000000010000001a000000040000000500000001000000
     - name: Waypoint to Beach
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -144,8 +147,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -171,9 +174,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 42656163680100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -185,7 +188,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000500000006000000
         paramByteDataSize: 000000000000000005000000010000000d000000
     - name: Show Beach Trail
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -204,6 +207,7 @@ MonoBehaviour:
         toState: Beach Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -218,7 +222,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -243,10 +247,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000
         paramName:
@@ -254,7 +258,7 @@ MonoBehaviour:
         paramDataPos: 00000000
         paramByteDataSize: 00000000
     - name: Finish
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -298,17 +302,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Is Player In Beach?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -327,6 +331,7 @@ MonoBehaviour:
         toState: Has Player Finished Beach Trail? 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -335,6 +340,7 @@ MonoBehaviour:
         toState: Waypoint to Beach
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -369,9 +375,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 42656163685472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001700000017000000
         paramName:
@@ -381,7 +387,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000009000000
         paramByteDataSize: 050000000400000005000000
     - name: Is Player in Diving?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -400,6 +406,7 @@ MonoBehaviour:
         toState: Has Player Finished Beach Trail?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -408,6 +415,7 @@ MonoBehaviour:
         toState: Is Player In Beach?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -442,9 +450,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 446976696e675472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001700000017000000
         paramName:
@@ -454,7 +462,7 @@ MonoBehaviour:
         paramDataPos: 00000000060000000a000000
         paramByteDataSize: 060000000400000005000000
     - name: Has Player Finished Beach Trail? 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -473,6 +481,7 @@ MonoBehaviour:
         toState: Waypoint To Diving
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -481,6 +490,7 @@ MonoBehaviour:
         toState: Find Objects
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -499,8 +509,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -512,14 +522,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RHC001Q006CursedTrail
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootFinishedBeachPath
@@ -537,9 +547,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f7446696e6973686564426561636850617468000001526566526f6f7446696e69736865644265616368506174685472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -555,7 +565,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000001a0000001b00000035000000390000003e000000
         paramByteDataSize: 0000000000000000000000001a000000010000001a000000040000000500000001000000
     - name: Show Diving Trail
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -574,6 +584,7 @@ MonoBehaviour:
         toState: Diving Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -588,7 +599,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -613,10 +624,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000
         paramName:
@@ -624,7 +635,7 @@ MonoBehaviour:
         paramDataPos: 00000000
         paramByteDataSize: 00000000
     - name: Waypoint To Diving
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -648,8 +659,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -675,9 +686,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 446976696e670100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -689,7 +700,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000600000007000000
         paramByteDataSize: 000000000000000006000000010000000d000000
     - name: Set Finished Beach Trail
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -708,6 +719,7 @@ MonoBehaviour:
         toState: Show Trail End Particles
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -724,8 +736,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -737,14 +749,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RHC001Q006CursedTrail
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootFinishedBeachPath
@@ -762,9 +774,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -776,7 +788,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Delay
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -795,6 +807,7 @@ MonoBehaviour:
         toState: Is Player in Diving?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -829,9 +842,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000003f0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -860,14 +873,15 @@ MonoBehaviour:
         toState: Set Items
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -891,17 +905,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Show Trail End Particles
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -928,25 +942,26 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TrailEndLocation
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1118704325586536, guid: 51379bdd63624194c85a5fb581b8f137, type: 2}
+          value: {fileID: 1118704325586536, guid: 51379bdd63624194c85a5fb581b8f137,
+            type: 3}
         - useVariable: 1
           name: TrailEndLocation
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -959,14 +974,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Trail4EndLocation
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Untagged
@@ -984,9 +999,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 12000000120000001300000013000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1002,7 +1017,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000100000002000000000000000d0000001a00000003000000
         paramByteDataSize: 00000000000000000000000000000000000000000d0000000d0000000d00000000000000
     - name: Set Items
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1021,6 +1036,7 @@ MonoBehaviour:
         toState: Delay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1055,9 +1071,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43757273656453746f6e657331000000000900000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000
         paramName:
@@ -1067,7 +1083,7 @@ MonoBehaviour:
         paramDataPos: 000000000d00000011000000
         paramByteDataSize: 0d0000000400000005000000
     - name: Beach Gameplay
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1086,6 +1102,7 @@ MonoBehaviour:
         toState: Is Showing Arrow
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: PathComplete
@@ -1094,6 +1111,7 @@ MonoBehaviour:
         toState: --- BI 01 ---
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1128,9 +1146,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0054696d65725469636b00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1140,7 +1158,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000e000000
         paramByteDataSize: 050000000900000001000000
     - name: Find Objects
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1159,6 +1177,7 @@ MonoBehaviour:
         toState: Show Beach Trail
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1175,13 +1194,13 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Penguin
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1194,26 +1213,26 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Trail4
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Untagged
@@ -1230,10 +1249,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000120000001200000013000000
         paramName:
@@ -1246,7 +1265,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000020000000300000001000000
         paramByteDataSize: 000000000000000000000000000000000000000000000000
     - name: Far From Path? 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1265,6 +1284,7 @@ MonoBehaviour:
         toState: Set Waypoint 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -1273,6 +1293,7 @@ MonoBehaviour:
         toState: Clear Waypoint 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1291,19 +1312,19 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: CurrentNode
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: Penguin
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1312,7 +1333,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: CurrentNode
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1337,9 +1358,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000144697374616e636500000000000144697374616e63650000004100000000000046616c73655472756500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000001300000014000000130000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
         paramName:
@@ -1359,7 +1380,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000002000000000000000d0000000e0000001b0000002000000025000000250000002a0000002e000000
         paramByteDataSize: 000000000000000000000000000000000d000000010000000d000000050000000500000000000000050000000400000001000000
     - name: Set Waypoint 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1378,6 +1399,7 @@ MonoBehaviour:
         toState: Diving Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1392,7 +1414,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: CurrentNode
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1418,9 +1440,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 446976696e670100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -1432,7 +1454,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000600000007000000
         paramByteDataSize: 000000000000000006000000010000000d000000
     - name: Clear Waypoint 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1451,6 +1473,7 @@ MonoBehaviour:
         toState: Diving Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1484,17 +1507,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Diving Gameplay
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1513,6 +1536,7 @@ MonoBehaviour:
         toState: Far From Path? 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: PathComplete
@@ -1521,6 +1545,7 @@ MonoBehaviour:
         toState: Set FSM Bool RootXferedFromPrevObj
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1555,9 +1580,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0054696d65725469636b00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1567,7 +1592,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000e000000
         paramByteDataSize: 050000000900000001000000
     - name: Find Objects 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1586,6 +1611,7 @@ MonoBehaviour:
         toState: Show Diving Trail
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1602,13 +1628,13 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Penguin
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1621,26 +1647,26 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Trail4
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Untagged
@@ -1657,10 +1683,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000120000001200000013000000
         paramName:
@@ -1692,6 +1718,7 @@ MonoBehaviour:
         toState: Finish
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1708,8 +1735,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1721,14 +1748,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RHC001Q006CursedTrail
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootXferedFromPrevObj
@@ -1746,9 +1773,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -1779,6 +1806,7 @@ MonoBehaviour:
         toState: Set Finished Beach Trail
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1788,7 +1816,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1813,11 +1841,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 7175657374526f636b686f7070657230317c3036466f6c6c6f772d7468652d747261696c3034676f742d746f2d656e642d6f662d747261696c343031
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -1831,11 +1859,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000050000000f0000001400000024000000260000003a0000003c0000003c0000003c0000003c0000003c0000003c000000
-        paramByteDataSize: 050000000a0000000500000010000000020000001400000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000050000000f0000001400000024000000260000003a0000003c0000003c0000003c0000003c0000003c000000
+        paramByteDataSize: 050000000a00000005000000100000000200000014000000020000000000000000000000000000000000000000000000
     - name: Far From Path? 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1854,6 +1881,7 @@ MonoBehaviour:
         toState: Set Waypoint 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -1862,6 +1890,7 @@ MonoBehaviour:
         toState: Clear Waypoint 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1880,19 +1909,19 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: QuestPath
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: CurrentNode
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: Penguin
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1901,7 +1930,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: CurrentNode
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1926,9 +1955,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000144697374616e636500000000000144697374616e636500000000014172726f7744697374616e6365000000000046616c73655472756500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000001300000014000000130000000f000000010000000f0000000f0000000f00000017000000170000001700000001000000
         paramName:
@@ -1948,7 +1977,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000002000000000000000d0000000e0000001b0000002d0000003200000032000000370000003b000000
         paramByteDataSize: 000000000000000000000000000000000d000000010000000d000000120000000500000000000000050000000400000001000000
     - name: Set Waypoint 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1967,6 +1996,7 @@ MonoBehaviour:
         toState: Beach Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1983,7 +2013,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: CurrentNode
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2009,9 +2039,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 426f61726477616c6b01000000000000a0bf0000000000000153686f77696e674172726f77010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000110000001100000001000000
         paramName:
@@ -2026,7 +2056,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000090000000a000000170000002500000027000000
         paramByteDataSize: 000000000000000009000000010000000d0000000e0000000200000001000000
     - name: Clear Waypoint 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2045,6 +2075,7 @@ MonoBehaviour:
         toState: Beach Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2081,9 +2112,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000153686f77696e674172726f77000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 110000001100000001000000
         paramName:
@@ -2093,7 +2124,7 @@ MonoBehaviour:
         paramDataPos: 000000000e00000010000000
         paramByteDataSize: 0e0000000200000001000000
     - name: Is Showing Arrow
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2112,6 +2143,7 @@ MonoBehaviour:
         toState: Set Dist Close
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -2120,6 +2152,7 @@ MonoBehaviour:
         toState: Set Dist Far
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2154,9 +2187,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000153686f77696e674172726f775472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 11000000170000001700000001000000
         paramName:
@@ -2167,7 +2200,7 @@ MonoBehaviour:
         paramDataPos: 000000000e0000001200000017000000
         paramByteDataSize: 0e000000040000000500000001000000
     - name: Set Dist Close
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2186,6 +2219,7 @@ MonoBehaviour:
         toState: Far From Path? 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2220,9 +2254,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000014172726f7744697374616e63650000e0400000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000000f00000001000000
         paramName:
@@ -2232,7 +2266,7 @@ MonoBehaviour:
         paramDataPos: 000000001200000017000000
         paramByteDataSize: 120000000500000001000000
     - name: Set Dist Far
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2251,6 +2285,7 @@ MonoBehaviour:
         toState: Far From Path? 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2285,9 +2320,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000014172726f7744697374616e6365000030410000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000000f00000001000000
         paramName:
@@ -2329,13 +2364,13 @@ MonoBehaviour:
       floatVariables:
       - useVariable: 1
         name: ArrowDistance
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: Distance
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
@@ -2343,19 +2378,19 @@ MonoBehaviour:
       boolVariables:
       - useVariable: 1
         name: RefRootCutsceneTabletRishingAlreadyPlayed
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootFinishedBeachPath
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: ShowingArrow
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
@@ -2368,73 +2403,73 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: BeachExitTrigger
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: CurrentNode
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Penguin
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Player
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: PlayerWalkPosition
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: PuzzleTrigger
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: QuestPath
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TabletPuzzle
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TabletPuzzleLocation
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Trail4
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TrailEndLocation
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TreasureX
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -2445,23 +2480,26 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs:
-    description:
-    docUrl:
+      variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    description: 
+    docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -2482,6 +2520,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

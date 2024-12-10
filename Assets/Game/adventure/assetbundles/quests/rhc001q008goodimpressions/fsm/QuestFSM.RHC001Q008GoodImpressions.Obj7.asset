@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: QuestFSM.RHC001Q008GoodImpressions.Obj7
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: Quest
   fsm:
     dataVersion: 1
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: Start
     states:
     - name: Start
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -38,14 +39,15 @@ MonoBehaviour:
         toState: FORCE GIVE ITEM 3 Impressed Sails
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -69,17 +71,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Set Waypoint Rockhopper
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -98,6 +100,7 @@ MonoBehaviour:
         toState: Gameplay Talk to Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -111,8 +114,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -138,9 +141,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572426f61726477616c6b0100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -152,7 +155,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000a0000001300000014000000
         paramByteDataSize: 0a0000000000000009000000010000000d000000
     - name: Gameplay Talk to Aunt Arctic
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -171,6 +174,7 @@ MonoBehaviour:
         toState: '--- BI 01 --- '
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: TriggerPuzzle1Inspection
@@ -179,6 +183,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: TriggerPuzzle2Inspection
@@ -187,6 +192,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: TriggerPuzzle3Inspection
@@ -195,6 +201,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 9
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -204,12 +211,12 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: db18ce01
+        actionHashCodes: cd3da903
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -234,12 +241,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 526f636b686f707065720000000000000000
-        arrayParamSizes:
+        byteData: 526f636b686f70706572000000000000000100
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000010000000100000001000000010000000100000001000000010000000100000013000000
+        paramDataType: 0300000001000000010000000100000001000000010000000100000001000000010000000100000013000000
         paramName:
         - MascotName
         - ZoomIn
@@ -249,12 +256,13 @@ MonoBehaviour:
         - ShowIndicator
         - SuppressQuestNotifier
         - RestoreQuestNotifier
+        - MoveToTalkSpot
         - OverrideInteracteeTxform
         - DesiredInteracteeTxform
-        paramDataPos: 000000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000000000000
-        paramByteDataSize: 0a000000010000000100000001000000010000000100000001000000010000000100000000000000
+        paramDataPos: 000000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001200000000000000
+        paramByteDataSize: 0a00000001000000010000000100000001000000010000000100000001000000010000000100000000000000
     - name: Clear Waypoint Rockhopper
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -273,6 +281,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -306,17 +315,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: ReturnControls 2
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -335,6 +344,7 @@ MonoBehaviour:
         toState: UnsuppressQuestNotifier 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -369,9 +379,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000000400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -382,7 +392,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: UnsuppressQuestNotifier 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -401,6 +411,7 @@ MonoBehaviour:
         toState: '--- BI 02 --- '
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -422,11 +433,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -441,9 +452,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -453,7 +464,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: CameraLookAtRockhopper
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -472,6 +483,7 @@ MonoBehaviour:
         toState: Hide Remote Players
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -484,16 +496,16 @@ MonoBehaviour:
         - 
         actionEnabled: 000100
         actionIsOpen: 010101
-        actionStartIndex: 00000000070000000e000000
-        actionHashCodes: 645a6203645a620305174b05
+        actionStartIndex: 000000000900000012000000
+        actionHashCodes: e4375e05e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -517,12 +529,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 526f636b686f707065722f43616d657261526f636b686f7070657200000000000000000000000000000000000000000000000000000000005248433030315130303843616d657261456e64506f736974696f6e52485248433030315130303843616d657261456e6454617267657452480000000000000000000000000000000000000000000000000000000000526f636b686f70706572
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 526f636b686f707065722f43616d657261526f636b686f707065720000000000000000000000000000000000000000000000000000000000005248433030315130303843616d657261456e64506f736974696f6e52485248433030315130303843616d657261456e645461726765745248000000000000000000000000000000000000000000000000000000000000526f636b686f70706572
+        arrayParamSizes: 000000000000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c00000001000000010000000100000003000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -531,6 +546,8 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - ControllerName
         - TargetName
         - StoreOriginalCameraPosition
@@ -538,12 +555,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 00000000110000001b000000280000003500000036000000370000003800000055000000700000007d0000008a0000008b0000008c0000008d00000000000000
-        paramByteDataSize: 110000000a0000000d0000000d0000000100000001000000010000001d0000001b0000000d0000000d0000000100000001000000010000000a00000000000000
+        - OverrideSettings
+        paramDataPos: 00000000110000001b0000002800000035000000360000003700000038000000000000003900000056000000710000007e0000008b0000008c0000008d0000008e000000010000008f0000000000000002000000
+        paramByteDataSize: 110000000a0000000d0000000d00000001000000010000000100000001000000000000001d0000001b0000000d0000000d00000001000000010000000100000001000000000000000a0000000000000000000000
     - name: RemoveControls 2
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -562,6 +582,7 @@ MonoBehaviour:
         toState: CameraLookAtRockhopper
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -596,9 +617,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -609,7 +630,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: SuppressQuestNotifier 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -628,6 +649,7 @@ MonoBehaviour:
         toState: RemoveControls 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -649,11 +671,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -668,9 +690,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -680,7 +702,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Finish
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -724,15 +746,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Rockhopper Dialog 6
       description: Right then. What do we got here?
       colorIndex: 2
@@ -753,6 +775,7 @@ MonoBehaviour:
         toState: Camera look at sail placement
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -777,23 +800,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RH/RHC001Q008/Obj7/1-5
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -808,7 +831,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e52484330303151303038476f6f64496d7072657373696f6e732e4f626a3746534d2e526f636b686f70706572204469616c6f6720362e6931386e436f6e74656e747300000000000001000000000000000000000000000000000000000000000000526f636b686f707065720101000101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -851,7 +874,7 @@ MonoBehaviour:
         paramDataPos: 000000000a0000006e000000bb00000000000000bc000000c0000000c1000000c1000000c2000000c6000000ca000000cb000000cc000000d0000000d4000000d500000000000000d5000000d5000000d5000000d9000000da000000da000000e4000000e4000000e500000000000000e6000000e700000001000000e800000002000000
         paramByteDataSize: 0a000000640000004d00000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a000000000000000100000001000000000000000100000001000000000000000100000000000000
     - name: Camera Inspect Puzzle1 Solution
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -870,6 +893,7 @@ MonoBehaviour:
         toState: Show P1 Solution PopUp 2  +++ Audio +++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -879,7 +903,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 645a6203
+        actionHashCodes: e4375e05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -903,12 +927,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637431506f736974696f6e5248433030315130303743616d496e7370656374315461726765740000000000000000000000000000000000000000000000000000000000
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637431506f736974696f6e5248433030315130303743616d496e737065637431546172676574000000000000000000000000000000000000000000000000000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c000000010000000100000001000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -917,10 +942,12 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
-        paramDataPos: 000000001d0000003800000045000000520000005300000054000000
-        paramByteDataSize: 1d0000001b0000000d0000000d000000010000000100000001000000
+        - ForceCutTransition
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000
     - name: RESET Camera Inspect Puzzle1 Solution
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -939,6 +966,7 @@ MonoBehaviour:
         toState: ReturnControls 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -949,16 +977,16 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 645a620305174b05
+        actionStartIndex: 0000000009000000
+        actionHashCodes: e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -982,12 +1010,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637431506f736974696f6e5248433030315130303743616d496e737065637431546172676574000000000000000000000000000000000000000000000000000000000150656e6775696e
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637431506f736974696f6e5248433030315130303743616d496e73706563743154617267657400000000000000000000000000000000000000000000000000000000010050656e6775696e
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -996,12 +1026,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
-        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000700000000000000
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000560000000000000001000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000070000000000000000000000
     - name: Show P1 Solution PopUp 2  +++ Audio +++
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1020,6 +1053,7 @@ MonoBehaviour:
         toState: RESET Camera Inspect Puzzle1 Solution
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1035,8 +1069,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1049,8 +1083,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SFX/UI/Item/WhooshIn
@@ -1068,7 +1102,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 507265666162732f506f707570732f496d616765506f7075705175657374732f436c6f736555705f50696c6c617250757a7a6c6531536f6c7574696f6e00000000000020c10000803f0000803f003030303030304173736574732f47616d652f4755492f5265736f75726365732f466f6e74732f50726f78696d614e6f76612d53656d69626f6c642e6f746624000000000000000000c842000048c3000101010000000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -1099,7 +1133,7 @@ MonoBehaviour:
         paramDataPos: 00000000190000003d000000450000004d0000004e0000004e000000000000004e000000540000008c00000090000000940000009c0000009d0000009e0000009f000000a00000000000000000000000a4000000
         paramByteDataSize: 190000002400000008000000080000000100000000000000000000000000000006000000380000000400000004000000080000000100000001000000010000000100000004000000000000000000000004000000
     - name: RemoveControls 3
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -1118,6 +1152,7 @@ MonoBehaviour:
         toState: Locomote to Inspect P1 Solution
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1152,9 +1187,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -1165,7 +1200,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: SuppressQuestNotifier 3
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1184,6 +1219,7 @@ MonoBehaviour:
         toState: RemoveControls 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1205,11 +1241,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1224,9 +1260,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -1236,7 +1272,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: ReturnControls 4
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -1255,6 +1291,7 @@ MonoBehaviour:
         toState: UnsuppressQuestNotifier 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1289,9 +1326,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000000400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -1302,7 +1339,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: UnsuppressQuestNotifier 4
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1321,6 +1358,7 @@ MonoBehaviour:
         toState: Gameplay Talk to Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1342,11 +1380,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1361,9 +1399,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -1373,7 +1411,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Locomote to Inspect P1 Solution
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1392,6 +1430,7 @@ MonoBehaviour:
         toState: Camera Inspect Puzzle1 Solution
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1406,16 +1445,17 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1033803721894151, guid: 1c099c1d58fd93949ba7dfd1066660ca, type: 2}
+          value: {fileID: 1033803721894151, guid: 1c099c1d58fd93949ba7dfd1066660ca,
+            type: 3}
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -1438,9 +1478,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000009a99193e000000804001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1300000013000000070000000f0000000200000001000000
         paramName:
@@ -1453,7 +1493,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000004000000090000000d000000
         paramByteDataSize: 000000000000000004000000050000000400000001000000
     - name: Camera Inspect Puzzle1 Solution 2
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -1472,6 +1512,7 @@ MonoBehaviour:
         toState: Show P1 Solution PopUp 4 +++ Audio +++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1481,7 +1522,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 645a6203
+        actionHashCodes: e4375e05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -1505,12 +1546,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637432506f736974696f6e5248433030315130303743616d496e7370656374325461726765740000000000000000000000000000000000000000000000000000000000
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637432506f736974696f6e5248433030315130303743616d496e737065637432546172676574000000000000000000000000000000000000000000000000000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c000000010000000100000001000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -1519,10 +1561,12 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
-        paramDataPos: 000000001d0000003800000045000000520000005300000054000000
-        paramByteDataSize: 1d0000001b0000000d0000000d000000010000000100000001000000
+        - ForceCutTransition
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000
     - name: RESET Camera Inspect Puzzle1 Solution 2
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -1541,6 +1585,7 @@ MonoBehaviour:
         toState: ReturnControls 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1551,16 +1596,16 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 645a620305174b05
+        actionStartIndex: 0000000009000000
+        actionHashCodes: e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1584,12 +1629,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637432506f736974696f6e5248433030315130303743616d496e737065637432546172676574000000000000000000000000000000000000000000000000000000000150656e6775696e
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637432506f736974696f6e5248433030315130303743616d496e73706563743254617267657400000000000000000000000000000000000000000000000000000000010050656e6775696e
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -1598,12 +1645,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
-        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000700000000000000
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000560000000000000001000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000070000000000000000000000
     - name: Show P1 Solution PopUp 4 +++ Audio +++
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -1622,6 +1672,7 @@ MonoBehaviour:
         toState: RESET Camera Inspect Puzzle1 Solution 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1637,8 +1688,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1651,8 +1702,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SFX/UI/Item/WhooshIn
@@ -1670,7 +1721,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 507265666162732f506f707570732f496d616765506f7075705175657374732f436c6f736555705f50696c6c617250757a7a6c6532536f6c7574696f6e00000000000020c10000803f0000803f003030303030304173736574732f47616d652f4755492f5265736f75726365732f466f6e74732f50726f78696d614e6f76612d53656d69626f6c642e6f746624000000000000000000c842000048c3000101010000000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -1701,7 +1752,7 @@ MonoBehaviour:
         paramDataPos: 00000000190000003d000000450000004d0000004e0000004e000000000000004e000000540000008c00000090000000940000009c0000009d0000009e0000009f000000a00000000000000000000000a4000000
         paramByteDataSize: 190000002400000008000000080000000100000000000000000000000000000006000000380000000400000004000000080000000100000001000000010000000100000004000000000000000000000004000000
     - name: RemoveControls 6
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -1720,6 +1771,7 @@ MonoBehaviour:
         toState: Locomote to Inspect P2 Solution
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1754,9 +1806,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -1767,7 +1819,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: SuppressQuestNotifier 6
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1786,6 +1838,7 @@ MonoBehaviour:
         toState: RemoveControls 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1807,11 +1860,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1826,9 +1879,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -1838,7 +1891,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: ReturnControls 7
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -1857,6 +1910,7 @@ MonoBehaviour:
         toState: UnsuppressQuestNotifier 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1891,9 +1945,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000000400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -1904,7 +1958,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: UnsuppressQuestNotifier 7
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -1923,6 +1977,7 @@ MonoBehaviour:
         toState: Gameplay Talk to Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1944,11 +1999,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -1963,9 +2018,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -1975,7 +2030,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Locomote to Inspect P2 Solution
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -1994,6 +2049,7 @@ MonoBehaviour:
         toState: Camera Inspect Puzzle1 Solution 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2008,16 +2064,17 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1601122613049311, guid: 1c099c1d58fd93949ba7dfd1066660ca, type: 2}
+          value: {fileID: 1601122613049311, guid: 1c099c1d58fd93949ba7dfd1066660ca,
+            type: 3}
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -2040,9 +2097,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000009a99193e000000804001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1300000013000000070000000f0000000200000001000000
         paramName:
@@ -2055,7 +2112,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000004000000090000000d000000
         paramByteDataSize: 000000000000000004000000050000000400000001000000
     - name: Camera Inspect Puzzle1 Solution 3
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -2074,6 +2131,7 @@ MonoBehaviour:
         toState: Show P1 Solution PopUp 5  +++ Audio +++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2083,7 +2141,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 645a6203
+        actionHashCodes: e4375e05
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -2107,12 +2165,13 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637433506f736974696f6e5248433030315130303743616d496e7370656374335461726765740000000000000000000000000000000000000000000000000000000000
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637433506f736974696f6e5248433030315130303743616d496e737065637433546172676574000000000000000000000000000000000000000000000000000000000000
+        arrayParamSizes: 00000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c000000010000000100000001000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -2121,10 +2180,12 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
-        paramDataPos: 000000001d0000003800000045000000520000005300000054000000
-        paramByteDataSize: 1d0000001b0000000d0000000d000000010000000100000001000000
+        - ForceCutTransition
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000
     - name: RESET Camera Inspect Puzzle1 Solution 3
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -2143,6 +2204,7 @@ MonoBehaviour:
         toState: ReturnControls 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2153,16 +2215,16 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 645a620305174b05
+        actionStartIndex: 0000000009000000
+        actionHashCodes: e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2186,12 +2248,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303743616d496e737065637433506f736974696f6e5248433030315130303743616d496e737065637433546172676574000000000000000000000000000000000000000000000000000000000150656e6775696e
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303743616d496e737065637433506f736974696f6e5248433030315130303743616d496e73706563743354617267657400000000000000000000000000000000000000000000000000000000010050656e6775696e
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -2200,12 +2264,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
-        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000700000000000000
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000560000000000000001000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000070000000000000000000000
     - name: Show P1 Solution PopUp 5  +++ Audio +++
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -2224,6 +2291,7 @@ MonoBehaviour:
         toState: RESET Camera Inspect Puzzle1 Solution 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2239,8 +2307,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2253,8 +2321,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SFX/UI/Item/WhooshIn
@@ -2272,7 +2340,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 507265666162732f506f707570732f496d616765506f7075705175657374732f436c6f736555705f50696c6c617250757a7a6c6533536f6c7574696f6e00000000000020c10000803f0000803f003030303030304173736574732f47616d652f4755492f5265736f75726365732f466f6e74732f50726f78696d614e6f76612d53656d69626f6c642e6f746624000000000000000000c842000048c3000101010000000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -2303,7 +2371,7 @@ MonoBehaviour:
         paramDataPos: 00000000190000003d000000450000004d0000004e0000004e000000000000004e000000540000008c00000090000000940000009c0000009d0000009e0000009f000000a00000000000000000000000a4000000
         paramByteDataSize: 190000002400000008000000080000000100000000000000000000000000000006000000380000000400000004000000080000000100000001000000010000000100000004000000000000000000000004000000
     - name: RemoveControls 9
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -2322,6 +2390,7 @@ MonoBehaviour:
         toState: Locomote to Inspect P3 Solution 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2356,9 +2425,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -2369,7 +2438,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: SuppressQuestNotifier 9
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2388,6 +2457,7 @@ MonoBehaviour:
         toState: RemoveControls 9
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2409,11 +2479,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2428,9 +2498,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -2440,7 +2510,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: ReturnControls 10
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -2459,6 +2529,7 @@ MonoBehaviour:
         toState: UnsuppressQuestNotifier 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2493,9 +2564,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000000400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -2506,7 +2577,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: UnsuppressQuestNotifier 10
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2525,6 +2596,7 @@ MonoBehaviour:
         toState: Gameplay Talk to Aunt Arctic
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2546,11 +2618,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2565,9 +2637,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -2577,7 +2649,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Locomote to Inspect P3 Solution 2
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -2596,6 +2668,7 @@ MonoBehaviour:
         toState: Camera Inspect Puzzle1 Solution 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2610,16 +2683,17 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1668227656429756, guid: 1c099c1d58fd93949ba7dfd1066660ca, type: 2}
+          value: {fileID: 1668227656429756, guid: 1c099c1d58fd93949ba7dfd1066660ca,
+            type: 3}
         fsmOwnerDefaultParams: []
         animationCurveParams: []
         functionCallParams: []
@@ -2642,9 +2716,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000009a99193e000000804001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1300000013000000070000000f0000000200000001000000
         paramName:
@@ -2657,7 +2731,7 @@ MonoBehaviour:
         paramDataPos: 00000000010000000000000004000000090000000d000000
         paramByteDataSize: 000000000000000004000000050000000400000001000000
     - name: Get LocalPlayer
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -2676,6 +2750,7 @@ MonoBehaviour:
         toState: Is Player in the Boardwalk Scene?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2690,7 +2765,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2703,14 +2778,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Penguin
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
@@ -2727,10 +2802,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000
         paramName:
@@ -2740,7 +2815,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000000000000
     - name: RH I Tween Look To Sails
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -2759,6 +2834,7 @@ MonoBehaviour:
         toState: Player I Tween Look To Sails
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2772,17 +2848,18 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10, type: 2}
+          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10,
+            type: 3}
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
             useVariable: 1
             name: Rockhopper
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2794,11 +2871,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2813,9 +2890,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000003f0000000000000000000001020000000000000002000000000001000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000130000001c0000000f0000000f0000000f0000000700000007000000070000001700000017000000110000001100000011000000
         paramName:
@@ -2837,7 +2914,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000000000000d00000012000000170000001c00000020000000240000002800000028000000280000002a0000002c000000
         paramByteDataSize: 0000000000000000000000000d0000000500000005000000050000000400000004000000040000000000000000000000020000000200000002000000
     - name: Find Rockhopper
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2856,6 +2933,7 @@ MonoBehaviour:
         toState: Get RockhopperRotationDefault
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2870,7 +2948,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Rockhopper
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2883,14 +2961,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Rockhopper
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: NPC
@@ -2907,10 +2985,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000
         paramName:
@@ -2920,7 +2998,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000000000000
     - name: Get RockhopperRotationDefault
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2939,6 +3017,7 @@ MonoBehaviour:
         toState: wait before laying out sails
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2956,7 +3035,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: Rockhopper
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2981,9 +3060,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000000000000100000000000000000000000001526f636b686f70706572526f746174696f6e44656661756c740000000001000000000100000000010000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000230000001c0000000f0000000f0000000f0000000700000001000000
         paramName:
@@ -2998,7 +3077,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000011000000370000003c00000041000000460000004a000000
         paramByteDataSize: 0000000011000000260000000500000005000000050000000400000001000000
     - name: wait for sails to appear
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3017,6 +3096,7 @@ MonoBehaviour:
         toState: Rockhopper Dialog 10
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3051,9 +3131,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -3082,6 +3162,7 @@ MonoBehaviour:
         toState: wait 3Sec 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3106,23 +3187,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RH/RHC001Q008/Obj7/1-5
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3137,7 +3218,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e52484330303151303038476f6f64496d7072657373696f6e732e4f626a3746534d2e526f636b686f70706572204469616c6f6720372e6931386e436f6e74656e747300000000000000030000000000000001000000403f00000000010000000000526f636b686f707065720100010101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -3180,7 +3261,7 @@ MonoBehaviour:
         paramDataPos: 000000000a0000006e000000bb00000000000000bc000000c0000000c1000000c1000000c2000000c6000000ca000000cb000000cc000000d0000000d4000000d500000000000000d5000000d5000000d5000000d9000000da000000da000000e4000000e4000000e500000000000000e6000000e700000001000000e800000002000000
         paramByteDataSize: 0a000000640000004d00000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a000000000000000100000001000000000000000100000001000000000000000100000000000000
     - name: RH I Tween Look To Default Spot
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -3199,6 +3280,7 @@ MonoBehaviour:
         toState: Player I Tween Look To Default Spot 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3212,8 +3294,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3222,7 +3304,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: Rockhopper
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -3234,11 +3316,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3253,9 +3335,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000000000001526f636b686f70706572526f746174696f6e44656661756c74cdcc4c3e0000000000000000000001020000000000000000000000000001000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000130000001c0000000f0000000f0000000f0000000700000007000000070000001700000017000000110000001100000011000000
         paramName:
@@ -3277,7 +3359,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000000000000260000002b0000003000000035000000390000003d0000004100000041000000410000004300000045000000
         paramByteDataSize: 000000000000000000000000260000000500000005000000050000000400000004000000040000000000000000000000020000000200000002000000
     - name: Is Player in the Boardwalk Scene?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -3296,6 +3378,7 @@ MonoBehaviour:
         toState: Spawn 3InkedSails
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -3304,6 +3387,7 @@ MonoBehaviour:
         toState: Set Waypoint to Boardwalk
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3338,9 +3422,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 426f61726477616c6b5472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001700000017000000
         paramName:
@@ -3350,7 +3434,7 @@ MonoBehaviour:
         paramDataPos: 00000000090000000d000000
         paramByteDataSize: 090000000400000005000000
     - name: Set Waypoint to Boardwalk
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3374,8 +3458,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3401,9 +3485,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 426f61726477616c6b0100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -3415,7 +3499,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000090000000a000000
         paramByteDataSize: 000000000000000009000000010000000d000000
     - name: Spawn 3InkedSails
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3434,6 +3518,7 @@ MonoBehaviour:
         toState: Set Waypoint Rockhopper
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3447,20 +3532,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1808400288952790, guid: 103b7df49a6b5864bbc9ab56e5f4c04d, type: 2}
+          value: {fileID: 1808400288952790, guid: 103b7df49a6b5864bbc9ab56e5f4c04d,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10, type: 2}
+          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10,
+            type: 3}
         - useVariable: 1
           name: 3InkedSails
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3486,9 +3573,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -3501,7 +3588,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Animate 3InkedSails Appearing
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3520,6 +3607,7 @@ MonoBehaviour:
         toState: wait for sails to appear
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3534,7 +3622,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: 3InkedSails
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3547,8 +3635,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Appearing
@@ -3566,9 +3654,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -3578,7 +3666,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Animate 3InkedSails GoingAway
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3597,6 +3685,7 @@ MonoBehaviour:
         toState: wait before Rockhopper turns.
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3611,7 +3700,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: 3InkedSails
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3624,8 +3713,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: GoingAway
@@ -3643,9 +3732,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -3655,7 +3744,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: wait for camera pan
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -3674,6 +3763,7 @@ MonoBehaviour:
         toState: Rockhopper Dialog 8
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3708,9 +3798,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 3333333f0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -3739,6 +3829,7 @@ MonoBehaviour:
         toState: Rockhopper Dialog 9
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3763,23 +3854,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RH/RHC001Q008/Obj7/1-5
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3794,7 +3885,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e52484330303151303038476f6f64496d7072657373696f6e732e4f626a3746534d2e526f636b686f70706572204469616c6f6720382e6931386e436f6e74656e747300000000000001000000000000000000000000000000000000000000000000526f636b686f707065720101010101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -3837,7 +3928,8 @@ MonoBehaviour:
         paramDataPos: 000000000a0000006e000000bb00000000000000bc000000c0000000c1000000c1000000c2000000c6000000ca000000cb000000cc000000d0000000d4000000d500000000000000d5000000d5000000d5000000d9000000da000000da000000e4000000e4000000e500000000000000e6000000e700000001000000e800000002000000
         paramByteDataSize: 0a000000640000004d00000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a000000000000000100000001000000000000000100000001000000000000000100000000000000
     - name: Rockhopper Dialog 9
-      description: Hold fast, matey. We'll find our way to the Penglantian Treasures yet!
+      description: Hold fast, matey. We'll find our way to the Penglantian Treasures
+        yet!
       colorIndex: 2
       position:
         serializedVersion: 2
@@ -3856,6 +3948,7 @@ MonoBehaviour:
         toState: RESET CameraLookAtRockhopper 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3880,23 +3973,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RH/RHC001Q008/Obj7/1-5
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3911,7 +4004,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e52484330303151303038476f6f64496d7072657373696f6e732e4f626a3746534d2e526f636b686f70706572204469616c6f6720392e6931386e436f6e74656e747300000000000001000000000000000000000000000000000000000000000000526f636b686f707065720101010101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -3954,7 +4047,7 @@ MonoBehaviour:
         paramDataPos: 000000000a0000006e000000bb00000000000000bc000000c0000000c1000000c1000000c2000000c6000000ca000000cb000000cc000000d0000000d4000000d500000000000000d5000000d5000000d5000000d9000000da000000da000000e4000000e4000000e500000000000000e6000000e700000001000000e800000002000000
         paramByteDataSize: 0a000000640000004d00000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a000000000000000100000001000000000000000100000001000000000000000100000000000000
     - name: Camera look at sail placement
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -3973,6 +4066,7 @@ MonoBehaviour:
         toState: Find Rockhopper
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3985,13 +4079,13 @@ MonoBehaviour:
         - 
         actionEnabled: 010001
         actionIsOpen: 010101
-        actionStartIndex: 000000000700000009000000
-        actionHashCodes: 645a620305174b05786b3902
+        actionStartIndex: 00000000090000000c000000
+        actionHashCodes: e4375e0584d7ee04786b3902
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3999,8 +4093,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4012,14 +4106,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: MUS/Quest/Rockhopper/C001Q008
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RockhopperQuestEnd
@@ -4036,12 +4130,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303843616d657261456e64506f736974696f6e5361696c735248433030315130303843616d657261456e645461726765745361696c7300000000000000000000000000000000000000000000000000000000005248433030315130303843616d657261456e645461726765745361696c73
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303843616d657261456e64506f736974696f6e5361696c735248433030315130303843616d657261456e645461726765745361696c730000000000000000000000000000000000000000000000000000000000005248433030315130303843616d657261456e645461726765745361696c73
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000120000001200000013000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000120000001200000013000000
         paramName:
         - ControllerName
         - TargetName
@@ -4050,15 +4146,18 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
+        - OverrideSettings
         - EventName
         - SwitchTo
         - TheObject
-        paramDataPos: 00000000200000003e0000004b00000058000000590000005a0000005b00000000000000000000000100000000000000
-        paramByteDataSize: 200000001e0000000d0000000d0000000100000001000000010000001e00000000000000000000000000000000000000
+        paramDataPos: 00000000200000003e0000004b00000058000000590000005a0000005b000000000000005c0000000000000001000000000000000100000000000000
+        paramByteDataSize: 200000001e0000000d0000000d00000001000000010000000100000001000000000000001e0000000000000000000000000000000000000000000000
     - name: RESET Camera look at sail placement
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -4077,6 +4176,7 @@ MonoBehaviour:
         toState: wait for camera pan
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4087,16 +4187,16 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 645a620305174b05
+        actionStartIndex: 0000000009000000
+        actionHashCodes: e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4120,12 +4220,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303843616d657261456e64506f736974696f6e5361696c735248433030315130303843616d657261456e645461726765745361696c7300000000000000000000000000000000000000000000000000000000015248433030315130303843616d657261456e645461726765745248
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303843616d657261456e64506f736974696f6e5361696c735248433030315130303843616d657261456e645461726765745361696c730000000000000000000000000000000000000000000000000000000001005248433030315130303843616d657261456e645461726765745248
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -4134,12 +4236,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 00000000200000003e0000004b00000058000000590000005a0000005b00000000000000
-        paramByteDataSize: 200000001e0000000d0000000d0000000100000001000000010000001b00000000000000
+        - OverrideSettings
+        paramDataPos: 00000000200000003e0000004b00000058000000590000005a0000005b000000000000005c0000000000000001000000
+        paramByteDataSize: 200000001e0000000d0000000d00000001000000010000000100000001000000000000001b0000000000000000000000
     - name: RESET CameraLookAtRockhopper 2
-      description:
+      description: 
       colorIndex: 7
       position:
         serializedVersion: 2
@@ -4158,6 +4263,7 @@ MonoBehaviour:
         toState: Show Remote Players
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4168,16 +4274,16 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000007000000
-        actionHashCodes: 645a620305174b05
+        actionStartIndex: 0000000009000000
+        actionHashCodes: e4375e0584d7ee04
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4201,12 +4307,14 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 5248433030315130303843616d657261456e64506f736974696f6e52485248433030315130303843616d657261456e645461726765745248000000000000000000000000000000000000000000000000000000000150656e6775696e
-        arrayParamSizes:
-        arrayParamTypes: []
-        customTypeSizes:
+        byteData: 5248433030315130303843616d657261456e64506f736974696f6e52485248433030315130303843616d657261456e64546172676574524800000000000000000000000000000000000000000000000000000000010050656e6775696e
+        arrayParamSizes: 0000000000000000
+        arrayParamTypes:
+        - ClubPenguin.Cinematography.ChangeCameraActionSettings
+        - ClubPenguin.Cinematography.ChangeCameraTargetActionSettings
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000001c0000001c0000000100000001000000010000000300000014000000
+        paramDataType: 03000000030000001c0000001c000000010000000100000001000000010000000c00000003000000140000000c000000
         paramName:
         - ControllerName
         - TargetName
@@ -4215,12 +4323,15 @@ MonoBehaviour:
         - PreserveCameraPriority
         - WaitForCameraToComplete
         - ResetOnExit
+        - ForceCutTransition
+        - OverrideSettings
         - TargetName
         - TargetGameObject
-        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000
-        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000700000000000000
+        - OverrideSettings
+        paramDataPos: 000000001d00000038000000450000005200000053000000540000005500000000000000560000000000000001000000
+        paramByteDataSize: 1d0000001b0000000d0000000d0000000100000001000000010000000100000000000000070000000000000000000000
     - name: wait before sails to go away
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4239,6 +4350,7 @@ MonoBehaviour:
         toState: Animate 3InkedSails GoingAway
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4273,9 +4385,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -4304,6 +4416,7 @@ MonoBehaviour:
         toState: wait 3Sec 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4328,23 +4441,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RH/RHC001Q008/Obj7/1-5
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4359,7 +4472,7 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 526f636b686f70706572546865726527732061206e657720686f7420636f636f6120626c656e642061742074686520666f6f64207374616e6420616e642074686579277265206c6f6f6b696e6720666f7220736572766572732e20436f756c6420796f752068656c70206f75743f51756573742e546578742e52484330303151303038476f6f64496d7072657373696f6e732e4f626a3746534d2e526f636b686f70706572204469616c6f672031302e6931386e436f6e74656e747300000000000000030000000000000001000000403f00000000010000000000526f636b686f707065720100010101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
         customTypeSizes: 03000000
         customTypeNames:
@@ -4402,7 +4515,7 @@ MonoBehaviour:
         paramDataPos: 000000000a0000006e000000bc00000000000000bd000000c1000000c2000000c2000000c3000000c7000000cb000000cc000000cd000000d1000000d5000000d600000000000000d6000000d6000000d6000000da000000db000000db000000e5000000e5000000e600000000000000e7000000e800000001000000e900000002000000
         paramByteDataSize: 0a000000640000004e00000001000000000000000400000001000000000000000100000004000000040000000100000001000000040000000400000001000000000000000000000000000000000000000400000001000000000000000a000000000000000100000001000000000000000100000001000000000000000100000000000000
     - name: wait before laying out sails
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4421,6 +4534,7 @@ MonoBehaviour:
         toState: RH I Tween Look To Sails
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4455,9 +4569,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcc4c3e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -4467,7 +4581,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: wait before laying out sails 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4486,6 +4600,7 @@ MonoBehaviour:
         toState: Animate 3InkedSails Appearing
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4520,9 +4635,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 9a99993e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -4532,7 +4647,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: Player I Tween Look To Sails
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -4551,6 +4666,7 @@ MonoBehaviour:
         toState: wait before laying out sails 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4564,17 +4680,18 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10, type: 2}
+          value: {fileID: 1643222798559424, guid: 869dbba1401aa2c4083c26ec0226bd10,
+            type: 3}
         fsmOwnerDefaultParams:
         - ownerOption: 1
           gameObject:
             useVariable: 1
             name: LocalPlayer
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4586,11 +4703,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4605,9 +4722,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000003f0000000000000000000001020000000000000002000000000001000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000130000001c0000000f0000000f0000000f0000000700000007000000070000001700000017000000110000001100000011000000
         paramName:
@@ -4629,7 +4746,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000000000000d00000012000000170000001c00000020000000240000002800000028000000280000002a0000002c000000
         paramByteDataSize: 0000000000000000000000000d0000000500000005000000050000000400000004000000040000000000000000000000020000000200000002000000
     - name: Player I Tween Look To Default Spot 2
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -4648,6 +4765,7 @@ MonoBehaviour:
         toState: RESET Camera look at sail placement
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4662,7 +4780,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Rockhopper
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4671,7 +4789,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: LocalPlayer
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4683,11 +4801,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -4702,9 +4820,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000003f0000000000000000000001020000000000000002000000000001000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000130000001c0000000f0000000f0000000f0000000700000007000000070000001700000017000000110000001100000011000000
         paramName:
@@ -4726,7 +4844,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000000000000d00000012000000170000001c00000020000000240000002800000028000000280000002a0000002c000000
         paramByteDataSize: 0000000000000000000000000d0000000500000005000000050000000400000004000000040000000000000000000000020000000200000002000000
     - name: wait before Rockhopper turns.
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4745,6 +4863,7 @@ MonoBehaviour:
         toState: RH I Tween Look To Default Spot
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4779,9 +4898,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcccc3e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -4791,7 +4910,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: FORCE GIVE ITEM 3 Impressed Sails
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4810,6 +4929,7 @@ MonoBehaviour:
         toState: Get LocalPlayer
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4848,9 +4968,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 5361696c73496e6b6564310200000000000000005361696c73496e6b6564320200000000000000005361696c73496e6b656433020000000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000030000000700000010000000030000000700000010000000
         paramName:
@@ -4866,7 +4986,7 @@ MonoBehaviour:
         paramDataPos: 000000000b0000000f000000140000001f00000023000000280000003300000037000000
         paramByteDataSize: 0b00000004000000050000000b00000004000000050000000b0000000400000005000000
     - name: Hide Remote Players
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4885,6 +5005,7 @@ MonoBehaviour:
         toState: Rockhopper Dialog 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4918,17 +5039,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Show Remote Players
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4947,6 +5068,7 @@ MonoBehaviour:
         toState: Wait 0.4Sec ++Audio++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4980,17 +5102,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: wait 3Sec 1
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5009,6 +5131,7 @@ MonoBehaviour:
         toState: Rockhopper Dialog 7
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5043,9 +5166,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000040400046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5055,7 +5178,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: wait 3Sec 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5074,6 +5197,7 @@ MonoBehaviour:
         toState: wait before sails to go away
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5108,9 +5232,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000040400046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5139,6 +5263,7 @@ MonoBehaviour:
         toState: Clear Waypoint Rockhopper
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5148,7 +5273,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -5173,11 +5298,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 717565737454616c6b5f746f5f526f636b686f7070657230317c30384d616b652d676f6f642d696d7072657373696f6e73303774616c6b65642d746f2d526f636b686f707065723031
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -5191,9 +5316,8 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 0000000005000000170000001c000000310000003300000047000000490000004900000049000000490000004900000049000000
-        paramByteDataSize: 05000000120000000500000015000000020000001400000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000005000000170000001c0000003100000033000000470000004900000049000000490000004900000049000000
+        paramByteDataSize: 050000001200000005000000150000000200000014000000020000000000000000000000000000000000000000000000
     - name: '--- BI 02 --- '
       description: finished_quest
       colorIndex: 4
@@ -5214,6 +5338,7 @@ MonoBehaviour:
         toState: Finish
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5223,7 +5348,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -5248,11 +5373,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 717565737454616c6b5f746f5f526f636b686f7070657230317c30384d616b652d676f6f642d696d7072657373696f6e73303766696e69736865642d71756573743032
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -5266,11 +5391,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 0000000005000000170000001c000000310000003300000041000000430000004300000043000000430000004300000043000000
-        paramByteDataSize: 05000000120000000500000015000000020000000e00000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000005000000170000001c0000003100000033000000410000004300000043000000430000004300000043000000
+        paramByteDataSize: 05000000120000000500000015000000020000000e000000020000000000000000000000000000000000000000000000
     - name: Wait 0.4Sec ++Audio++
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -5289,6 +5413,7 @@ MonoBehaviour:
         toState: ReturnControls 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5304,8 +5429,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5318,8 +5443,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: MUS/Quest/Stinger/CymbalSwellShort
@@ -5337,9 +5462,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcccc3e0046494e49534845440000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000120000001300000007000000
         paramName:
@@ -5380,7 +5505,7 @@ MonoBehaviour:
       boolVariables:
       - useVariable: 1
         name: RockhopperWantsToComment
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
@@ -5389,32 +5514,29 @@ MonoBehaviour:
       vector3Variables:
       - useVariable: 1
         name: RockhopperRotationDefault
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
-        value:
-          x: 0
-          y: 0
-          z: 0
+        value: {x: 0, y: 0, z: 0}
       colorVariables: []
       rectVariables: []
       quaternionVariables: []
       gameObjectVariables:
       - useVariable: 1
         name: 3InkedSails
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: LocalPlayer
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Rockhopper
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -5425,23 +5547,26 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs:
-    description:
-    docUrl:
+      variableCategoryIDs: 0000000000000000000000000000000000000000
+    description: 
+    docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -5462,6 +5587,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

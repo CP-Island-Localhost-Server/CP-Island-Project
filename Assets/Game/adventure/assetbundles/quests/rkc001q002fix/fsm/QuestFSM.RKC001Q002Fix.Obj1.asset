@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: QuestFSM.RKC001Q002Fix.Obj1
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: Quest
   fsm:
     dataVersion: 1
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: Start Objective
     states:
     - name: PlayerInBlizz?
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -38,6 +39,7 @@ MonoBehaviour:
         toState: Show Subtasks ++Audio++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -46,6 +48,7 @@ MonoBehaviour:
         toState: Change Obj Text
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -80,9 +83,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 4d74426c697a7a6172645472756546616c7365
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001700000017000000
         paramName:
@@ -111,14 +114,15 @@ MonoBehaviour:
         toState: Get FSM RootCollectedCheeseTotal
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -142,17 +146,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Waypoint to MtBlizz
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -176,8 +180,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -203,9 +207,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 4d74426c697a7a6172640100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -217,7 +221,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000a0000000b000000
         paramByteDataSize: 00000000000000000a000000010000000d000000
     - name: Gameplay
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -236,6 +240,7 @@ MonoBehaviour:
         toState: Clear Waypoint Hint 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: TriggerActCheese2
@@ -244,6 +249,7 @@ MonoBehaviour:
         toState: Clear Waypoint Hint 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: TriggerActCheese3
@@ -252,6 +258,7 @@ MonoBehaviour:
         toState: Clear Waypoint Hint 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: PickedUpChocolite
@@ -260,6 +267,7 @@ MonoBehaviour:
         toState: Clear Waypoint Hint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: SetWaypoint
@@ -268,6 +276,7 @@ MonoBehaviour:
         toState: Is all cheese collected? 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -302,9 +311,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a04100536574576179706f696e7400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -314,7 +323,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000010000000
         paramByteDataSize: 050000000b00000001000000
     - name: Is Cheese1 Collected?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -333,6 +342,7 @@ MonoBehaviour:
         toState: Is Cheese2 Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -341,6 +351,7 @@ MonoBehaviour:
         toState: Spawn Cheese1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -359,8 +370,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -373,13 +384,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese1
@@ -397,9 +408,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f74436f6c6c656374656443686565736531000001526566526f6f74436f6c6c6563746564436865657365315472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -415,7 +426,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000190000001a00000033000000370000003c000000
         paramByteDataSize: 000000000000000000000000190000000100000019000000040000000500000001000000
     - name: Spawn Cheese1
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -434,6 +445,7 @@ MonoBehaviour:
         toState: Animate Cheese1 Idle
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -447,20 +459,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79, type: 2}
+          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Cheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -486,9 +500,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -501,7 +515,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Animate Cheese1 Idle
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -520,6 +534,7 @@ MonoBehaviour:
         toState: Spawn TriggerActCheese01
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -534,7 +549,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -547,8 +562,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Idle
@@ -566,9 +581,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -578,7 +593,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Spawn TriggerActCheese01
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -597,6 +612,7 @@ MonoBehaviour:
         toState: Spawn Sparkles01
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -610,20 +626,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1515115696162039, guid: a38845b3063b33647b04efd6aa52ac85, type: 2}
+          value: {fileID: 1515115696162039, guid: a38845b3063b33647b04efd6aa52ac85,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: TriggerActCheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -649,9 +667,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -664,7 +682,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Spawn Sparkles01
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -683,6 +701,7 @@ MonoBehaviour:
         toState: Is Cheese2 Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -696,20 +715,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c, type: 2}
+          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1718718881811905, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Sparkles01
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -735,9 +756,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000cdcccc3e00000000000000b4c200000000000000000000000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -750,7 +771,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Is Cheese2 Collected
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -769,6 +790,7 @@ MonoBehaviour:
         toState: Is Cheese3 Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -777,6 +799,7 @@ MonoBehaviour:
         toState: Spawn Cheese2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -795,8 +818,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -809,13 +832,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese2
@@ -833,9 +856,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f74436f6c6c656374656443686565736532000001526566526f6f74436f6c6c6563746564436865657365325472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -851,7 +874,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000190000001a00000033000000370000003c000000
         paramByteDataSize: 000000000000000000000000190000000100000019000000040000000500000001000000
     - name: Spawn Cheese2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -870,6 +893,7 @@ MonoBehaviour:
         toState: Animate Cheese2 Idle
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -883,20 +907,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79, type: 2}
+          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Cheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -922,9 +948,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -937,7 +963,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Animate Cheese2 Idle
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -956,6 +982,7 @@ MonoBehaviour:
         toState: Spawn TriggerActCheese2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -970,7 +997,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -983,8 +1010,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Idle
@@ -1002,9 +1029,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1014,7 +1041,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Spawn TriggerActCheese2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1033,6 +1060,7 @@ MonoBehaviour:
         toState: Spawn Sparkles02
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1046,20 +1074,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1697206722569157, guid: 59603354492cd564f9d106afa8668c4a, type: 2}
+          value: {fileID: 1697206722569157, guid: 59603354492cd564f9d106afa8668c4a,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: TriggerActCheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1085,9 +1115,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1100,7 +1130,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Spawn Sparkles02
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1119,6 +1149,7 @@ MonoBehaviour:
         toState: Is Cheese3 Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1132,20 +1163,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c, type: 2}
+          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1998354956294388, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Sparkles02
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1171,9 +1204,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000cdcccc3e00000000000000b4c200000000000000000000000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1186,7 +1219,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Is Cheese3 Collected
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1205,6 +1238,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -1213,6 +1247,7 @@ MonoBehaviour:
         toState: Spawn Cheese3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1231,8 +1266,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1245,13 +1280,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese3
@@ -1269,9 +1304,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f74436f6c6c656374656443686565736533000001526566526f6f74436f6c6c6563746564436865657365335472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -1287,7 +1322,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000000000000190000001a00000033000000370000003c000000
         paramByteDataSize: 000000000000000000000000190000000100000019000000040000000500000001000000
     - name: Spawn Cheese3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1306,6 +1341,7 @@ MonoBehaviour:
         toState: Animate Cheese3 Idle
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1319,20 +1355,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79, type: 2}
+          value: {fileID: 1938618418183420, guid: 38c4cca307320f440b3858ef9eb6eb79,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Cheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1358,9 +1396,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1373,7 +1411,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Animate Cheese3 Idle
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1392,6 +1430,7 @@ MonoBehaviour:
         toState: Spawn TriggerActCheese3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1406,7 +1445,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1419,8 +1458,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Idle
@@ -1438,9 +1477,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1450,7 +1489,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Spawn TriggerActCheese3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1469,6 +1508,7 @@ MonoBehaviour:
         toState: Spawn Sparkles03
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1482,20 +1522,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1919932208672830, guid: d6eae9251aaf67c4fbecc2eaa80744cb, type: 2}
+          value: {fileID: 1919932208672830, guid: d6eae9251aaf67c4fbecc2eaa80744cb,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: TriggerActCheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1521,9 +1563,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 000000000000000000000000010000000000000000000000000100000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1536,7 +1578,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Spawn Sparkles03
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1555,6 +1597,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1568,20 +1611,22 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c, type: 2}
+          value: {fileID: 1678312987380856, guid: b4e7cbe2646478e44b8869851bd27c4c,
+            type: 3}
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30, type: 2}
+          value: {fileID: 1497105852978564, guid: 9bfc6322ab646774c8e7490c8d1b1f30,
+            type: 3}
         - useVariable: 1
           name: Sparkles03
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1607,9 +1652,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000cdcccc3e00000000000000b4c200000000000000000000000000000000000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000130000001c0000001c0000001c00000013000000
         paramName:
@@ -1622,7 +1667,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000d0000001a00000002000000
         paramByteDataSize: 00000000000000000d0000000d0000000d00000000000000
     - name: Destroy Trigger1
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1641,6 +1686,7 @@ MonoBehaviour:
         toState: Stop Emitting Sparkels01
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1655,7 +1701,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TriggerActCheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1681,9 +1727,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -1693,7 +1739,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: Stop Emitting Sparkels01
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1712,6 +1758,7 @@ MonoBehaviour:
         toState: Set True RootCollectedWood01
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1726,7 +1773,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Sparkles01
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1752,9 +1799,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000110000001100000001000000
         paramName:
@@ -1765,7 +1812,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000200000004000000
         paramByteDataSize: 00000000020000000200000001000000
     - name: Animate 1 Disappear
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1784,6 +1831,7 @@ MonoBehaviour:
         toState: Wait
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1798,7 +1846,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1811,8 +1859,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Disappear
@@ -1830,9 +1878,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1842,7 +1890,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Set True RootCollectedWood01
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1861,6 +1909,7 @@ MonoBehaviour:
         toState: Destroy Cheese1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1877,8 +1926,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1891,13 +1940,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese1
@@ -1915,9 +1964,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -1929,7 +1978,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Add to Cheese Collected
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -1948,6 +1997,7 @@ MonoBehaviour:
         toState: Collect Item Cheese
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1968,16 +2018,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 1
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -1990,25 +2040,25 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
@@ -2026,9 +2076,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c6563746564436865657365546f74616c000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c0100000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001200000010000000010000001000000010000000010000001400000012000000120000001000000001000000
         paramName:
@@ -2067,6 +2117,7 @@ MonoBehaviour:
         toState: Animate 1 Disappear
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2089,17 +2140,18 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Cheese drinks
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable Cheese
+          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable
+            Cheese
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -2114,9 +2166,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c03000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000012000000010000000500000000000000100000001000000011000000
         paramName:
@@ -2131,7 +2183,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000000000000100000005000000250000002a000000
         paramByteDataSize: 0000000000000000010000000000000004000000200000000500000002000000
     - name: Collect Item Cheese
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2150,6 +2202,7 @@ MonoBehaviour:
         toState: Subtask Cheese drinks
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2184,9 +2237,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43686565736520537465616d657273000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000
         paramName:
@@ -2196,7 +2249,7 @@ MonoBehaviour:
         paramDataPos: 000000000f00000013000000
         paramByteDataSize: 0f0000000400000020000000
     - name: Destroy Trigger2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2215,6 +2268,7 @@ MonoBehaviour:
         toState: Stop Emitting Sparkels02
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2229,7 +2283,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TriggerActCheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2255,9 +2309,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -2267,7 +2321,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: Stop Emitting Sparkels02
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2286,6 +2340,7 @@ MonoBehaviour:
         toState: Set True RootCollectedWood02
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2300,7 +2355,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Sparkles02
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2326,9 +2381,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000110000001100000001000000
         paramName:
@@ -2339,7 +2394,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000200000004000000
         paramByteDataSize: 00000000020000000200000001000000
     - name: Animate 2 Disappear
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2358,6 +2413,7 @@ MonoBehaviour:
         toState: Wait 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2372,7 +2428,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2385,8 +2441,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Disappear
@@ -2404,9 +2460,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -2416,7 +2472,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Set True RootCollectedWood02
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -2435,6 +2491,7 @@ MonoBehaviour:
         toState: Destroy Cheese1 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2451,8 +2508,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2465,13 +2522,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese2
@@ -2489,9 +2546,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -2503,7 +2560,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Destroy Trigger3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2522,6 +2579,7 @@ MonoBehaviour:
         toState: Stop Emitting Sparkels03
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2536,7 +2594,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: TriggerActCheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2562,9 +2620,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -2574,7 +2632,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: Stop Emitting Sparkels03
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2593,6 +2651,7 @@ MonoBehaviour:
         toState: Set True RootCollectedWood03
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2607,7 +2666,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Sparkles03
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2633,9 +2692,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 13000000110000001100000001000000
         paramName:
@@ -2646,7 +2705,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000200000004000000
         paramByteDataSize: 00000000020000000200000001000000
     - name: Animate 3 Disappear
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -2665,6 +2724,7 @@ MonoBehaviour:
         toState: Wait 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2679,7 +2739,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -2692,8 +2752,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Disappear
@@ -2711,9 +2771,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -2723,7 +2783,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Set True RootCollectedWood03
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -2742,6 +2802,7 @@ MonoBehaviour:
         toState: Destroy Cheese1 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2758,8 +2819,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -2772,13 +2833,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheese3
@@ -2796,9 +2857,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -2810,7 +2871,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: RemoveControls 5
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -2829,6 +2890,7 @@ MonoBehaviour:
         toState: --- BI 04 --- Picked-up-all-cheese-and-choklidium
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2863,9 +2925,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 020000000300000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -2876,7 +2938,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: WaitA 1.5Sec
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -2895,6 +2957,7 @@ MonoBehaviour:
         toState: SuppressQuestNotifier 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2929,9 +2992,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000803f0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -2941,7 +3004,7 @@ MonoBehaviour:
         paramDataPos: 00000000050000000d000000
         paramByteDataSize: 050000000800000001000000
     - name: SuppressQuestNotifier 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -2960,6 +3023,7 @@ MonoBehaviour:
         toState: '- Remove Subtasks -'
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2981,11 +3045,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3000,9 +3064,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -3012,7 +3076,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Collect Item WoodPiles 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3031,6 +3095,7 @@ MonoBehaviour:
         toState: Pop Up Item Choklidium
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3067,9 +3132,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43686565736520537465616d65727300000000030000000043686f6b6c696469756d000000000900000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000030000000700000010000000
         paramName:
@@ -3082,7 +3147,7 @@ MonoBehaviour:
         paramDataPos: 000000000f00000013000000180000002200000026000000
         paramByteDataSize: 0f00000004000000050000000a0000000400000005000000
     - name: SFX Collect Item ++Audio++
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3101,6 +3166,7 @@ MonoBehaviour:
         toState: WaitB 0.1Sec
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3114,8 +3180,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3128,8 +3194,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SFX/UI/Quest/Item/CollectTonalAA
@@ -3147,9 +3213,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001300000007000000
         paramName:
@@ -3159,7 +3225,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000004000000
     - name: Pop Up Item Choklidium
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -3178,6 +3244,7 @@ MonoBehaviour:
         toState: SFX Collect Item ++Audio++
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3237,7 +3304,7 @@ MonoBehaviour:
         paramDataPos: 000000000a000000280000002800000028000000280000002900000000000000000000002d00000042000000420000004200000046000000
         paramByteDataSize: 0a0000001e000000000000000000000000000000010000000400000000000000000000001500000000000000000000000400000004000000
     - name: UnsuppressQuestNotifier 3
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -3256,6 +3323,7 @@ MonoBehaviour:
         toState: ReturnControls 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3277,11 +3345,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -3296,9 +3364,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000000100000012000000
         paramName:
@@ -3308,7 +3376,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 010000000100000000000000
     - name: Finish
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3352,17 +3420,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: WaitB 0.1Sec
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -3381,6 +3449,7 @@ MonoBehaviour:
         toState: Rookie PopUp 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3415,9 +3484,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcccc3d0046494e495348454400
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -3446,6 +3515,7 @@ MonoBehaviour:
         toState: UnsuppressQuestNotifier 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3462,8 +3532,8 @@ MonoBehaviour:
         - {fileID: 0}
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -3476,26 +3546,26 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RK/RKC001Q002/Obj1/1
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: DIA/RK/RKC001Q002/Obj0/8
@@ -3513,9 +3583,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 51756573742e546578742e524b43303031513030324669782e4f626a3146534d2e526f6f6b696520506f70557020312e6931386e436f6e74656e7473000000000000526f6f6b6965060000000000000000010100010101000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000100000005000000000000000100000003000000000000000200000003000000010000000100000001000000120000000100000001000000120000000100000012000000120000001300000007000000
         paramName:
@@ -3543,7 +3613,7 @@ MonoBehaviour:
         paramDataPos: 000000003c000000000000003d0000004100000042000000480000004c00000050000000500000005100000052000000000000005300000054000000010000005500000002000000030000000000000056000000
         paramByteDataSize: 3c0000000100000000000000040000000100000006000000040000000400000000000000010000000100000001000000000000000100000001000000000000000100000000000000000000000000000004000000
     - name: '- Remove Subtasks -'
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -3562,6 +3632,7 @@ MonoBehaviour:
         toState: Collect Item WoodPiles 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3596,9 +3667,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 01000000
         paramName:
@@ -3606,7 +3677,7 @@ MonoBehaviour:
         paramDataPos: 00000000
         paramByteDataSize: 01000000
     - name: Add to Choco Collected
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3625,6 +3696,7 @@ MonoBehaviour:
         toState: Collect Item Choco
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3645,16 +3717,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 1
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -3667,25 +3739,25 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedChocTotal
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedChocTotal
@@ -3703,9 +3775,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c656374656443686f63546f74616c000000000001526566526f6f74436f6c6c656374656443686f63546f74616c0100000000000000000001526566526f6f74436f6c6c656374656443686f63546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001200000010000000010000001000000010000000010000001400000012000000120000001000000001000000
         paramName:
@@ -3725,7 +3797,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000001e0000001f0000003d000000420000000100000002000000030000004300000061000000
         paramByteDataSize: 0000000000000000000000001e000000010000001e00000005000000010000000000000000000000000000001e00000001000000
     - name: Collect Item Choco
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3744,6 +3816,7 @@ MonoBehaviour:
         toState: Subtask Choco
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3778,9 +3851,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43686f6b6c696469756d000000000000000001526566526f6f74436f6c6c656374656443686f63546f74616c
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000
         paramName:
@@ -3790,7 +3863,7 @@ MonoBehaviour:
         paramDataPos: 000000000a0000000e000000
         paramByteDataSize: 0a000000040000001e000000
     - name: Clear Waypoint Hint
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -3809,6 +3882,7 @@ MonoBehaviour:
         toState: Add to Choco Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3842,15 +3916,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Subtask Choco
       description: Choklidium
       colorIndex: 5
@@ -3871,6 +3945,7 @@ MonoBehaviour:
         toState: Is all Choco collected?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3893,14 +3968,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Choklidium
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Exchange.Collectible.Chocolite
@@ -3918,9 +3993,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000001526566526f6f74436f6c6c656374656443686f63546f74616c09000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000012000000010000000500000000000000100000001000000011000000
         paramName:
@@ -3935,7 +4010,7 @@ MonoBehaviour:
         paramDataPos: 0000000001000000000000000000000001000000050000002300000028000000
         paramByteDataSize: 00000000000000000100000000000000040000001e0000000500000002000000
     - name: Set CheeseDone
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -3954,6 +4029,7 @@ MonoBehaviour:
         toState: Are all tasks done?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -3970,8 +4046,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -3984,13 +4060,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllCheeseDone
@@ -4008,9 +4084,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -4022,7 +4098,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: SetChocoDone
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4041,6 +4117,7 @@ MonoBehaviour:
         toState: Are all tasks done?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4057,8 +4134,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4071,13 +4148,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllChocoDone
@@ -4095,9 +4172,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001100000001000000
         paramName:
@@ -4109,7 +4186,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000002000000
         paramByteDataSize: 0000000000000000000000000200000001000000
     - name: Are all tasks done?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4128,6 +4205,7 @@ MonoBehaviour:
         toState: RemoveControls 5
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: FINISHED
@@ -4136,6 +4214,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4156,16 +4235,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4178,25 +4257,25 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllChocoDone
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllCheeseDone
@@ -4217,7 +4296,7 @@ MonoBehaviour:
         arrayParamSizes: 02000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmBool
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000014000000120000001200000011000000010000000c0000001100000011000000170000001100000001000000
         paramName:
@@ -4240,7 +4319,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000015000000010000000200000003000000160000002c000000000000002d00000043000000580000005c0000005e000000
         paramByteDataSize: 00000000000000000000000015000000010000000000000000000000000000001600000001000000000000001600000015000000040000000200000001000000
     - name: Is all Choco collected?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4259,6 +4338,7 @@ MonoBehaviour:
         toState: SetChocoDone
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -4267,6 +4347,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4301,9 +4382,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c656374656443686f63546f74616c09000000005472756546616c73655472756500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 100000001000000017000000170000001700000001000000
         paramName:
@@ -4316,7 +4397,7 @@ MonoBehaviour:
         paramDataPos: 000000001e00000023000000270000002c00000030000000
         paramByteDataSize: 1e0000000500000004000000050000000400000001000000
     - name: Is all cheese collected?
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4335,6 +4416,7 @@ MonoBehaviour:
         toState: Set CheeseDone
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -4343,6 +4425,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4377,9 +4460,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c6563746564436865657365546f74616c03000000005472756546616c73655472756500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 100000001000000017000000170000001700000001000000
         paramName:
@@ -4392,7 +4475,7 @@ MonoBehaviour:
         paramDataPos: 000000002000000025000000290000002e00000032000000
         paramByteDataSize: 200000000500000004000000050000000400000001000000
     - name: Show Subtasks ++Audio++
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -4411,6 +4494,7 @@ MonoBehaviour:
         toState: Is Cheese1 Collected?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4430,8 +4514,8 @@ MonoBehaviour:
         - {fileID: 0}
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4444,32 +4528,33 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Choklidium
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Exchange.Collectible.Chocolite
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Cheese drinks
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable Cheese
+          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable
+            Cheese
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: SFX/UI/Collectable/ClusterShakePitchDown
@@ -4487,9 +4572,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000001526566526f6f74436f6c6c656374656443686f63546f74616c0900000000000100000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c0300000000000100000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 12000000120000000100000005000000000000001000000010000000110000001200000012000000010000000500000000000000100000001000000011000000120000001300000007000000
         paramName:
@@ -4515,7 +4600,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000000000000100000005000000230000002800000002000000030000002a000000010000002b0000002f0000004f00000054000000040000000000000056000000
         paramByteDataSize: 00000000000000000100000000000000040000001e00000005000000020000000000000000000000010000000000000004000000200000000500000002000000000000000000000004000000
     - name: Find Closest Choco
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4534,6 +4619,7 @@ MonoBehaviour:
         toState: Is PickUpWaypoint there?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4548,7 +4634,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: PickUpWaypoint
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4556,11 +4642,12 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
-            value: {fileID: 1982432305073029, guid: 8f064b5fe95c97740be6da6bbf356179, type: 2}
+            value: {fileID: 1982432305073029, guid: 8f064b5fe95c97740be6da6bbf356179,
+              type: 3}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -4569,8 +4656,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: InteractablePhysicsProp
@@ -4588,9 +4675,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01000100000000000100
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001100000011000000130000000f00000001000000
         paramName:
@@ -4604,7 +4691,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000002000000000000000400000009000000
         paramByteDataSize: 00000000000000000200000002000000000000000500000001000000
     - name: Is all cheese collected? 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4623,6 +4710,7 @@ MonoBehaviour:
         toState: Is all Choco collected? 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -4631,6 +4719,7 @@ MonoBehaviour:
         toState: Find Closest Cheese
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4649,8 +4738,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4663,13 +4752,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllCheeseDone
@@ -4687,9 +4776,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f74416c6c436865657365446f6e65000001526566526f6f74416c6c436865657365446f6e655472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -4705,7 +4794,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000016000000170000002d0000003100000036000000
         paramByteDataSize: 000000000000000000000000160000000100000016000000040000000500000001000000
     - name: Is all Choco collected? 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -4724,6 +4813,7 @@ MonoBehaviour:
         toState: Are all tasks done?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -4732,6 +4822,7 @@ MonoBehaviour:
         toState: Find Closest Choco
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4750,8 +4841,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4764,13 +4855,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootAllChocoDone
@@ -4788,9 +4879,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526566526f6f74416c6c43686f636f446f6e65000001526566526f6f74416c6c43686f636f446f6e655472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 140000001200000012000000110000000100000011000000170000001700000001000000
         paramName:
@@ -4806,7 +4897,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000015000000160000002b0000002f00000034000000
         paramByteDataSize: 000000000000000000000000150000000100000015000000040000000500000001000000
     - name: Find Closest Cheese
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -4825,6 +4916,7 @@ MonoBehaviour:
         toState: Set Collectible Waypoint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4839,7 +4931,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: PickUpWaypoint
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4847,8 +4939,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 1
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -4860,8 +4952,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: GenericQuestTrigger
@@ -4879,9 +4971,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01000000000000000100
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001100000011000000130000000f00000001000000
         paramName:
@@ -4895,7 +4987,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000000000002000000000000000400000009000000
         paramByteDataSize: 00000000000000000200000002000000000000000500000001000000
     - name: Set Collectible Waypoint
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -4914,6 +5006,7 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -4928,7 +5021,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: PickUpWaypoint
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -4954,9 +5047,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0100000000333333bf0000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000001300000003000000010000001c000000
         paramName:
@@ -4968,7 +5061,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000000000000000000001000000
         paramByteDataSize: 000000000000000000000000010000000d000000
     - name: Clear Waypoint Hint 2
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -4987,6 +5080,7 @@ MonoBehaviour:
         toState: --- BI 01 --- Picked-Up-Cheese1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5020,17 +5114,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Destroy Cheese1
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5049,6 +5143,7 @@ MonoBehaviour:
         toState: Is all cheese collected?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5063,7 +5158,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5089,9 +5184,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -5101,7 +5196,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: Destroy Cheese1 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5120,6 +5215,7 @@ MonoBehaviour:
         toState: Is all cheese collected?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5134,7 +5230,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5160,9 +5256,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -5172,7 +5268,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: Destroy Cheese1 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5191,6 +5287,7 @@ MonoBehaviour:
         toState: Is all cheese collected?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5205,7 +5302,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5231,9 +5328,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 130000000f00000011000000
         paramName:
@@ -5243,7 +5340,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000005000000
         paramByteDataSize: 000000000500000002000000
     - name: ReturnControls 3
-      description:
+      description: 
       colorIndex: 4
       position:
         serializedVersion: 2
@@ -5262,6 +5359,7 @@ MonoBehaviour:
         toState: Finish
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5296,9 +5394,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 010000000400000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 07000000070000000700000003000000
         paramName:
@@ -5309,7 +5407,7 @@ MonoBehaviour:
         paramDataPos: 0000000004000000080000000c000000
         paramByteDataSize: 04000000040000000400000000000000
     - name: Wait
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -5328,6 +5426,7 @@ MonoBehaviour:
         toState: Wait for Animation
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5362,9 +5461,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcc4c3e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5374,7 +5473,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: Wait for Animation
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5393,6 +5492,7 @@ MonoBehaviour:
         toState: Destroy Trigger1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5407,7 +5507,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese1
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5433,9 +5533,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1700000001000000100000000100000013000000
         paramName:
@@ -5447,7 +5547,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000600000000000000
         paramByteDataSize: 0000000001000000050000000100000000000000
     - name: Wait 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -5466,6 +5566,7 @@ MonoBehaviour:
         toState: Wait for Animation 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5500,9 +5601,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcc4c3e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5512,7 +5613,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: Wait for Animation 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5531,6 +5632,7 @@ MonoBehaviour:
         toState: Destroy Trigger2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5545,7 +5647,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese2
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5571,9 +5673,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1700000001000000100000000100000013000000
         paramName:
@@ -5585,7 +5687,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000600000000000000
         paramByteDataSize: 0000000001000000050000000100000000000000
     - name: Wait 3
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -5604,6 +5706,7 @@ MonoBehaviour:
         toState: Wait for Animation 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5638,9 +5741,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcc4c3e0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -5650,7 +5753,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: Wait for Animation 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5669,6 +5772,7 @@ MonoBehaviour:
         toState: Destroy Trigger3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5683,7 +5787,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: Cheese3
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -5709,9 +5813,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1700000001000000100000000100000013000000
         paramName:
@@ -5742,6 +5846,7 @@ MonoBehaviour:
         toState: Waypoint to MtBlizz
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5776,9 +5881,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 476f20746f204d6f756e7420426c697a7a61726451756573742e546578742e524b433030315130303144726f702e4f626a322e4368616e6765204f626a20546578742e6931386e54657874
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0300000003000000
         paramName:
@@ -5787,7 +5892,7 @@ MonoBehaviour:
         paramDataPos: 0000000014000000
         paramByteDataSize: 1400000037000000
     - name: Add to Cheese Collected 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -5806,6 +5911,7 @@ MonoBehaviour:
         toState: Collect Item Cheese 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5826,16 +5932,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 1
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -5848,25 +5954,25 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
@@ -5884,9 +5990,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c6563746564436865657365546f74616c000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c0100000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001200000010000000010000001000000010000000010000001400000012000000120000001000000001000000
         paramName:
@@ -5925,6 +6031,7 @@ MonoBehaviour:
         toState: Animate 2 Disappear
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -5947,17 +6054,18 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Cheese drinks
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable Cheese
+          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable
+            Cheese
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -5972,9 +6080,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c03000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000012000000010000000500000000000000100000001000000011000000
         paramName:
@@ -5989,7 +6097,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000000000000100000005000000250000002a000000
         paramByteDataSize: 0000000000000000010000000000000004000000200000000500000002000000
     - name: Collect Item Cheese 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6008,6 +6116,7 @@ MonoBehaviour:
         toState: Subtask Cheese drinks 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6042,9 +6151,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43686565736520537465616d657273000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000
         paramName:
@@ -6054,7 +6163,7 @@ MonoBehaviour:
         paramDataPos: 000000000f00000013000000
         paramByteDataSize: 0f0000000400000020000000
     - name: Clear Waypoint Hint 3
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -6073,6 +6182,7 @@ MonoBehaviour:
         toState: --- BI 02 --- Picked-Up-Cheese2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6106,17 +6216,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Add to Cheese Collected 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6135,6 +6245,7 @@ MonoBehaviour:
         toState: Collect Item Cheese 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6155,16 +6266,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 1
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -6177,25 +6288,25 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
@@ -6213,9 +6324,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c6563746564436865657365546f74616c000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c0100000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 14000000120000001200000010000000010000001000000010000000010000001400000012000000120000001000000001000000
         paramName:
@@ -6254,6 +6365,7 @@ MonoBehaviour:
         toState: Animate 3 Disappear
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6276,17 +6388,18 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 1
           name: Cheese drinks
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable Cheese
+          value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable
+            Cheese
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -6301,9 +6414,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 00000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c03000000000001
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000012000000010000000500000000000000100000001000000011000000
         paramName:
@@ -6318,7 +6431,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000000000000100000005000000250000002a000000
         paramByteDataSize: 0000000000000000010000000000000004000000200000000500000002000000
     - name: Collect Item Cheese 3
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6337,6 +6450,7 @@ MonoBehaviour:
         toState: Subtask Cheese drinks 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6371,9 +6485,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 43686565736520537465616d657273000000000000000001526566526f6f74436f6c6c6563746564436865657365546f74616c
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000700000010000000
         paramName:
@@ -6383,7 +6497,7 @@ MonoBehaviour:
         paramDataPos: 000000000f00000013000000
         paramByteDataSize: 0f0000000400000020000000
     - name: Clear Waypoint Hint 4
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -6402,6 +6516,7 @@ MonoBehaviour:
         toState: --- BI 03 --- Picked-Up-Cheese3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6435,17 +6550,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: --- BI 01 --- Picked-Up-Cheese1
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -6464,6 +6579,7 @@ MonoBehaviour:
         toState: Add to Cheese Collected
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6473,7 +6589,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6498,11 +6614,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 7175657374526f6f6b696530317c30325069636b2d75702d6368656573652d616e642d63686f6b6c696469756d30315069636b65642d55702d436865657365313031
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -6516,11 +6632,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000050000000b000000100000002d0000002f00000040000000420000004200000042000000420000004200000042000000
-        paramByteDataSize: 0500000006000000050000001d000000020000001100000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000050000000b000000100000002d0000002f000000400000004200000042000000420000004200000042000000
+        paramByteDataSize: 0500000006000000050000001d0000000200000011000000020000000000000000000000000000000000000000000000
     - name: --- BI 02 --- Picked-Up-Cheese2
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -6539,6 +6654,7 @@ MonoBehaviour:
         toState: Add to Cheese Collected 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6548,7 +6664,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6573,11 +6689,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 7175657374526f6f6b696530317c30325069636b2d75702d6368656573652d616e642d63686f6b6c696469756d30315069636b65642d55702d436865657365323032
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -6591,11 +6707,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000050000000b000000100000002d0000002f00000040000000420000004200000042000000420000004200000042000000
-        paramByteDataSize: 0500000006000000050000001d000000020000001100000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000050000000b000000100000002d0000002f000000400000004200000042000000420000004200000042000000
+        paramByteDataSize: 0500000006000000050000001d0000000200000011000000020000000000000000000000000000000000000000000000
     - name: --- BI 03 --- Picked-Up-Cheese3
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -6614,6 +6729,7 @@ MonoBehaviour:
         toState: Add to Cheese Collected 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6623,7 +6739,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6648,11 +6764,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 7175657374526f6f6b696530317c30325069636b2d75702d6368656573652d616e642d63686f6b6c696469756d30315069636b65642d55702d436865657365333033
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -6666,11 +6782,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000050000000b000000100000002d0000002f00000040000000420000004200000042000000420000004200000042000000
-        paramByteDataSize: 0500000006000000050000001d000000020000001100000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000050000000b000000100000002d0000002f000000400000004200000042000000420000004200000042000000
+        paramByteDataSize: 0500000006000000050000001d0000000200000011000000020000000000000000000000000000000000000000000000
     - name: --- BI 04 --- Picked-up-all-cheese-and-choklidium
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -6689,6 +6804,7 @@ MonoBehaviour:
         toState: WaitA 1.5Sec
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6698,7 +6814,7 @@ MonoBehaviour:
         actionEnabled: 01
         actionIsOpen: 01
         actionStartIndex: 00000000
-        actionHashCodes: 719c1c02
+        actionHashCodes: 29b3ec00
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -6723,11 +6839,11 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 7175657374526f6f6b696530317c30325069636b2d75702d6368656573652d616e642d63686f6b6c696469756d30315069636b65642d75702d616c6c2d6368656573652d616e642d63686f6b6c696469756d3034
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 03000000030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
+        paramDataType: 030000000300000003000000030000000300000003000000030000000300000003000000030000000300000003000000
         paramName:
         - Context
         - QuestId
@@ -6741,11 +6857,10 @@ MonoBehaviour:
         - Location
         - Level
         - Message
-        - KochavaAction
-        paramDataPos: 00000000050000000b000000100000002d0000002f00000052000000540000005400000054000000540000005400000054000000
-        paramByteDataSize: 0500000006000000050000001d000000020000002300000002000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000050000000b000000100000002d0000002f000000520000005400000054000000540000005400000054000000
+        paramByteDataSize: 0500000006000000050000001d0000000200000023000000020000000000000000000000000000000000000000000000
     - name: Get FSM RootCollectedCheeseTotal
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6764,6 +6879,7 @@ MonoBehaviour:
         toState: Get FSM RootCollectedChocTotal
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6780,8 +6896,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -6794,13 +6910,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedCheeseTotal
@@ -6818,9 +6934,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c6563746564436865657365546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001000000001000000
         paramName:
@@ -6832,7 +6948,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000020000000
         paramByteDataSize: 0000000000000000000000002000000001000000
     - name: Get FSM RootCollectedChocTotal
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6851,6 +6967,7 @@ MonoBehaviour:
         toState: PlayerInBlizz?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6867,8 +6984,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -6881,13 +6998,13 @@ MonoBehaviour:
         fsmStringParams:
         - useVariable: 1
           name: RootFSM_Name
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: QuestFSM.RKC001Q002Fix
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: RootCollectedChocTotal
@@ -6905,9 +7022,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000000001526566526f6f74436f6c6c656374656443686f63546f74616c00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000012000000120000001000000001000000
         paramName:
@@ -6919,7 +7036,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000001000000000000001e000000
         paramByteDataSize: 0000000000000000000000001e00000001000000
     - name: Is PickUpWaypoint there?
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -6938,6 +7055,7 @@ MonoBehaviour:
         toState: Set Collectible Waypoint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -6946,6 +7064,7 @@ MonoBehaviour:
         toState: Did Rookie already give hint?
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -6960,7 +7079,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: PickUpWaypoint
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -6986,9 +7105,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 46616c736554727565000100
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1300000017000000170000001100000001000000
         paramName:
@@ -7019,6 +7138,7 @@ MonoBehaviour:
         toState: HUB 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7041,23 +7161,23 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -7072,9 +7192,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 51756573742e546578742e524b43303031513030324669782e43686f636f48696e74000000000000526f6f6b69650600000000000000000001000101
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000100000005000000000000000100000003000000000000000200000003000000010000000100000001000000120000000100000001000000120000000100000012000000
         paramName:
@@ -7099,7 +7219,7 @@ MonoBehaviour:
         paramDataPos: 0000000022000000000000002300000027000000280000002e000000320000003600000036000000370000003800000000000000390000003a000000010000003b00000002000000
         paramByteDataSize: 220000000100000000000000040000000100000006000000040000000400000000000000010000000100000001000000000000000100000001000000000000000100000000000000
     - name: Did Rookie already give hint?
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -7118,6 +7238,7 @@ MonoBehaviour:
         toState: Set FALSE RookieGaveHint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: False
@@ -7126,6 +7247,7 @@ MonoBehaviour:
         toState: Set TRUE RookieGaveHint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7160,9 +7282,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526f6f6b69654761766548696e745472756546616c736500
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 11000000170000001700000001000000
         paramName:
@@ -7173,7 +7295,7 @@ MonoBehaviour:
         paramDataPos: 00000000100000001400000019000000
         paramByteDataSize: 10000000040000000500000001000000
     - name: Set TRUE RookieGaveHint
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -7192,6 +7314,7 @@ MonoBehaviour:
         toState: Rookie PopUp Hint
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7226,9 +7349,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526f6f6b69654761766548696e74010000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 110000001100000001000000
         paramName:
@@ -7238,7 +7361,8 @@ MonoBehaviour:
         paramDataPos: 000000001000000012000000
         paramByteDataSize: 100000000200000001000000
     - name: Set FALSE RookieGaveHint
-      description: This resets Rookies hint so he'll only repeat the hint after 1 minute.
+      description: This resets Rookies hint so he'll only repeat the hint after 1
+        minute.
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -7257,6 +7381,7 @@ MonoBehaviour:
         toState: HUB 1
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -7291,9 +7416,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0001526f6f6b69654761766548696e74000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 110000001100000001000000
         paramName:
@@ -7303,7 +7428,7 @@ MonoBehaviour:
         paramDataPos: 000000001000000012000000
         paramByteDataSize: 100000000200000001000000
     - name: HUB 1
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -7322,14 +7447,15 @@ MonoBehaviour:
         toState: Gameplay
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -7353,15 +7479,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     events:
     - name: FINISHED
       isSystemEvent: 1
@@ -7411,75 +7537,76 @@ MonoBehaviour:
       intVariables:
       - useVariable: 1
         name: RefRootCollectedCheeseTotal
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootCollectedChocTotal
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootHintTimerIntervals5secs
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       boolVariables:
       - useVariable: 1
         name: RefRootAllCheeseDone
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootAllChocoDone
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootCollectedCheese1
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootCollectedCheese2
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RefRootCollectedCheese3
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       - useVariable: 1
         name: RookieGaveHint
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: 0
       stringVariables:
       - useVariable: 1
         name: Cheese drinks
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
-        value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable Cheese
+        value: Quest.Text.RKC001Q002Fix.Obj1FSM.Subtask Cheese drinks.subtaskAction.Chuggable
+          Cheese
       - useVariable: 1
         name: Choklidium
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: Exchange.Collectible.Chocolite
       - useVariable: 1
         name: RootFSM_Name
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: QuestFSM.RKC001Q002Fix
@@ -7491,73 +7618,73 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: Cheese1
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Cheese2
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Cheese3
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: ChocoHintTimer
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: LocalPlayer
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: PickUpWaypoint
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Sparkles01
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Sparkles02
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: Sparkles03
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TriggerActCheese1
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TriggerActCheese2
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: TriggerActCheese3
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -7569,22 +7696,25 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-    description:
-    docUrl:
+    description: 
+    docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -7605,6 +7735,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0
