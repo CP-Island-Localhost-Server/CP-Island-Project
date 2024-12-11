@@ -64,7 +64,6 @@ Shader "CpRemix/World/Waterfall" {
                 o.sv_target.w = tmp0.w * _Color.w;
                 o.sv_target.xyz = tmp0.xyz + _Color.xyz;
 				//UNITY_APPLY_FOG(inp.fogCoord, o.sv_target);
-				UNITY_OPAQUE_ALPHA(o.sv_target.w);
                 return o;
 			}
 			ENDCG
