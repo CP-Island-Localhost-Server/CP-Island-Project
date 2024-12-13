@@ -60,7 +60,7 @@ namespace AmplifyShaderEditor
 		protected int m_shaderLOD = 0;
 
 		[SerializeField]
-		protected int m_shaderModelIdx = 2;
+		protected int m_shaderModelIdx = 3;
 
 		[SerializeField]
 		protected Shader m_currentShader;

@@ -17,7 +17,7 @@ Shader /*ase_name*/"Hidden/Templates/CustomRTUpdate"/*end*/
             #include "UnityCustomRenderTexture.cginc"
             #pragma vertex ASECustomRenderTextureVertexShader
             #pragma fragment frag
-            #pragma target 3.0
+            #pragma target 3.5
 			/*ase_pragma*/
 
 			struct ase_appdata_customrendertexture

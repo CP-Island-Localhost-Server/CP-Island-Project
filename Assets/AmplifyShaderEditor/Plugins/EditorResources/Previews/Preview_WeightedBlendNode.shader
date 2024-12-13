@@ -15,6 +15,7 @@ Shader "Hidden/WeightedBlendNode"
 		CGINCLUDE
 		
 		#include "UnityCG.cginc"
+			#include "Preview.cginc"
 		#pragma vertex vert_img
 		#pragma fragment frag
 		sampler2D _A;

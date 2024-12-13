@@ -30,7 +30,7 @@ Shader /*ase_name*/ "Hidden/Templates/Legacy/Particles Alpha Blended" /*end*/
 				
 				#pragma vertex vert
 				#pragma fragment frag
-				#pragma target 2.0
+				#pragma target 3.5
 				#pragma multi_compile_instancing
 				#pragma multi_compile_particles
 				#pragma multi_compile_fog

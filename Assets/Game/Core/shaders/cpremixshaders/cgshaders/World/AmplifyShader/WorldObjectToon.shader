@@ -1,4 +1,4 @@
-// Made with Amplify Shader Editor v1.9.5.3
+// Made with Amplify Shader Editor v1.9.8.0
 // Available at the Unity Asset Store - http://u3d.as/y3X 
 Shader "WorldObjectToon"
 {

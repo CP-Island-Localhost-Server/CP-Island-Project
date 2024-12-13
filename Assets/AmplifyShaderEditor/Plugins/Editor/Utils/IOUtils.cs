@@ -710,22 +710,22 @@ namespace AmplifyShaderEditor
 
 		public static void AddFunctionHeader( ref string function , string header )
 		{
-			function += header + "\n{\n";
+			function += string.Format( "\t\t{0}\n\t\t{{\n", header );
 		}
 
 		public static void AddSingleLineFunction( ref string function , string header )
 		{
-			function += "\t" + header;
+			function += string.Format( "\t\t{0}", header );
 		}
 
 		public static void AddFunctionLine( ref string function , string line )
 		{
-			function += "\t" + line + "\n";
+			function += string.Format( "\t\t\t{0}\n", line );
 		}
 
 		public static void CloseFunctionBody( ref string function )
 		{
-			function += "}\n";
+			function += "\t\t}\n";
 		}
 
 		public static string CreateFullFunction( string header , params string[] functionLines )

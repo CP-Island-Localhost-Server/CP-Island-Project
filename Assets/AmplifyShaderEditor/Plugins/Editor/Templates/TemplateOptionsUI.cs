@@ -12,7 +12,7 @@ namespace AmplifyShaderEditor
 	[Serializable]
 	public class TemplateOptionUIItem
 	{
-		public delegate void OnActionPerformed( bool actionFromUser, bool isRefreshing, bool invertAction, TemplateOptionUIItem uiItem, params TemplateActionItem[] validActions );
+		public delegate void OnActionPerformed( bool actionFromUser, bool isRefreshing, bool invertAction, TemplateOptionUIItem uiItem, int recursionLevel = 0, params TemplateActionItem[] validActions );
 		public event OnActionPerformed OnActionPerformedEvt;
 
 		[SerializeField]
@@ -144,9 +144,9 @@ namespace AmplifyShaderEditor
 					if( OnActionPerformedEvt != null )
 					{
 						if( m_invertActionOnDeselection )
-							OnActionPerformedEvt( true, false, lastOption != m_options.DisableIdx, this, m_options.ActionsPerOption[ lastOption ] );
+							OnActionPerformedEvt( true, false, lastOption != m_options.DisableIdx, this, 0, m_options.ActionsPerOption[ lastOption ] );
 
-						OnActionPerformedEvt( true, false, false, this, m_options.ActionsPerOption[ m_currentOption ] );
+						OnActionPerformedEvt( true, false, false, this, 0, m_options.ActionsPerOption[ m_currentOption ] );
 					}
 				}
 			}
@@ -169,14 +169,14 @@ namespace AmplifyShaderEditor
 							{
 								if( i != m_currentOption && i != m_options.DisableIdx )
 								{
-									OnActionPerformedEvt( actionFromUser, false, true, this, m_options.ActionsPerOption[ i ] );
+									OnActionPerformedEvt( actionFromUser, false, true, this, 0, m_options.ActionsPerOption[ i ] );
 								}
 							}
 						}
 
-						OnActionPerformedEvt( actionFromUser, false, false, this, m_options.ActionsPerOption[ m_currentOption ] );
+						OnActionPerformedEvt( actionFromUser, false, false, this, 0, m_options.ActionsPerOption[ m_currentOption ] );
 						//if( !m_isVisible )
-							//OnActionPerformedEvt( isRefreshing, false, this, m_options.ActionsPerOption[ m_options.DisableIdx ] );
+							//OnActionPerformedEvt( isRefreshing, false, this, 0, m_options.ActionsPerOption[ m_options.DisableIdx ] );
 					}
 				}
 
@@ -190,7 +190,7 @@ namespace AmplifyShaderEditor
 
 				if( OnActionPerformedEvt != null )
 				{
-					OnActionPerformedEvt( actionFromUser, false, false, this, m_options.ActionsPerOption[ m_options.DisableIdx ] );
+					OnActionPerformedEvt( actionFromUser, false, false, this, 0, m_options.ActionsPerOption[ m_options.DisableIdx ] );
 				}
 			}
 		}
@@ -218,7 +218,7 @@ namespace AmplifyShaderEditor
 			}
 		}
 
-		public void Update( bool isRefreshing = true )
+		public void Update( int recursionLevel = 0, bool isRefreshing = true )
 		{
 			if( OnActionPerformedEvt != null )
 			{
@@ -228,12 +228,12 @@ namespace AmplifyShaderEditor
 					{
 						if( i != m_currentOption && i != m_options.DisableIdx )
 						{
-							OnActionPerformedEvt( false, isRefreshing, true, this, m_options.ActionsPerOption[ i ] );
+							OnActionPerformedEvt( false, isRefreshing, true, this, recursionLevel, m_options.ActionsPerOption[ i ] );
 						}
 					}
 				}
 
-				OnActionPerformedEvt( false, isRefreshing, false, this, m_options.ActionsPerOption[ m_currentOption ] );
+				OnActionPerformedEvt( false, isRefreshing, false, this, recursionLevel, m_options.ActionsPerOption[ m_currentOption ] );
 			}
 		}
 

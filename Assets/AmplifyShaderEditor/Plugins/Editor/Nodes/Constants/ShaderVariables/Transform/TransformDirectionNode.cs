@@ -62,16 +62,16 @@ namespace AmplifyShaderEditor
 
 		///////////////////////////////////////////////////////////
 		private const string AseObjectToClipDirVarName = "objectToClipDir";
-		private const string AseObjectToClipDirFormat = "mul(UNITY_MATRIX_VP, mul(unity_ObjectToWorld, float4({0}, 0.0)))";
+		private const string AseObjectToClipDirFormat = "mul(UNITY_MATRIX_VP, mul(unity_ObjectToWorld, float4({0}, 0.0))).xyz";
 		private const string AseSRPObjectToClipDirFormat = "TransformWorldToHClipDir(TransformObjectToWorldDir({0}))";
 
 		private const string AseWorldToClipDirVarName = "worldToClipDir";
-		private const string AseWorldToClipDirFormat = "mul(UNITY_MATRIX_VP, float4({0}, 0.0))";
+		private const string AseWorldToClipDirFormat = "mul(UNITY_MATRIX_VP, float4({0}, 0.0)).xyz";
 		private const string AseSRPWorldToClipDirFormat = "TransformWorldToHClipDir({0})";
 
 		private const string AseViewToClipDirVarName = "viewToClipDir";
-		private const string AseViewToClipDirFormat = "mul(UNITY_MATRIX_P, float4({0}, 0.0))";
-		private const string AseSRPViewToClipDirFormat = "mul(GetViewToHClipMatrix(), float4({0}, 1.0))";
+		private const string AseViewToClipDirFormat = "mul(UNITY_MATRIX_P, float4({0}, 0.0)).xyz";
+		private const string AseSRPViewToClipDirFormat = "mul(GetViewToHClipMatrix(), float4({0}, 1.0)).xyz";
 		//
 		private const string AseClipToObjectDirVarName = "clipToObjectDir";
 

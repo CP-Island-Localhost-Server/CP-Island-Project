@@ -17,7 +17,7 @@ Shader /*ase_name*/ "Hidden/Templates/PostProcessStack" /*end*/
 
 			#pragma vertex Vert
 			#pragma fragment Frag
-			#pragma target 3.0
+			#pragma target 3.5
 
 			#include "UnityCG.cginc"
 			/*ase_pragma*/

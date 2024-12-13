@@ -21,7 +21,7 @@ Shader /*ase_name*/ "Hidden/Templates/Legacy/PostProcess" /*end*/
 
 			#pragma vertex vert_img_custom 
 			#pragma fragment frag
-			#pragma target 3.0
+			#pragma target 3.5
 			#include "UnityCG.cginc"
 			/*ase_pragma*/
 

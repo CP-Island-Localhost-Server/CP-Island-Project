@@ -433,7 +433,7 @@ namespace AmplifyShaderEditor
 				result = UIUtils.GetNode( m_externalReferences[ 0 ].NodeId ).GenerateShaderForOutput( m_externalReferences[ 0 ].PortId, ref dataCollector, false );
 				if( m_externalReferences[ 0 ].DataType != m_dataType )
 				{
-					result = UIUtils.CastPortType( ref dataCollector, UIUtils.GetNode( m_nodeId ).CurrentPrecisionType, new NodeCastInfo( m_externalReferences[ 0 ].NodeId, m_externalReferences[ 0 ].PortId ), null, m_externalReferences[ 0 ].DataType, m_dataType, result );
+					result = UIUtils.CastPortType( ref dataCollector, UIUtils.GetNode( m_nodeId ).CurrentPrecisionType, null, m_externalReferences[ 0 ].DataType, m_dataType, result );
 				}
 			}
 			else
@@ -494,7 +494,7 @@ namespace AmplifyShaderEditor
 				result = UIUtils.GetNode( m_externalReferences[ 0 ].NodeId ).GenerateShaderForOutput( m_externalReferences[ 0 ].PortId, ref dataCollector, ignoreLocalVar );
 				if( autoCast && m_externalReferences[ 0 ].DataType != inputPortType )
 				{
-					result = UIUtils.CastPortType( ref dataCollector, UIUtils.GetNode( m_nodeId ).CurrentPrecisionType, new NodeCastInfo( m_externalReferences[ 0 ].NodeId, m_externalReferences[ 0 ].PortId ), null, m_externalReferences[ 0 ].DataType, inputPortType, result );
+					result = UIUtils.CastPortType( ref dataCollector, UIUtils.GetNode( m_nodeId ).CurrentPrecisionType, null, m_externalReferences[ 0 ].DataType, inputPortType, result );
 				}
 			}
 			else
@@ -864,12 +864,16 @@ namespace AmplifyShaderEditor
 							case WirePortDataType.FLOAT3: m_previewInternalVec3.x = m_previewInternalFloat; break;
 							case WirePortDataType.FLOAT4: m_previewInternalVec4.x = m_previewInternalFloat; break;
 							case WirePortDataType.FLOAT3x3:
-							case WirePortDataType.FLOAT4x4: m_previewInternalMatrix4x4[ 0 ] = m_previewInternalFloat; break;
+							case WirePortDataType.FLOAT4x4:
+							{
+								// @diogo: not applicable
+								break;
+							}
 							case WirePortDataType.COLOR: m_previewInternalColor.r = m_previewInternalFloat; break;
 							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalFloat; break;
 						}
+						break;
 					}
-					break;
 					case WirePortDataType.FLOAT2:
 					{
 						switch( value )
@@ -879,31 +883,30 @@ namespace AmplifyShaderEditor
 							{
 								m_previewInternalVec3.x = m_previewInternalVec2.x;
 								m_previewInternalVec3.y = m_previewInternalVec2.y;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT4:
 							{
 								m_previewInternalVec4.x = m_previewInternalVec2.x;
 								m_previewInternalVec4.y = m_previewInternalVec2.y;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3x3:
 							case WirePortDataType.FLOAT4x4:
 							{
-								m_previewInternalMatrix4x4[ 0 ] = m_previewInternalVec2.x;
-								m_previewInternalMatrix4x4[ 1 ] = m_previewInternalVec2.y;
+								// @diogo: not applicable
+								break;
 							}
-							break;
 							case WirePortDataType.COLOR:
 							{
 								m_previewInternalColor.r = m_previewInternalVec2.x;
 								m_previewInternalColor.g = m_previewInternalVec2.y;
+								break;
 							}
-							break;
 							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalVec2.x; break;
 						}
+						break;
 					}
-					break;
 					case WirePortDataType.FLOAT3:
 					{
 						switch( value )
@@ -913,34 +916,32 @@ namespace AmplifyShaderEditor
 							{
 								m_previewInternalVec2.x = m_previewInternalVec3.x;
 								m_previewInternalVec2.y = m_previewInternalVec3.y;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT4:
 							{
 								m_previewInternalVec4.x = m_previewInternalVec3.x;
 								m_previewInternalVec4.y = m_previewInternalVec3.y;
 								m_previewInternalVec4.z = m_previewInternalVec3.z;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3x3:
 							case WirePortDataType.FLOAT4x4:
 							{
-								m_previewInternalMatrix4x4[ 0 ] = m_previewInternalVec3.x;
-								m_previewInternalMatrix4x4[ 1 ] = m_previewInternalVec3.y;
-								m_previewInternalMatrix4x4[ 2 ] = m_previewInternalVec3.z;
+								// @diogo: not applicable
+								break;
 							}
-							break;
 							case WirePortDataType.COLOR:
 							{
 								m_previewInternalColor.r = m_previewInternalVec3.x;
 								m_previewInternalColor.g = m_previewInternalVec3.y;
 								m_previewInternalColor.b = m_previewInternalVec3.z;
+								break;
 							}
-							break;
 							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalVec3.x; break;
 						}
+						break;
 					}
-					break;
 					case WirePortDataType.FLOAT4:
 					{
 						switch( value )
@@ -950,75 +951,39 @@ namespace AmplifyShaderEditor
 							{
 								m_previewInternalVec2.x = m_previewInternalVec4.x;
 								m_previewInternalVec2.y = m_previewInternalVec4.y;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3:
 							{
 								m_previewInternalVec3.x = m_previewInternalVec4.x;
 								m_previewInternalVec3.y = m_previewInternalVec4.y;
 								m_previewInternalVec3.z = m_previewInternalVec4.z;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3x3:
 							case WirePortDataType.FLOAT4x4:
 							{
-								m_previewInternalMatrix4x4[ 0 ] = m_previewInternalVec4.x;
-								m_previewInternalMatrix4x4[ 1 ] = m_previewInternalVec4.y;
-								m_previewInternalMatrix4x4[ 2 ] = m_previewInternalVec4.z;
-								m_previewInternalMatrix4x4[ 3 ] = m_previewInternalVec4.w;
+								// @diogo: not applicable
+								break;
 							}
-							break;
 							case WirePortDataType.COLOR:
 							{
 								m_previewInternalColor.r = m_previewInternalVec4.x;
 								m_previewInternalColor.g = m_previewInternalVec4.y;
 								m_previewInternalColor.b = m_previewInternalVec4.z;
 								m_previewInternalColor.a = m_previewInternalVec4.w;
+								break;
 							}
-							break;
 							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalVec4.x; break;
 						}
+						break;
 					}
-					break;
 					case WirePortDataType.FLOAT3x3:
 					case WirePortDataType.FLOAT4x4:
 					{
-						switch( value )
-						{
-							case WirePortDataType.FLOAT: m_previewInternalFloat = m_previewInternalMatrix4x4[ 0 ]; break;
-							case WirePortDataType.FLOAT2:
-							{
-								m_previewInternalVec2.x = m_previewInternalMatrix4x4[ 0 ];
-								m_previewInternalVec2.y = m_previewInternalMatrix4x4[ 1 ];
-							}
-							break;
-							case WirePortDataType.FLOAT3:
-							{
-								m_previewInternalVec3.x = m_previewInternalMatrix4x4[ 0 ];
-								m_previewInternalVec3.y = m_previewInternalMatrix4x4[ 1 ];
-								m_previewInternalVec3.z = m_previewInternalMatrix4x4[ 2 ];
-							}
-							break;
-							case WirePortDataType.FLOAT4:
-							{
-								m_previewInternalVec4.x = m_previewInternalMatrix4x4[ 0 ];
-								m_previewInternalVec4.y = m_previewInternalMatrix4x4[ 1 ];
-								m_previewInternalVec4.z = m_previewInternalMatrix4x4[ 2 ];
-								m_previewInternalVec4.w = m_previewInternalMatrix4x4[ 3 ];
-							}
-							break;
-							case WirePortDataType.COLOR:
-							{
-								m_previewInternalColor.r = m_previewInternalMatrix4x4[ 0 ];
-								m_previewInternalColor.g = m_previewInternalMatrix4x4[ 1 ];
-								m_previewInternalColor.b = m_previewInternalMatrix4x4[ 2 ];
-								m_previewInternalColor.a = m_previewInternalMatrix4x4[ 3 ];
-							}
-							break;
-							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalMatrix4x4[ 0 ]; break;
-						}
+						// @diogo: not applicable
+						break;
 					}
-					break;
 					case WirePortDataType.COLOR:
 					{
 						switch( value )
@@ -1028,36 +993,33 @@ namespace AmplifyShaderEditor
 							{
 								m_previewInternalVec2.x = m_previewInternalColor.r;
 								m_previewInternalVec2.y = m_previewInternalColor.g;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3:
 							{
 								m_previewInternalVec3.x = m_previewInternalColor.r;
 								m_previewInternalVec3.y = m_previewInternalColor.g;
 								m_previewInternalVec3.z = m_previewInternalColor.b;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT4:
 							{
 								m_previewInternalVec4.x = m_previewInternalColor.r;
 								m_previewInternalVec4.y = m_previewInternalColor.g;
 								m_previewInternalVec4.z = m_previewInternalColor.b;
 								m_previewInternalVec4.w = m_previewInternalColor.a;
+								break;
 							}
-							break;
 							case WirePortDataType.FLOAT3x3:
 							case WirePortDataType.FLOAT4x4:
 							{
-								m_previewInternalMatrix4x4[ 0 ] = m_previewInternalColor.r;
-								m_previewInternalMatrix4x4[ 1 ] = m_previewInternalColor.g;
-								m_previewInternalMatrix4x4[ 2 ] = m_previewInternalColor.b;
-								m_previewInternalMatrix4x4[ 3 ] = m_previewInternalColor.a;
+								// @diogo: not applicable
+								break;
 							}
-							break;
 							case WirePortDataType.INT: m_previewInternalInt = (int)m_previewInternalColor.r; break;
 						}
+						break;
 					}
-					break;
 					case WirePortDataType.INT:
 					{
 						switch( value )
@@ -1067,11 +1029,15 @@ namespace AmplifyShaderEditor
 							case WirePortDataType.FLOAT3: m_previewInternalVec3.x = m_previewInternalInt; break;
 							case WirePortDataType.FLOAT4: m_previewInternalVec4.x = m_previewInternalInt; break;
 							case WirePortDataType.FLOAT3x3:
-							case WirePortDataType.FLOAT4x4: m_previewInternalMatrix4x4[ 0 ] = m_previewInternalInt; break;
+							case WirePortDataType.FLOAT4x4: 
+							{
+								// @diogo: not applicable
+								break;
+							}
 							case WirePortDataType.COLOR: m_previewInternalColor.r = m_previewInternalInt; break;
 						}
+						break;
 					}
-					break;
 				}
 				base.DataType = value;
 			}

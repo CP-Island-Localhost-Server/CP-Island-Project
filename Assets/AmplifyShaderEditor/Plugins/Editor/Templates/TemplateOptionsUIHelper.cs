@@ -121,11 +121,40 @@ namespace AmplifyShaderEditor
 			return port;
 		}
 
-		public void OnCustomOptionSelected( bool actionFromUser, bool isRefreshing, bool invertAction, TemplateMultiPassMasterNode owner, TemplateOptionUIItem uiItem, params TemplateActionItem[] validActions )
+		private bool TestActionItemConditional( TemplateActionItem actionItem )
+		{
+			bool succeeded = true;
+			TemplateActionItemConditional conditional = actionItem.ActionConditional;
+			if ( conditional != null && conditional.IsValid )
+			{
+				TemplateOptionUIItem referenceItem = m_passCustomOptionsUI.Find( x => ( x.Options.Name.Equals( conditional.Option ) ) );
+				if ( referenceItem != null )
+				{
+					bool equal = conditional.Value.Equals( referenceItem.Options.Options[ referenceItem.CurrentOption ] );
+					if ( conditional.Condition == TemplateActionItemConditional.Conditional.Equal )
+					{
+						succeeded = equal;
+					}
+					else if ( conditional.Condition == TemplateActionItemConditional.Conditional.NotEqual )
+					{
+						succeeded = !equal;
+					}
+				}
+			}
+			return succeeded;
+		}
+
+		public void OnCustomOptionSelected( bool actionFromUser, bool isRefreshing, bool invertAction, TemplateMultiPassMasterNode owner, TemplateOptionUIItem uiItem, int recursionLevel, params TemplateActionItem[] validActions )
 		{
 			uiItem.CheckOnExecute = false;
 			for( int i = 0; i < validActions.Length; i++ )
 			{
+				// @diogo: test conditional before running
+				if ( !TestActionItemConditional( validActions[ i ] ) )
+				{
+					continue;
+				}
+
 				AseOptionsActionType actionType = validActions[ i ].ActionType;
 				if( invertAction )
 				{
@@ -135,9 +164,24 @@ namespace AmplifyShaderEditor
 					}
 				}
 
-
 				switch( actionType )
 				{
+					case AseOptionsActionType.RefreshOption:
+					{
+						if ( !uiItem.IsVisible || recursionLevel > 0 )
+							break;
+
+						TemplateOptionUIItem item = m_passCustomOptionsUI.Find( x => ( x.Options.Name.Equals( validActions[ i ].ActionData ) ) );
+						if ( item != null )
+						{
+							item.Update( recursionLevel + 1, isRefreshing );
+						}
+						else
+						{
+							Debug.LogFormat( "Could not find Option {0} for action '{1}' on template {2}", validActions[ i ].ActionData, validActions[ i ].ActionType, owner.CurrentTemplate.DefaultShaderName );
+						}
+					}
+					break;
 					case AseOptionsActionType.ShowOption:
 					{
 						TemplateOptionUIItem item = m_passCustomOptionsUI.Find( x => ( x.Options.Name.Equals( validActions[ i ].ActionData ) ) );
@@ -200,7 +244,7 @@ namespace AmplifyShaderEditor
 						if( item != null )
 						{
 							item.CurrentOption = validActions[ i ].ActionDataIdx;
-							item.Update( isRefreshing );
+							item.Update( recursionLevel, isRefreshing );
 						}
 						else
 						{

@@ -74,7 +74,7 @@ namespace AmplifyShaderEditor
 			if ( m_inputPorts[ 0 ].DataType != WirePortDataType.FLOAT4x4 &&
 				m_inputPorts[ 0 ].DataType != WirePortDataType.FLOAT3x3 )
 			{
-				value = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, new NodeCastInfo( UniqueId, outputId ), value, m_inputPorts[ 0 ].DataType, WirePortDataType.FLOAT4x4, value );
+				value = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, value, m_inputPorts[ 0 ].DataType, WirePortDataType.FLOAT4x4, value );
 			}
 			if ( m_mode == eVectorFromMatrixMode.Row )
 			{

@@ -18,6 +18,7 @@ Shader "Hidden/TexturePropertyNode"
 			#pragma fragment frag
 			#pragma target 3.5
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			int _Default;
 			float4 frag( v2f_img i ) : SV_Target
 			{
@@ -50,6 +51,7 @@ Shader "Hidden/TexturePropertyNode"
 			#pragma fragment frag
 			#pragma target 3.5
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 
 			UNITY_DECLARE_TEX2DARRAY (_Array);
 			samplerCUBE _Cube;

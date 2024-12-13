@@ -106,7 +106,7 @@ namespace AmplifyShaderEditor
 			if( m_workflow == ASEStandardSurfaceWorkflow.Specular )
 				specularMode = "Specular";
 
-			dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, CurrentPrecisionType );
+			dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision );
 
 			if( dataCollector.DirtyNormal )
 			{

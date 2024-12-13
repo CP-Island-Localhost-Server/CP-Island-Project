@@ -41,9 +41,10 @@ namespace AmplifyShaderEditor
 				}
 			}
 
+			string variable;
 			if ( dataCollector.IsTemplate )
 			{
-				return dataCollector.TemplateDataCollectorInstance.GetVFace( UniqueId );
+				variable = dataCollector.TemplateDataCollectorInstance.GetVFace( UniqueId );
 			}
 			else
 			{
@@ -56,9 +57,10 @@ namespace AmplifyShaderEditor
 					dataCollector.AddToInput( UniqueId, SurfaceInputs.FRONT_FACING_VFACE );
 				}
 
-				string variable = ( dataCollector.PortCategory == MasterNodePortCategory.Vertex ) ? Constants.VertexShaderOutputStr : Constants.InputVarStr;
-				return "(" + variable + "." + Constants.IsFrontFacingVariable + " > 0 ? +1 : -1 )";
+				variable = ( dataCollector.PortCategory == MasterNodePortCategory.Vertex ) ? Constants.VertexShaderOutputStr : Constants.InputVarStr;
+				variable = string.Format( "{0}.{1}", variable, Constants.IsFrontFacingVariable );
 			}
+			return string.Format( "( {0} > 0 ? +1 : -1 )", variable );
 		}
 	}
 }

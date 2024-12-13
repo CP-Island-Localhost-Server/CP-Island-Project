@@ -153,6 +153,12 @@ namespace AmplifyShaderEditor
 		public override void DrawProperties()
 		{
 			base.DrawProperties();
+
+			if ( m_showErrorMessage )
+			{
+				EditorGUILayout.HelpBox( TemplateErrorMessage, MessageType.Error );
+			}
+
 			NodeUtils.DrawPropertyGroup( ref m_propertiesFoldout, Constants.ParameterLabelStr, () =>
 			{
 				EditorGUI.BeginChangeCheck();
@@ -188,7 +194,6 @@ namespace AmplifyShaderEditor
 				m_zTestMode = EditorGUILayoutPopup( ZBufferOpHelper.ZTestModeStr, m_zTestMode, ZBufferOpHelper.ZTestModeLabels );
 				m_colorMaskHelper.Draw( this );
 				m_noFog = EditorGUILayoutToggle( "No Fog", m_noFog );
-
 			} );
 		}
 

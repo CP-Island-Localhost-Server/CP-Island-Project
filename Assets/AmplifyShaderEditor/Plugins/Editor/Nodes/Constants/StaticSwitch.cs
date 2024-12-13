@@ -1001,9 +1001,6 @@ namespace AmplifyShaderEditor
 
 			this.OrderIndex = node.RawOrderIndex;
 			this.OrderIndexOffset = node.OrderIndexOffset;
-			//if( m_keywordModeType == KeywordModeType.KeywordEnum )
-
-			//node.RegisterPragmas( ref dataCollector );
 
 			string outType = UIUtils.PrecisionWirePortToCgType( CurrentPrecisionType, m_outputPorts[ 0 ].DataType );
 
@@ -1015,8 +1012,6 @@ namespace AmplifyShaderEditor
 
 				if ( m_multiCompile == ( int )KeywordType.DynamicBranch )
 				{
-					string defaultKey = "\t" + outType + " dynamicSwitch" + OutputId + " = " + m_inputPorts[ node.DefaultValue ].GeneratePortInstructions( ref dataCollector ) + ";";
-
 					dataCollector.AddLocalVariable( UniqueId, outType + " dynamicSwitch" + OutputId + " = ( " + outType + " )0;", true );
 					for ( int i = 0; i < node.KeywordEnumAmount; i++ )
 					{
@@ -1028,18 +1023,17 @@ namespace AmplifyShaderEditor
 
 						dataCollector.AddLocalVariable( UniqueId, "{", true );
 
-						if ( node.DefaultValue == i )
-							dataCollector.AddLocalVariable( UniqueId, defaultKey, true );
-						else
-							dataCollector.AddLocalVariable( UniqueId, "\tdynamicSwitch" + OutputId + " = " + allOutputs[ i ] + ";", true );
+						dataCollector.AddLocalVariable( UniqueId, "\tdynamicSwitch" + OutputId + " = " + allOutputs[ i ] + ";", true );
 
 						dataCollector.AddLocalVariable( UniqueId, "}", true );
 					}
+					dataCollector.AddLocalVariable( UniqueId, "else", true );
+					dataCollector.AddLocalVariable( UniqueId, "{", true );
+					dataCollector.AddLocalVariable( UniqueId, "\tdynamicSwitch" + OutputId + " = " + allOutputs[ node.DefaultValue ] + ";", true );
+					dataCollector.AddLocalVariable( UniqueId, "}", true );
 				}
 				else
 				{
-					string defaultKey = "\t" + outType + " staticSwitch" + OutputId + " = " + m_inputPorts[ node.DefaultValue ].GeneratePortInstructions( ref dataCollector ) + ";";					
-
 					for ( int i = 0; i < node.KeywordEnumAmount; i++ )
 					{
 						string keyword = node.KeywordEnum( i );
@@ -1048,13 +1042,10 @@ namespace AmplifyShaderEditor
 						else
 							dataCollector.AddLocalVariable( UniqueId, "#elif defined( " + keyword + " )", true );
 
-						if ( node.DefaultValue == i )
-							dataCollector.AddLocalVariable( UniqueId, defaultKey, true );
-						else
-							dataCollector.AddLocalVariable( UniqueId, "\t" + outType + " staticSwitch" + OutputId + " = " + allOutputs[ i ] + ";", true );
+						dataCollector.AddLocalVariable( UniqueId, "\t" + outType + " staticSwitch" + OutputId + " = " + allOutputs[ i ] + ";", true );
 					}
 					dataCollector.AddLocalVariable( UniqueId, "#else", true );
-					dataCollector.AddLocalVariable( UniqueId, defaultKey, true );
+					dataCollector.AddLocalVariable( UniqueId, "\t" + outType + " staticSwitch" + OutputId + " = " + allOutputs[ node.DefaultValue ] + ";", true );
 					dataCollector.AddLocalVariable( UniqueId, "#endif", true );
 				}
 			}

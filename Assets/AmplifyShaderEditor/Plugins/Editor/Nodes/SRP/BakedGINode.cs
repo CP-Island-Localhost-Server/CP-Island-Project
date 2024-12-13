@@ -151,7 +151,7 @@ namespace AmplifyShaderEditor
 			}
 			else
 			{
-				screenPos = GeneratorUtils.GenerateScreenPosition( ref dataCollector, UniqueId, CurrentPrecisionType );
+				screenPos = GeneratorUtils.GenerateScreenPositionRaw( ref dataCollector, UniqueId, CurrentPrecisionType );
 				positionSS = string.Format( "( uint2 )( {0}.xy / {0}.w * _ScreenSize.xy )", screenPos );
 			}
 

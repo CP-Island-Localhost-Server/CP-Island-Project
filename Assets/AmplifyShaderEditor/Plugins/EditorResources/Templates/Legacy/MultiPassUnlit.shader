@@ -12,7 +12,7 @@ Shader /*ase_name*/ "Hidden/Templates/Legacy/Multi Pass Unlit" /*end*/
 
 		Cull Off
 		CGINCLUDE
-		#pragma target 3.0 
+		#pragma target 3.5 
 		ENDCG
 		
 		/*ase_pass*/

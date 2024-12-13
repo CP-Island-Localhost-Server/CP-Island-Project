@@ -21,7 +21,7 @@ Shader /*ase_name*/ "Hidden/Templates/Legacy/UnlitLightmap" /*end*/
 			Tags{ "LightMode" = "VertexLMRGBM" "RenderType" = "Opaque" }
 			Name "Unlit LM"
 			CGPROGRAM
-			#pragma target 2.0
+			#pragma target 3.5
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"
@@ -76,7 +76,7 @@ Shader /*ase_name*/ "Hidden/Templates/Legacy/UnlitLightmap" /*end*/
 			Tags{ "LightMode" = "VertexLM" "RenderType" = "Opaque" }
 			Name "Unlit LM Mobile"
 			CGPROGRAM
-			#pragma target 2.0
+			#pragma target 3.5
 			#pragma vertex vert
 			#pragma fragment frag
 			#include "UnityCG.cginc"

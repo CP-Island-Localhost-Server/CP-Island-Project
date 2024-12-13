@@ -394,61 +394,64 @@ namespace AmplifyShaderEditor
 				Debug.LogWarningFormat( "Action not allowed. Attempting to load the native {0} shader into Amplify Shader Editor", shader.name );
 				return;
 			}
-			if( OpenOnSeparateWindow )
+			if ( IOUtils.IsASEShader( shader ) )
 			{
-				AmplifyShaderEditorWindow currentWindow = CreateTab( shader.name , UIUtils.ShaderIcon );
-				UIUtils.CurrentWindow = currentWindow;
-				currentWindow.Show();
-			}
-			else
-			{
-				string guid = AssetDatabase.AssetPathToGUID( AssetDatabase.GetAssetPath( shader ) );
-				if( IOUtils.AllOpenedWindows.Count > 0 )
+				if ( OpenOnSeparateWindow )
 				{
-					AmplifyShaderEditorWindow openedTab = null;
-					for( int i = 0 ; i < IOUtils.AllOpenedWindows.Count ; i++ )
-					{
-						//if( AssetDatabase.GetAssetPath( shader ).Equals( IOUtils.AllOpenedWindows[ i ].LastOpenedLocation ) )
-						if( guid.Equals( IOUtils.AllOpenedWindows[ i ].GUID ) )
-						{
-							openedTab = IOUtils.AllOpenedWindows[ i ];
-							break;
-						}
-					}
-
-					if( openedTab != null )
-					{
-						openedTab.wantsMouseMove = true;
-						openedTab.ShowTab();
-						UIUtils.CurrentWindow = openedTab;
-					}
-					else
-					{
-						EditorWindow openedWindow = AmplifyShaderEditorWindow.GetWindow<AmplifyShaderEditorWindow>();
-						AmplifyShaderEditorWindow currentWindow = CreateTab();
-						WindowHelper.AddTab( openedWindow , currentWindow );
-						UIUtils.CurrentWindow = currentWindow;
-					}
+					AmplifyShaderEditorWindow currentWindow = CreateTab( shader.name , UIUtils.ShaderIcon );
+					UIUtils.CurrentWindow = currentWindow;
+					currentWindow.Show();
 				}
 				else
 				{
-					AmplifyShaderEditorWindow currentWindow = OpenWindow( shader.name , UIUtils.ShaderIcon );
-					UIUtils.CurrentWindow = currentWindow;
+					string guid = AssetDatabase.AssetPathToGUID( AssetDatabase.GetAssetPath( shader ) );
+					if( IOUtils.AllOpenedWindows.Count > 0 )
+					{
+						AmplifyShaderEditorWindow openedTab = null;
+						for( int i = 0 ; i < IOUtils.AllOpenedWindows.Count ; i++ )
+						{
+							//if( AssetDatabase.GetAssetPath( shader ).Equals( IOUtils.AllOpenedWindows[ i ].LastOpenedLocation ) )
+							if( guid.Equals( IOUtils.AllOpenedWindows[ i ].GUID ) )
+							{
+								openedTab = IOUtils.AllOpenedWindows[ i ];
+								break;
+							}
+						}
+
+						if( openedTab != null )
+						{
+							openedTab.wantsMouseMove = true;
+							openedTab.ShowTab();
+							UIUtils.CurrentWindow = openedTab;
+						}
+						else
+						{
+							EditorWindow openedWindow = AmplifyShaderEditorWindow.GetWindow<AmplifyShaderEditorWindow>();
+							AmplifyShaderEditorWindow currentWindow = CreateTab();
+							WindowHelper.AddTab( openedWindow , currentWindow );
+							UIUtils.CurrentWindow = currentWindow;
+						}
+					}
+					else
+					{
+						AmplifyShaderEditorWindow currentWindow = OpenWindow( shader.name , UIUtils.ShaderIcon );
+						UIUtils.CurrentWindow = currentWindow;
+					}
 				}
-			}
-			if( IOUtils.IsASEShader( shader ) )
-			{
+			
 				UIUtils.CurrentWindow.LoadProjectSelected( shader );
 			}
 			else
 			{
-				UIUtils.CreateEmptyFromInvalid( shader );
-				UIUtils.ShowMessage( "Trying to open shader not created on ASE! BEWARE, old data will be lost if saving it here!", MessageSeverity.Warning );
-				if( UIUtils.CurrentWindow.LiveShaderEditing )
-				{
-					UIUtils.ShowMessage( "Disabling Live Shader Editing. Must manually re-enable it.", MessageSeverity.Warning );
-					UIUtils.CurrentWindow.LiveShaderEditing = false;
-				}
+				Debug.LogWarning( "[AmplifyShaderEditor] Can't open shader " + shader.name + " because it was not created in ASE." );
+				
+				//UIUtils.CreateEmptyFromInvalid( shader );
+				//UIUtils.ShowMessage( "Trying to open shader not created on ASE! BEWARE, old data will be lost if saving it here!", MessageSeverity.Warning );
+				//if( UIUtils.CurrentWindow.LiveShaderEditing )
+				//{
+				//	UIUtils.ShowMessage( "Disabling Live Shader Editing. Must manually re-enable it.", MessageSeverity.Warning );
+				//	UIUtils.CurrentWindow.LiveShaderEditing = false;
+				//}
 			}
 		}
 
@@ -1769,11 +1772,6 @@ namespace AmplifyShaderEditor
 						m_consoleLogWindow.ClearMessages();
 					}
 					SaveToDisk( false );
-					
-					if ( Preferences.User.ClearLog )
-					{
-						m_consoleLogWindow.ClearMessages();
-					}					
 				}
 				break;
 				case ToolButtonType.Live:
@@ -4613,12 +4611,12 @@ namespace AmplifyShaderEditor
 					}
 					catch ( Exception )
 					{
-						FocusZoom( true, false, false, 3 );
+						FocusZoom( true, false, false );
 					}
 				}
 				else
 				{
-					FocusZoom( true, false, false, 3 );
+					FocusZoom( true, false, false );
 				}
 			}
 
@@ -5607,6 +5605,7 @@ namespace AmplifyShaderEditor
 			
 			/////////// UPDATE PREVIEWS //////////////
 			UIUtils.CheckNullMaterials();
+			UIUtils.SetPreviewShaderConstants();
 			//CurrentGraph.AllNodes.Sort( ( x, y ) => { return x.Depth.CompareTo( y.Depth ); } );
 			int nodeCount = CurrentGraph.AllNodes.Count;
 			for( int i = nodeCount - 1; i >= 0; i-- )

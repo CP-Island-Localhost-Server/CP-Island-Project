@@ -1,3 +1,90 @@
+v1.9.8
+
+   Editor
+      * Updated default shader target for Surface shaders to 3.5
+      * Fixed loading a shader sometimes shows an empty canvas (nodes out of view)
+      * Fix bug in "Clear Log on Update" preferences option hiding messages
+
+   Templates
+      * Updated all templates to shader target 3.5
+      * Updated Fog, Vertex Lighting, Depth Output, Early-Z in URP 12x-17x (#349, #274)
+      * Updated decal templates to use correct relative-world position (URP 12-17x)
+      * Fixed Lit and Hair template api errors in HDRP 14x
+      * Fixed "Alpha Clipping" in URP 12x to 17x
+      * Fixed duplicated ase_local_var in HDRP templates 10x to 17x
+
+   Nodes
+      * Added new "Position" node that can output in different spaces (#364)
+      * Added new "Normal Face" node that can output in different spaces (#354)
+      * Added numerically stable camera-relative world position to "Normal Face" node 
+      * Added extended Mode options to "Screen Position" node, matching SG (#144)
+      * Added "Inverse Model Matrix" node that outputs unity_WorldToObject
+      * Changed "Model Matrix" to output unity_ObjectToWorld, not UNITY_MATRIX_M
+      * Changed "Screen Depth" to remove linear toggle and extend depth mode
+      * Changed "Surface Depth" node, depth mode options now match "Screen Depth"
+      * Fixed div by zero in "Main Light Color" node when there are no lights (#367)
+      * Fixed errors and warnings in "Transform Direction" node (#359)
+      * Fixed errors and warnings in "Transform Position" node (#359)
+      * Fixed errors and warnings in "Grab Screen Color" nodes (#359)
+      * Fixed "Dither" node implicit truncation warnings
+      * Fixed "Dither" node large float precision issues when using tessellation
+      * Fixed "World Normal Face" node not correcting for projection flip
+      * Fixed "World Normal Face" node large-float precision issues (#354)
+      * Fixed "Screen Position" node not considering Vertex Offset in HDRP 10x-17x (#346) 
+      * Fixed "Screen Position" Normalized preview Z output
+
+v1.9.7.1
+
+   Editor
+      * Added ASE_VERSION define to all generated shaders
+
+   Templates
+      * Fixed URP 14x templates missing "Alpha Clipping" options and other changes
+
+   Nodes
+      * Updated "Common Transform Matrices" node to add InvP, InvVP and InvMVP
+      * Updated "Inverse View Projection Matrix" node to be compatible with BiRP
+      * Updated "Inverse Projection Matrix" node to be compatible with BiRP
+
+v1.9.7
+
+   Editor
+      * Added "Shader Graph to ASE" link button to Start Screen
+      * Shader inspector button "Open in Shader Editor" now greyed for non-ASE shaders
+
+   Templates
+      * Added template ase_subshader_options action conditionals and RefreshOption
+      * Added "Alpha Clipping" option to URP templates 10x-17x
+      * Fixed renderQueue based on AlphaTest/Transparency on URP templates 10x-17x
+      * Fixed missing light shadows in Transmission/Translucency on URP 10x-17x (#344)
+      * Fixed "Legacy/Lit" template error when using Baked Lightmap debug VIS (#244)
+
+   Nodes
+      * Added "View Vector" node (#57)
+      * Added "Object" and "View" space options to "View Dir" node
+      * Added Normalize option to "Normal Reconstruct Z" (#342)
+      * Added "Rounded Polygon" node
+      * Added "Fade Transition" node (#56)
+      * Added Saturation node (#64)
+      * Updated "Diffuse And Specular From Metallic" to work on any SRP, not just BiRP
+      * Updated "Polygon" node with minor improvements
+      * Updated "Rectangle" and "Rounded Rectangle" nodes with minor improvements
+      * Renamed "Light Color" node to "Main Light Color" (#310)
+      * Renamed "Light Attenuation" node to "Main Light Attenuation" (#310)
+      * Deprecated "Object Space View Dir" and "World Space View Dir" nodes (#315)
+      * Fixed SRP's additional lights Function for Light Layers on SRP 14+ (#325)
+      * Fixed invalid preview of the Dot Product Node (#338)
+      * Fixed matrix default values on Function Inputs (#335)
+      * Fixed "Switch" node Dynamic Branch bug (#348)
+      * Fixed "Parallax Occlusion Mapping" tex port disconnecting on changes (#255.B)
+      * Fixed "Grid" and "Rectangle" nodes throwing warning floatdiv/zero (#336)
+      * Fixed "Parallax Occlusion Mapping" node visual errors in WebGL2 (#339)
+      * Fixed "SRP Additional Light" no shadows unless "Use Shadow Mask" (#280)
+      * Fixed "Custom Expression" handling of unconnected SamplerState inputs (#318)
+      * Fixed invalid "screenPosition" when using "Depth Fade" and "Dither" nodes (#333)
+      * Fixed error using "Surface Depth" when connected "Local Vertex Offset" (#331)
+      * Fixed "Dither" node handling of unstable precision inputs (#266)
+
 v1.9.6.3
 
    Templates

@@ -71,6 +71,7 @@ namespace AmplifyShaderEditor
 		private static string PackageCRCFormat = "ASE_PkgCRC_{0}_{1}";
 
 		private static string SRPKeywordFormat = "ASE_SRP_VERSION {0}";
+		private static string ASEVersionKeywordFormat = "ASE_VERSION {0}";
 
 		private static Dictionary<int, ASESRPPackageDesc> m_srpPackageSupport = new Dictionary<int,ASESRPPackageDesc>()
 		{
@@ -430,6 +431,16 @@ namespace AmplifyShaderEditor
 					}
 				}
 			}
+		}
+
+		public static void SetASEVersionInfoOnDataCollector( ref MasterNodeDataCollector dataCollector )
+		{
+			if ( m_requireUpdateList )
+			{
+				Update();
+			}
+
+			dataCollector.AddToDirectives( string.Format( ASEVersionKeywordFormat, VersionInfo.FullNumber ), -1, AdditionalLineType.Define );
 		}
 
 		public static void SetSRPInfoOnDataCollector( ref MasterNodeDataCollector dataCollector )

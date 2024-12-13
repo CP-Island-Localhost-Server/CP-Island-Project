@@ -485,6 +485,7 @@ namespace AmplifyShaderEditor
 		public readonly static string SubTitleNameFormatStr = "Name( {0} )";
 		public readonly static string SubTitleSpaceFormatStr = "Space( {0} )";
 		public readonly static string SubTitleTypeFormatStr = "Type( {0} )";
+		public readonly static string SubTitleModeFormatStr = "Mode( {0} )";
 		public readonly static string SubTitleValueFormatStr = "Value( {0} )";
 		public readonly static string SubTitleConstFormatStr = "Const( {0} )";
 		public readonly static string SubTitleVarNameFormatStr = "Var( {0} )";

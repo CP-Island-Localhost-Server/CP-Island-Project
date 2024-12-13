@@ -31,14 +31,15 @@ namespace AmplifyShaderEditor
 
 		public static readonly string ChangelogURL = "https://amplify.pt/Banner/ASEchangelog.json";
 
-		private static readonly string ManualURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Manual";
-		private static readonly string BasicURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials#Official_-_Basics";
-		private static readonly string BeginnerURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials#Official_-_Beginner_Series";
-		private static readonly string NodesURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Nodes";
-		private static readonly string SRPURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Scriptable_Rendering_Pipeline";
-		private static readonly string FunctionsURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Manual#Shader_Functions";
-		private static readonly string TemplatesURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Templates";
-		private static readonly string APIURL = "http://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/API";
+		private static readonly string ManualURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Manual";
+		private static readonly string BasicURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials#Official_-_Basics";
+		private static readonly string BeginnerURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Tutorials#Official_-_Beginner_Series";
+		private static readonly string NodesURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Nodes";
+		private static readonly string SRPURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Scriptable_Rendering_Pipeline";
+		private static readonly string FunctionsURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Manual#Shader_Functions";
+		private static readonly string TemplatesURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Templates";
+		private static readonly string APIURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/API";
+		private static readonly string SGtoASEURL = "https://wiki.amplify.pt/index.php?title=Unity_Products:Amplify_Shader_Editor/Shader_Graph_to_ASE";	
 
 		private static readonly string DiscordURL = "https://discordapp.com/invite/EdrVAP5";
 		private static readonly string ForumURL = "https://forum.unity.com/threads/best-tool-asset-store-award-amplify-shader-editor-node-based-shader-creation-tool.430959/";
@@ -76,6 +77,7 @@ namespace AmplifyShaderEditor
 		GUIContent Functionsbutton = null;
 		GUIContent Templatesbutton = null;
 		GUIContent APIbutton = null;
+		GUIContent SGtoASEbutton = null;
 
 		GUIContent DiscordButton = null;
 		GUIContent ForumButton = null;
@@ -136,6 +138,7 @@ namespace AmplifyShaderEditor
 				Functionsbutton = new GUIContent( " Shader Functions", textIcon );
 				Templatesbutton = new GUIContent( " Shader Templates", textIcon );
 				APIbutton = new GUIContent( " Node API", textIcon );
+				SGtoASEbutton = new GUIContent( " Shader Graph to ASE", textIcon );
 			}
 
 			if( packageIcon == null )
@@ -307,6 +310,9 @@ namespace AmplifyShaderEditor
 
 					if( GUILayout.Button( APIbutton, m_buttonStyle ) )
 						Application.OpenURL( APIURL );
+
+					if ( GUILayout.Button( SGtoASEbutton, m_buttonStyle ) )
+						Application.OpenURL( SGtoASEURL );
 				}
 				EditorGUILayout.EndVertical();
 

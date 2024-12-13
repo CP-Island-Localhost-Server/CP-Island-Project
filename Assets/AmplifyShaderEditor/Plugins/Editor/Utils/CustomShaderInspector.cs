@@ -79,6 +79,7 @@ namespace UnityEditor
 		private Mesh m_previewMesh;
 		private Vector2 m_mouseDelta;
 		private Transform m_cameraTransform;
+		private bool m_allowOpenInCanvas = true;
 
 		private static int m_sliderHashCode = -1;
 		private const float MaxDeltaY = 90;
@@ -228,6 +229,8 @@ namespace UnityEditor
 			Shader s = this.target as Shader;
 			if( s!= null )
 				ShaderUtilEx.FetchCachedErrors( s );
+
+			m_allowOpenInCanvas = IOUtils.IsASEShader( s );
 		}
 		
 		private static string GetPropertyType( Shader s, int index )
@@ -253,10 +256,12 @@ namespace UnityEditor
 			GUILayout.Space( 3 );
 			GUILayout.BeginHorizontal();
 			{
+				GUI.enabled = m_allowOpenInCanvas;
 				if ( GUILayout.Button( "Open in Shader Editor" ) )
 				{
 					ASEPackageManagerHelper.SetupLateShader( shader );
 				}
+				GUI.enabled = true;
 
 				if ( GUILayout.Button( "Open in Text Editor" ) )
 				{

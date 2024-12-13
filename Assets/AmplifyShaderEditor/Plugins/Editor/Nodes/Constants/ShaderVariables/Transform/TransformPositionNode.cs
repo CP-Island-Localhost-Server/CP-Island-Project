@@ -73,10 +73,10 @@ namespace AmplifyShaderEditor
 		private const string AseViewToScreenVarName = "viewToScreen";
 
 		private const string AseToScreenFormat = "ComputeScreenPos( {0} )";
-		private const string AseHDRPToScreenFormat = "ComputeScreenPos( {0} _ProjectionParams.x )";
+		private const string AseHDRPToScreenFormat = "ComputeScreenPos( {0}, _ProjectionParams.x )";
 
 		//
-		private const string AseClipToNDC = "{0}/{0}.w";
+		private const string AseClipToNDC = "{0}{1}/{0}.w";
 		/////////////////////////////////////////////////////
 		private const string AseObjectToTangentPosVarName = "objectToTangentPos";
 		private const string AseWorldToTangentPosVarName = "worldToTangentPos";
@@ -583,7 +583,7 @@ namespace AmplifyShaderEditor
 				if ( m_perspectiveDivide || m_to == TransformSpaceTo.Screen )
 				{
 					dataCollector.AddLocalVariable( UniqueId, CurrentPrecisionType, WirePortDataType.FLOAT4, varName, result );
-					result = string.Format( AseClipToNDC, varName );
+					result = string.Format( AseClipToNDC, varName, ( m_to == TransformSpaceTo.Screen ) ? ".xyz" : string.Empty );
 					varName += "NDC";
 				}
 				else if ( m_to != TransformSpaceTo.Clip )

@@ -131,14 +131,7 @@ namespace AmplifyShaderEditor
 		public override void OnConnectedOutputNodeChanges( int outputPortId, int otherNodeId, int otherPortId, string name, WirePortDataType type )
 		{
 			base.OnConnectedOutputNodeChanges( outputPortId, otherNodeId, otherPortId, name, type );
-			if( !m_texPort.CheckValidType( type ) )
-			{
-				m_texPort.FullDeleteConnections();
-				UIUtils.ShowMessage( UniqueId, "Parallax Occlusion Mapping node only accepts SAMPLER2D, SAMPLER3D and SAMPLER2DARRAY input types.\nTexture Object connected changed to "+ type + ", connection was lost, please review and update accordingly.", MessageSeverity.Warning );
-			} else
-			{
-				m_texPort.MatchPortToConnection();
-			}
+			m_texPort.MatchPortToConnection();
 			UpdateIndexPort();
 		}
 
@@ -271,11 +264,11 @@ namespace AmplifyShaderEditor
 				
 				if ( dataCollector.IsTemplate )
 				{
-					viewDirTan = dataCollector.TemplateDataCollectorInstance.GetTangentViewDir( CurrentPrecisionType );
+					viewDirTan = dataCollector.TemplateDataCollectorInstance.GetViewDir( CurrentPrecisionType, space: ViewSpace.Tangent );
 				}
 				else
 				{
-					viewDirTan = GeneratorUtils.GenerateViewDirection( ref dataCollector, UniqueId, ViewSpace.Tangent );
+					viewDirTan = GeneratorUtils.GenerateViewDirection( ref dataCollector, UniqueId, space: ViewSpace.Tangent );
 					//dataCollector.AddToInput( UniqueId, SurfaceInputs.VIEW_DIR, m_currentPrecisionType );
 					//viewDirTan = Constants.InputVarStr + "." + UIUtils.GetInputValueFromType( SurfaceInputs.VIEW_DIR );
 				}
@@ -298,12 +291,12 @@ namespace AmplifyShaderEditor
 			}
 			else
 			{
-				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, CurrentPrecisionType );
+				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision );
 				dataCollector.AddToInput( UniqueId, SurfaceInputs.INTERNALDATA, addSemiColon: false );
 				normalWorld = GeneratorUtils.GenerateWorldNormal( ref dataCollector, UniqueId );
 			}
 
-			string worldViewDir = GeneratorUtils.GenerateViewDirection( ref dataCollector, UniqueId, ViewSpace.World );
+			string worldViewDir = GeneratorUtils.GenerateViewDirection( ref dataCollector, UniqueId, space: ViewSpace.World );
 			
 			string dx = "ddx("+ textcoords + ")";
 			string dy = "ddy(" + textcoords + ")";
@@ -414,10 +407,10 @@ namespace AmplifyShaderEditor
 			}
 			
 			IOUtils.AddFunctionLine( ref m_functionBody, "float3 result = 0;" );
-			IOUtils.AddFunctionLine( ref m_functionBody, "int stepIndex = 0;" );
-			//IOUtils.AddFunctionLine( ref m_functionBody, "int numSteps = ( int )( minSamples + dot( viewWorld, normalWorld ) * ( maxSamples - minSamples ) );" );
-			//IOUtils.AddFunctionLine( ref m_functionBody, "int numSteps = ( int )lerp( maxSamples, minSamples, length( fwidth( uvs ) ) * 10 );" );
-			IOUtils.AddFunctionLine( ref m_functionBody, "int numSteps = ( int )lerp( (float)maxSamples, (float)minSamples, saturate( dot( normalWorld, viewWorld ) ) );" );
+			IOUtils.AddFunctionLine( ref m_functionBody, "float stepIndex = 0;" );
+			//IOUtils.AddFunctionLine( ref m_functionBody, "float numSteps = ( float )( minSamples + dot( viewWorld, normalWorld ) * ( maxSamples - minSamples ) );" );
+			//IOUtils.AddFunctionLine( ref m_functionBody, "float numSteps = ( float )lerp( maxSamples, minSamples, length( fwidth( uvs ) ) * 10 );" );
+			IOUtils.AddFunctionLine( ref m_functionBody, "float numSteps = floor( lerp( (float)maxSamples, (float)minSamples, saturate( dot( normalWorld, viewWorld ) ) ) );" );
 			IOUtils.AddFunctionLine( ref m_functionBody, "float layerHeight = 1.0 / numSteps;" );
 			IOUtils.AddFunctionLine( ref m_functionBody, "float2 plane = parallax * ( viewDirTan.xy / viewDirTan.z );" );
 			IOUtils.AddFunctionLine( ref m_functionBody, "uvs.xy += refPlane * plane;" );
@@ -472,8 +465,8 @@ namespace AmplifyShaderEditor
 
 			if ( m_sidewallSteps > 0 || m_sidewallStepsPort.IsConnected )
 			{
-				IOUtils.AddFunctionLine( ref m_functionBody, "int sectionSteps = sidewallSteps;" );
-				IOUtils.AddFunctionLine( ref m_functionBody, "int sectionIndex = 0;" );
+				IOUtils.AddFunctionLine( ref m_functionBody, "float sectionSteps = sidewallSteps;" );
+				IOUtils.AddFunctionLine( ref m_functionBody, "float sectionIndex = 0;" );
 				IOUtils.AddFunctionLine( ref m_functionBody, "float newZ = 0;" );
 				IOUtils.AddFunctionLine( ref m_functionBody, "float newHeight = 0;" );
 				IOUtils.AddFunctionLine( ref m_functionBody, "while ( sectionIndex < sectionSteps )" );

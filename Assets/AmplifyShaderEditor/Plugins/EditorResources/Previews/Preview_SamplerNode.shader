@@ -26,6 +26,7 @@ Shader "Hidden/SamplerNode"
 			#pragma fragment frag
 			#pragma target 3.5
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "UnityStandardUtils.cginc"
 
 			sampler2D _F;
@@ -64,6 +65,7 @@ Shader "Hidden/SamplerNode"
 			#pragma fragment frag
 			#pragma target 3.5
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "UnityStandardUtils.cginc"
 
 			sampler2D _B;

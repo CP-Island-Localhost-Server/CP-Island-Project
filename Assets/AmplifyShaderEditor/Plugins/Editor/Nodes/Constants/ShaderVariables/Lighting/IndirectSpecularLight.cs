@@ -109,7 +109,7 @@ namespace AmplifyShaderEditor
 				{
 					dataCollector.AddToIncludes( UniqueId, Constants.UnityLightingLib );
 					string worldPos = dataCollector.TemplateDataCollectorInstance.GetWorldPos();
-					string worldViewDir = dataCollector.TemplateDataCollectorInstance.GetViewDir( false, MasterNodePortCategory.Fragment );
+					string worldViewDir = dataCollector.TemplateDataCollectorInstance.GetViewDir( useMasterNodeCategory:false, customCategory:MasterNodePortCategory.Fragment );
 
 					string worldNormal = string.Empty;
 					if( m_inputPorts[ 0 ].IsConnected )
@@ -152,7 +152,7 @@ namespace AmplifyShaderEditor
 				{
 					if( dataCollector.CurrentSRPType == TemplateSRPType.URP )
 					{
-						string worldViewDir = dataCollector.TemplateDataCollectorInstance.GetViewDir( false, MasterNodePortCategory.Fragment );
+						string worldViewDir = dataCollector.TemplateDataCollectorInstance.GetViewDir( useMasterNodeCategory: false, customCategory: MasterNodePortCategory.Fragment );
 						string worldNormal = string.Empty;
 						if( m_inputPorts[ 0 ].IsConnected )
 						{
@@ -163,7 +163,7 @@ namespace AmplifyShaderEditor
 						}
 						else
 						{
-							worldNormal = dataCollector.TemplateDataCollectorInstance.GetWorldNormal( PrecisionType.Float, false, MasterNodePortCategory.Fragment );
+							worldNormal = dataCollector.TemplateDataCollectorInstance.GetWorldNormal( precisionType:PrecisionType.Float, useMasterNodeCategory: false, customCategory: MasterNodePortCategory.Fragment );
 						}
 
 						string tempsmoothness = m_inputPorts[ 1 ].GeneratePortInstructions( ref dataCollector );
@@ -187,7 +187,7 @@ namespace AmplifyShaderEditor
 			string normal = string.Empty;
 			if( m_inputPorts[ 0 ].IsConnected )
 			{
-				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, CurrentPrecisionType );
+				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision );
 				dataCollector.AddToInput( UniqueId, SurfaceInputs.INTERNALDATA, addSemiColon: false );
 				dataCollector.ForceNormal = true;
 
@@ -208,7 +208,7 @@ namespace AmplifyShaderEditor
 			{
 				if( dataCollector.IsFragmentCategory )
 				{
-					dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, CurrentPrecisionType );
+					dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision );
 					if( dataCollector.DirtyNormal )
 					{
 						dataCollector.AddToInput( UniqueId, SurfaceInputs.INTERNALDATA, addSemiColon: false );

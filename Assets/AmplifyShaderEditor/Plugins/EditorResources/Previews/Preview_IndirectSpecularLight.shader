@@ -16,6 +16,7 @@ Shader "Hidden/IndirectSpecularLight"
 			#pragma vertex vert_img
 			#pragma fragment frag
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "Lighting.cginc"
 			#include "UnityPBSLighting.cginc"
 
@@ -26,11 +27,10 @@ Shader "Hidden/IndirectSpecularLight"
 
 			float4 frag(v2f_img i) : SV_Target
 			{
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 worldNormal = normalize(float3(xy, z));
-				float3 vertexPos = float3(xy, z);
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
+				float3 normal = PreviewFragmentNormalOS( i.uv );
+				float3 worldNormal = UnityObjectToWorldNormal( normal );
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 
 				float3 worldRefl = -worldViewDir;
 				worldRefl = normalize(reflect( worldRefl, worldNormal ));
@@ -48,6 +48,7 @@ Shader "Hidden/IndirectSpecularLight"
 			#pragma vertex vert_img
 			#pragma fragment frag
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "Lighting.cginc"
 			#include "UnityPBSLighting.cginc"
 
@@ -58,15 +59,13 @@ Shader "Hidden/IndirectSpecularLight"
 
 			float4 frag(v2f_img i) : SV_Target
 			{
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
-				float3 normal = normalize(vertexPos);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
+				float3 normal = PreviewFragmentNormalOS( i.uv );
 				float3 worldNormal = UnityObjectToWorldNormal(normal);
 
-				float3 tangent = normalize(float3( -z, xy.y*0.01, xy.x ));
+				float3 tangent = PreviewFragmentTangentOS( i.uv );
 				float3 worldPos = mul(unity_ObjectToWorld, float4(vertexPos,1)).xyz;
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 				
 				float3 worldTangent = UnityObjectToWorldDir(tangent);
 				float tangentSign = -1;
@@ -99,6 +98,7 @@ Shader "Hidden/IndirectSpecularLight"
 			#pragma vertex vert_img
 			#pragma fragment frag
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "Lighting.cginc"
 			#include "UnityPBSLighting.cginc"
 
@@ -109,12 +109,10 @@ Shader "Hidden/IndirectSpecularLight"
 
 			float4 frag(v2f_img i) : SV_Target
 			{
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
-				float3 normal = normalize(vertexPos);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
+				float3 normal = PreviewFragmentNormalOS( i.uv );
 				float3 worldNormal = tex2D( _A, i.uv );
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 				
 				float3 worldRefl = reflect( -worldViewDir, worldNormal );
 

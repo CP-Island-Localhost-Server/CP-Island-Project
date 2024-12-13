@@ -14,6 +14,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -29,11 +30,10 @@ Shader "Hidden/FresnelNode"
 				float s = tex2D( _C, i.uv ).r;
 				float pw = tex2D( _D, i.uv ).r;
 
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
-				float3 worldNormal = normalize(float3(xy, z));
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
+				float3 vertexNormal = PreviewFragmentNormalOS( i.uv );
+				float3 worldNormal = UnityObjectToWorldNormal( vertexNormal );
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 
 				float fresnel = 0;
 				if(_FresnelType == 0)
@@ -54,6 +54,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -69,11 +70,9 @@ Shader "Hidden/FresnelNode"
 				float s = tex2D( _C, i.uv ).r;
 				float pw = tex2D( _D, i.uv ).r;
 
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
 				float3 worldNormal = tex2D( _A, i.uv );
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 
 				float fresnel = 0;
 				if(_FresnelType == 0)
@@ -94,6 +93,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -109,12 +109,11 @@ Shader "Hidden/FresnelNode"
 				float s = tex2D( _C, i.uv ).r;
 				float pw = tex2D( _D, i.uv ).r;
 
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
-				float3 worldNormal = normalize(float3(xy, z));
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
+				float3 vertexNormal = PreviewFragmentNormalOS( i.uv );
+				float3 worldNormal = UnityObjectToWorldNormal( vertexNormal );
 
-				float3 tangent = normalize(float3( -z, xy.y*0.01, xy.x ));
+				float3 tangent = PreviewFragmentTangentOS( i.uv );
 				float3 worldPos = mul(unity_ObjectToWorld, float4(vertexPos,1)).xyz;
 				float3 worldTangent = UnityObjectToWorldDir(tangent);
 				float tangentSign = -1;
@@ -130,7 +129,7 @@ Shader "Hidden/FresnelNode"
 
 				worldNormal = fixed3( dot( tSpace0.xyz, tangentNormal ), dot( tSpace1.xyz, tangentNormal ), dot( tSpace2.xyz, tangentNormal ) );
 
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 
 				float fresnel = 0;
 				if(_FresnelType == 0)
@@ -151,6 +150,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -169,7 +169,7 @@ Shader "Hidden/FresnelNode"
 				float2 xy = 2 * i.uv - 1;
 				float z = -sqrt(1-(dot(xy,xy)));
 				float3 vertexPos = normalize(float3(xy, z));
-				float3 worldViewDir = normalize(float3(0,0,-5) - vertexPos);
+				float3 worldViewDir = normalize(preview_WorldSpaceCameraPos - vertexPos);
 				float3 lightDir = normalize( _EditorWorldLightPos.xyz );
 				float3 halfVector = normalize(worldViewDir+lightDir);
 
@@ -192,6 +192,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -208,9 +209,7 @@ Shader "Hidden/FresnelNode"
 				float s = tex2D( _C, i.uv ).r;
 				float pw = tex2D( _D, i.uv ).r;
 
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
 				float3 worldNormal = tex2D( _A, i.uv );
 				float3 worldViewDir = tex2D( _E, i.uv );;
 				
@@ -233,6 +232,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -275,6 +275,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 
@@ -291,9 +292,7 @@ Shader "Hidden/FresnelNode"
 				float s = tex2D( _C, i.uv ).r;
 				float pw = tex2D( _D, i.uv ).r;
 
-				float2 xy = 2 * i.uv - 1;
-				float z = -sqrt(1-saturate(dot(xy,xy)));
-				float3 vertexPos = float3(xy, z);
+				float3 vertexPos = PreviewFragmentPositionOS( i.uv );
 				float3 normal = normalize(vertexPos);
 				float3 worldNormal = UnityObjectToWorldNormal(normal);
 				float3 worldViewDir = tex2D( _E, i.uv );
@@ -317,6 +316,7 @@ Shader "Hidden/FresnelNode"
 		{
 			CGPROGRAM
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#pragma vertex vert_img
 			#pragma fragment frag
 

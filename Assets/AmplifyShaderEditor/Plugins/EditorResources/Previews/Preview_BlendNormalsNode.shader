@@ -13,6 +13,7 @@ Shader "Hidden/BlendNormalsNode"
 			#pragma fragment frag
 			#pragma target 3.0
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "UnityStandardUtils.cginc"
 		
 			float3 BlendNormalWorldspaceRNM(float3 n1, float3 n2, float3 vtxNormal)

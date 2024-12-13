@@ -1127,7 +1127,7 @@ namespace AmplifyShaderEditor
 			if( !isVertex )
 			{
 				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_POS );
-				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, CurrentPrecisionType );
+				dataCollector.AddToInput( UniqueId, SurfaceInputs.WORLD_NORMAL, UIUtils.CurrentWindow.CurrentGraph.CurrentPrecision );
 				dataCollector.AddToInput( UniqueId, SurfaceInputs.INTERNALDATA, addSemiColon: false );
 				dataCollector.ForceNormal = true;
 			}

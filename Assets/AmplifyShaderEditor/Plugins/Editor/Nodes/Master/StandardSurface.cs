@@ -1379,7 +1379,10 @@ namespace AmplifyShaderEditor
 				ContainerGraph.CurrentCanvasMode = NodeAvailability.CustomLighting;
 			}
 
-			if( isInstancedShader )
+			// @diogo: Set ASE info
+			ASEPackageManagerHelper.SetASEVersionInfoOnDataCollector( ref m_currentDataCollector );
+
+			if ( isInstancedShader )
 			{
 				m_currentDataCollector.AddToPragmas( UniqueId, IOUtils.InstancedPropertiesHeader );
 			}

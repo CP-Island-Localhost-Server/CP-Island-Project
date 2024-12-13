@@ -18,6 +18,7 @@ Shader "Hidden/TextureArrayNode"
 			#pragma fragment frag
 			#pragma target 3.5
 			#include "UnityCG.cginc"
+			#include "Preview.cginc"
 			#include "UnityStandardUtils.cginc"
 
 			uniform UNITY_DECLARE_TEX2DARRAY( _Sampler );

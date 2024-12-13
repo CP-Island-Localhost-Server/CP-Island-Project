@@ -2617,7 +2617,7 @@ namespace AmplifyShaderEditor
 			{
 				if( outPort.DataType != WirePortDataType.OBJECT && outPort.DataType != inputPortType )
 				{
-					return UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, new NodeCastInfo( m_uniqueId, outputId ), null, outPort.DataType, inputPortType, outPort.LocalValue( dataCollector.PortCategory ) );
+					return UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, null, outPort.DataType, inputPortType, outPort.LocalValue( dataCollector.PortCategory ) );
 				}
 				else
 				{
@@ -2630,7 +2630,7 @@ namespace AmplifyShaderEditor
 
 			if( outPort.DataType != WirePortDataType.OBJECT && outPort.DataType != inputPortType )
 			{
-				result = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, new NodeCastInfo( m_uniqueId, outputId ), null, outPort.DataType, inputPortType, result );
+				result = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, null, outPort.DataType, inputPortType, result );
 			}
 			return result;
 		}

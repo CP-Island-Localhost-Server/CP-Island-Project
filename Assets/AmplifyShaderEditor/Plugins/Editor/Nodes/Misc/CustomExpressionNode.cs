@@ -90,6 +90,8 @@ namespace AmplifyShaderEditor
 		private const string AutoRegisterStr = "Auto-Register";
 		private const string DependenciesStr = "Dependencies";
 
+		private const string DefaultSamplerStateStr = "_Linear_Repeat";
+
 		private const string VarRegexReplacer = @"\b{0}\b";
 		private readonly string[] PrecisionLabelsExtraLocal = { "Float" , "Half" , "Inherit Local" };
 
@@ -1356,6 +1358,10 @@ namespace AmplifyShaderEditor
 						if( m_inputPorts[ i ].DataType != WirePortDataType.OBJECT )
 						{
 							string result = m_inputPorts[ i ].GeneratePortInstructions( ref dataCollector );
+							if ( !m_inputPorts[ i ].IsConnected && m_inputPorts[ i ].DataType == WirePortDataType.SAMPLERSTATE )
+							{
+								result = GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, DefaultSamplerStateStr, VariableMode.Create );
+							}
 							dataCollector.AddLocalVariable( UniqueId , CurrentPrecisionType , m_inputPorts[ i ].DataType , inputPortLocalVar , result );
 						}
 						else
@@ -1428,7 +1434,12 @@ namespace AmplifyShaderEditor
 									}
 									else
 									{
-										dataCollector.AddLocalVariable( UniqueId , CurrentPrecisionType , m_inputPorts[ i ].DataType , inputPortLocalVar , m_inputPorts[ i ].WrappedInternalData );
+										string result = m_inputPorts[ i ].WrappedInternalData;
+										if ( m_inputPorts[ i ].DataType == WirePortDataType.SAMPLERSTATE )
+										{
+											result = GeneratorUtils.GenerateSamplerState( ref dataCollector, UniqueId, DefaultSamplerStateStr, VariableMode.Create );
+										}
+										dataCollector.AddLocalVariable( UniqueId, CurrentPrecisionType, m_inputPorts[ i ].DataType, inputPortLocalVar, result );
 									}
 								}
 

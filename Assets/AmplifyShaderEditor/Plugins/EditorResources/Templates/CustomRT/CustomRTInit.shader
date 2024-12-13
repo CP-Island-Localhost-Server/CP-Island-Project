@@ -18,7 +18,7 @@ Shader /*ase_name*/"Hidden/Templates/CustomRTInit"/*end*/
 
             #pragma vertex ASEInitCustomRenderTextureVertexShader
             #pragma fragment frag
-            #pragma target 3.0
+            #pragma target 3.5
 			/*ase_pragma*/
 
 			struct ase_appdata_init_customrendertexture

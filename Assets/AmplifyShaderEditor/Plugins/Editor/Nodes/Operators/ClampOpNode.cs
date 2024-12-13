@@ -65,13 +65,13 @@ namespace AmplifyShaderEditor
 			string min = m_inputPorts[ 1 ].GeneratePortInstructions( ref dataCollector );
 			if ( minType != valueType )
 			{
-				min = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, new NodeCastInfo( UniqueId, outputId ), null, m_inputPorts[ 1 ].DataType, m_inputPorts[ 0 ].DataType, min );
+				min = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, null, m_inputPorts[ 1 ].DataType, m_inputPorts[ 0 ].DataType, min );
 			}
 
 			string max = m_inputPorts[ 2 ].GeneratePortInstructions( ref dataCollector );
 			if ( maxType != valueType )
 			{
-				max = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, new NodeCastInfo( UniqueId, outputId ), null, m_inputPorts[ 2 ].DataType, m_inputPorts[ 0 ].DataType, max );
+				max = UIUtils.CastPortType( ref dataCollector, CurrentPrecisionType, null, m_inputPorts[ 2 ].DataType, m_inputPorts[ 0 ].DataType, max );
 			}
 
 			string result = string.Empty;

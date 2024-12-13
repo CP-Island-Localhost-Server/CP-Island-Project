@@ -6,7 +6,7 @@ using UnityEngine;
 namespace AmplifyShaderEditor
 {
 	[System.Serializable]
-	[NodeAttributes( "Light Color", "Lighting", "Light Color, RGB value already contains light intensity while A only contains light intensity" )]
+	[NodeAttributes( "Main Light Color", "Lighting", "Light color of main Directional light. RGB value already contains light intensity while A only contains light intensity." )]
 	public sealed class LightColorNode : ShaderVariablesNode
 	{
 		private const string m_lightColorValue = "_LightColor0";
@@ -71,7 +71,7 @@ namespace AmplifyShaderEditor
 				}
 
 				dataCollector.AddLocalVariable( UniqueId, CurrentPrecisionType, WirePortDataType.FLOAT, m_localIntensityVar, 
-					string.Format( "max( max( {0}.r, {0}.g ), {0}.b )", constantVar ) );
+					string.Format( "max( max( {0}.r, {0}.g ), {0}.b ) + 1e-7", constantVar ) );
 
 				dataCollector.AddLocalVariable( UniqueId, CurrentPrecisionType, WirePortDataType.FLOAT4, m_localColorVar,
 					string.Format( "float4( {0}.rgb / {1}, {1} )", constantVar, m_localIntensityVar ) );
