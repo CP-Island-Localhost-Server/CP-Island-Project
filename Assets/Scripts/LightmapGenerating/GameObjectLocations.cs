@@ -50,9 +50,8 @@ public class GameObjectLocations : MonoBehaviour
 	// Town
     public GameObject CivicDoor;
     public GameObject CivicDoor2;
-	// Summer Splashdown and Beach
+	// Summer Splashdown
 	public GameObject InflatableDolphinFBX;
-	public GameObject Blob;
 	// Disable static on these meshes
 	public GameObject DanceCaveSpotLights;
 	public GameObject GatewayFX;

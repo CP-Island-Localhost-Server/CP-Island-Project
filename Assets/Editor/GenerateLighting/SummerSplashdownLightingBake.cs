@@ -54,8 +54,6 @@ public class SummerSplashdownLightingBake : MonoBehaviour
 				
 				//set for baking
 				Gol.ChangeSkybox(Gol.LightmappingSkybox);
-				
-				Gol.Blob.transform.localPosition = new Vector3(Gol.Blob.transform.localPosition.x, 100, Gol.Blob.transform.localPosition.z);
 
 				Gol.AdditiveWorldArt.isStatic = true;
 				SetStaticRecursively(Gol.AdditiveWorldArt, true);
@@ -69,8 +67,6 @@ public class SummerSplashdownLightingBake : MonoBehaviour
 				
 				//bake
 				Lightmapping.Bake();
-				
-				Gol.Blob.transform.localPosition = new Vector3(Gol.Blob.transform.localPosition.x, 6.923531f, Gol.Blob.transform.localPosition.z);
 
 				Gol.AdditiveWorldArt.isStatic = false;
 				SetStaticRecursively(Gol.AdditiveWorldArt, false);

@@ -54,8 +54,6 @@ public class BeachLightingBake : MonoBehaviour
 				
 				//set for baking
 				Gol.ChangeSkybox(Gol.LightmappingSkybox);
-				
-				Gol.Blob.transform.localPosition = new Vector3(Gol.Blob.transform.localPosition.x, 100, Gol.Blob.transform.localPosition.z);
 
 				Gol.WorldArt.isStatic = true;
 				SetStaticRecursively(Gol.WorldArt, true);
@@ -67,8 +65,6 @@ public class BeachLightingBake : MonoBehaviour
 				
 				//reset
 				Gol.ChangeSkybox(Gol.DayCubemap);
-				
-				Gol.Blob.transform.localPosition = new Vector3(Gol.Blob.transform.localPosition.x, -0.6504999f, Gol.Blob.transform.localPosition.z);
 
 				Gol.WorldArt.isStatic = false;
 				SetStaticRecursively(Gol.WorldArt, false);
