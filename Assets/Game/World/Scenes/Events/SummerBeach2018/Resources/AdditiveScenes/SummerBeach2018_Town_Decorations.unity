@@ -29340,6 +29340,7 @@ Transform:
   - {fileID: 3630}
   - {fileID: 3460}
   - {fileID: 4355}
+  - {fileID: 149011131}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2451
@@ -147593,6 +147594,89 @@ MonoBehaviour:
   _syncRegionsWithTempo: 0
   _audioClipTempo: 120
   _regions: []
+--- !u!1 &149011130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149011131}
+  - component: {fileID: 149011134}
+  - component: {fileID: 149011133}
+  - component: {fileID: 149011132}
+  m_Layer: 24
+  m_Name: SewerTriggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149011131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149011130}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.035587087, z: -0, w: 0.9993666}
+  m_LocalPosition: {x: 72.12, y: -4.78, z: -1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2449}
+  m_LocalEulerAnglesHint: {x: -0, y: -4.078841, z: 0}
+--- !u!114 &149011132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149011130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc966c71d25a1d0dea4b3f988e2979ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Latch: 0
+  EditorGizmoColor: {r: 1, g: 1, b: 1, a: 1}
+  Tag: Player
+--- !u!114 &149011133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149011130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91a7fbbd3b83131ad25599f8eef42f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TokenDefinition: {fileID: 11400000, guid: ff203e92a126ca2429519b860922917f, type: 2}
+--- !u!65 &149011134
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149011130}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 39.03546, y: 13.641077, z: 30.192354}
+  m_Center: {x: -12.870245, y: -5.7102194, z: 14.069114}
 --- !u!1 &252949190
 GameObject:
   m_ObjectHideFlags: 0
@@ -150151,7 +150235,6 @@ MonoBehaviour:
   CivicDoor: {fileID: 0}
   CivicDoor2: {fileID: 0}
   InflatableDolphinFBX: {fileID: 1927}
-  Blob: {fileID: 1619}
   DanceCaveSpotLights: {fileID: 0}
   GatewayFX: {fileID: 0}
   GatewayFX2: {fileID: 0}
