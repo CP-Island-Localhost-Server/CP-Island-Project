@@ -61,11 +61,6 @@ namespace AmplifyShaderEditor
 		{
 			AmplifyShaderEditorWindow.CreateConfirmationTemplateShader( "899e609c083c74c4ca567477c39edef0" );
 		}
-		[MenuItem( "Assets/Create/Amplify Shader/Templates/CPIsland/World", false, 85 )]
-		public static void ApplyTemplateTemplatesCPIslandWorld()
-		{
-			AmplifyShaderEditorWindow.CreateConfirmationTemplateShader( "17acbe90099405d4aaa579c8105e2b1a" );
-		}
 		[MenuItem( "Assets/Create/Amplify Shader/UI/Default", false, 85 )]
 		public static void ApplyTemplateUIDefault()
 		{
