@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1609821650431224
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4043817057303225}
+  - component: {fileID: 65847850862537970}
+  - component: {fileID: 114304427030824685}
+  - component: {fileID: 114803767626309770}
+  - component: {fileID: 114617286757350178}
+  - component: {fileID: 114609693553491124}
+  - component: {fileID: 114528277345845356}
+  m_Layer: 24
+  m_Name: FrankysMarketplace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4043817057303225
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_LocalRotation: {x: 0, y: -0.13392635, z: 0, w: 0.9909913}
+  m_LocalPosition: {x: 13.604, y: 0.4, z: 2.477}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 15.393081, z: 0}
+--- !u!65 &65847850862537970
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 1.2417755, y: 1.64, z: 1.4570854}
+  m_Center: {x: 0.13948902, y: 0, z: -0.216449}
+--- !u!114 &114304427030824685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e16ccdeeb5fe9b837ef63b0e7636dca, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  definition: {fileID: 11400000, guid: 84cd2709fb41d4244b05b86bb35b9d7c, type: 2}
+--- !u!114 &114803767626309770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e90e6dcffe65745acedc0fcd99cf1f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: SendMessageAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 0
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  TargetObject: {fileID: 1609821650431224}
+  MethodName: ActivateMarketplace
+  DataString:
+  IsReceiverRequired: 0
+--- !u!114 &114617286757350178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff02ef0faa1fb6e6f942f2f774ea8338, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: FilterTriggerAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 1
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  OwnerTag: Player
+  TriggerEveryFrame: 1
+  ExcludeIfSitting: 0
+  ExcludeIfSwimming: 0
+  ExcludeIfInAir: 0
+--- !u!114 &114609693553491124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6df44f1b4d71f0d94f509f3eccc4cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  colliderColorType: 3
+--- !u!114 &114528277345845356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1609821650431224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495b8fc2bd46955a2235092698a7c85, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: LogAnalyticsGameActionAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 2
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  Context: mainUI
+  Action: special_action
+  Type: market_Frankys
+  Message:
+  Location:
+  IsSingular: 0
+  SingularID:
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1609821650431224}
+  m_IsPrefabParent: 1

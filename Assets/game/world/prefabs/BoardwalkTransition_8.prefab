@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1013597843024561
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4905743210011306}
+  - component: {fileID: 65537334084282178}
+  - component: {fileID: 114087193817620533}
+  - component: {fileID: 114165534727496928}
+  m_Layer: 24
+  m_Name: BoardwalkTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1472051895320665
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4615558581899296}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4905743210011306
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013597843024561}
+  m_LocalRotation: {x: -0, y: 0.5536344, z: -0, w: 0.8327599}
+  m_LocalPosition: {x: 0.35, y: 1.77, z: -10.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4615558581899296}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0, y: -67.23341, z: 0}
+--- !u!65 &65537334084282178
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013597843024561}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 2.221984, y: 4.509163, z: 5.8324304}
+  m_Center: {x: 1.3595233, y: 1.4920802, z: -0.68012387}
+--- !u!114 &114087193817620533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013597843024561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd613c4f79e859c72d23dc2cb0f7048, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Zone: {fileID: 11400000, guid: 5b88faf35c213bc4c9af9219af98cd78, type: 2}
+  LoadingScene: Loading
+--- !u!114 &114165534727496928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013597843024561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e0fb2d08b0f038e77cb527b14f9453, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnPoint: {fileID: 4615558581899296}
+--- !u!4 &4615558581899296
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1472051895320665}
+  m_LocalRotation: {x: -0, y: -0.6314673, z: -0, w: 0.77540255}
+  m_LocalPosition: {x: -4.86, y: -0.47, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4905743210011306}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 78.31692, z: 0}
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1013597843024561}
+  m_IsPrefabParent: 1

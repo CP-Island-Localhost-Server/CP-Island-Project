@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1134724705328388
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4216521261197054}
+  - component: {fileID: 65912559846714356}
+  - component: {fileID: 114337134364894225}
+  - component: {fileID: 114944921022459698}
+  m_Layer: 24
+  m_Name: EventPiratePartyTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1712891176357748
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4724028484188314}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4216521261197054
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134724705328388}
+  m_LocalRotation: {x: 1.2959954E-09, y: 0.41333252, z: -2.6757154E-09, w: 0.9105802}
+  m_LocalPosition: {x: 0.096767426, y: -0.029626846, z: 0.53084993}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4724028484188314}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 1.2906768E-08, y: -48.8287, z: 3.3086553E-07}
+--- !u!65 &65912559846714356
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134724705328388}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 1.4534132, y: 3.7053113, z: 1.6611028}
+  m_Center: {x: 0.74602383, y: 1.1022999, z: -0.031761408}
+--- !u!114 &114337134364894225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134724705328388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd613c4f79e859c72d23dc2cb0f7048, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ZoneDefinitionKey:
+    Id:
+    type: ClubPenguin.ZoneDefinition, ReMix-Game
+  Zone: {fileID: 11400000, guid: 2a940cf361fa8c04487639c1abe542d2, type: 2}
+  LoadingScene: Loading
+  DestinationSpawnPoint: {x: 0, y: 0, z: 0}
+  DestinationSpawnRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114944921022459698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1134724705328388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e0fb2d08b0f038e77cb527b14f9453, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnPoint: {fileID: 4724028484188314}
+--- !u!4 &4724028484188314
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712891176357748}
+  m_LocalRotation: {x: -0, y: -0.6314673, z: -0, w: 0.77540255}
+  m_LocalPosition: {x: -4.86, y: -0.96, z: -0.02}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4216521261197054}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 78.31692, z: 0}
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1134724705328388}
+  m_IsPrefabParent: 1

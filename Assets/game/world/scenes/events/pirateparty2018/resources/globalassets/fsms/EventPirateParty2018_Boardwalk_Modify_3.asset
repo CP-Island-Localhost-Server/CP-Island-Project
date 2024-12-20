@@ -1,0 +1,4229 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2940edbb6acfe2e314f329f06a02e410, type: 3}
+  m_Name: EventPirateParty2018_Boardwalk_Modify
+  m_EditorClassIdentifier:
+  category: General
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 11400000}
+    name: FSM
+    startState: Find PohtaytohIslandDecor 2
+    states:
+    - name: Has Player already Scene the Cutscene 03?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 554.6797
+        y: 1744.3984
+        width: 308
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Animate PrizeRuins BelowWater 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Animate PrizeRuins BelowWater
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.LocalAccountPlayerPrefsHasKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27442976
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_Scene03
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: PirateParty2018_Scene03
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 23
+        - 23
+        paramName:
+        - key
+        - trueEvent
+        - falseEvent
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Is the Player on a Quest?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 560
+        y: 1520
+        width: 187
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Deactivate PohtaytohIslandDecor
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Activate PohtaytohIslandDecor 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.CheckActiveQuestAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 87136216
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 23
+        - 23
+        paramName:
+        - IsOnQuestEvent
+        - IsNotOnQuestEvent
+        paramDataPos:
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+    - name: Find PohtaytohIslandDecor
+      description: NO LONGER USED!!!
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 100.875
+        y: 1542.5469
+        width: 199
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate PohtaytohIslandDecor
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: PohtaytohIslandDecor
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - EventPirateParty2018_Boardwalk_NotOnQuestDecor
+        - PohtaytohIslandDecor
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Find PiratePartyPrizeRuins
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 563
+        y: 1170
+        width: 198
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find ChestArea
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: PiratePartyPrizeRuins
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: PiratePartyPrizeRuins
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Deactivate PohtaytohIslandDecor
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 100.00781
+        y: 1611.2734
+        width: 242
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate PiratePartyPrizeRuins
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PohtaytohIslandDecor
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Deactivate PiratePartyPrizeRuins
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 99.50781
+        y: 1657.2734
+        width: 241
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: PLAYER IS ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PiratePartyPrizeRuins
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Find rewardCollectible_PenglantisChest
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 1040.5
+        y: 1264.9844
+        width: 284
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Parent rewardCollectible_PenglantisChest to ChestArea
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: rewardCollectible_PenglantisChest
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: rewardCollectible_PenglantisChest
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Parent rewardCollectible_PenglantisChest to ChestArea
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 1039.5
+        y: 1306.7969
+        width: 389
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState:
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetParent
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 94450410
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: ChestArea
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: rewardCollectible_PenglantisChest
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 19
+        - 17
+        - 17
+        paramName:
+        - gameObject
+        - parent
+        - resetLocalPosition
+        - resetLocalRotation
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: Find ChestArea
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 638
+        y: 1211
+        width: 120
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find BoardwalkCloud
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindChild
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27724793
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: ChestArea
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PiratePartyPrizeRuins
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: ChestArea
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 18
+        - 19
+        paramName:
+        - gameObject
+        - childName
+        - storeResult
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Spawn the Cover Cloud
+      description: This cloud prevents players from seeing other penguins on the sunken Penglantian Ruins
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 941.3672
+        y: 2012.4375
+        width: 388.5
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Spawn Cutscene03
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CreateObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 13206463
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1635458614707684, guid: 503411b5a4ec43f46bec46146da9c19e, type: 2}
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1475945389434338, guid: 2e6c02c0c3df89c46bf2e36d49d2b440, type: 2}
+        - useVariable: 1
+          name: PiratePartyCoverCloud
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 19
+        - 19
+        - 28
+        - 28
+        - 19
+        paramName:
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: Animate PrizeRuins BelowWater
+      description: Initialize Ruins under the sea
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 944.5547
+        y: 1835.0078
+        width: 234
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is Cutscene 3 already loaded?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.AnimatorTriggerAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 28021262
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: PiratePartyPrizeRuins
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: BelowWater
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 1
+        - 19
+        - 18
+        paramName:
+        - UseOwnerGameObject
+        - Target
+        - Parameter
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 1
+        - 0
+        - 0
+    - name: Find BoardwalkCloud
+      description: + Hide
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 560
+        y: 1360
+        width: 160
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is the Player on a Quest?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 3
+        actionHashCodes:
+        - 32189433
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: BoardwalkCloud
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoardwalkCloud
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - WorldArt/Background/Cards
+        - Cloud_02 (1)
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Spawn Cutscene03
+      description: "--- NEW ACTION --\nThis previously spawned cutscene03 Trigger (see orange action to the right). Now it spawns Cutscene03 with the trigger integrated in it."
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 940
+        y: 2097.4766
+        width: 400
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: PLAYER IS NOT ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CreateEmptyObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 13206463
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1666467049738563, guid: 113c31cc96ec09845a70511997a05b3b, type: 2}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Cutscene03Trigger
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 19
+        - 19
+        - 28
+        - 28
+        - 19
+        paramName:
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: If Player is on a Quest
+      description: DON'T show any of these decorations.
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 102.96094
+        y: 1460.5234
+        width: 220
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Find and store LocalPlayer object
+      description: "Since we do not have a \"Local Account PlayerPrefs Delete Key\", we need to manually get the local player's screen name.\n\nThis part finds the correct parent to start this process."
+      colorIndex: 7
+      position:
+        serializedVersion: 2
+        x: 1258.75
+        y: 287.46875
+        width: 400
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: NULL
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: LocalPlayer object not found. Wait and try again
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: NOT_NULL
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Get Local Player's Screen Name
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 3
+        actionHashCodes:
+        - 32189433
+        - 90334485
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: LocalPlayerObj
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: LocalPlayerObj
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - /UI/UIRoot_WorldScene/WorldSceneUIRoot/GuiChat/PlayerNameCanvas
+        - LocalPlayer
+        - NULL
+        - NOT_NULL
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        - 19
+        - 23
+        - 23
+        - 17
+        - 1
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        - 3
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: LocalPlayer object not found. Wait and try again
+      description:
+      colorIndex: 7
+      position:
+        serializedVersion: 2
+        x: 1842.1562
+        y: 288.54688
+        width: 339
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: TRY AGAIN
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Find and store LocalPlayer object
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 17940552
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - TRY AGAIN
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 15
+        - 23
+        - 1
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    - name: Get Local Player's Screen Name
+      description: "Unfortunately, the next child object can have different names, so we can't do a find on it. Instead, we use \"Get Child Num\" to get the first child, regardless of name.\n\nThen, we can use a \"Get Child\" to find 'NameText\" gameObject.\n\nOnce we have that, we get the \"Text\" script component, and finally get the \"Text.text\" value, which contains the local player\ns name. Whew!"
+      colorIndex: 7
+      position:
+        serializedVersion: 2
+        x: 1253.6875
+        y: 488.46094
+        width: 400
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Create Key Name
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetChildNum
+        - HutongGames.PlayMaker.Actions.GetChild
+        - HutongGames.PlayMaker.Actions.GetComponent
+        - HutongGames.PlayMaker.Actions.GetProperty
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex:
+        - 0
+        - 3
+        - 7
+        - 10
+        actionHashCodes:
+        - 98372648
+        - 72829720
+        - 34920452
+        - 72534106
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: FirstChildObj
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: NameTextObj
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: LocalPlayerObj
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: FirstChildObj
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: NameTextObj
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 1
+            name: NameTextScript
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.UI.Text
+            value: {fileID: 0}
+          TargetTypeName: UnityEngine.UI.Text
+          PropertyName: text
+          BoolParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          IntParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 1
+            name: LocalPlayerName
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value:
+          Vector2Parameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.String
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName:
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName:
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: []
+            boolValues:
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 0
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: NameText
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams:
+        - useVariable: 1
+          name: NameTextScript
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.UI.Text
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 16
+        - 19
+        - 20
+        - 18
+        - 18
+        - 19
+        - 20
+        - 24
+        - 1
+        - 36
+        - 1
+        paramName:
+        - gameObject
+        - childIndex
+        - store
+        - gameObject
+        - childName
+        - withTag
+        - storeResult
+        - gameObject
+        - storeComponent
+        - everyFrame
+        - targetProperty
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        - 1
+        - 2
+        - 0
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+    - name: Create Key Name
+      description: Here, we manually build the key names, matching what the LocalAccount actions do in the background. This combines the local player's name (eg. Sheep99) with the desired PlayerPref text to create a key for use with the "PlayerPref Delet Key" action.
+      colorIndex: 7
+      position:
+        serializedVersion: 2
+        x: 1249.6484
+        y: 731.8281
+        width: 400
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player come from Maze?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BuildString
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 95318131
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: LocalPlayerName
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value:
+        - useVariable: 1
+          name: PlayerPref_HasTeleportedToBoardwalk
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: HasTeleportedToBoardwalk
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value:
+        - useVariable: 1
+          name: PlayerPref_LocalAccount_HasTeleportedToBoardwalk
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value:
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes:
+        - 2
+        arrayParamTypes:
+        - HutongGames.PlayMaker.FsmString
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 12
+        - 18
+        - 18
+        - 18
+        - 17
+        - 18
+        - 1
+        paramName:
+        - stringParts
+        - 
+        - 
+        - separator
+        - addToEnd
+        - storeResult
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 2
+        - 0
+        - 3
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Display Key names in Unity's Console
+      description: This step is for DEBUG ONLY, and can be safely deleted when everything has been verified as working correctly
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 558.7656
+        y: 895.3906
+        width: 400
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player come from Maze?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DebugLog
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 31807900
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_LocalAccount_HasTeleportedToBoardwalk
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value:
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000001
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 7
+        - 18
+        - 1
+        paramName:
+        - logLevel
+        - text
+        - sendToUnityLog
+        paramDataPos:
+        - 0
+        - 0
+        - 4
+        paramByteDataSize:
+        - 4
+        - 0
+        - 1
+    - name: Has Player come from Maze?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 557.4531
+        y: 1016.5469
+        width: 211
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Find Local Player
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Find PiratePartyPrizeRuins
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.LocalAccountPlayerPrefsHasKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27442976
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_HasTeleportedToBoardwalk
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: HasTeleportedToBoardwalk
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 23
+        - 23
+        paramName:
+        - key
+        - trueEvent
+        - falseEvent
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Send LocalPlayer to Portal Spawn Point
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 58.054688
+        y: 1029.9219
+        width: 283
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: PlayerPrefs Delete Key
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetPosition
+        - HutongGames.PlayMaker.Actions.SetRotation
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 8
+        actionHashCodes:
+        - 62842358
+        - 71409303
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: LocalPlayer
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: LocalPlayer
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 55.42
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 2.19
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 16.43
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: -146.55
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0, w: 0}
+        stringParams: []
+        byteData: 000000000000000000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 28
+        - 15
+        - 15
+        - 15
+        - 7
+        - 1
+        - 1
+        - 20
+        - 35
+        - 28
+        - 15
+        - 15
+        - 15
+        - 7
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
+        - gameObject
+        - quaternion
+        - vector
+        - xAngle
+        - yAngle
+        - zAngle
+        - space
+        - everyFrame
+        - lateUpdate
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 2
+        - 0
+        - 4
+        - 5
+        - 1
+        - 0
+        - 1
+        - 3
+        - 4
+        - 5
+        - 6
+        - 10
+        - 11
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 4
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 4
+        - 1
+        - 1
+    - name: PlayerPrefs Delete Key
+      description: "Remove:\nPlayerNameHasTeleportedToBeach"
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 55.445312
+        y: 1072.8438
+        width: 213.5
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find PiratePartyPrizeRuins
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.PlayerPrefsDeleteKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 7414291
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_LocalAccount_HasTeleportedToBoardwalk
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value:
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        paramName:
+        - key
+        paramDataPos:
+        - 0
+        paramByteDataSize:
+        - 0
+    - name: Find Local Player
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 61.546875
+        y: 987.03125
+        width: 134
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Send LocalPlayer to Portal Spawn Point
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: LocalPlayer
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Penguin
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Player
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: OMIT THESE BLUE STATES! --->
+      description: The chest already starts parented to the ChestArea now. This fixes an error where player couldn't recieve the rewards.
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 571
+        y: 1273
+        width: 400
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Animate PrizeRuins BelowWater 2
+      description: Initialize ruins above the sea
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 897.9297
+        y: 2403.6797
+        width: 247
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: PLAYER IS NOT ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.AnimatorTriggerAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 28021262
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: PiratePartyPrizeRuins
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Default
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 1
+        - 19
+        - 18
+        paramName:
+        - UseOwnerGameObject
+        - Target
+        - Parameter
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 1
+        - 0
+        - 0
+    - name: PLAYER IS ON QUEST!
+      description: wait 5 seconds
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 89.16406
+        y: 2677.25
+        width: 172
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is the Player on a Quest? 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 17940552
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 15
+        - 23
+        - 1
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    - name: Is the Player on a Quest? 2
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 88.49219
+        y: 2750.6484
+        width: 200
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: PLAYER IS ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Activate PohtaytohIslandDecor 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.CheckActiveQuestAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 87136216
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 23
+        - 23
+        paramName:
+        - IsOnQuestEvent
+        - IsNotOnQuestEvent
+        paramDataPos:
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+    - name: PLAYER IS NOT ON QUEST!
+      description: wait 5 seconds
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 942.96875
+        y: 2670.7812
+        width: 205
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is the Player on a Quest? 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 17940552
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0.1
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 15
+        - 23
+        - 1
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    - name: Is the Player on a Quest? 3
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 940.8203
+        y: 2747.4062
+        width: 200
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Deactivate PohtaytohIslandDecor
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: PLAYER IS NOT ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.CheckActiveQuestAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 87136216
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 23
+        - 23
+        paramName:
+        - IsOnQuestEvent
+        - IsNotOnQuestEvent
+        paramDataPos:
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+    - name: Activate PohtaytohIslandDecor 2
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 293.89844
+        y: 2091.9688
+        width: 238
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Activate PiratePartyPrizeRuins 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PohtaytohIslandDecor
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Activate PiratePartyPrizeRuins 2
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 293.39844
+        y: 2137.9688
+        width: 237
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player already Scene the Cutscene 03?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PiratePartyPrizeRuins
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Find PohtaytohIslandDecor 2
+      description: NO LONGER USED!!!
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 567.2578
+        y: 104.64844
+        width: 212
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate PohtaytohIslandDecor 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: PohtaytohIslandDecor
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - EventPirateParty2018_Boardwalk_NotOnQuestDecor
+        - PohtaytohIslandDecor
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Deactivate PohtaytohIslandDecor 2
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 566.3906
+        y: 173.375
+        width: 255
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate PiratePartyPrizeRuins 2
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PohtaytohIslandDecor
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Deactivate PiratePartyPrizeRuins 2
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 564.7344
+        y: 212.54688
+        width: 254
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find PiratePartyPrizeRuins
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PiratePartyPrizeRuins
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Activate PohtaytohIslandDecor 3
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 942.02344
+        y: 1593.2891
+        width: 238
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Activate PiratePartyPrizeRuins 3
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PohtaytohIslandDecor
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Activate PiratePartyPrizeRuins 3
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 941.52344
+        y: 1639.2891
+        width: 237
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player already Scene the Cutscene 03?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PiratePartyPrizeRuins
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Spawn Cutscene03Trigger 2
+      description: --- OLD ACTION -- we are no longer using this seperate trigger prefab, we have integrated the trigger into the Cutscene Prefab.
+      colorIndex: 5
+      position:
+        serializedVersion: 2
+        x: 1497.5391
+        y: 2102.0234
+        width: 400
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState:
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CreateEmptyObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 13206463
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1489762037503792, guid: 2e6afab07eda8604d838ea8980e7e63f, type: 2}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1626993863907326, guid: 2e6c02c0c3df89c46bf2e36d49d2b440, type: 2}
+        - useVariable: 1
+          name: Cutscene03Trigger
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 19
+        - 19
+        - 28
+        - 28
+        - 19
+        paramName:
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: Is Cutscene 3 already loaded?
+      description: If it is, let's not load another version of it.
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 942.5547
+        y: 1915.2891
+        width: 256.5
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: PLAYER IS NOT ON QUEST!
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Spawn the Cover Cloud
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GameObjectIsNull
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 90334485
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Cutscene03Trigger
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - False
+        - True
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 19
+        - 23
+        - 23
+        - 17
+        - 1
+        paramName:
+        - gameObject
+        - isNull
+        - isNotNull
+        - storeResult
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: NO LONGER USED
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1263.7344
+        y: 255.10938
+        width: 142
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: False
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: True
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NULL
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NOT_NULL
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: TRY AGAIN
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables:
+      - useVariable: 1
+        name: LocalPlayerName
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value:
+      - useVariable: 1
+        name: PlayerPref_HasTeleportedToBoardwalk
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: HasTeleportedToBoardwalk
+      - useVariable: 1
+        name: PlayerPref_LocalAccount_HasTeleportedToBoardwalk
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value:
+      - useVariable: 1
+        name: PlayerPref_Scene02
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: PirateParty2018_Scene02
+      - useVariable: 1
+        name: PlayerPref_Scene03
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: PirateParty2018_Scene03
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: BoardwalkCloud
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: ChestArea
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Cutscene03Trigger
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: EventPirateParty2018_Boardwalk_Cutscene03
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: FirstChildObj
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: LocalPlayer
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: LocalPlayerObj
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: NameTextObj
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PiratePartyCoverCloud
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PiratePartyPrizeRuins
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PohtaytohIslandDecor
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: rewardCollectible_PenglantisChest
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables:
+      - useVariable: 1
+        name: NameTextScript
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        typeName: UnityEngine.UI.Text
+        value: {fileID: 0}
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    description:
+    docUrl:
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark:
+    password:
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 3
+    activeStateName:
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleApplicationEvents: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0

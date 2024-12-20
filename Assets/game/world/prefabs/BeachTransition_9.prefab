@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1010419048620091
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4111676537019168}
+  - component: {fileID: 65053176630244915}
+  - component: {fileID: 114106012927467869}
+  - component: {fileID: 114557801050176635}
+  m_Layer: 24
+  m_Name: BeachTransition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1983122100151173
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4717688107705291}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4111676537019168
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010419048620091}
+  m_LocalRotation: {x: 9.530151E-10, y: -0.084180586, z: 1.500125E-08, w: 0.99645054}
+  m_LocalPosition: {x: -15.79, y: -0.06, z: 6.59}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4717688107705291}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -3.640391E-08, y: 9.657814, z: -1.7282155E-06}
+--- !u!65 &65053176630244915
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010419048620091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 1.3851402, y: 2.2692652, z: 5.294935}
+  m_Center: {x: -1.8190854, y: 0.78693795, z: -1.133018}
+--- !u!114 &114106012927467869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010419048620091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd613c4f79e859c72d23dc2cb0f7048, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  ZoneDefinitionKey:
+    Id:
+    type: ClubPenguin.ZoneDefinition, ReMix-Game
+  Zone: {fileID: 11400000, guid: 3d949d16046e4e945b951b4fca5401a1, type: 2}
+  LoadingScene: Loading
+  DestinationSpawnPoint: {x: 0, y: 0, z: 0}
+  DestinationSpawnRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &114557801050176635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1010419048620091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e0fb2d08b0f038e77cb527b14f9453, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  SpawnPoint: {fileID: 4717688107705291}
+--- !u!4 &4717688107705291
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983122100151173}
+  m_LocalRotation: {x: 0, y: 0.47054586, z: 0, w: 0.8823756}
+  m_LocalPosition: {x: 3.94, y: -0.01, z: 0.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4111676537019168}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -56.139465, z: -0}
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1010419048620091}
+  m_IsPrefabParent: 1

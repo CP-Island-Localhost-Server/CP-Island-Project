@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7c925bb1faf25c21423bbbad249fbb, type: 3}
+  m_Name: SlideControllerData
+  m_EditorClassIdentifier:
+  PilotPrefab: {fileID: 1214647656150246, guid: 61e08b5531c803949921ece5a8a405ef, type: 2}
+  SledPrefab: {fileID: 1344079872095100, guid: 41d6d3455f06b5f438fffb8f9cd35927, type: 2}
+  ParticlesPrefab: {fileID: 198340837719543365, guid: 406aeabe56025a046acf707669816a5a, type: 2}
+  BuildMomentumTime: 1
+  MinHeightForTrick: 0.1
+  TurnSmoothing: 2
+  SpinScale: 1.5
+  SpinScaleOnWater: 0.2
+  MaxSpinRate: 2
+  MaxSpinRateOnWater: 1
+  SurfaceSmoothing: 5
+  SpringAccel: 11
+  StartingSpringAccel: 5
+  ImpulseScale: 0.1
+  MaxManualSpeedBeforeMomentumTakeover: 2
+  HopSpeed: 4
+  JumpSpeed: 3.5
+  EjectHopSpeed: 3.5
+  EjectDamper: 0.25
+  GroundedDistance: 0.75
+  RotationSmoothing: 2
+  SledOffsetFromPilot: {x: 0, y: -0.05, z: 0}
+  MinMagnitudeForBump: 2
+  IdleLoopTransitionSmoothing: 1
+  WaveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 4.582408
+      outSlope: 4.582408
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.293
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.707
+      value: -1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 5.5021653
+      outSlope: 5.5021653
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  ImpulseScaleOnWater: 0.05
+  WaterRipples: {fileID: 198820010323089925, guid: f8e5778202b8e394b87576cb2f58ee32, type: 2}
+  WaterSplash: {fileID: 1392329030624064, guid: 884e5fc939e7a1d41a5fb7a28607e0b6, type: 2}
+  SplashCooldown: 0.75
+  SplashOffset: 0.15
+  WaterRippleOffset: -0.12
+  WaterRippleSmoothing: 3
+  ChestBoneName: chest_jnt
+  ChestBoneRotation: {x: 0, y: 0, z: 40}
+  WaterProperties:
+    Drag: 0.5
+    MaxSpeed: 2
+    RippleRate: 0.75
+    RippleAmplitude: 3
+    SurfaceOffset: -0.07
+  MinSpeedForSlowLoopAnim: 1.5
+  MinSpeedForFastLoopAnim: 3
+  ImpulseProperties: {fileID: 11400000, guid: aed90f50215f6e54ba7601a59dc6715e, type: 2}
+  Audio:
+    SurfaceSamplingData: {fileID: 0}
+    VelocityMagEventName: SFX/Player/Sled/SlideLoop
+    VelocityMagRTP: Velocity
+    YVelocityEventName:
+    YVelocityRTP:
+    SupportedEventName: SFX/Player/Sled/SlideLoop
+    AirborneEventName:
+    LandedEventName: SFX/Player/Sled/Land

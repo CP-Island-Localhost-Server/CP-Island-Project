@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1989689397701307
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4193877763950373}
+  - component: {fileID: 65030585309407019}
+  - component: {fileID: 114398650676318528}
+  - component: {fileID: 114268672415927844}
+  - component: {fileID: 114702437032707582}
+  - component: {fileID: 114949068470371186}
+  - component: {fileID: 114758220734785596}
+  m_Layer: 24
+  m_Name: DisneyShopTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4193877763950373
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_LocalRotation: {x: -0, y: 0.2058866, z: -0, w: 0.9785759}
+  m_LocalPosition: {x: -1.74, y: -0.2, z: -2.15}
+  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -0, y: -23.762808, z: 0}
+--- !u!65 &65030585309407019
+BoxCollider:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Size: {x: 0.65971136, y: 1.5246184, z: 1.7403498}
+  m_Center: {x: 0.39957947, y: 0.3873092, z: 0.35017407}
+--- !u!114 &114398650676318528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff02ef0faa1fb6e6f942f2f774ea8338, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: FilterTriggerAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 2
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  OwnerTag: Player
+  TriggerEveryFrame: 1
+  ExcludeIfSitting: 0
+  ExcludeIfSwimming: 0
+  ExcludeIfInAir: 0
+--- !u!114 &114268672415927844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6df44f1b4d71f0d94f509f3eccc4cc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  colliderColorType: 3
+--- !u!114 &114702437032707582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9495b8fc2bd46955a2235092698a7c85, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name:
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 3
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  Context: mainUI
+  Action: special_action
+  Type: boardwalk_disneyshop
+  Message:
+  Location:
+  IsSingular: 0
+  SingularID:
+--- !u!114 &114949068470371186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4611cb330259ea8a1fdc4278a83175b7, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: CreateFullscreenPopupAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 4
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  PopupContentPath: DisneyShop/Prefabs/DisneyShop
+--- !u!114 &114758220734785596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989689397701307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998a9bd6ef2d43fb1c24ba4ddd0aa7a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  Name: WaitAction
+  EndAllOnExit: 0
+  AbortOnUserInput: 0
+  Target: 0
+  CustomTarget: {fileID: 0}
+  Owner: {fileID: 0}
+  Id: 5
+  ParentId: -1
+  ParentIdOnFalse: -1
+  InterruptedBy: -1
+  Duration: 1
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1989689397701307}
+  m_IsPrefabParent: 1

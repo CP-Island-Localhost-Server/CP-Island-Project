@@ -1,0 +1,2994 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2940edbb6acfe2e314f329f06a02e410, type: 3}
+  m_Name: MedievalDungeonScornHit
+  m_EditorClassIdentifier:
+  category: General
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 11400000}
+    name: Halloween2017_Scene2
+    startState: Start
+    states:
+    - name: Start
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 359.14062
+        y: 239.07031
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find IsPlayerPresentInBattleFSM
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Wait for Hit to Enter Trigger
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 543.7656
+        y: 497.125
+        width: 205
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is Player Present?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.TriggerEvent
+        - HutongGames.PlayMaker.Actions.TriggerEvent
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 4
+        actionHashCodes:
+        - 61594525
+        - 61594525
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Snowball
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: SwordCollider
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        - FINISHED
+        byteData: 0000000000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 7
+        - 18
+        - 23
+        - 19
+        - 7
+        - 18
+        - 23
+        - 19
+        paramName:
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        - trigger
+        - collideTag
+        - sendEvent
+        - storeCollider
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 4
+        - 1
+        - 1
+        - 1
+        paramByteDataSize:
+        - 4
+        - 0
+        - 0
+        - 0
+        - 4
+        - 0
+        - 0
+        - 0
+    - name: Animate HitDamage
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1372.0625
+        y: 497.14062
+        width: 151
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: -1 ScornHP
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.AnimatorTriggerAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 28021262
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Hit
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 01
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 1
+        - 19
+        - 18
+        paramName:
+        - UseOwnerGameObject
+        - Target
+        - Parameter
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 1
+        - 0
+        - 0
+    - name: WaitA 0.5s
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 545.7656
+        y: 561.125
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait for Hit to Enter Trigger
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 17940552
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0.5
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 15
+        - 23
+        - 1
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    - name: Find Local Player
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 552.1406
+        y: 238.07031
+        width: 134
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find Scorn
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: LocalPlayer
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Penguin
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Player
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: -1 ScornHP
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1568.0625
+        y: 498.14062
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Is Scorn Defeated?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntOperator
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 50927636
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: ScornHP
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 6
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: ScornHP
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 6
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0100000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 16
+        - 16
+        - 7
+        - 16
+        - 1
+        paramName:
+        - integer1
+        - integer2
+        - operation
+        - storeResult
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 2
+        - 4
+        paramByteDataSize:
+        - 0
+        - 0
+        - 4
+        - 0
+        - 1
+    - name: Is Scorn Defeated?
+      description: Does HP = 0?
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 1568.0625
+        y: 545.1406
+        width: 146
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Turn Scorn Facing Sphere Collider OFFish
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntCompare
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 44169737
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: ScornHP
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 6
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - True
+        - False
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 16
+        - 16
+        - 23
+        - 23
+        - 23
+        - 1
+        paramName:
+        - integer1
+        - integer2
+        - equal
+        - lessThan
+        - greaterThan
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Animate Scorn Final Hit
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 2154.0625
+        y: 558.6406
+        width: 175
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Tell QuestBossScorn Scorn is defeated
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.AnimatorTriggerAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 28021262
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Scorn
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: FinalHit
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 1
+        - 19
+        - 18
+        paramName:
+        - UseOwnerGameObject
+        - Target
+        - Parameter
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 1
+        - 0
+        - 0
+    - name: Destroy Self
+      description: This slime will now self-destruct
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1582.5625
+        y: 948.09375
+        width: 168
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DestroySelf
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 55769442
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 17
+        paramName:
+        - detachChildren
+        paramDataPos:
+        - 0
+        paramByteDataSize:
+        - 0
+    - name: Wait 2 Seconds
+      description:
+      colorIndex: 6
+      position:
+        serializedVersion: 2
+        x: 1584.5625
+        y: 898.09375
+        width: 123
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Destroy Self
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Wait
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 17940552
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 15
+        - 23
+        - 1
+        paramName:
+        - time
+        - finishEvent
+        - realTime
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    - name: Find QuestBossScorn Director
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 554.1406
+        y: 195.07031
+        width: 218
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find Local Player
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: QuestBossScornDirector
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: QuestBossScorn
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: -1 CurrentWaveSlimeTotal
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1585.5625
+        y: 854.09375
+        width: 197
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait 2 Seconds
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmInt
+        - HutongGames.PlayMaker.Actions.IntOperator
+        - HutongGames.PlayMaker.Actions.SetFsmInt
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex:
+        - 0
+        - 5
+        - 10
+        actionHashCodes:
+        - 96410376
+        - 50927636
+        - 96410376
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: QuestBossScornDirector
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: QuestBossScornDirector
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalDungeonQuestBattleRoom
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: CurrentWaveSlimesTotal
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalDungeonQuestBattleRoom
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: CurrentWaveSlimesTotal
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: Local_CurrentWaveSlimesTotal
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Local_CurrentWaveSlimesTotal
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        - useVariable: 1
+          name: Local_CurrentWaveSlimesTotal
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Local_CurrentWaveSlimesTotal
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00010000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 18
+        - 18
+        - 16
+        - 1
+        - 16
+        - 16
+        - 7
+        - 16
+        - 1
+        - 20
+        - 18
+        - 18
+        - 16
+        - 1
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - integer1
+        - integer2
+        - operation
+        - storeResult
+        - everyFrame
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 1
+        - 2
+        - 1
+        - 3
+        - 5
+        - 1
+        - 2
+        - 3
+        - 4
+        - 6
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 4
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Is Player Present?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 831.7656
+        y: 500.125
+        width: 142
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Is Player Captive?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 5
+        actionHashCodes:
+        - 97451624
+        - 12568740
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: IsPlayerPresentInBattleFSM
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalDungeon1IsPlayerPresentInBattle
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: PlayerIsPresent
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: Local_PlayerIsPresent
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Local_PlayerIsPresent
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 18
+        - 18
+        - 17
+        - 1
+        - 17
+        - 23
+        - 23
+        - 1
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Find IsPlayerPresentInBattleFSM
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 556.2656
+        y: 104.69531
+        width: 240
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find IsPlayerCaptiveOfScornFSM
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: IsPlayerPresentInBattleFSM
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: IsPlayerPresentForScornFSM
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Find Scorn
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 551.1406
+        y: 278.0703
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find Scorn Facing Sphere Collider
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: Scorn
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Mascots/ScornBattle/Position/UpDownPosition/Facing/HitContainer/Scale
+        - Scorn
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Find Scorn Facing Sphere Collider
+      description: + ScornLookAtPoint
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 551.03906
+        y: 320.0703
+        width: 243
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player already seen BossIntro01?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        - HutongGames.PlayMaker.Actions.GetComponent
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex:
+        - 0
+        - 3
+        - 6
+        actionHashCodes:
+        - 32189433
+        - 34920452
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: ScornFacingObject
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ScornLookAtPoint
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: ScornFacingObject
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams:
+        - useVariable: 1
+          name: ScornFacingSphereCollider
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          typeName: UnityEngine.SphereCollider
+          value: {fileID: 0}
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - Mascots/ScornBattle/Position/UpDownPosition
+        - Facing
+        - Mascots/ScornBattle/Position/UpDownPosition
+        - LookAtPoint
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        - 20
+        - 24
+        - 1
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - gameObject
+        - storeComponent
+        - everyFrame
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 0
+        - 2
+        - 3
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+    - name: Turn Scorn Facing Sphere Collider OFFish
+      description: OFFish - Radius of 1 is too small to see player.
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1778.3984
+        y: 557.0469
+        width: 311
+        height: 32
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Animate Scorn Final Hit
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetProperty
+        - HutongGames.PlayMaker.Actions.SetPosition
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 2
+        actionHashCodes:
+        - 72534106
+        - 62842358
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: ScornLookAtPoint
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams:
+        - TargetObject:
+            useVariable: 1
+            name: ScornFacingSphereCollider
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName: UnityEngine.SphereCollider
+            value: {fileID: 0}
+          TargetTypeName: UnityEngine.SphereCollider
+          PropertyName: radius
+          BoolParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          FloatParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 1
+          IntParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: 0
+          GameObjectParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+          StringParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value:
+          Vector2Parameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0}
+          Vector3Parameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0}
+          RectParamater:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value:
+              serializedVersion: 2
+              x: 0
+              y: 0
+              width: 0
+              height: 0
+          QuaternionParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {x: 0, y: 0, z: 0, w: 0}
+          ObjectParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName: System.Single
+            value: {fileID: 0}
+          MaterialParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName:
+            value: {fileID: 0}
+          TextureParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            typeName:
+            value: {fileID: 0}
+          ColorParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {r: 0, g: 0, b: 0, a: 1}
+          EnumParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            enumName: HutongGames.PlayMaker.None
+            intValue: 0
+          ArrayParameter:
+            useVariable: 0
+            name:
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            type: -1
+            objectTypeName: UnityEngine.Object
+            floatValues: []
+            intValues: []
+            boolValues:
+            stringValues: []
+            vector4Values: []
+            objectReferences: []
+          setProperty: 1
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 2
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 1
+          name: ScornHitTelegraphPosition
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00010000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 36
+        - 1
+        - 20
+        - 28
+        - 15
+        - 15
+        - 15
+        - 7
+        - 1
+        - 1
+        paramName:
+        - targetProperty
+        - everyFrame
+        - gameObject
+        - vector
+        - x
+        - y
+        - z
+        - space
+        - everyFrame
+        - lateUpdate
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 2
+        - 1
+        - 5
+        - 6
+        paramByteDataSize:
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 4
+        - 1
+        - 1
+    - name: Tell QuestBossScorn Scorn is defeated
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 2153.5
+        y: 602.0469
+        width: 275
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Wait For HP to Reset
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetFsmBool
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 97451624
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: QuestBossScornDirector
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalDungeonQuestBossScorn
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: IsScornDefeated
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 1
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 18
+        - 18
+        - 17
+        - 1
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - setValue
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Is Player Captive?
+      description: Scorn does not recieve damage while player is in cage.
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 1046.25
+        y: 497.16406
+        width: 262
+        height: 48
+      isBreakpoint: 0
+      isSequence: 1
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Animate HitDamage
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.GetFsmBool
+        - HutongGames.PlayMaker.Actions.BoolTest
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex:
+        - 0
+        - 5
+        actionHashCodes:
+        - 97451624
+        - 12568740
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: IsPlayerCaptiveOfScornFSM
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalDungeon1IsPlayerCaptiveOfScorn
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: PlayerIsCaptive
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: Local_PlayerIsCaptive
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name: Local_PlayerIsCaptive
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData: 0000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 18
+        - 18
+        - 17
+        - 1
+        - 17
+        - 23
+        - 23
+        - 1
+        paramName:
+        - gameObject
+        - fsmName
+        - variableName
+        - storeValue
+        - everyFrame
+        - boolVariable
+        - isTrue
+        - isFalse
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+    - name: Find IsPlayerCaptiveOfScornFSM
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 555.0547
+        y: 149.30469
+        width: 240
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find QuestBossScorn Director
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.FindGameObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 37317496
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: IsPlayerCaptiveOfScornFSM
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: IsPlayerCaptiveOfScornFSM
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: Untagged
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 18
+        - 19
+        paramName:
+        - objectName
+        - withTag
+        - store
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: HUB 1
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 829.7344
+        y: 674.83594
+        width: 100
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: WaitA 0.5s
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Wait Fore HP to Replenish
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1757.8828
+        y: 787.4375
+        width: 193
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.IntChanged
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 19698507
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: ScornHP
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 6
+        fsmBoolParams:
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 16
+        - 23
+        - 17
+        paramName:
+        - intVariable
+        - changedEvent
+        - storeResult
+        paramDataPos:
+        - 0
+        - 0
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Has Player already seen BossIntro01?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 64.40625
+        y: 363.83594
+        width: 274
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait for Hit to Enter Trigger
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Has Player already seen Boss get defeated?
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.LocalAccountPlayerPrefsHasKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27442976
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_BossIntro01
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalParty2018_BossIntro01
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 23
+        - 23
+        paramName:
+        - key
+        - trueEvent
+        - falseEvent
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Has Player already seen Boss get defeated?
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 54.257812
+        y: 448.45312
+        width: 310
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait For HP to Reset
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Wait for Hit to Enter Trigger
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.LocalAccountPlayerPrefsHasKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27442976
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_BossChestAvailable
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: MedievalParty2018_BossChestAvailable
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 23
+        - 23
+        paramName:
+        - key
+        - trueEvent
+        - falseEvent
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Wait For HP to Reset
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1782.2656
+        y: 659.8594
+        width: 158
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.BoolChanged
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 73568362
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: HPReset
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - FINISHED
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 17
+        - 23
+        - 17
+        paramName:
+        - boolVariable
+        - changedEvent
+        - storeResult
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: Set HPReset to FALSE
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 1772.8047
+        y: 703.60156
+        width: 165
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: HUB 1
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetBoolValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 65141543
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 1
+          name: HPReset
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 00
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 17
+        - 17
+        - 1
+        paramName:
+        - boolVariable
+        - boolValue
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        paramByteDataSize:
+        - 0
+        - 0
+        - 1
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: True
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: False
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables:
+      - useVariable: 1
+        name: Local_CurrentWaveSlimesTotal
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: ScornHP
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: 80
+      boolVariables:
+      - useVariable: 1
+        name: HPReset
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Local_PlayerIsCaptive
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Local_PlayerIsPresent
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      stringVariables:
+      - useVariable: 1
+        name: PlayerPref_BossChestAvailable
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: MedievalParty2018_BossChestAvailable
+      - useVariable: 1
+        name: PlayerPref_BossIntro01
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: MedievalParty2018_BossIntro01
+      vector2Variables: []
+      vector3Variables:
+      - useVariable: 1
+        name: ScornHitTelegraphPosition
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: IsPlayerCaptiveOfScornFSM
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: IsPlayerPresentInBattleFSM
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: LocalPlayer
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: QuestBossScornDirector
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Scorn
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: ScornFacingObject
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: ScornLookAtPoint
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables:
+      - useVariable: 1
+        name: ScornFacingSphereCollider
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        typeName: UnityEngine.SphereCollider
+        value: {fileID: 0}
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    description:
+    docUrl:
+    showStateLabel: 0
+    maxLoopCount: 0
+    watermark:
+    password:
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 3
+    activeStateName:
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 1
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 1
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleApplicationEvents: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 387f81ec515fd3ad264c978a00a6660d, type: 3}
+  m_Name: SwimControllerData
+  m_EditorClassIdentifier:
+  Ripples: {fileID: 198380370961485268, guid: 212798e448265ba4a8ab6b16a689b420, type: 2}
+  RippleHeightOffset: 0.55
+  SplashHeightOffset: 0.5
+  Splash: {fileID: 1323713574738911, guid: 4a50eab78f69eae4e9c99ffe3ac13976, type: 2}
+  MaxDistToConsiderNearSurface: 1
+  MaxDistToConsiderOnSurface: 0.4
+  HitReactRotationSmoothing: 5
+  FreezeAxis: 2
+  FreezeDist: 0
+  SurfaceConstraintSmoothing: 15
+  SurfaceSontraintSnapThreshold: 0.5
+  MaxShallowWaterDepth: 0.5
+  ShallowWaterDepthHysteresis: 0.06
+  ShallowWaterSwimSpeedMultiplier: 0.8
+  ResurfaceTransform: {fileID: 4484487770698710, guid: e2c646daf94ec9d4696c29445bb0f250, type: 2}
+  QuickResurfacingTransform: {fileID: 4014800301515122, guid: fcae6bd022482a440ae72e152ce2196c, type: 2}
+  LowAirThresholds:
+  - AirSupplyThreshold: 0.5
+    AnimDuration: 0.6
+  - AirSupplyThreshold: 0.375
+    AnimDuration: 1.3
+  - AirSupplyThreshold: 0.25
+    AnimDuration: 10
+  LowAirAnimSmoothing: 11
+  SwimProperties: {fileID: 11400000, guid: 72971a1f795d6ec4180c4e27a615d26f, type: 2}
+  ImpulseProperties: {fileID: 11400000, guid: 42439a0d2a33dd646a491845b9c6b61a, type: 2}
+  SwimWithPropIKSmoothing: 1000
+  CollisionAudioEvent: SFX/Player/Swim/Impact
+  AirRechargeAudioEvent: SFX/UI/Swim/AirSupplyFilled
+  AirWarningAudioEvent:
+  AirCriticalAudioEvent: SFX/UI/Swim/AirSupplyWarning

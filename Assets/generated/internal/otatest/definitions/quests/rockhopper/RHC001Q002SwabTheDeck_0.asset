@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d91b37bcbd153f5a77c1b7115672ff7, type: 3}
+  m_Name: RHC001Q002SwabTheDeck
+  m_EditorClassIdentifier:
+  Prototyped: 0
+  OverridesFirstObjective: 0
+  IsReplayable: 1
+  IsPausable: 1
+  Mascot: {fileID: 11400000, guid: e52d5865b17686144887aee5df79ab81, type: 2}
+  Title: Quest.RHC1Q2.Title
+  AbbreviatedTitle: AAC1Q2.ShortTitle.Text
+  Description: Dress like a pirate. Mop the deck of the Migrator. Find a cryptic note which leads the player on an emitocon adventure!
+  SplashScreenText: Quest.RHC1Q2.Splash
+  Instructions: []
+  QuestItems:
+  - DisplayName:
+    Name: CrytpicNoteUpsideDown
+    ItemText: Riddle
+    ItemInventoryContentKey:
+      Key: Quests/Icon_CrypticDrawingUnsolved
+      type: UnityEngine.Sprite, UnityEngine
+    ItemUIContentKey:
+      Key: ScreenQuestsDetailsPrefabs/QuestInventoryItem
+      type: UnityEngine.GameObject, UnityEngine
+    IsHiddenWhenNotCollected: 1
+    ClickAction: 5
+    ClickActionArg:
+    PopupContentKey:
+      Key:
+      type: UnityEngine.GameObject, UnityEngine
+    PopupImageContentKey:
+      Key: Quests/CloseUp_CrypticDrawingUnsolved
+      type: UnityEngine.Sprite, UnityEngine
+    UseItemButton:
+      Text: Look
+      IconKey:
+      Id:
+      ButtonPrefabKey: Buttons/PromptBlueButton
+  - DisplayName:
+    Name: CrypticNoteRightsideUp
+    ItemText: Riddle
+    ItemInventoryContentKey:
+      Key: Quests/Icon_CrypticDrawingSolved
+      type: UnityEngine.Sprite, UnityEngine
+    ItemUIContentKey:
+      Key: ScreenQuestsDetailsPrefabs/QuestInventoryItem
+      type: UnityEngine.GameObject, UnityEngine
+    IsHiddenWhenNotCollected: 1
+    ClickAction: 5
+    ClickActionArg:
+    PopupContentKey:
+      Key:
+      type: UnityEngine.GameObject, UnityEngine
+    PopupImageContentKey:
+      Key: Quests/CloseUp_CrytpicDrawingSolved
+      type: UnityEngine.Sprite, UnityEngine
+    UseItemButton:
+      Text: Look
+      IconKey:
+      Id:
+      ButtonPrefabKey: Buttons/PromptBlueButton
+  - DisplayName:
+    Name: ShellbeardHat
+    ItemText: Old Captain's Hat
+    ItemInventoryContentKey:
+      Key: Quests/Icon_ShellbeardHat
+      type: UnityEngine.Sprite, UnityEngine
+    ItemUIContentKey:
+      Key: ScreenQuestsDetailsPrefabs/QuestInventoryItem
+      type: UnityEngine.GameObject, UnityEngine
+    IsHiddenWhenNotCollected: 1
+    ClickAction: 0
+    ClickActionArg:
+    PopupContentKey:
+      Key:
+      type: UnityEngine.GameObject, UnityEngine
+    PopupImageContentKey:
+      Key:
+      type: UnityEngine.Sprite, UnityEngine
+    UseItemButton:
+      Text:
+      IconKey:
+      Id:
+      ButtonPrefabKey:
+  - DisplayName:
+    Name: ShellbeardJournalPages
+    ItemText: Old Journal
+    ItemInventoryContentKey:
+      Key: Quests/Icon_ShellbeardJournal
+      type: UnityEngine.Sprite, UnityEngine
+    ItemUIContentKey:
+      Key: ScreenQuestsDetailsPrefabs/QuestInventoryItem
+      type: UnityEngine.GameObject, UnityEngine
+    IsHiddenWhenNotCollected: 1
+    ClickAction: 0
+    ClickActionArg:
+    PopupContentKey:
+      Key:
+      type: UnityEngine.GameObject, UnityEngine
+    PopupImageContentKey:
+      Key:
+      type: UnityEngine.Sprite, UnityEngine
+    UseItemButton:
+      Text:
+      IconKey:
+      Id:
+      ButtonPrefabKey:
+  StartReward:
+    Coins: 0
+    XP: []
+    RewardCollectibleArray: []
+    ColourPacks: []
+    Decals: []
+    Fabrics: []
+    EmotePacks: []
+    SizzleClips: []
+    EquipmentTemplates: []
+    FurnitureTemplates: []
+    PartySupplies: []
+    Durables: []
+    SavedOutfitSlots: 0
+    EquipmentInstances: []
+  CompleteReward:
+    Coins: 50
+    XP:
+    - Mascot: {fileID: 11400000, guid: e52d5865b17686144887aee5df79ab81, type: 2}
+      XP: 85
+    RewardCollectibleArray: []
+    ColourPacks: []
+    Decals:
+    - {fileID: 11400000, guid: 485f7086a345de84b85b0be79abd00ac, type: 2}
+    - {fileID: 11400000, guid: 1fb6540e91141b34e97ed64e700df34e, type: 2}
+    - {fileID: 11400000, guid: dea831bbf2e492b498fc2dbebda201f7, type: 2}
+    Fabrics:
+    - {fileID: 11400000, guid: d46049d511bd8d147b511ce0bbd58cdd, type: 2}
+    - {fileID: 11400000, guid: de404ec8d5da1134bac5ea9b5f4ac4c7, type: 2}
+    - {fileID: 11400000, guid: d1cb351346d5a144b885f95b24b9a8f5, type: 2}
+    - {fileID: 11400000, guid: 192ac33afd21bb744b4522c166250a50, type: 2}
+    - {fileID: 11400000, guid: abb79656cdd48414a8a57ee7e41a7b22, type: 2}
+    - {fileID: 11400000, guid: 77d5381b4f49275478da926985e481c8, type: 2}
+    EmotePacks: []
+    SizzleClips: []
+    EquipmentTemplates: []
+    FurnitureTemplates: []
+    PartySupplies: []
+    Durables: []
+    SavedOutfitSlots: 0
+    EquipmentInstances:
+    - definition: {fileID: 11400000, guid: b700a4cb9f52c4343aa2db72250c7ea2, type: 2}
+      parts: []
+  ObjectiveRewards: []
+  IsRewardPopupSupressed: 0
+  LevelRequirement: 1
+  CompletedQuestRequirement:
+  - {fileID: 11400000, guid: 9b8ed70ee626655498887c858b75a4f8, type: 2}
+  TimeLock:
+    days: 0
+    hours: 0
+    minutes: 0
+    seconds: 0
+  isMemberOnly: 1

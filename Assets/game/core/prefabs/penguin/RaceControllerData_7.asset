@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a84cdedcee17af9d49bdb82acb8a3e, type: 3}
+  m_Name: RaceControllerData
+  m_EditorClassIdentifier:
+  PilotPrefab: {fileID: 1805940678216630, guid: 6bcda5eaef6c9264ca65c184502a11d7, type: 2}
+  SledPrefab: {fileID: 1710368924916400, guid: 13aa18ff62322f04aac27d1539cde41a, type: 2}
+  ParticlesPrefab: {fileID: 198044701125447909, guid: 2e8f153dd5b51f541a5e8808b6934f11, type: 2}
+  BuildMomentumTime: 1.5
+  MinHeightForTrick: 0.1
+  TurnSmoothing: 3
+  SpinScale: 0.5
+  SpinScaleOnWater: 0.5
+  MaxSpinRate: 1.5
+  MaxSpinRateOnWater: 1.5
+  SurfaceSmoothing: 8
+  SpringAccel: 11
+  StartingSpringAccel: 5
+  ImpulseScale: 0.25
+  MaxManualSpeedBeforeMomentumTakeover: 3.5
+  HopSpeed: 4
+  JumpSpeed: 3.5
+  EjectHopSpeed: 3.5
+  EjectDamper: 5
+  GroundedDistance: 0.75
+  RotationSmoothing: 2
+  SledOffsetFromPilot: {x: 0, y: -0.05, z: 0}
+  MinMagnitudeForBump: 14
+  IdleLoopTransitionSmoothing: 1
+  WaveCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0.13428816
+      value: 0.4054551
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.50427306
+      value: 0.40486762
+      inSlope: 0.25004917
+      outSlope: 0.25004917
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  ImpulseScaleOnWater: 0.05
+  WaterRipples: {fileID: 198506390329120168, guid: c35c3e0653a2a0142a75f61e69126b8f, type: 2}
+  WaterSplash: {fileID: 1508676353772521, guid: 16dfe517abcc074488b2adec22f1ccea, type: 2}
+  SplashCooldown: 0.75
+  SplashOffset: 0.1
+  WaterRippleOffset: -0.12
+  WaterRippleSmoothing: 1
+  ChestBoneName: chest_jnt
+  ChestBoneRotation: {x: 5, y: 0, z: 40}
+  WaterProperties:
+    Drag: 0
+    MaxSpeed: 0
+    RippleRate: 0
+    RippleAmplitude: 0
+    SurfaceOffset: 0
+  MinSpeedForSlowLoopAnim: 1.5
+  MinSpeedForFastLoopAnim: 3
+  ImpulseProperties: {fileID: 11400000, guid: 85278fe2927b07047a2c4b8a5e053c87, type: 2}
+  Audio:
+    SurfaceSamplingData: {fileID: 0}
+    VelocityMagEventName: SFX/Player/Sled/SlideLoop
+    VelocityMagRTP: Velocity
+    YVelocityEventName:
+    YVelocityRTP:
+    SupportedEventName: SFX/Player/Sled/SlideLoop
+    AirborneEventName: SFX/Player/Sled/Airborne
+    LandedEventName: SFX/Player/Sled/LandSnow
+  SpeedLinesTubeRacePrefab: {fileID: 1892792817818122, guid: 9f5a9af7163527d47adfba2f90d9989c, type: 2}
+  ConstantForwardThrustThreshold: 4
+  ConstantForwardThrust: 2
+  LateralThrustScale: 0.6
+  LaunchImpulse: 0
+  CountdownMS: 0
+  Bounciness: 0.2
+  BounceCombine: 2
+  RaceTrackProperties:
+    Drag: 0.005
+    MaxSpeed: 12
+  VisualizeTrackSegment: 0

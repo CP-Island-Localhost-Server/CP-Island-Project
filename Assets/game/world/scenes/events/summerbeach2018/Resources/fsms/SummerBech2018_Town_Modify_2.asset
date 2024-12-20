@@ -1,0 +1,5959 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2940edbb6acfe2e314f329f06a02e410, type: 3}
+  m_Name: SummerBech2018_Town_Modify
+  m_EditorClassIdentifier:
+  category: General
+  fsm:
+    dataVersion: 2
+    usedInTemplate: {fileID: 11400000}
+    name: FSM
+    startState: START HERE
+    states:
+    - name: START HERE
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 94.84375
+        y: 112.9375
+        width: 102
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find Collider Walls
+        linkStyle: 0
+        linkConstraint: 1
+        colorIndex: 0
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Note 1
+      description: Deactivate some Collider Walls!
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 64.41406
+        y: 163.42969
+        width: 147.5
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Find Collider Walls
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 92.53906
+        y: 228.50781
+        width: 144
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate Collider Walls
+        linkStyle: 0
+        linkConstraint: 1
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101010101010101010101010101
+        actionIsOpen: 010101010101010101010101010101010101
+        actionStartIndex:
+        - 0
+        - 3
+        - 6
+        - 9
+        - 12
+        - 15
+        - 18
+        - 21
+        - 24
+        - 27
+        - 30
+        - 33
+        - 36
+        - 39
+        - 42
+        - 45
+        - 48
+        - 51
+        actionHashCodes:
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: BoxColliderWall01
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall03
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall04
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall05
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall06
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall07
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall08
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall09
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall10
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall11
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall12
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall13
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall14
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall15
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall16
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall17
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall18
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: BoxColliderWall19
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall1
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall3
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall4
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall5
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall6
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall7
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall8
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall9
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall10
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall11
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall12
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall13
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall14
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall15
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall16
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall17
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall18
+        - WorldArt
+        - TownCollision/ZoneWallsCollision/BoxColliderWall19
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 2
+        - 3
+        - 1
+        - 4
+        - 5
+        - 2
+        - 6
+        - 7
+        - 3
+        - 8
+        - 9
+        - 4
+        - 10
+        - 11
+        - 5
+        - 12
+        - 13
+        - 6
+        - 14
+        - 15
+        - 7
+        - 16
+        - 17
+        - 8
+        - 18
+        - 19
+        - 9
+        - 20
+        - 21
+        - 10
+        - 22
+        - 23
+        - 11
+        - 24
+        - 25
+        - 12
+        - 26
+        - 27
+        - 13
+        - 28
+        - 29
+        - 14
+        - 30
+        - 31
+        - 15
+        - 32
+        - 33
+        - 16
+        - 34
+        - 35
+        - 17
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: Deactivate Collider Walls
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 93
+        y: 268
+        width: 187
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Find Objects
+        linkStyle: 0
+        linkConstraint: 1
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101010101010101010101010101
+        actionIsOpen: 010101010101010101010101010101010101
+        actionStartIndex:
+        - 0
+        - 5
+        - 10
+        - 15
+        - 20
+        - 25
+        - 30
+        - 35
+        - 40
+        - 45
+        - 50
+        - 55
+        - 60
+        - 65
+        - 70
+        - 75
+        - 80
+        - 85
+        actionHashCodes:
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall01
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall03
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall04
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall05
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall06
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall07
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall08
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall09
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall10
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall11
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall12
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall13
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall14
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall15
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall16
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall17
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall18
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: BoxColliderWall19
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000000000000000000000000000000000000000000000000000000000000000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        - 1
+        - 2
+        - 3
+        - 2
+        - 3
+        - 2
+        - 4
+        - 5
+        - 4
+        - 5
+        - 3
+        - 6
+        - 7
+        - 6
+        - 7
+        - 4
+        - 8
+        - 9
+        - 8
+        - 9
+        - 5
+        - 10
+        - 11
+        - 10
+        - 11
+        - 6
+        - 12
+        - 13
+        - 12
+        - 13
+        - 7
+        - 14
+        - 15
+        - 14
+        - 15
+        - 8
+        - 16
+        - 17
+        - 16
+        - 17
+        - 9
+        - 18
+        - 19
+        - 18
+        - 19
+        - 10
+        - 20
+        - 21
+        - 20
+        - 21
+        - 11
+        - 22
+        - 23
+        - 22
+        - 23
+        - 12
+        - 24
+        - 25
+        - 24
+        - 25
+        - 13
+        - 26
+        - 27
+        - 26
+        - 27
+        - 14
+        - 28
+        - 29
+        - 28
+        - 29
+        - 15
+        - 30
+        - 31
+        - 30
+        - 31
+        - 16
+        - 32
+        - 33
+        - 32
+        - 33
+        - 17
+        - 34
+        - 35
+        - 34
+        - 35
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Note 2
+      description: Deactivate objects we don't want to see.
+      colorIndex: 4
+      position:
+        serializedVersion: 2
+        x: 66.21875
+        y: 313.28906
+        width: 176.5
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled:
+        actionIsOpen:
+        actionStartIndex: []
+        actionHashCodes: []
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType: []
+        paramName: []
+        paramDataPos: []
+        paramByteDataSize: []
+    - name: Find Objects
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 97
+        y: 380
+        width: 103
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Deactivate Objects
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        - ClubPenguin.Adventure.FindTransformAction
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+        actionIsOpen: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+        actionStartIndex:
+        - 0
+        - 3
+        - 6
+        - 9
+        - 12
+        - 15
+        - 18
+        - 21
+        - 24
+        - 27
+        - 30
+        - 33
+        - 36
+        - 39
+        - 42
+        - 45
+        - 48
+        - 51
+        - 54
+        - 57
+        - 60
+        - 63
+        - 66
+        - 69
+        - 72
+        - 75
+        - 78
+        - 81
+        - 84
+        - 87
+        - 90
+        - 93
+        - 96
+        - 99
+        - 102
+        - 105
+        - 108
+        - 111
+        - 114
+        - 117
+        - 120
+        - 123
+        - 126
+        - 129
+        - 132
+        - 135
+        - 138
+        - 141
+        - 144
+        - 147
+        - 150
+        actionHashCodes:
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        - 32189433
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: EntranceTree1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: EntranceTree2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFence1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFence2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFence3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFence4
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFenceBracket1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFenceBracket2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PipeFenceBracket3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock01
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock02
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: DockPillar1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: DockPillar2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: DockPillar3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: SnowyRock1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Tree1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock03
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock04
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush4
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush5
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock05
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush6
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Tree2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock06
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock07
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock08
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock09
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: SnowyRock2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: SnowyRock3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Rock10
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush7
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bush8
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Bench
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: Tree3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock4
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock5
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: PathRock6
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ForegroundTree1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: ForegroundTree2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: WallRing1
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: WallRing2
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: WallRing3
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: WallRing4
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: WallRing5
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name: TownRiver
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - WorldArt
+        - Trees/SnowyPineTreeStraight (2)
+        - WorldArt
+        - Trees/SnowyPineTreeStraight (3)
+        - WorldArt
+        - PipeFence/PipeFenceBars (5)
+        - WorldArt
+        - PipeFence/PipeFenceBars (6)
+        - WorldArt
+        - PipeFence/PipeFenceBars (7)
+        - WorldArt
+        - PipeFence/PipeFenceBars (8)
+        - WorldArt
+        - PipeFence/PipeFenceSegmentBrackets (4)
+        - WorldArt
+        - PipeFence/PipeFenceSegmentBrackets (3)
+        - WorldArt
+        - PipeFence/PipeFenceSegmentBrackets (6)
+        - WorldArt
+        - Terrain/PathRockD (4)
+        - WorldArt
+        - Terrain/PathRockD (5)
+        - WorldArt
+        - Terrain/DockPillar (2)
+        - WorldArt
+        - Terrain/DockPillar (1)
+        - WorldArt
+        - Terrain/DockPillar
+        - WorldArt
+        - Terrain/SnowyRockMedium (3)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (1)
+        - WorldArt
+        - Trees/SnowyPineTreeCurved (2)
+        - WorldArt
+        - Terrain/PathRockD
+        - WorldArt
+        - Terrain/PathRockD (1)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (2)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (3)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (4)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (5)
+        - WorldArt
+        - Terrain/PathRockD (2)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (6)
+        - WorldArt
+        - Trees/SnowyPineTreeCurved (3)
+        - WorldArt
+        - Terrain/PathRockD (3)
+        - WorldArt
+        - Terrain/PathRockD (11)
+        - WorldArt
+        - Terrain/PathRockD (7)
+        - WorldArt
+        - Terrain/PathRockD (6)
+        - WorldArt
+        - Terrain/SnowyRockLarge (1)
+        - WorldArt
+        - Terrain/SnowyRockSmall (2)
+        - WorldArt
+        - Terrain/PathRockD (8)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (7)
+        - WorldArt
+        - PlantersAndPlants/OutsideCenter/BerryBushA (8)
+        - WorldArt
+        - Benches/TownBench (5)
+        - WorldArt
+        - Trees/SnowyPineTreeCurved
+        - WorldArt
+        - Terrain/PathRockB (3)
+        - WorldArt
+        - Terrain/PathRockA (6)
+        - WorldArt
+        - Terrain/PathRockB
+        - WorldArt
+        - Terrain/PathRockB (1)
+        - WorldArt
+        - Terrain/PathRockB (2)
+        - WorldArt
+        - Terrain/PathRockA (7)
+        - WorldArt
+        - Trees/SnowyPineTreeTallWithTrunk (4)
+        - WorldArt
+        - Trees/SnowyPineTreeTallWithTrunk (3)
+        - WorldArt
+        - Terrain/WallRing (5)
+        - WorldArt
+        - Terrain/WallRing
+        - WorldArt
+        - Terrain/WallRing (1)
+        - WorldArt
+        - Terrain/WallRing (2)
+        - WorldArt
+        - Terrain/WallRing (3)
+        - WorldArt
+        - Terrain/TownRiver
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        - 3
+        - 3
+        - 19
+        paramName:
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        - ParentName
+        - ObjectName
+        - OUT_GameObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 2
+        - 3
+        - 1
+        - 4
+        - 5
+        - 2
+        - 6
+        - 7
+        - 3
+        - 8
+        - 9
+        - 4
+        - 10
+        - 11
+        - 5
+        - 12
+        - 13
+        - 6
+        - 14
+        - 15
+        - 7
+        - 16
+        - 17
+        - 8
+        - 18
+        - 19
+        - 9
+        - 20
+        - 21
+        - 10
+        - 22
+        - 23
+        - 11
+        - 24
+        - 25
+        - 12
+        - 26
+        - 27
+        - 13
+        - 28
+        - 29
+        - 14
+        - 30
+        - 31
+        - 15
+        - 32
+        - 33
+        - 16
+        - 34
+        - 35
+        - 17
+        - 36
+        - 37
+        - 18
+        - 38
+        - 39
+        - 19
+        - 40
+        - 41
+        - 20
+        - 42
+        - 43
+        - 21
+        - 44
+        - 45
+        - 22
+        - 46
+        - 47
+        - 23
+        - 48
+        - 49
+        - 24
+        - 50
+        - 51
+        - 25
+        - 52
+        - 53
+        - 26
+        - 54
+        - 55
+        - 27
+        - 56
+        - 57
+        - 28
+        - 58
+        - 59
+        - 29
+        - 60
+        - 61
+        - 30
+        - 62
+        - 63
+        - 31
+        - 64
+        - 65
+        - 32
+        - 66
+        - 67
+        - 33
+        - 68
+        - 69
+        - 34
+        - 70
+        - 71
+        - 35
+        - 72
+        - 73
+        - 36
+        - 74
+        - 75
+        - 37
+        - 76
+        - 77
+        - 38
+        - 78
+        - 79
+        - 39
+        - 80
+        - 81
+        - 40
+        - 82
+        - 83
+        - 41
+        - 84
+        - 85
+        - 42
+        - 86
+        - 87
+        - 43
+        - 88
+        - 89
+        - 44
+        - 90
+        - 91
+        - 45
+        - 92
+        - 93
+        - 46
+        - 94
+        - 95
+        - 47
+        - 96
+        - 97
+        - 48
+        - 98
+        - 99
+        - 49
+        - 100
+        - 101
+        - 50
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    - name: Deactivate Objects
+      description:
+      colorIndex: 1
+      position:
+        serializedVersion: 2
+        x: 96
+        y: 420
+        width: 146
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: Has Player already seen Cutscene 01
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        - HutongGames.PlayMaker.Actions.ActivateGameObject
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+        actionIsOpen: 010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101
+        actionStartIndex:
+        - 0
+        - 5
+        - 10
+        - 15
+        - 20
+        - 25
+        - 30
+        - 35
+        - 40
+        - 45
+        - 50
+        - 55
+        - 60
+        - 65
+        - 70
+        - 75
+        - 80
+        - 85
+        - 90
+        - 95
+        - 100
+        - 105
+        - 110
+        - 115
+        - 120
+        - 125
+        - 130
+        - 135
+        - 140
+        - 145
+        - 150
+        - 155
+        - 160
+        - 165
+        - 170
+        - 175
+        - 180
+        - 185
+        - 190
+        - 195
+        - 200
+        - 205
+        - 210
+        - 215
+        - 220
+        - 225
+        - 230
+        - 235
+        - 240
+        - 245
+        - 250
+        actionHashCodes:
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        - 1101746
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bench
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush4
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush5
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush6
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush7
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Bush8
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DockPillar1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DockPillar2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: DockPillar3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: EntranceTree1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: EntranceTree2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: ForegroundTree1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: ForegroundTree2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock4
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock5
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PathRock6
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFence1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFence2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFence3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFence4
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFenceBracket1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFenceBracket2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: PipeFenceBracket3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock01
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock02
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock03
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock04
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock05
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock06
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock07
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock08
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock09
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Rock10
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: SnowyRock1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: SnowyRock2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: SnowyRock3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Tree1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Tree2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: Tree3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: WallRing1
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: WallRing2
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: WallRing3
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: WallRing4
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: WallRing5
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 1
+          gameObject:
+            useVariable: 1
+            name: TownRiver
+            tooltip:
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        - 20
+        - 17
+        - 17
+        - 1
+        - 1
+        paramName:
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        - gameObject
+        - activate
+        - recursive
+        - resetOnExit
+        - everyFrame
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        - 0
+        - 1
+        - 1
+        - 2
+        - 3
+        - 2
+        - 3
+        - 2
+        - 4
+        - 5
+        - 4
+        - 5
+        - 3
+        - 6
+        - 7
+        - 6
+        - 7
+        - 4
+        - 8
+        - 9
+        - 8
+        - 9
+        - 5
+        - 10
+        - 11
+        - 10
+        - 11
+        - 6
+        - 12
+        - 13
+        - 12
+        - 13
+        - 7
+        - 14
+        - 15
+        - 14
+        - 15
+        - 8
+        - 16
+        - 17
+        - 16
+        - 17
+        - 9
+        - 18
+        - 19
+        - 18
+        - 19
+        - 10
+        - 20
+        - 21
+        - 20
+        - 21
+        - 11
+        - 22
+        - 23
+        - 22
+        - 23
+        - 12
+        - 24
+        - 25
+        - 24
+        - 25
+        - 13
+        - 26
+        - 27
+        - 26
+        - 27
+        - 14
+        - 28
+        - 29
+        - 28
+        - 29
+        - 15
+        - 30
+        - 31
+        - 30
+        - 31
+        - 16
+        - 32
+        - 33
+        - 32
+        - 33
+        - 17
+        - 34
+        - 35
+        - 34
+        - 35
+        - 18
+        - 36
+        - 37
+        - 36
+        - 37
+        - 19
+        - 38
+        - 39
+        - 38
+        - 39
+        - 20
+        - 40
+        - 41
+        - 40
+        - 41
+        - 21
+        - 42
+        - 43
+        - 42
+        - 43
+        - 22
+        - 44
+        - 45
+        - 44
+        - 45
+        - 23
+        - 46
+        - 47
+        - 46
+        - 47
+        - 24
+        - 48
+        - 49
+        - 48
+        - 49
+        - 25
+        - 50
+        - 51
+        - 50
+        - 51
+        - 26
+        - 52
+        - 53
+        - 52
+        - 53
+        - 27
+        - 54
+        - 55
+        - 54
+        - 55
+        - 28
+        - 56
+        - 57
+        - 56
+        - 57
+        - 29
+        - 58
+        - 59
+        - 58
+        - 59
+        - 30
+        - 60
+        - 61
+        - 60
+        - 61
+        - 31
+        - 62
+        - 63
+        - 62
+        - 63
+        - 32
+        - 64
+        - 65
+        - 64
+        - 65
+        - 33
+        - 66
+        - 67
+        - 66
+        - 67
+        - 34
+        - 68
+        - 69
+        - 68
+        - 69
+        - 35
+        - 70
+        - 71
+        - 70
+        - 71
+        - 36
+        - 72
+        - 73
+        - 72
+        - 73
+        - 37
+        - 74
+        - 75
+        - 74
+        - 75
+        - 38
+        - 76
+        - 77
+        - 76
+        - 77
+        - 39
+        - 78
+        - 79
+        - 78
+        - 79
+        - 40
+        - 80
+        - 81
+        - 80
+        - 81
+        - 41
+        - 82
+        - 83
+        - 82
+        - 83
+        - 42
+        - 84
+        - 85
+        - 84
+        - 85
+        - 43
+        - 86
+        - 87
+        - 86
+        - 87
+        - 44
+        - 88
+        - 89
+        - 88
+        - 89
+        - 45
+        - 90
+        - 91
+        - 90
+        - 91
+        - 46
+        - 92
+        - 93
+        - 92
+        - 93
+        - 47
+        - 94
+        - 95
+        - 94
+        - 95
+        - 48
+        - 96
+        - 97
+        - 96
+        - 97
+        - 49
+        - 98
+        - 99
+        - 98
+        - 99
+        - 50
+        - 100
+        - 101
+        - 100
+        - 101
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+        - 0
+        - 0
+        - 0
+        - 1
+        - 1
+    - name: Has Player already seen Cutscene 01
+      description:
+      colorIndex: 3
+      position:
+        serializedVersion: 2
+        x: 95.5
+        y: 464
+        width: 267
+        height: 48
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: True
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: SELF DESTRUCT
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      - fsmEvent:
+          name: False
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Spawn Cutscene 01
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - ClubPenguin.LocalAccountPlayerPrefsHasKey
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 27442976
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: PlayerPref_Scene01
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: SummerBeach2018_Cutscene01
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams:
+        - True
+        - False
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 18
+        - 23
+        - 23
+        paramName:
+        - key
+        - trueEvent
+        - falseEvent
+        paramDataPos:
+        - 0
+        - 0
+        - 1
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+    - name: SELF DESTRUCT
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 91
+        y: 649
+        width: 128
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.DestroySelf
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 55769442
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 17
+        paramName:
+        - detachChildren
+        paramDataPos:
+        - 0
+        paramByteDataSize:
+        - 0
+    - name: Spawn Cutscene 01
+      description:
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 292
+        y: 559
+        width: 151
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: FINISHED
+          isSystemEvent: 1
+          isGlobal: 0
+        toState: SELF DESTRUCT
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.CreateObject
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex:
+        - 0
+        actionHashCodes:
+        - 13206463
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 1267725702034503, guid: 92a54686cd133cb4bb7672ce77ba5c6b, type: 2}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        - useVariable: 1
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params:
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        - useVariable: 0
+          name:
+          tooltip:
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData:
+        arrayParamSizes: []
+        arrayParamTypes: []
+        customTypeSizes: []
+        customTypeNames: []
+        paramDataType:
+        - 19
+        - 19
+        - 28
+        - 28
+        - 19
+        paramName:
+        - gameObject
+        - spawnPoint
+        - position
+        - rotation
+        - storeObject
+        paramDataPos:
+        - 0
+        - 1
+        - 0
+        - 1
+        - 2
+        paramByteDataSize:
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+    events:
+    - name: FINISHED
+      isSystemEvent: 1
+      isGlobal: 0
+    - name: False
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: True
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NULL
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: NOT_NULL
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: TRY AGAIN
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: CONTINUE
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables: []
+      intVariables: []
+      boolVariables: []
+      stringVariables:
+      - useVariable: 1
+        name: PlayerPref_Scene01
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: SummerBeach2018_Cutscene01
+      vector2Variables: []
+      vector3Variables: []
+      colorVariables: []
+      rectVariables: []
+      quaternionVariables: []
+      gameObjectVariables:
+      - useVariable: 1
+        name: Bench
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall01
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall03
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall04
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall05
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall06
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall07
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall08
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall09
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall10
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall11
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall12
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall13
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall14
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall15
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall16
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall17
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall18
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: BoxColliderWall19
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush4
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush5
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush6
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush7
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Bush8
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: DockPillar1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: DockPillar2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: DockPillar3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: EntranceTree1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: EntranceTree2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: ForegroundTree1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: ForegroundTree2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock4
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock5
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PathRock6
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFence1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFence2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFence3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFence4
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFenceBracket1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFenceBracket2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: PipeFenceBracket3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock01
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock02
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock03
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock04
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock05
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock06
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock07
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock08
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock09
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Rock10
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: SnowyRock1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: SnowyRock2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: SnowyRock3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: TownRiver
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Tree1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Tree2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: Tree3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: WallRing1
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: WallRing2
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: WallRing3
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: WallRing4
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      - useVariable: 1
+        name: WallRing5
+        tooltip:
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    description:
+    docUrl:
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark:
+    password:
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 3
+    activeStateName:
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleApplicationEvents: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0

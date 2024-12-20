@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd2fcdde17d237e950747b41d2ba23, type: 3}
+  m_Name: GoogleAccountHoldPrompt
+  m_EditorClassIdentifier:
+  Id: GoogleAccountHoldPrompt
+  PrefabContentKey:
+    Key: Prefabs/Membership
+    type: UnityEngine.GameObject, UnityEngine
+  i18nTitleText: Membership.AccountHold.Title
+  i18nBodyText: Account.AccountHold.Body
+  Buttons:
+  - 2
+  - 1
+  CustomButtons:
+  - ButtonDefinition:
+      Prefab: {fileID: 1671641998867051, guid: d5323f0ccc4aba34eb0504bebbef1bbe, type: 2}
+      i18nText: Account.Expired.Button
+    ButtonFlags: 2
+  - ButtonDefinition:
+      Prefab: {fileID: 1326979568503474, guid: 729ebcc3d09743c43b0a3f871fe254a0, type: 2}
+      i18nText: Account.Expired.LaterButton
+    ButtonFlags: 1
+  SpriteContentKey:
+    Key: Images/SharedAssets_ErrorMessages_SessionLost
+    type: UnityEngine.Sprite, UnityEngine
+  IsModal: 1
+  AutoClose: 1

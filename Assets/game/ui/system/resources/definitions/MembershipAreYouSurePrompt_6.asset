@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18dd2fcdde17d237e950747b41d2ba23, type: 3}
+  m_Name: MembershipAreYouSurePrompt
+  m_EditorClassIdentifier:
+  Id: MembershipAreYouSurePrompt
+  PrefabContentKey:
+    Key: Prefabs/Membership
+    type: UnityEngine.GameObject, UnityEngine
+  i18nTitleText: GlobalUI.AreYouSure.Title
+  i18nBodyText: GlobalUI.AreYouSure.Body
+  Buttons:
+  - 2
+  - 1
+  CustomButtons:
+  - ButtonDefinition:
+      Prefab: {fileID: 1129352572099583, guid: 4a2614398cbb7a343b483fb6aa01cf4a, type: 2}
+      i18nText: GlobalUI.AreYouSure.Forward
+    ButtonFlags: 2
+  - ButtonDefinition:
+      Prefab: {fileID: 1095715587208596, guid: a2e93dff8aa6c334dbbd995e4c3d5f4b, type: 2}
+      i18nText: GlobalUI.AreYouSure.Back
+    ButtonFlags: 1
+  SpriteContentKey:
+    Key: Images/SharedAssets_ErrorMessages_SessionLost
+    type: UnityEngine.Sprite, UnityEngine
+  IsModal: 1
+  AutoClose: 1
