@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: SunSet2018_KlutzyInteractions
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: General
   fsm:
     dataVersion: 2
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: START HERE
     states:
     - name: START HERE
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -38,14 +39,15 @@ MonoBehaviour:
         toState: Find Local Player
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -69,17 +71,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Find Local Player
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -98,6 +100,7 @@ MonoBehaviour:
         toState: Find LookAhead Target
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -112,7 +115,7 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -125,14 +128,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Penguin
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
@@ -149,10 +152,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 120000001200000013000000
         paramName:
@@ -162,7 +165,7 @@ MonoBehaviour:
         paramDataPos: 000000000100000000000000
         paramByteDataSize: 000000000000000000000000
     - name: Find LookAhead Target
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -181,6 +184,7 @@ MonoBehaviour:
         toState: Wait for Player to Approach Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -197,13 +201,13 @@ MonoBehaviour:
         fsmGameObjectParams:
         - useVariable: 1
           name: KlutzysParent
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: KlutzyLookAheadTarget
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -211,8 +215,8 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -220,7 +224,7 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: KlutzysParent
-            tooltip:
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -238,8 +242,8 @@ MonoBehaviour:
         fsmFloatParams: []
         fsmIntParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
@@ -250,10 +254,10 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1400000013000000140000001000000013000000
         paramName:
@@ -265,7 +269,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000010000000000000001000000
         paramByteDataSize: 0000000000000000000000000000000000000000
     - name: Wait for Player to Approach Klutzy
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -284,6 +288,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -294,19 +299,19 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 9ddbab034e661301
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 9c5124004e661301
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: KlutzyLookAheadTarget
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -314,8 +319,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -327,8 +340,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
@@ -338,42 +351,42 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 3
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
@@ -384,12 +397,13 @@ MonoBehaviour:
         - PlayerApproachedKlutzy
         - 
         byteData: 00000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0700000012000000170000001300000014000000130000001c0000001c000000110000000f000000110000000f00000017000000
+        paramDataType: 140000000700000012000000170000001300000014000000130000001c0000001c000000110000000f000000110000000f00000017000000
         paramName:
+        - gameObject
         - trigger
         - collideTag
         - sendEvent
@@ -403,10 +417,10 @@ MonoBehaviour:
         - debug
         - finishTolerance
         - finishEvent
-        paramDataPos: 00000000000000000000000000000000000000000100000000000000010000000000000000000000010000000100000001000000
-        paramByteDataSize: 04000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 0000000000000000000000000000000000000000010000000100000000000000010000000000000000000000010000000100000001000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
     - name: Wait for Player to Leave Klutzy
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -425,6 +439,7 @@ MonoBehaviour:
         toState: Wait for Player to Approach Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: PlayerLanded
@@ -433,6 +448,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpExcited
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: EmojiCrab
@@ -441,6 +457,7 @@ MonoBehaviour:
         toState: wait 0.5 seconds
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: EmojiRoyal
@@ -449,6 +466,7 @@ MonoBehaviour:
         toState: wait 0.5 seconds 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: EmojiShark
@@ -457,6 +475,7 @@ MonoBehaviour:
         toState: wait 0.5 seconds 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: EmojiHeartCrabQuestion
@@ -465,6 +484,7 @@ MonoBehaviour:
         toState: wait 0.5 seconds 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: EmojiPizza
@@ -473,6 +493,7 @@ MonoBehaviour:
         toState: wait 0.5 seconds 5
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -493,19 +514,19 @@ MonoBehaviour:
         - 
         actionEnabled: 01010101010101
         actionIsOpen: 01010101010101
-        actionStartIndex: 00000000040000000d00000012000000170000001c00000022000000
-        actionHashCodes: 9ddbab034e661301e3d6dc03e3d6dc03e3d6dc03e3d6dc03e3d6dc03
+        actionStartIndex: 00000000050000000e00000013000000180000001d00000023000000
+        actionHashCodes: 9c5124004e661301e3d6dc03e3d6dc03e3d6dc03e3d6dc03e3d6dc03
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
           name: LocalPlayer
-          tooltip:
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -513,8 +534,16 @@ MonoBehaviour:
         - ownerOption: 0
           gameObject:
             useVariable: 0
-            name:
-            tooltip:
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
             showInInspector: 0
             networkSync: 0
             value: {fileID: 0}
@@ -526,8 +555,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
@@ -537,42 +566,42 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 3
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0
         fsmVector2Params: []
         fsmVector3Params:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {x: 0, y: 0, z: 0}
@@ -606,10 +635,11 @@ MonoBehaviour:
         - System.String
         - System.String
         - System.String
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0700000012000000170000001300000014000000130000001c0000001c000000110000000f000000110000000f000000170000000c000000030000001700000017000000010000000c000000030000001700000017000000010000000c000000030000001700000017000000010000000c00000003000000030000001700000017000000010000000c00000003000000170000001700000001000000
+        paramDataType: 140000000700000012000000170000001300000014000000130000001c0000001c000000110000000f000000110000000f000000170000000c000000030000001700000017000000010000000c000000030000001700000017000000010000000c000000030000001700000017000000010000000c00000003000000030000001700000017000000010000000c00000003000000170000001700000001000000
         paramName:
+        - gameObject
         - trigger
         - collideTag
         - sendEvent
@@ -649,10 +679,10 @@ MonoBehaviour:
         - MatchEvent
         - FailedEvent
         - IsIncludingRemotePlayers
-        paramDataPos: 00000000000000000000000000000000000000000100000000000000010000000000000000000000010000000100000001000000000000000200000003000000040000000400000001000000050000000600000007000000050000000200000008000000090000000a00000006000000030000000b0000000c0000000d0000000e00000007000000040000000f000000100000001100000008000000
-        paramByteDataSize: 040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000000000000000000010000000100000000000000010000000000000000000000010000000100000001000000000000000200000003000000040000000400000001000000050000000600000007000000050000000200000008000000090000000a00000006000000030000000b0000000c0000000d0000000e00000007000000040000000f000000100000001100000008000000
+        paramByteDataSize: 00000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000100000000000000000000000000000000000000010000000000000000000000000000000000000000000000010000000000000000000000000000000000000001000000
     - name: Animate Klutzy JumpExcited
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -671,6 +701,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -684,8 +715,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -698,8 +729,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpExcited
@@ -717,9 +748,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -729,7 +760,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Wait 1 second
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -748,6 +779,7 @@ MonoBehaviour:
         toState: Klutzy Emote 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -774,8 +806,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
@@ -789,9 +821,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -820,6 +852,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -862,7 +895,7 @@ MonoBehaviour:
         arrayParamSizes: 01000000
         arrayParamTypes:
         - System.String
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000c00000003000000030000000100000001000000000000000200000001000000010000000200000001000000
         paramName:
@@ -881,7 +914,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000002000000000000000100000002000000060000000a0000000b0000000c00000010000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000040000000400000001000000010000000400000001000000
     - name: Animate Klutzy JumpExcited 2
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -900,6 +933,7 @@ MonoBehaviour:
         toState: Wait 1 second
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -913,8 +947,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -927,8 +961,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpExcited
@@ -946,9 +980,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -958,7 +992,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Animate Klutzy JumpStartled
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -977,6 +1011,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -990,8 +1025,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1004,8 +1039,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpStartled
@@ -1023,9 +1058,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1035,7 +1070,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Animate Klutzy JumpStartled 3
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -1054,6 +1089,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1067,8 +1103,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1081,8 +1117,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpStartled
@@ -1100,9 +1136,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1112,7 +1148,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Animate Klutzy JumpExcited 90
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -1131,6 +1167,7 @@ MonoBehaviour:
         toState: Wait 0.8 Seconds
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1144,8 +1181,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1158,8 +1195,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpExcited
@@ -1177,9 +1214,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -1189,7 +1226,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Wait 0.8 Seconds
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1208,6 +1245,7 @@ MonoBehaviour:
         toState: Klutzy Emote 4
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1234,8 +1272,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1.2
@@ -1249,9 +1287,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1280,6 +1318,7 @@ MonoBehaviour:
         toState: Wait 2.1 seconds
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1322,7 +1361,7 @@ MonoBehaviour:
         arrayParamSizes: 01000000
         arrayParamTypes:
         - System.String
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000c00000003000000030000000100000001000000000000000200000001000000010000000200000001000000
         paramName:
@@ -1341,7 +1380,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000002000000000000000100000002000000060000000a0000000b0000000c00000010000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000040000000400000001000000010000000400000001000000
     - name: Wait 2.1 seconds
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1360,6 +1399,7 @@ MonoBehaviour:
         toState: Klutzy Emote 5
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1386,8 +1426,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 2.1
@@ -1401,9 +1441,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1432,6 +1472,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1474,7 +1515,7 @@ MonoBehaviour:
         arrayParamSizes: 01000000
         arrayParamTypes:
         - System.String
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000c00000003000000030000000100000001000000000000000200000001000000010000000200000001000000
         paramName:
@@ -1493,7 +1534,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000002000000000000000100000002000000060000000a0000000b0000000c00000010000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000040000000400000001000000010000000400000001000000
     - name: wait 0.5 seconds
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1512,6 +1553,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpExcited 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1538,8 +1580,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0.5
@@ -1553,9 +1595,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1565,7 +1607,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
     - name: wait 0.5 seconds 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1584,6 +1626,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpStartled
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1610,8 +1653,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0.2
@@ -1625,9 +1668,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1637,7 +1680,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
     - name: wait 0.5 seconds 3
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1656,6 +1699,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpStartled 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1682,8 +1726,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0.2
@@ -1697,9 +1741,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1709,7 +1753,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
     - name: wait 0.5 seconds 4
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1728,6 +1772,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpExcited 90
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1754,8 +1799,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0.5
@@ -1769,9 +1814,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1781,7 +1826,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 000000000000000001000000
     - name: Wait 1 second 2
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -1800,6 +1845,7 @@ MonoBehaviour:
         toState: Klutzy Emote 6
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1826,8 +1872,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 1
@@ -1841,9 +1887,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -1872,6 +1918,7 @@ MonoBehaviour:
         toState: Wait for Player to Leave Klutzy
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1914,7 +1961,7 @@ MonoBehaviour:
         arrayParamSizes: 01000000
         arrayParamTypes:
         - System.String
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 030000000c00000003000000030000000100000001000000000000000200000001000000010000000200000001000000
         paramName:
@@ -1933,7 +1980,7 @@ MonoBehaviour:
         paramDataPos: 00000000000000000100000002000000000000000100000002000000060000000a0000000b0000000c00000010000000
         paramByteDataSize: 000000000000000000000000000000000100000001000000040000000400000001000000010000000400000001000000
     - name: Animate Klutzy JumpExcited 3
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -1952,6 +1999,7 @@ MonoBehaviour:
         toState: Wait 1 second 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -1965,8 +2013,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -1979,8 +2027,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: JumpExcited
@@ -1998,9 +2046,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -2010,7 +2058,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: wait 0.5 seconds 5
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -2029,6 +2077,7 @@ MonoBehaviour:
         toState: Animate Klutzy JumpExcited 3
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -2055,8 +2104,8 @@ MonoBehaviour:
         fsmEnumParams: []
         fsmFloatParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: 0.5
@@ -2070,9 +2119,9 @@ MonoBehaviour:
         stringParams:
         - FINISHED
         byteData: 00
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -2129,19 +2178,19 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: KlutzyLookAheadTarget
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: KlutzysParent
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
       - useVariable: 1
         name: LocalPlayer
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -2153,22 +2202,25 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 000000000000000000000000
-    description:
-    docUrl:
+    description: 
+    docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -2189,6 +2241,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

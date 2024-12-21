@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: TutorialFSM_16_PartyGames
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: Quest
   fsm:
     dataVersion: 1
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: Delay
     states:
     - name: Hide Tutorial
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -38,6 +39,7 @@ MonoBehaviour:
         toState: Show Tutorial 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -71,15 +73,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Show Tutorial
       description: Party Games allow you to play games with other penguins!
       colorIndex: 5
@@ -100,6 +102,7 @@ MonoBehaviour:
         toState: Hide Tutorial
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -110,13 +113,13 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000013000000
-        actionHashCodes: 37c5070188611604
+        actionStartIndex: 0000000014000000
+        actionHashCodes: 08b9fa0488611604
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -129,11 +132,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -147,12 +150,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 53636176656e67657248756e7447726f7570427574746f6e000000000000884100010000000000000cc200000000020000000000000000000000000016c3000016c30000003f0000000000009643005475746f7269616c46534d5f31362e53686f775475746f7269616c2e54657874009a99193f01010146494e4953484544
-        arrayParamSizes:
+        byteData: 53636176656e67657248756e7447726f7570427574746f6e000000000000884100010000000000000cc200000000020000000000000000000000000016c3000016c30000003f0000000000009643005475746f7269616c46534d5f31362e53686f775475746f7269616c2e54657874009a99193f0101010046494e4953484544
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000017000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -173,11 +176,12 @@ MonoBehaviour:
         - UseTarget
         - DisableUI
         - EnableTarget
+        - BlocksRaycast
         - FinishEvent
-        paramDataPos: 00000000000000001800000021000000220000002a0000002e000000320000003a000000420000004a0000004e0000004f000000000000006f0000007000000074000000750000007600000077000000
-        paramByteDataSize: 1800000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002000000000000000010000000400000001000000010000000100000008000000
+        paramDataPos: 00000000000000001800000021000000220000002a0000002e000000320000003a000000420000004a0000004e0000004f000000000000006f000000700000007400000075000000760000007700000078000000
+        paramByteDataSize: 180000000000000009000000010000000800000004000000040000000800000008000000080000000400000001000000200000000000000001000000040000000100000001000000010000000100000008000000
     - name: Delay
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -196,6 +200,7 @@ MonoBehaviour:
         toState: CheckButton
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -230,9 +235,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: cdcccc3d0000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 0f0000001700000001000000
         paramName:
@@ -242,7 +247,7 @@ MonoBehaviour:
         paramDataPos: 000000000500000005000000
         paramByteDataSize: 050000000000000001000000
     - name: End 2
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -288,17 +293,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Hide Tutorial 2
-      description:
+      description: 
       colorIndex: 5
       position:
         serializedVersion: 2
@@ -317,6 +322,7 @@ MonoBehaviour:
         toState: End 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -350,15 +356,15 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Show Tutorial 2
       description: Purchased Party Games go into your inventory
       colorIndex: 5
@@ -379,6 +385,7 @@ MonoBehaviour:
         toState: Hide Tutorial 2
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -389,13 +396,13 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000013000000
-        actionHashCodes: 37c5070188611604
+        actionStartIndex: 0000000014000000
+        actionHashCodes: 08b9fa0488611604
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -408,11 +415,11 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
-          value:
+          value: 
         fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
@@ -426,12 +433,12 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData: 0000003f0000003f000000000000000000000200000002000000000000000000000000000000000000000000003f0000000000009643005475746f7269616c46534d5f31362e53686f775475746f7269616c20322e54657874009a99193f00010146494e4953484544
-        arrayParamSizes:
+        byteData: 0000003f0000003f000000000000000000000200000002000000000000000000000000000000000000000000003f0000000000009643005475746f7269616c46534d5f31362e53686f775475746f7269616c20322e54657874009a99193f0001010046494e4953484544
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0300000013000000250000000100000008000000070000000700000008000000080000000800000002000000010000000300000012000000010000000200000001000000010000000100000017000000
+        paramDataType: 030000001300000025000000010000000800000007000000070000000800000008000000080000000200000001000000030000001200000001000000020000000100000001000000010000000100000017000000
         paramName:
         - TargetName
         - TargetObject
@@ -452,11 +459,12 @@ MonoBehaviour:
         - UseTarget
         - DisableUI
         - EnableTarget
+        - BlocksRaycast
         - FinishEvent
-        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a00000032000000360000003700000000000000590000005a0000005e0000005f0000006000000061000000
-        paramByteDataSize: 0000000000000000090000000100000008000000040000000400000008000000080000000800000004000000010000002200000000000000010000000400000001000000010000000100000008000000
+        paramDataPos: 000000000000000000000000090000000a00000012000000160000001a000000220000002a00000032000000360000003700000000000000590000005a0000005e0000005f000000600000006100000062000000
+        paramByteDataSize: 000000000000000009000000010000000800000004000000040000000800000008000000080000000400000001000000220000000000000001000000040000000100000001000000010000000100000008000000
     - name: CheckButton
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -475,6 +483,7 @@ MonoBehaviour:
         toState: TurnOffButtons
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -488,8 +497,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -502,8 +511,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: ScavengerHuntGroupButton
@@ -521,9 +530,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 0000a040cdcc4c3e01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 1200000002000000020000000100000013000000
         paramName:
@@ -535,7 +544,7 @@ MonoBehaviour:
         paramDataPos: 0000000000000000040000000800000000000000
         paramByteDataSize: 0000000004000000040000000100000000000000
     - name: TurnOffButtons
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -554,6 +563,7 @@ MonoBehaviour:
         toState: Show Tutorial
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -610,9 +620,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 4d61726b6574706c616365427574746f6e004d61726b6574706c616365427574746f6e5f30004d61726b6574706c616365427574746f6e5f31004d61726b6574706c616365427574746f6e5f32004d61726b6574706c616365427574746f6e5f33004d61726b6574706c616365427574746f6e5f34004d61726b6574706c616365427574746f6e5f35004d61726b6574706c616365427574746f6e5f36004d61726b6574706c616365427574746f6e5f37004d61726b6574706c616365427574746f6e5f38004d61726b6574706c616365427574746f6e5f3900
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 03000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000030000000100000003000000010000000300000001000000
         paramName:
@@ -670,7 +680,7 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: TargetButton
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -682,22 +692,25 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 00000000
-    description:
-    docUrl:
+    description: 
+    docUrl: 
     showStateLabel: 1
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -718,6 +731,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0

@@ -4549,7 +4549,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 8f3a12edf12d55b478e3166c516154c5, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e3437bb74aec19246a67459d112b7a62, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -9682,7 +9682,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 1534759873615798, guid: b3c8b97d94016424bb322f3b99de0db2,
+          value: {fileID: 1105548842782378, guid: e0708f0d4d628b740afe41f16bc080ff,
             type: 3}
         - useVariable: 0
           name: 
@@ -12287,7 +12287,7 @@ MonoBehaviour:
     manualUpdate: 0
     outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     OutputEvents: []
     RestartOnEnable: 1
@@ -13124,6 +13124,60 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 203f52504cab70953a15c171634ba6ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1030055717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1030055719}
+  - component: {fileID: 1030055718}
+  m_Layer: 0
+  m_Name: PlayMakerGUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1030055718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030055717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -73581967, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewOnGUI: 1
+  enableGUILayout: 0
+  drawStateLabels: 1
+  enableStateLabelsInBuilds: 0
+  GUITextureStateLabels: 0
+  GUITextStateLabels: 0
+  filterLabelsWithDistance: 0
+  maxLabelDistance: 10
+  controlMouseCursor: 1
+  labelScale: 1
+--- !u!4 &1030055719
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030055717}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042113390
 GameObject:
   m_ObjectHideFlags: 0
@@ -13156,11 +13210,15 @@ MonoBehaviour:
   LighthouseIce: {fileID: 0}
   funHutSpeakerTowerA: {fileID: 0}
   funHutSpeakerTowerB: {fileID: 0}
+  LighthouseUpperDoorLightOff: {fileID: 0}
+  LighthouseGlassWallsLightOff: {fileID: 0}
   LightmappingSkybox: {fileID: 0}
-  PiratePartySkyboxForBakingLightmaps: {fileID: 2100000, guid: 8f3a12edf12d55b478e3166c516154c5,
+  PiratePartySkyboxForBakingLightmaps: {fileID: 2100000, guid: e3437bb74aec19246a67459d112b7a62,
     type: 2}
+  HerbertBaseV2: {fileID: 0}
   WorldArt: {fileID: 0}
   World: {fileID: 0}
+  LighthouseDoor: {fileID: 0}
   Halloween: {fileID: 0}
   Sewer: {fileID: 0}
   AdditiveWorldArt: {fileID: 0}
@@ -13185,13 +13243,10 @@ MonoBehaviour:
   HerbertBaseCubemap: {fileID: 0}
   MtBlizzardCubemap: {fileID: 0}
   EventPiratePartySkybox: {fileID: 0}
+  MedievalDungeonSkybox: {fileID: 0}
   CivicDoor: {fileID: 0}
   CivicDoor2: {fileID: 0}
-  SunSetThankYouStatue: {fileID: 0}
-  SnowyPineTreeStraight2: {fileID: 0}
-  SnowyPineTreeStraight3: {fileID: 0}
   InflatableDolphinFBX: {fileID: 0}
-  Blob: {fileID: 0}
   DanceCaveSpotLights: {fileID: 0}
   GatewayFX: {fileID: 14}
   GatewayFX2: {fileID: 0}
@@ -13218,3 +13273,4 @@ SceneRoots:
   - {fileID: 184}
   - {fileID: 185}
   - {fileID: 1042113392}
+  - {fileID: 1030055719}

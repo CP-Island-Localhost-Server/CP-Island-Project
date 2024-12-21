@@ -3,14 +3,15 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1219815696, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
   m_Name: DoorOpenClose
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
   category: General
   fsm:
     dataVersion: 2
@@ -19,7 +20,7 @@ MonoBehaviour:
     startState: Start
     states:
     - name: Start
-      description:
+      description: 
       colorIndex: 0
       position:
         serializedVersion: 2
@@ -38,14 +39,15 @@ MonoBehaviour:
         toState: Wait for Player to Enter Trigger
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames: []
         customNames: []
-        actionEnabled:
-        actionIsOpen:
-        actionStartIndex:
-        actionHashCodes:
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams: []
@@ -69,17 +71,17 @@ MonoBehaviour:
         fsmRectParams: []
         fsmQuaternionParams: []
         stringParams: []
-        byteData:
-        arrayParamSizes:
+        byteData: 
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType:
+        paramDataType: 
         paramName: []
-        paramDataPos:
-        paramByteDataSize:
+        paramDataPos: 
+        paramByteDataSize: 
     - name: Wait for Player to Enter Trigger
-      description:
+      description: 
       colorIndex: 1
       position:
         serializedVersion: 2
@@ -98,6 +100,7 @@ MonoBehaviour:
         toState: Door Animate Opening
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       - fsmEvent:
           name: Close
@@ -106,6 +109,7 @@ MonoBehaviour:
         toState: Door Animate Closing
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -116,23 +120,39 @@ MonoBehaviour:
         - 
         actionEnabled: 0101
         actionIsOpen: 0101
-        actionStartIndex: 0000000004000000
-        actionHashCodes: 9ddbab039ddbab03
+        actionStartIndex: 0000000005000000
+        actionHashCodes: 9c5124009c512400
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
         - useVariable: 1
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
-        fsmOwnerDefaultParams: []
+        fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         animationCurveParams: []
         functionCallParams: []
         fsmTemplateControlParams: []
@@ -141,14 +161,14 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Player
@@ -168,24 +188,26 @@ MonoBehaviour:
         - Open
         - Close
         byteData: 0000000002000000
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
-        paramDataType: 0700000012000000170000001300000007000000120000001700000013000000
+        paramDataType: 14000000070000001200000017000000130000001400000007000000120000001700000013000000
         paramName:
+        - gameObject
         - trigger
         - collideTag
         - sendEvent
         - storeCollider
+        - gameObject
         - trigger
         - collideTag
         - sendEvent
         - storeCollider
-        paramDataPos: 0000000000000000000000000000000004000000010000000100000001000000
-        paramByteDataSize: 0400000000000000000000000000000004000000000000000000000000000000
+        paramDataPos: 00000000000000000000000000000000000000000100000004000000010000000100000001000000
+        paramByteDataSize: 00000000040000000000000000000000000000000000000004000000000000000000000000000000
     - name: Door Animate Opening
-      description:
+      description: 
       colorIndex: 3
       position:
         serializedVersion: 2
@@ -204,6 +226,7 @@ MonoBehaviour:
         toState: Wait for Player to Enter Trigger
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -217,8 +240,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -231,8 +254,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Opening
@@ -250,9 +273,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -262,7 +285,7 @@ MonoBehaviour:
         paramDataPos: 000000000000000000000000
         paramByteDataSize: 010000000000000000000000
     - name: Door Animate Closing
-      description:
+      description: 
       colorIndex: 6
       position:
         serializedVersion: 2
@@ -281,6 +304,7 @@ MonoBehaviour:
         toState: Wait for Player to Enter Trigger
         linkStyle: 0
         linkConstraint: 0
+        linkTarget: 0
         colorIndex: 0
       actionData:
         actionNames:
@@ -294,8 +318,8 @@ MonoBehaviour:
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: {fileID: 0}
@@ -308,8 +332,8 @@ MonoBehaviour:
         layoutOptionParams: []
         fsmStringParams:
         - useVariable: 0
-          name:
-          tooltip:
+          name: 
+          tooltip: 
           showInInspector: 0
           networkSync: 0
           value: Closing
@@ -327,9 +351,9 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams: []
         byteData: 01
-        arrayParamSizes:
+        arrayParamSizes: 
         arrayParamTypes: []
-        customTypeSizes:
+        customTypeSizes: 
         customTypeNames: []
         paramDataType: 010000001300000012000000
         paramName:
@@ -362,7 +386,7 @@ MonoBehaviour:
       gameObjectVariables:
       - useVariable: 1
         name: TargetDoor
-        tooltip:
+        tooltip: 
         showInInspector: 0
         networkSync: 0
         value: {fileID: 0}
@@ -374,22 +398,25 @@ MonoBehaviour:
       categories:
       - 
       variableCategoryIDs: 00000000
-    description:
-    docUrl:
+    description: 
+    docUrl: 
     showStateLabel: 0
     maxLoopCount: 0
-    watermark:
-    password:
+    watermark: 
+    password: 
     locked: 0
     manualUpdate: 0
+    outVariableIndices: 
     keepDelayedEventsOnStateExit: 0
     preprocessed: 0
     ExposedEvents: []
+    OutputEvents: []
     RestartOnEnable: 1
+    ResetVariablesOnEnable: 0
     EnableDebugFlow: 0
     EnableBreakpoints: 1
     editorFlags: 3
-    activeStateName:
+    activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
     handleTriggerEnter2D: 0
@@ -410,6 +437,9 @@ MonoBehaviour:
     handleJointBreak2D: 0
     handleOnGUI: 0
     handleFixedUpdate: 0
+    handleLateUpdate: 0
     handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
     handleAnimatorMove: 0
     handleAnimatorIK: 0
