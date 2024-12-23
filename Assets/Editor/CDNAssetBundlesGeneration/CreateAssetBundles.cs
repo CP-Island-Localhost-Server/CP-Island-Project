@@ -21,6 +21,9 @@ public class CreateAssetBundles : MonoBehaviour
       //  BuildTarget.Switch,
     };
 
+    public static long Todaysdate1;
+    public static long Todaysdate2;
+
     static string generateHexString() {
         System.Random random = new System.Random();
         var bytes = new Byte[16];
@@ -242,11 +245,11 @@ public class CreateAssetBundles : MonoBehaviour
 
             if ((int)target == 24)
             {
-                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/standalonelinux/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-04-04 00:00:00 -08:00"));
+                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/standalonelinux/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-22 00:00:00 -08:00"));
             }
             else
             {
-                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/{0}/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-04-04 00:00:00 -08:00"));
+                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/{0}/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-22 00:00:00 -08:00"));
             }
 
 
@@ -272,8 +275,8 @@ public class CreateAssetBundles : MonoBehaviour
     {
         ClientManifests clientManifestDirectory = new ClientManifests();
         string Todaysdate = Convert.ToString((int)DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds);
-        long Todaysdate1 = (int)DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
-        long Todaysdate2 = (int)DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+        Todaysdate1 = (int)DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+        Todaysdate2 = (int)DateTime.Now.Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
         clientManifestDirectory.version = "test-"+ Todaysdate;
         clientManifestDirectory.unique = Todaysdate;
         clientManifestDirectory.cdnRoot = "http://localhost/";
@@ -323,5 +326,58 @@ public class CreateAssetBundles : MonoBehaviour
         var jsonwriter = new StreamWriter("Export/__manifest_cpremix_prod.0000.json", true);
         jsonwriter.WriteLine(clientmd);
         jsonwriter.Close();
+    }
+
+    [MenuItem("Project/AssetBundles/Generated/Generate CDN AssetBundles/Step 4: Pepare for your CDN")]
+    static void GenerateManifest3()
+    {
+        Debug.Log("Peparing for WWW ");
+
+        var targetPath2 = string.Format("Export/www/manifests");
+        if (!Directory.Exists(targetPath2))
+        {
+            Directory.CreateDirectory(targetPath2);
+        }
+
+        var targetPath3 = string.Format("Export/www/" + Todaysdate1);
+        if (!Directory.Exists(targetPath3))
+        {
+            Directory.CreateDirectory(targetPath3);
+        }
+
+
+        var targetPath4 = string.Format("Export/www/" + Todaysdate2);
+        if (!Directory.Exists(targetPath4))
+        {
+            Directory.CreateDirectory(targetPath4);
+        }
+
+        Directory.Move("Export/ClientBundles/", targetPath3 + "/ClientBundles/");
+
+        string[] files = Directory.GetFiles(targetPath3 + "/ClientBundles/", "*.txt", System.IO.SearchOption.AllDirectories);
+        foreach (string file in files)
+            try
+            {
+                File.Delete(file);
+            }
+            catch { }
+
+        string[] files2 = Directory.GetFiles(targetPath3 + "/ClientBundles/", "*.manifest", System.IO.SearchOption.AllDirectories);
+        foreach (string file in files2)
+            try
+            {
+                File.Delete(file);
+            }
+            catch { }
+
+        File.Delete(targetPath3 + "/ClientBundles/android/android");
+        File.Delete(targetPath3 + "/ClientBundles/ios/ios");
+        File.Delete(targetPath3 + "/ClientBundles/standaloneosx/standaloneosx");
+        File.Delete(targetPath3 + "/ClientBundles/standalonewindows/standalonewindows");
+        File.Delete(targetPath3 + "/ClientBundles/standalonelinux64/standalonelinux64");
+
+        File.Move("Export/ClientManifestDirectory.json", targetPath4 + "/ClientManifestDirectory.json");
+        File.Move("Export/__manifest_cpremix_prod.0000.json", targetPath2 + "/__manifest_cpremix_prod.0000.json");
+        Debug.Log("The WWW is done, now you can put it in your CDN server.");
     }
 }
