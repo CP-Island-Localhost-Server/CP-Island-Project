@@ -111,7 +111,8 @@ public class CreateAssetBundles : MonoBehaviour
 
     [MenuItem("Project/AssetBundles/Generated/Generate CDN AssetBundles/Step 1: Build ClientBundles and Generate ContentManifest.txt")]
     static void GetNames()
-    {
+{
+
         if (Directory.Exists("Export"))
         {
             Directory.Delete("Export", true);
@@ -179,7 +180,10 @@ public class CreateAssetBundles : MonoBehaviour
                     for (var i = 1; i < assetFileName.Length - 1; i++)
                     {
                         resourcesIndex++;
-                        if (assetFileName[i] == "resources") break;
+                        if (path.ToLower().Contains("resources/scenes") || path.ToLower().Contains("resources/additivscenes"))
+                        {
+                        }
+                        else if (assetFileName[i] == "resources" || assetFileName[i] == "resources_landscape") break;
                     }
                     var basepatharr = assetFileName.Skip(1).Take(resourcesIndex);
                     var assetBasePath = basepatharr.Aggregate((total, next) => total + "/" + next);
@@ -245,11 +249,11 @@ public class CreateAssetBundles : MonoBehaviour
 
             if ((int)target == 24)
             {
-                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/standalonelinux/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-22 00:00:00 -08:00"));
+                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/standalonelinux/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-25 00:00:00 -08:00"));
             }
             else
             {
-                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/{0}/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-22 00:00:00 -08:00"));
+                clientManifestDirectory.Add(new ClientManifest("1.13.0", target.ToString().ToLower(), "production", "Client 1.13.0_2018_11_05", false, string.Format("ClientBundles/{0}/{1}.unity3d", target.ToString().ToLower(), cmanifestName), "", generateHexString(), "Client 1.13.0", "2024-12-25 00:00:00 -08:00"));
             }
 
 
