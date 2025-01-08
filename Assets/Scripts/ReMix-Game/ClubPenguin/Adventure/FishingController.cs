@@ -190,68 +190,277 @@ namespace ClubPenguin.Adventure
 			fishPrefab.SetPosition(Vector3.down * 100f);
 		}
 
-		private void init()
-		{
-			getReferences();
-			originalCameraPosition = cinematicCameraFishingController.transform.position;
-			_rodPropLineParent = _rodPropLineEndTransform.parent;
-			SimpleSpringInterper simpleSpringInterper = reelSpring;
-			simpleSpringInterper.OnSpringValueChanged = (SimpleSpringInterper.SpringValueChangedHandler)Delegate.Combine(simpleSpringInterper.OnSpringValueChanged, new SimpleSpringInterper.SpringValueChangedHandler(OnReelSpringUpdated));
-			locomotionBroadcaster.BroadcastOnControlsLocked();
-			eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElement("Joystick", true));
-			userControl.enabled = true;
-			eventDispatcher.DispatchEvent(new ControlsScreenEvents.SetButton(bobberContentKey, 0));
-			Quaternion rotation = Quaternion.Euler(config.PlayerRotationTowardsWater);
-			player.GetComponent<RunController>().SnapToFacing(rotation * Vector3.forward);
-			prizeDropContainer.transform.localPosition = config.PrizeDropOffset;
-			patternIndex = getRandomPatternIndex();
-			setGameplayState(FishingGameplayStates.WaitingForServer, true);
-			CoroutineRunner.Start(ExecuteCast(), this, "ExecuteCast");
-			getFishingGamePrize();
-			clickListener = GetComponent<ClickListener>();
-			eventDispatcher.DispatchEvent(new PlayerCardEvents.SetEnablePlayerCard(false));
-			if (PlatformUtils.GetPlatformType() != PlatformType.Standalone)
-			{
-				eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElementGroup("MainNavButtons"));
-				eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElement("ChatButtons"));
-			}
-		}
+        private void init()
+        {
+            // Ensure all references are fetched correctly
+            getReferences();
 
-		private void getReferences()
-		{
-			minigameService = Service.Get<MinigameService>();
-			eventDispatcher = Service.Get<EventDispatcher>();
-			questService = Service.Get<QuestService>();
-			player = SceneRefs.ZoneLocalPlayerManager.LocalPlayerGameObject;
-			locomotionBroadcaster = player.GetComponent<LocomotionEventBroadcaster>();
-			fishingRod = getChildByName(player, "FishingRodProp(Clone)");
-			_rodPropLineEndTransform = getChildByName(fishingRod, "string_end_jnt").transform;
-			playerAnimator = player.GetComponent<Animator>();
-			fishingRodAnimator = fishingRod.GetComponent<Animator>();
-			prizeDropContainerAnimator = prizeDropContainer.GetComponentInChildren<Animator>();
-			_bobberAnimator = bobberRootTransform.GetComponentInChildren<Animator>();
-			GameObject gameObject = GameObject.Find("CinematicFishing");
-			cinematicCameraFishingController = gameObject.GetComponent<CameraController>();
-			GameObject gameObject2 = GameObject.Find("CinematicFishingZoom");
-			cinematicCameraFishingControllerZoom = gameObject2.GetComponent<CameraController>();
-			for (int i = 0; i < cinematicCameraFishingController.GoalPlanners.Length; i++)
-			{
-				RailDollyGoalPlanner railDollyGoalPlanner = cinematicCameraFishingController.GoalPlanners[i] as RailDollyGoalPlanner;
-				if (railDollyGoalPlanner != null)
-				{
-					_cameraDolly = railDollyGoalPlanner.Dolly;
-					break;
-				}
-			}
-			RailDollyFramer railDollyFramer = cinematicCameraFishingController.Framer as RailDollyFramer;
-			if (railDollyFramer != null)
-			{
-				_cameraDollyFocus = railDollyFramer.Dolly;
-			}
-			userControl = player.GetComponent<PenguinUserControl>();
-		}
+            // Check if cinematicCameraFishingController is null
+            if (cinematicCameraFishingController == null)
+            {
+                Debug.LogError("CinematicCameraFishingController is not set.");
+                return; // Return early if the camera controller is missing
+            }
+            originalCameraPosition = cinematicCameraFishingController.transform.position;
 
-		private int getRandomPatternIndex()
+            // Check if _rodPropLineEndTransform is null
+            if (_rodPropLineEndTransform == null)
+            {
+                Debug.LogError("RodPropLineEndTransform is not set.");
+                return; // Return early if the rod transform is missing
+            }
+            _rodPropLineParent = _rodPropLineEndTransform.parent;
+
+            // Check if reelSpring is null before using it
+            if (reelSpring == null)
+            {
+                Debug.LogError("ReelSpring is not set.");
+                return;
+            }
+            SimpleSpringInterper simpleSpringInterper = reelSpring;
+            simpleSpringInterper.OnSpringValueChanged = (SimpleSpringInterper.SpringValueChangedHandler)Delegate.Combine(simpleSpringInterper.OnSpringValueChanged, new SimpleSpringInterper.SpringValueChangedHandler(OnReelSpringUpdated));
+
+            // Check if locomotionBroadcaster is null
+            if (locomotionBroadcaster == null)
+            {
+                Debug.LogError("LocomotionEventBroadcaster is missing on the player.");
+                return;
+            }
+            locomotionBroadcaster.BroadcastOnControlsLocked();
+
+            // Check if eventDispatcher is null
+            if (eventDispatcher == null)
+            {
+                Debug.LogError("EventDispatcher is not set.");
+                return;
+            }
+            eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElement("Joystick", true));
+
+            // Check if userControl is null
+            if (userControl == null)
+            {
+                Debug.LogError("PenguinUserControl is missing on the player.");
+                return;
+            }
+            userControl.enabled = true;
+
+            // Continue with other events
+            eventDispatcher.DispatchEvent(new ControlsScreenEvents.SetButton(bobberContentKey, 0));
+
+            // Check if player is null before accessing its components
+            if (player == null)
+            {
+                Debug.LogError("Player GameObject is not set.");
+                return;
+            }
+
+            Quaternion rotation = Quaternion.Euler(config.PlayerRotationTowardsWater);
+            player.GetComponent<RunController>().SnapToFacing(rotation * Vector3.forward);
+
+            // Check if prizeDropContainer is null
+            if (prizeDropContainer == null)
+            {
+                Debug.LogError("PrizeDropContainer is not set.");
+                return;
+            }
+            prizeDropContainer.transform.localPosition = config.PrizeDropOffset;
+
+            patternIndex = getRandomPatternIndex();
+            setGameplayState(FishingGameplayStates.WaitingForServer, true);
+
+            // Start Coroutine for ExecuteCast()
+            CoroutineRunner.Start(ExecuteCast(), this, "ExecuteCast");
+
+            // Fetch fishing game prize
+            getFishingGamePrize();
+
+            // Check if clickListener is null
+            clickListener = GetComponent<ClickListener>();
+            if (clickListener == null)
+            {
+                Debug.LogError("ClickListener component is missing.");
+                return;
+            }
+
+            eventDispatcher.DispatchEvent(new PlayerCardEvents.SetEnablePlayerCard(false));
+
+            // Platform-specific checks
+            if (PlatformUtils.GetPlatformType() != PlatformType.Standalone)
+            {
+                eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElementGroup("MainNavButtons"));
+                eventDispatcher.DispatchEvent(new UIDisablerEvents.DisableUIElement("ChatButtons"));
+            }
+        }
+
+
+        private void getReferences()
+        {
+            // Service references
+            minigameService = Service.Get<MinigameService>();
+            if (minigameService == null)
+            {
+                Debug.LogError("MinigameService is not initialized.");
+            }
+
+            eventDispatcher = Service.Get<EventDispatcher>();
+            if (eventDispatcher == null)
+            {
+                Debug.LogError("EventDispatcher is not initialized.");
+            }
+
+            questService = Service.Get<QuestService>();
+            if (questService == null)
+            {
+                Debug.LogError("QuestService is not initialized.");
+            }
+
+            // Player reference
+            player = SceneRefs.ZoneLocalPlayerManager.LocalPlayerGameObject;
+            if (player == null)
+            {
+                Debug.LogError("Player GameObject is not set.");
+                return; // If player is null, we can't continue, so return early
+            }
+
+            // LocomotionEventBroadcaster reference
+            locomotionBroadcaster = player.GetComponent<LocomotionEventBroadcaster>();
+            if (locomotionBroadcaster == null)
+            {
+                Debug.LogError("LocomotionEventBroadcaster is missing on the player.");
+            }
+
+            // FishingRod reference
+            fishingRod = getChildByNameRecursive(player, "FishingRodProp(Clone)");
+            if (fishingRod == null)
+            {
+                Debug.LogError("FishingRodProp(Clone) child is missing from the player.");
+                return; // Return early as we can't proceed without the fishing rod
+            }
+
+            // _rodPropLineEndTransform reference (Recursively searching for "string_end_jnt")
+            GameObject rodObject = getChildByNameRecursive(fishingRod, "string_end_jnt");
+            if (rodObject == null)
+            {
+                Debug.LogError("string_end_jnt child is missing from the fishing rod.");
+                return; // Return early as we can't proceed without the rod's transform
+            }
+            _rodPropLineEndTransform = rodObject.transform; // Now that we have a valid GameObject, access its Transform
+
+            // PlayerAnimator reference
+            playerAnimator = player.GetComponent<Animator>();
+            if (playerAnimator == null)
+            {
+                Debug.LogError("Animator component is missing on the player.");
+            }
+
+            // FishingRodAnimator reference
+            fishingRodAnimator = fishingRod.GetComponent<Animator>();
+            if (fishingRodAnimator == null)
+            {
+                Debug.LogError("Animator component is missing on the fishing rod.");
+            }
+
+            // PrizeDropContainerAnimator reference
+            if (prizeDropContainer == null)
+            {
+                Debug.LogError("PrizeDropContainer is not set.");
+                return;
+            }
+            prizeDropContainerAnimator = prizeDropContainer.GetComponentInChildren<Animator>();
+            if (prizeDropContainerAnimator == null)
+            {
+                Debug.LogError("Animator component is missing in the PrizeDropContainer.");
+            }
+
+            // BobberAnimator reference
+            if (bobberRootTransform == null)
+            {
+                Debug.LogError("BobberRootTransform is not set.");
+                return;
+            }
+            _bobberAnimator = bobberRootTransform.GetComponentInChildren<Animator>();
+            if (_bobberAnimator == null)
+            {
+                Debug.LogError("Animator component is missing in the bobber root.");
+            }
+
+            // CinematicFishing and CinematicFishingZoom GameObject references
+            GameObject cinematicFishingObject = GameObject.Find("CinematicFishing");
+            if (cinematicFishingObject == null)
+            {
+                Debug.LogError("CinematicFishing GameObject is missing from the scene.");
+                return;
+            }
+            cinematicCameraFishingController = cinematicFishingObject.GetComponent<CameraController>();
+            if (cinematicCameraFishingController == null)
+            {
+                Debug.LogError("CameraController component is missing on CinematicFishing.");
+                return;
+            }
+
+            GameObject cinematicFishingZoomObject = GameObject.Find("CinematicFishingZoom");
+            if (cinematicFishingZoomObject == null)
+            {
+                Debug.LogError("CinematicFishingZoom GameObject is missing from the scene.");
+                return;
+            }
+            cinematicCameraFishingControllerZoom = cinematicFishingZoomObject.GetComponent<CameraController>();
+            if (cinematicCameraFishingControllerZoom == null)
+            {
+                Debug.LogError("CameraController component is missing on CinematicFishingZoom.");
+                return;
+            }
+
+            // RailDollyGoalPlanner setup
+            for (int i = 0; i < cinematicCameraFishingController.GoalPlanners.Length; i++)
+            {
+                RailDollyGoalPlanner railDollyGoalPlanner = cinematicCameraFishingController.GoalPlanners[i] as RailDollyGoalPlanner;
+                if (railDollyGoalPlanner != null)
+                {
+                    _cameraDolly = railDollyGoalPlanner.Dolly;
+                    break;
+                }
+            }
+
+            // RailDollyFramer setup
+            RailDollyFramer railDollyFramer = cinematicCameraFishingController.Framer as RailDollyFramer;
+            if (railDollyFramer != null)
+            {
+                _cameraDollyFocus = railDollyFramer.Dolly;
+            }
+
+            // UserControl reference
+            userControl = player.GetComponent<PenguinUserControl>();
+            if (userControl == null)
+            {
+                Debug.LogError("PenguinUserControl component is missing on the player.");
+            }
+        }
+
+        private GameObject getChildByNameRecursive(GameObject parent, string name)
+        {
+            // Print the parent's name to check the context
+            Debug.Log($"Searching for '{name}' in parent: {parent.name}");
+
+            Transform[] children = parent.GetComponentsInChildren<Transform>(true); // Get all child transforms (true to include inactive ones)
+
+            foreach (Transform child in children)
+            {
+                Debug.Log($"Checking child: {child.name}"); // Log each child's name
+
+                if (child.name == name)
+                {
+                    Debug.Log($"Found '{name}' under parent '{parent.name}'");
+                    return child.gameObject; // Return the GameObject when a match is found
+                }
+            }
+
+            Debug.Log($"'{name}' not found under parent '{parent.name}'");
+            return null; // Return null if no match is found
+        }
+
+
+        private int getRandomPatternIndex()
 		{
 			int num = 0;
 			if (sessionIndexList.Count <= 0)

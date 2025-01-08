@@ -18,15 +18,15 @@ namespace ClubPenguin.Core
 			{
 			case RuntimePlatform.IPhonePlayer:
 			case RuntimePlatform.Android:
-			case RuntimePlatform.Switch:
-				return PlatformType.Mobile;
+            case RuntimePlatform.Switch:
+                return PlatformType.Mobile;
 			case RuntimePlatform.OSXPlayer:
 			case RuntimePlatform.WindowsPlayer:
-			case RuntimePlatform.LinuxPlayer:
-			case RuntimePlatform.WindowsEditor:
-			case RuntimePlatform.LinuxEditor:
-			case RuntimePlatform.OSXEditor:
-				return PlatformType.Standalone;
+            case RuntimePlatform.LinuxPlayer:
+            case RuntimePlatform.WindowsEditor:
+            case RuntimePlatform.LinuxEditor:
+            case RuntimePlatform.OSXEditor:
+                    return PlatformType.Standalone;
 			default:
 				return PlatformType.None;
 			}

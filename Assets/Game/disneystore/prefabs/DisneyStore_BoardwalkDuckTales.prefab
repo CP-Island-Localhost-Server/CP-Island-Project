@@ -83,6 +83,60 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &99093448966366186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8132912788265714721}
+  - component: {fileID: 5464590846566659666}
+  m_Layer: 29
+  m_Name: collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8132912788265714721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99093448966366186}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.0000000018626449, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7253317009658381709}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.11, z: 0}
+--- !u!64 &5464590846566659666
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99093448966366186}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 01970e71ed882e741a18f584e2d043d8, type: 2}
 --- !u!1 &405829299513724921
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,6 +520,7 @@ GameObject:
   - component: {fileID: 7253317009658381709}
   - component: {fileID: 8351143789093067319}
   - component: {fileID: 773178337948720557}
+  - component: {fileID: 6191768308781697956}
   m_Layer: 0
   m_Name: DuckTalesSign_1.7
   m_TagString: Untagged
@@ -485,7 +540,8 @@ Transform:
   m_LocalPosition: {x: 3.5902631, y: 3.687, z: 1.4519722}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8132912788265714721}
   m_Father: {fileID: 2208797306477725532}
   m_LocalEulerAnglesHint: {x: 0, y: -2.11, z: 0}
 --- !u!33 &8351143789093067319
@@ -538,6 +594,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6191768308781697956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460162742876059860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2b70476d8daa14a0947badd70b6965c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GenericContentKey:
+    Key: Textures/DuckTalesSign
+    type: UnityEngine.Texture, UnityEngine.CoreModule
 --- !u!1 &1494334247750144367
 GameObject:
   m_ObjectHideFlags: 0

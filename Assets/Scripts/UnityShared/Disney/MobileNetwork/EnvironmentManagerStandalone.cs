@@ -6,7 +6,8 @@ namespace Disney.MobileNetwork
 {
 	public class EnvironmentManagerStandalone : EnvironmentManager
 	{
-		protected override string _SKU
+#if UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LINUX
+        protected override string _SKU
 		{
 			get
 			{
@@ -86,5 +87,6 @@ namespace Disney.MobileNetwork
 		protected override void _ShowStatusBar(bool show, bool useLightColor)
 		{
 		}
-	}
+#endif
+    }
 }

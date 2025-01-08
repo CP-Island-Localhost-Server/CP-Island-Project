@@ -216,59 +216,61 @@ namespace ClubPenguin
 		}
 
 		private IEnumerator processDecoration(DecorationLayoutData decoration, PrefabContentKey contentKey)
-{
-    PrefabCacheTracker.PrefabRequest prefabRequest = prefabCacheTracker.Acquire(contentKey);
-    while (!prefabRequest.IsComplete)
-    {
-        yield return null;
-    }
-    yield return new WaitForEndOfFrame();
-    while (loadOrder.Peek() != decoration.Id.GetFullPath())
-    {
-        yield return null;
-    }
-    string idFromQueue = loadOrder.Dequeue();
-    Assert.IsTrue(idFromQueue == decoration.Id.GetFullPath());
-    if (prefabRequest != null && prefabRequest.Prefab != null)
-    {
-        bool flag = true;
-        Transform transform = Container;
-        if (!string.IsNullOrEmpty(decoration.Id.ParentPath))
-        {
-            transform = Container.Find(decoration.Id.ParentPath);
-            if (transform == null)
-            {
-                Log.LogErrorFormatted(this, "Invalid path of decoration. Removing from layout: {0}", decoration.Id.GetFullPath());
-                layout.RemoveDecoration(decoration, true);
-                flag = false;
-            }
-        }
-        if (flag)
-        {
-            GameObject gameObject = UnityEngine.Object.Instantiate(prefabRequest.Prefab, transform, false);
-            SplittableObject component = gameObject.GetComponent<SplittableObject>();
-            Vector3 localScale = gameObject.transform.localScale;
-            if (component != null)
-            {
-                gameObject = component.ExtractSingleItem();
-                gameObject.transform.SetParent(transform, false);
-            }
-            configurePartneredObject(decoration, gameObject);
-            gameObject.transform.localPosition = decoration.Position;
-            gameObject.transform.localRotation = decoration.Rotation;
-            gameObject.name = decoration.Id.Name;
-            gameObject.transform.localScale = decoration.UniformScale * localScale;
-            prefabCacheTracker.SetCache(gameObject, prefabRequest.ContentKey);
-        }
-    }
-    else
-    {
-        Log.LogErrorFormatted(this, "Something went wrong loading {0}.", contentKey.Key);
-        prefabCacheTracker.Release(contentKey);
-    }
-    checkForLoadComplete();
-}
-
+		{
+			PrefabCacheTracker.PrefabRequest prefabRequest = prefabCacheTracker.Acquire(contentKey);
+			while (!prefabRequest.IsComplete)
+			{
+				yield return null;
+			}
+			yield return new WaitForEndOfFrame();
+			while (loadOrder.Peek() != decoration.Id.GetFullPath())
+			{
+				yield return null;
+			}
+			string idFromQueue = loadOrder.Dequeue();
+			Assert.IsTrue(idFromQueue == decoration.Id.GetFullPath());
+			if (prefabRequest != null && prefabRequest.Prefab != null)
+			{
+				bool flag = true;
+				Transform transform = Container.Find(decoration.Id.ParentPath);
+				if (transform == null)
+				{
+					if (string.IsNullOrEmpty(decoration.Id.ParentPath))
+					{
+						transform = Container;
+					}
+					else
+					{
+						Log.LogErrorFormatted(this, "Invalid path of decoration. Removing from layout: {0}", decoration.Id.GetFullPath());
+						layout.RemoveDecoration(decoration, true);
+						flag = false;
+					}
+				}
+				if (flag)
+				{
+					GameObject gameObject = UnityEngine.Object.Instantiate(prefabRequest.Prefab, transform, false);
+					SplittableObject component = gameObject.GetComponent<SplittableObject>();
+					Vector3 localScale = gameObject.transform.localScale;
+					if (component != null)
+					{
+						gameObject = component.ExtractSingleItem();
+						gameObject.transform.SetParent(transform, false);
+					}
+					configurePartneredObject(decoration, gameObject);
+					gameObject.transform.localPosition = decoration.Position;
+					gameObject.transform.localRotation = decoration.Rotation;
+					gameObject.name = decoration.Id.Name;
+					gameObject.transform.localScale = decoration.UniformScale * localScale;
+					prefabCacheTracker.SetCache(gameObject, prefabRequest.ContentKey);
+				}
+			}
+			else
+			{
+				Log.LogErrorFormatted(this, "Something went wrong loading {0}.", contentKey.Key);
+				prefabCacheTracker.Release(contentKey);
+			}
+			checkForLoadComplete();
+		}
 
 		private void checkForLoadComplete()
 		{

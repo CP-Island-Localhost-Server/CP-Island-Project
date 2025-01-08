@@ -2,7 +2,7 @@ namespace Disney.Kelowna.Common.DataModel
 {
 	public class DataEntityHandle
 	{
-		public static readonly DataEntityHandle NullHandle = new DataEntityHandle(null);
+		public static DataEntityHandle NullHandle = new DataEntityHandle(null);
 
 		internal string Id;
 
@@ -14,7 +14,7 @@ namespace Disney.Kelowna.Common.DataModel
 			}
 		}
 
-		internal DataEntityHandle(string id)
+		public DataEntityHandle(string id)
 		{
 			Id = id;
 		}

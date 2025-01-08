@@ -4,7 +4,8 @@ namespace Disney.MobileNetwork
 {
 	public class KeyChainStandaloneManager : KeyChainManager
 	{
-		protected override void Init()
+#if UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX || UNITY_STANDALONE_LINUX
+        protected override void Init()
 		{
 		}
 
@@ -22,5 +23,6 @@ namespace Disney.MobileNetwork
 		{
 			PlayerPrefs.DeleteKey(key);
 		}
-	}
+#endif
+    }
 }

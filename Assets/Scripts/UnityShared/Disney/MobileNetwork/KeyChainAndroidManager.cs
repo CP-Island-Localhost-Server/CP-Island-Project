@@ -6,7 +6,7 @@ namespace Disney.MobileNetwork
 	public class KeyChainAndroidManager : KeyChainManager
 	{
 #if UNITY_ANDROID
-		private AndroidJavaObject androidPlugin = null;
+		private AndroidJavaObject androidPlugin;
 
 		protected override void Init()
 		{

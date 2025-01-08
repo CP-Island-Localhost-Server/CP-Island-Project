@@ -47,9 +47,6 @@ public class GameObjectLocations : MonoBehaviour
 	public Material MtBlizzardCubemap;
 	public Material EventPiratePartySkybox;
 	public Material MedievalDungeonSkybox;
-	// Town
-    public GameObject CivicDoor;
-    public GameObject CivicDoor2;
 	// Summer Splashdown
 	public GameObject InflatableDolphinFBX;
 	// Disable static on these meshes

@@ -79,7 +79,20 @@ namespace ClubPenguin.Props
 			}
 		}
 
-		public event Action<Prop> EPropSpawned;
+        public DataEntityHandle PlayerHandle2
+        {
+            get
+            {
+                DataEntityHandle handle2;
+                if (!AvatarDataHandle.TryGetPlayerHandle(base.gameObject, out handle2))
+                {
+                    return DataEntityHandle.NullHandle;
+                }
+                return handle2;
+            }
+        }
+
+        public event Action<Prop> EPropSpawned;
 
 		public event Action<Prop> EPropRetrieved;
 

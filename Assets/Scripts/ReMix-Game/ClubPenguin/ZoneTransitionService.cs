@@ -315,7 +315,7 @@ namespace ClubPenguin
 			string setting = hg.ApiWebKit.Configuration.GetSetting<string>("cp-content-version");
 			string subContentVersion = hg.ApiWebKit.Configuration.GetSetting<DateTime>("cp-content-version-date").ToString("yyyy-MM-dd");
 			string abTestGroup = "NONE";
-			Debug.Log("test");
+		//	Debug.Log("test");
 			return new ContentIdentifier(clientVersion, setting, subContentVersion, abTestGroup);
 		}
 

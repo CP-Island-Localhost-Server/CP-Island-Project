@@ -6,13 +6,13 @@ namespace ClubPenguin.Core
 {
 	public class WindowsProcess : IPlatformProcess
 	{
-		private const string CLIENT_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Disney Interactive\\Club Penguin Island";
+		private const string CLIENT_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\OpenCPI\\Club Penguin Island";
 
-		private const string CLIENT_WOW6432_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Disney Interactive\\Club Penguin Island";
+		private const string CLIENT_WOW6432_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\OpenCPI\\Club Penguin Island";
 
-		private const string LAUNCHER_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Disney Interactive\\Club Penguin Island Launcher";
+		private const string LAUNCHER_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\OpenCPI\\Club Penguin Island Launcher";
 
-		private const string LAUNCHER_WOW6432_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Disney Interactive\\Club Penguin Island Launcher";
+		private const string LAUNCHER_WOW6432_REGISTRY_KEY = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\OpenCPI\\Club Penguin Island Launcher";
 
 		private const string EXE_REGISTRY_VALUE = "InstallExePath";
 
@@ -27,8 +27,8 @@ namespace ClubPenguin.Core
 		public static IPlatformProcess BuildClientProcess()
 		{
 			WindowsProcess windowsProcess = new WindowsProcess();
-			string keyName = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Disney Interactive\\Club Penguin Island";
-			string keyName2 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Disney Interactive\\Club Penguin Island";
+			string keyName = "HKEY_LOCAL_MACHINE\\SOFTWARE\\OpenCPI\\Club Penguin Island";
+			string keyName2 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\OpenCPI\\Club Penguin Island";
 			object value = Registry.GetValue(keyName, "InstallPath", null);
 			if (value == null)
 			{
@@ -47,8 +47,8 @@ namespace ClubPenguin.Core
 		public static IPlatformProcess BuildLauncherProcess()
 		{
 			WindowsProcess windowsProcess = new WindowsProcess();
-			string keyName = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Disney Interactive\\Club Penguin Island Launcher";
-			string keyName2 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Disney Interactive\\Club Penguin Island Launcher";
+			string keyName = "HKEY_LOCAL_MACHINE\\SOFTWARE\\OpenCPI\\Club Penguin Island Launcher";
+			string keyName2 = "HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\OpenCPI\\Club Penguin Island Launcher";
 			object value = Registry.GetValue(keyName, "InstallPath", null);
 			if (value == null)
 			{

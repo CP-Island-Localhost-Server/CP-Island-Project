@@ -4,6 +4,7 @@ namespace ClubPenguin.Core
 	{
 		None,
 		Mobile,
-		Standalone
+		Standalone,
+		Console
 	}
 }

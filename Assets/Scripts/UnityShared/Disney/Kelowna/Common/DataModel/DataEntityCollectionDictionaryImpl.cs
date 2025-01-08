@@ -8,7 +8,9 @@ namespace Disney.Kelowna.Common.DataModel
 	{
 		private Dictionary<DataEntityHandle, Dictionary<Type, BaseData>> entities;
 
-		private DataEventListenerCollection listenerCollection;
+        private Dictionary<DataEntityHandle2, Dictionary<Type, BaseData>> entities2;
+
+        private DataEventListenerCollection listenerCollection;
 
 		private EventDispatcher eventDispatcher = new EventDispatcher();
 
@@ -81,6 +83,7 @@ namespace Disney.Kelowna.Common.DataModel
 			{
 				throw new ArgumentNullException("name", "AddEntity requires a name that is not null or empty");
 			}
+            UnityEngine.Debug.Log("Entity Is: "+ entityName);
 			DataEntityHandle dataEntityHandle = new DataEntityHandle(entityName);
 			if (entities.ContainsKey(dataEntityHandle))
 			{
@@ -134,7 +137,17 @@ namespace Disney.Kelowna.Common.DataModel
 			return null;
 		}
 
-		public DataEntityHandle[] GetEntitiesByType<T>() where T : BaseData
+        public T GetComponent2<T>(DataEntityHandle2 handle) where T : BaseData
+        {
+            validateHandle2(handle, "GetComponent");
+            if (entities2[handle].ContainsKey(typeof(T)))
+            {
+                return (T)entities2[handle][typeof(T)];
+            }
+            return null;
+        }
+
+        public DataEntityHandle[] GetEntitiesByType<T>() where T : BaseData
 		{
 			List<DataEntityHandle> list = new List<DataEntityHandle>();
 			foreach (KeyValuePair<DataEntityHandle, Dictionary<Type, BaseData>> entity in entities)
@@ -346,7 +359,11 @@ namespace Disney.Kelowna.Common.DataModel
 			}
 		}
 
-		public DataEventListener When<T>(string entityName, Action<T> onAdded) where T : BaseData
+        private void validateHandle2(DataEntityHandle2 handle, string method)
+        {
+        }
+
+        public DataEventListener When<T>(string entityName, Action<T> onAdded) where T : BaseData
 		{
 			return listenerCollection.When(entityName, onAdded);
 		}

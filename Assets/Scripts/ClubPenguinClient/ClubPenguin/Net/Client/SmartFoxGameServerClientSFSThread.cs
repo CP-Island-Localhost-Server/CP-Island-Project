@@ -66,9 +66,10 @@ namespace ClubPenguin.Net.Client
 
 		private void onUserVariableUpdate(BaseEvent evt)
 		{
+            UnityEngine.Debug.Log("UserVariableUpdate as been fired");
 			User user = (User)evt.Params["user"];
 			ArrayList changedVars = (ArrayList)evt.Params["changedVars"];
-			broadcastUserVariables(user, changedVars);
+            broadcastUserVariables(user, changedVars);
 		}
 
 		private void broadcastUserVariables(User user, ArrayList changedVars = null)
@@ -372,7 +373,8 @@ namespace ClubPenguin.Net.Client
 						data = getSessionId(userId);
 						break;
 					case SmartfoxCommand.CHAT:
-						gameServerEvent = GameServerEvent.CHAT_MESSAGE_RECEIVED;
+                      //  UnityEngine.Debug.Log("chat.msg   :::   " + iSFSObject.ToJson());
+                        gameServerEvent = GameServerEvent.CHAT_MESSAGE_RECEIVED;
 						data = mt.JsonService.Deserialize<ReceivedChatMessage>(iSFSObject.GetUtfString("msg"));
 						break;
 					case SmartfoxCommand.GET_SERVER_TIME:
@@ -585,7 +587,7 @@ namespace ClubPenguin.Net.Client
 
 		private void encryptionKeyReceived(string encodedEncryptedEncryptionKey)
 		{
-		/*	RSAParameters value = mt.ClubPenguinClient.CPKeyValueDatabase.GetRsaParameters().Value;
+			/*RSAParameters value = mt.ClubPenguinClient.CPKeyValueDatabase.GetRsaParameters().Value;
 			byte[] ciphertext = Convert.FromBase64String(encodedEncryptedEncryptionKey);
 			byte[] key = RsaEncryptor.Decrypt(ciphertext, value);
 			mt.SmartFoxEncryptor = new SmartFoxEncryptor(key);*/
@@ -817,7 +819,8 @@ namespace ClubPenguin.Net.Client
 
 		private LocomotionActionEvent locomotionActionEventFromProps(int playerId, ISFSObject props)
 		{
-			LocomotionActionEvent result = default(LocomotionActionEvent);
+           // UnityEngine.Debug.Log("penguin? l.a   :::   " + props.ToJson());
+            LocomotionActionEvent result = default(LocomotionActionEvent);
 			result.SessionId = getSessionId(playerId);
 			result.Type = (LocomotionAction)props.GetByte("a");
 			result.Position = SmartFoxGameServerClientShared.deserializeVec3(props, "p");

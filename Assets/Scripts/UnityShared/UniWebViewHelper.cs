@@ -28,6 +28,12 @@ public class UniWebViewHelper
 
 	public static string streamingAssetURLForPath(string path)
 	{
-		return string.Empty;
-	}
+#if UNITY_ANDROID
+        return "file:///android_asset/" + path;
+#elif UNITY_IOS || UNITY_IPHONE
+        return "file:///ios_asset/" + path;
+#else
+        return string.Empty;
+#endif
+    }
 }

@@ -53,5 +53,7 @@ namespace Disney.Kelowna.Common.DataModel
 		void RemoveEntityScopedComponents(DataEntityHandle handle, string[] scopeIDs);
 
 		void RemoveAllComponents(DataEntityHandle handle);
-	}
+
+        T GetComponent2<T>(DataEntityHandle2 handle) where T : BaseData;
+    }
 }

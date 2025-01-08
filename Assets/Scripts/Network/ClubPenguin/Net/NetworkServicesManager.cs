@@ -329,7 +329,7 @@ namespace ClubPenguin.Net
 			{
 				clubPenguinClient.Destroy();
 			}
-			clubPenguinClient = new ClubPenguinClient(monoBehaviour, config.CPAPIServicehost, config.CPAPIClientToken, config.ClientApiVersion, config.CPGameServerZone, !offlineMode && config.CPGameServerEncrypted, config.CPGameServerDebug, config.CPLagMonitoring, config.CPGameServerLatencyWindowSize, config.CPWebServiceLatencyWindowSize, config.CPMonitoringServicehost, config.CPWebsiteAPIServicehost, offlineMode);
+			clubPenguinClient = new ClubPenguinClient(monoBehaviour, config.CPAPIServicehost, config.CPAPIClientToken, config.ClientApiVersion, config.CPGameServerZone, !offlineMode && config.CPGameServerEncrypted, true, config.CPLagMonitoring, config.CPGameServerLatencyWindowSize, config.CPWebServiceLatencyWindowSize, config.CPMonitoringServicehost, config.CPWebsiteAPIServicehost, offlineMode);
 			currentConfig = config;
 			worldService = new WorldService();
 			worldService.Initialize(clubPenguinClient);

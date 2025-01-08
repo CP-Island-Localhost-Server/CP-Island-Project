@@ -1,4 +1,5 @@
 using Disney.MobileNetwork;
+using Disney.Kelowna.Common;
 using System;
 using UnityEngine;
 
@@ -7,11 +8,11 @@ namespace Disney.MobileNetwork
 	public class EnvironmentManagerAndroid : EnvironmentManager
 	{
 #if UNITY_ANDROID
-		private AndroidJavaObject m_androidActivity = null;
+		private AndroidJavaObject m_androidActivity;
 
-		private AndroidJavaObject m_androidContext = null;
+		private AndroidJavaObject m_androidContext;
 
-		private AndroidJavaObject m_androidEnvironmentManager = null;
+		private AndroidJavaObject m_androidEnvironmentManager;
 
 		public AndroidJavaObject AndroidActivity
 		{
@@ -29,7 +30,91 @@ namespace Disney.MobileNetwork
 			}
 		}
 
-		protected override string _SKU
+        protected override string _SKU
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(EnvironmentManager.mSKU))
+                {
+                    EnvironmentManager.mSKU = "android";
+                }
+                return EnvironmentManager.mSKU;
+            }
+        }
+
+        protected override string _SKUPluginManifestJson
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+
+        protected override void _Init()
+        {
+            EnvironmentManager.mBundleIdentifier = Application.identifier;
+            string version = Application.version;
+            version = EnvironmentManager.NormalizeVersionString(version);
+            EnvironmentManager.mBundleVersionCode = ClientInfo.Instance.Changelist;
+            if (!string.IsNullOrEmpty(version))
+            {
+                EnvironmentManager.mBundleVersion = new Version(version);
+            }
+            else
+            {
+                EnvironmentManager.mBundleVersion = new Version(0, 0, 0);
+            }
+            BuildSettings.LoadSettings();
+        }
+
+        protected override string _GetLocale()
+        {
+            return "us_en";
+        }
+
+        protected override string _GetDeviceLanguage()
+        {
+            return "en";
+        }
+
+        protected override int _GetDiskSpaceFreeMegabytes()
+        {
+            return 1048576000;
+        }
+
+        protected override bool _GetIsMusicPlaying()
+        {
+            return false;
+        }
+
+        protected override bool _GetAreHeadphonesConnected()
+        {
+            return false;
+        }
+
+        protected override bool _GetIsExternalLinksRestricted()
+        {
+            return false;
+        }
+
+        protected override string _GetBuildSettingsJson()
+        {
+            return null;
+        }
+
+        public override void ShowAlert(ShowAlertDelegate showAlertDelegate, string title, string message, string viewButtonText, string cancelButtonText)
+        {
+            base.ShowAlert(showAlertDelegate, title, message, viewButtonText, cancelButtonText);
+        }
+
+        protected override void _ShowStatusBar(bool show, bool useLightColor)
+        {
+        }
+
+        /*
+         * 
+         * 		protected override string _SKU
 		{
 			get
 			{
@@ -40,8 +125,7 @@ namespace Disney.MobileNetwork
 				return EnvironmentManager.mSKU;
 			}
 		}
-
-		protected override string _SKUPluginManifestJson
+         * 		protected override string _SKUPluginManifestJson
 		{
 			get
 			{
@@ -54,7 +138,6 @@ namespace Disney.MobileNetwork
 			base.ShowAlert(showAlertDelegate, title, message, viewButtonText, cancelButtonText);
 			m_androidEnvironmentManager.Call("showAlert", title, message, viewButtonText, cancelButtonText);
 		}
-
 		protected override void _Init()
 		{
 			using (AndroidJavaClass androidJavaClass = new AndroidJavaClass("com.unity3d.player.UnityPlayer"))
@@ -67,7 +150,7 @@ namespace Disney.MobileNetwork
 				if (androidJavaClass2 != null)
 				{
 					m_androidEnvironmentManager = androidJavaClass2.CallStatic<AndroidJavaObject>("getInstance", new object[0]);
-					m_androidEnvironmentManager.Call("listenForHeadphonesConnected");
+				//	m_androidEnvironmentManager.Call("listenForHeadphonesConnected");
 				}
 			}
 			EnvironmentManager.mBundleIdentifier = _GetBundleIdentifier();
@@ -177,8 +260,8 @@ namespace Disney.MobileNetwork
 		protected override void _ShowStatusBar(bool show, bool useLightColor)
 		{
 			m_androidEnvironmentManager.Call("showStatusBar", show);
-		}
+		}*/
 #endif
-	}
+    }
 
 }

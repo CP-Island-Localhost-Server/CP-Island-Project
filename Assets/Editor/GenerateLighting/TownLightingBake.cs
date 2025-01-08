@@ -54,9 +54,6 @@ public class TownLightingBake : MonoBehaviour
 				
 				//set for baking
 				Gol.ChangeSkybox(Gol.LightmappingSkybox);
-				
-				Gol.CivicDoor.transform.localPosition = new Vector3(Gol.CivicDoor.transform.localPosition.x, 100, Gol.CivicDoor.transform.localPosition.z);
-				Gol.CivicDoor2.transform.localPosition = new Vector3(Gol.CivicDoor2.transform.localPosition.x, 100, Gol.CivicDoor2.transform.localPosition.z);
 
 				Gol.WorldArt.isStatic = true;
 				SetStaticRecursively(Gol.WorldArt, true);
@@ -71,9 +68,6 @@ public class TownLightingBake : MonoBehaviour
 				
 				//reset
 				Gol.ChangeSkybox(Gol.DayCubemap);
-				
-				Gol.CivicDoor.transform.localPosition = new Vector3(Gol.CivicDoor.transform.localPosition.x, -8.753f, Gol.CivicDoor.transform.localPosition.z);
-				Gol.CivicDoor2.transform.localPosition = new Vector3(Gol.CivicDoor2.transform.localPosition.x, -8.753f, Gol.CivicDoor2.transform.localPosition.z);
 
 				Gol.WorldArt.isStatic = false;
 				SetStaticRecursively(Gol.WorldArt, false);

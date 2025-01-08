@@ -20,7 +20,13 @@ namespace ClubPenguin
 			private set;
 		}
 
-		public static bool TryGetPlayerHandle(GameObject owner, out DataEntityHandle handle)
+        public DataEntityHandle2 Handle2
+        {
+            get;
+            private set;
+        }
+
+        public static bool TryGetPlayerHandle(GameObject owner, out DataEntityHandle handle)
 		{
 			if (!owner.IsDestroyed())
 			{
@@ -35,7 +41,22 @@ namespace ClubPenguin
 			return false;
 		}
 
-		public void SetHandle(DataEntityHandle handle, bool isLocalPlayer = false)
+        public static bool TryGetPlayerHandle2(GameObject owner, out DataEntityHandle2 handle)
+        {
+            if (!owner.IsDestroyed())
+            {
+                AvatarDataHandle component = owner.GetComponent<AvatarDataHandle>();
+                if (component != null)
+                {
+                    handle = component.Handle2;
+                    return !handle.IsNull;
+                }
+            }
+            handle = DataEntityHandle2.NullHandle;
+            return false;
+        }
+
+        public void SetHandle(DataEntityHandle handle, bool isLocalPlayer = false)
 		{
 			Handle = handle;
 			IsLocalPlayer = isLocalPlayer;

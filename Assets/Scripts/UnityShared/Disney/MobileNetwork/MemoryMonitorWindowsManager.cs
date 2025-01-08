@@ -1,11 +1,12 @@
+using Disney.LaunchPadFramework;
 using System;
 using System.Runtime.InteropServices;
-using Disney.LaunchPadFramework;
 
 namespace Disney.MobileNetwork
 {
 	public class MemoryMonitorWindowsManager : MemoryMonitorManager
 	{
+#if UNITY_STANDALONE_WIN
 		public static bool Enabled = true;
 
 		[DllImport("MemoryMonitorWindows")]
@@ -28,5 +29,6 @@ namespace Disney.MobileNetwork
 		{
 			return Enabled ? _getProcessUsedBytes() : base.GetProcessUsedBytes();
 		}
+#endif
 	}
 }
