@@ -6,7 +6,7 @@ Unity 2022.3.56f1 LTS
 
 ### General notes:
 
-The project may ask upon opening if you want to use the new input system. Press no. The penguin data gets stored here in the Windows Registery: ```HKEY_CURRENT_USER\SOFTWARE\OpenCPI\CP Island``` but for the Unity editor, the penguin data gets stored here: ```HKEY_CURRENT_USER\SOFTWARE\Unity\UnityEditor\OpenCPI\CP Island```.
+The project may ask upon opening if you want to use the new input system. Press no. The penguin data gets stored here in the Windows Registery: ```HKEY_CURRENT_USER\SOFTWARE\OpenCPI\CP Island``` but for the Unity editor, the penguin data gets stored here: ```HKEY_CURRENT_USER\SOFTWARE\Unity\UnityEditor\OpenCPI\CP Island```. To launch the game inside of the Unity editor, you will need to open the Boot scene from ```Assets/Game/Core/Scenes/Boot.unity``` and then press the play button.
 
 ### Windows:
 

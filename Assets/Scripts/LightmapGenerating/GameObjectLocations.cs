@@ -39,6 +39,10 @@ public class GameObjectLocations : MonoBehaviour
 	public GameObject PiratePartyPrizeRuins;
 	public GameObject EventPirateParty2018_Boardwalk_Prefab;
 	public GameObject EventPirateParty2018_Beach_Prefab;
+	// Town
+	public GameObject FrontTrainDoorLeft;
+	public GameObject FrontTrainDoorRight;
+	public GameObject TrainBlue;
 	// The default skybox
     public Material DayCubemap;
 	public Material BoxDimensionCubemap;
