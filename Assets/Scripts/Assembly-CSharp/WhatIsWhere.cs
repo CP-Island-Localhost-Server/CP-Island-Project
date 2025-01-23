@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "WhatIsWhere")]
+[CreateAssetMenu(menuName = "Definition/What is Where")]
 public class WhatIsWhere : ScriptableObject
 {
     // This will not be used in the game, this is to state what is where for future notations.
@@ -16,5 +16,7 @@ public class WhatIsWhere : ScriptableObject
     public string HomescreenPrefabsPath;
 
     public string HalloweenCostumesPath;
+
+    public string FogDataPath;
 
 }

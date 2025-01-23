@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "EventSceneNames")]
+[CreateAssetMenu(menuName = "Definition/Event Scene Names")]
 public class EventSceneNames : ScriptableObject
 {
     // This will not be used in the game, this is to state the event names for future notations.
