@@ -13,7 +13,7 @@ Shader "CpRemix/World/ScrollingTexture" {
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma multi_compile_fog
+			// #pragma multi_compile_fog
 			
 			#include "UnityCG.cginc"
 			struct v2f
@@ -21,7 +21,7 @@ Shader "CpRemix/World/ScrollingTexture" {
 				float4 position : SV_POSITION0;
 				float2 texcoord1 : TEXCOORD1;
 				float3 color : COLOR0;
-				UNITY_FOG_COORDS(2)
+				// UNITY_FOG_COORDS(2)
 			};
 			struct fout
 			{
@@ -54,7 +54,7 @@ v2f vert(appdata_full v)
     o.color.xyz = v.color.xyz;
 
     // Apply fog
-    UNITY_TRANSFER_FOG(o, o.position);
+    // UNITY_TRANSFER_FOG(o, o.position);
 
     return o;
 }
@@ -69,7 +69,7 @@ v2f vert(appdata_full v)
                 tmp0.xyz = tmp0.xyz + inp.color.xyz;
                 o.sv_target.xyz = tmp0.xyz + _Color;
                 o.sv_target.w = 1.0;
-				UNITY_APPLY_FOG(inp.fogCoord, o.sv_target);
+				// UNITY_APPLY_FOG(inp.fogCoord, o.sv_target);
 				UNITY_OPAQUE_ALPHA(o.sv_target.w);
                 return o;
 			}
