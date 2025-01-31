@@ -26,7 +26,7 @@ public class GitHubCommitViewer : EditorWindow
     {
         // Load saved repo owner and name
         repositoryOwner = EditorPrefs.GetString(ownerKey, "CP-Island-Localhost-Server");
-        repositoryName = EditorPrefs.GetString(repoKey, "CP-Island-Project");
+        repositoryName = EditorPrefs.GetString(repoKey, "CPI-Project");
     }
 
     private void OnGUI()
