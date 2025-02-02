@@ -31,6 +31,7 @@
     - The Classic Arcade machine has been moved from near Franky's Pizza in Island Central to the sewer in Island Central
     - Added and optimized support for native macOS Arm Silicon (Apple M1, M2, M3, M4, and newer chips)
     - Changed the Waddle On login coins award from ```1000000``` to ```0```
+    - Added 2 new lighting options to the igloos. Those are ```Holiday``` and ```Rainbow Migration```. The ```Holiday``` lighting can be unlocked at Penguin level 20 and the ```Rainbow Migration``` lighting can be unlocked at Penguin level 27.
 
 - What has been fixed:
     - The spawn points have been moved so you will no longer spawn into the void and endlessly fall randomly like in the original
