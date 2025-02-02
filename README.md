@@ -29,7 +29,7 @@
     - Added 4 custom duck tube recolors (Blue, Green, Pink, and Purple)
     - Refined the lightmap baking process
     - The Classic Arcade machine has been moved from near Franky's Pizza in Island Central to the sewer in Island Central
-    - Added and optimized support for native macOS Arm Silicon support (Apple M1, M2, M3, M4, and newer chips)
+    - Added and optimized support for native macOS Arm Silicon (Apple M1, M2, M3, M4, and newer chips)
     - Changed the Waddle On login coins award from ```1000000``` to ```0```
 
 - What has been fixed:
