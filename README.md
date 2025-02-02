@@ -40,6 +40,7 @@
     - Performance improvements
     - Added the missing Summer Splashdown chat phases and Rookie sound effects to the Regular sewer in Island Central
     - Fixed original errors within the ```Unlit Dynamic Object No FOG``` and Igloo ```CubeMap``` shaders
+    - Fixed the Disney Store banners, they were originally stopped working on ```January 1, 2020```. Now they will stop working on ```December 31, 4065```
       
 ## System Requirements
 
