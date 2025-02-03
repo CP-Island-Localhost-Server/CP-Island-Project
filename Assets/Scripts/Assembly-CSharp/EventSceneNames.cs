@@ -27,16 +27,6 @@ public class EventSceneNames : ScriptableObject
 
     public string Halloween2018MtBlizzard;
 
-    public string Halloween2024Town;
-
-    public string Halloween2024Boardwalk;
-
-    public string Halloween2024Beach;
-
-    public string Halloween2024Diving;
-
-    public string Halloween2024MtBlizzard;
-
     public string MedievalBoardwalk;
 
     public string PirateExpeditionBeach;
