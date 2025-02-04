@@ -1,7 +1,7 @@
 ## Requirements to Open the Project
 
 ### Unity Version
-- **Unity 2022.3.57f1 LTS**
+- **Unity 6000.0.36f1 LTS**
 
 ### Notes
 - When opening the project, Unity might ask if you want to use the new input system. **Press NO.**
