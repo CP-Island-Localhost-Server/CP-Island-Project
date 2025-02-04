@@ -53,7 +53,7 @@ namespace HutongGames.PlayMaker.Actions
                 return;
             }
 
-			storeResult.Value = rigidbody2d.velocity.magnitude;
+			storeResult.Value = rigidbody2d.linearVelocity.magnitude;
 		}
 		
 		

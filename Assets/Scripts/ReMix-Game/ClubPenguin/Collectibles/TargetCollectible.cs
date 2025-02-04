@@ -26,9 +26,9 @@ namespace ClubPenguin.Collectibles
 
 		private SphereCollider sphereColl;
 
-		private PhysicMaterial slipperyPhysicMaterial;
+		private PhysicsMaterial slipperyPhysicMaterial;
 
-		private PhysicMaterial stickyPhysicMaterial;
+		private PhysicsMaterial stickyPhysicMaterial;
 
 		private TargetCollectibleTrigger triggerScript;
 
@@ -52,21 +52,21 @@ namespace ClubPenguin.Collectibles
 			triggerScript.Init();
 			meshRend = base.gameObject.GetComponent<MeshRenderer>();
 			sphereColl = base.gameObject.GetComponent<SphereCollider>();
-			slipperyPhysicMaterial = new PhysicMaterial();
+			slipperyPhysicMaterial = new PhysicsMaterial();
 			slipperyPhysicMaterial.dynamicFriction = 0f;
 			slipperyPhysicMaterial.staticFriction = 0f;
 			slipperyPhysicMaterial.bounciness = 0f;
-			slipperyPhysicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
-			slipperyPhysicMaterial.frictionCombine = PhysicMaterialCombine.Minimum;
-			stickyPhysicMaterial = new PhysicMaterial();
+			slipperyPhysicMaterial.bounceCombine = PhysicsMaterialCombine.Minimum;
+			slipperyPhysicMaterial.frictionCombine = PhysicsMaterialCombine.Minimum;
+			stickyPhysicMaterial = new PhysicsMaterial();
 			stickyPhysicMaterial.dynamicFriction = float.PositiveInfinity;
 			stickyPhysicMaterial.staticFriction = float.PositiveInfinity;
 			stickyPhysicMaterial.bounciness = 0f;
-			stickyPhysicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
-			stickyPhysicMaterial.frictionCombine = PhysicMaterialCombine.Maximum;
+			stickyPhysicMaterial.bounceCombine = PhysicsMaterialCombine.Minimum;
+			stickyPhysicMaterial.frictionCombine = PhysicsMaterialCombine.Maximum;
 			float num = base.gameObject.transform.position.x / 1.5f + base.gameObject.transform.position.y / 1.5f + base.gameObject.transform.position.z / 1.5f;
 			animCurveScript.startPosition = Mathf.Abs(num - Mathf.Round(num));
-			rigidBody.angularDrag = float.PositiveInfinity;
+			rigidBody.angularDamping = float.PositiveInfinity;
 			ChangeState(SceneryState.READY_TO_ACTIVATE);
 		}
 
@@ -160,7 +160,7 @@ namespace ClubPenguin.Collectibles
 
 		private void OnCollisionStay(Collision collision)
 		{
-			if (!hasLanded && !(rigidBody.velocity.magnitude > 0.2f))
+			if (!hasLanded && !(rigidBody.linearVelocity.magnitude > 0.2f))
 			{
 				ChangeState(SceneryState.READY_FOR_PICKUP);
 				if (AutomaticPickup)

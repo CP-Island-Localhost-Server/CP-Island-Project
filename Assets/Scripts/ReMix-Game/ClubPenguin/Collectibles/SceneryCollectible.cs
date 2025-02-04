@@ -57,9 +57,9 @@ namespace ClubPenguin.Collectibles
 
 		private SphereCollider sphereColl;
 
-		private PhysicMaterial slipperyPhysicMaterial;
+		private PhysicsMaterial slipperyPhysicMaterial;
 
-		private PhysicMaterial stickyPhysicMaterial;
+		private PhysicsMaterial stickyPhysicMaterial;
 
 		private SceneryCollectibleTrigger triggerScript;
 
@@ -103,18 +103,18 @@ namespace ClubPenguin.Collectibles
 			triggerScript = base.gameObject.GetComponentInChildren<SceneryCollectibleTrigger>();
 			meshRend = base.gameObject.GetComponent<MeshRenderer>();
 			sphereColl = base.gameObject.GetComponent<SphereCollider>();
-			slipperyPhysicMaterial = new PhysicMaterial();
+			slipperyPhysicMaterial = new PhysicsMaterial();
 			slipperyPhysicMaterial.dynamicFriction = 0f;
 			slipperyPhysicMaterial.staticFriction = 0f;
 			slipperyPhysicMaterial.bounciness = 0f;
-			slipperyPhysicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
-			slipperyPhysicMaterial.frictionCombine = PhysicMaterialCombine.Minimum;
-			stickyPhysicMaterial = new PhysicMaterial();
+			slipperyPhysicMaterial.bounceCombine = PhysicsMaterialCombine.Minimum;
+			slipperyPhysicMaterial.frictionCombine = PhysicsMaterialCombine.Minimum;
+			stickyPhysicMaterial = new PhysicsMaterial();
 			stickyPhysicMaterial.dynamicFriction = float.PositiveInfinity;
 			stickyPhysicMaterial.staticFriction = float.PositiveInfinity;
 			stickyPhysicMaterial.bounciness = 0f;
-			stickyPhysicMaterial.bounceCombine = PhysicMaterialCombine.Minimum;
-			stickyPhysicMaterial.frictionCombine = PhysicMaterialCombine.Maximum;
+			stickyPhysicMaterial.bounceCombine = PhysicsMaterialCombine.Minimum;
+			stickyPhysicMaterial.frictionCombine = PhysicsMaterialCombine.Maximum;
 			if (animCurveScript != null)
 			{
 				float num = base.gameObject.transform.position.x / 1.5f + base.gameObject.transform.position.y / 1.5f + base.gameObject.transform.position.z / 1.5f;
@@ -122,7 +122,7 @@ namespace ClubPenguin.Collectibles
 			}
 			if (rigidBody != null)
 			{
-				rigidBody.angularDrag = float.PositiveInfinity;
+				rigidBody.angularDamping = float.PositiveInfinity;
 			}
 			else
 			{
@@ -222,7 +222,7 @@ namespace ClubPenguin.Collectibles
 				internalState = newState;
 				scriptControl(false);
 				isMagnetic = false;
-				rigidBody.drag = 0f;
+				rigidBody.linearDamping = 0f;
 				rigidBody.useGravity = false;
 				rigidBody.isKinematic = true;
 				sphereColl.enabled = false;
@@ -247,12 +247,12 @@ namespace ClubPenguin.Collectibles
 				if (IsDivingCollectible)
 				{
 					rigidBody.useGravity = false;
-					rigidBody.drag = 5f;
+					rigidBody.linearDamping = 5f;
 				}
 				else
 				{
 					rigidBody.useGravity = true;
-					rigidBody.drag = 0f;
+					rigidBody.linearDamping = 0f;
 				}
 				rigidBody.isKinematic = false;
 				sphereColl.enabled = true;
@@ -268,7 +268,7 @@ namespace ClubPenguin.Collectibles
 				lockRotation();
 				scriptControl(true);
 				isMagnetic = false;
-				rigidBody.drag = 0f;
+				rigidBody.linearDamping = 0f;
 				rigidBody.useGravity = false;
 				rigidBody.isKinematic = false;
 				sphereColl.enabled = true;
@@ -288,7 +288,7 @@ namespace ClubPenguin.Collectibles
 				lockRotation();
 				scriptControl(false, false, true);
 				isMagnetic = true;
-				rigidBody.drag = 0f;
+				rigidBody.linearDamping = 0f;
 				rigidBody.useGravity = false;
 				rigidBody.isKinematic = true;
 				sphereColl.enabled = false;
@@ -308,7 +308,7 @@ namespace ClubPenguin.Collectibles
 				lockRotation();
 				scriptControl(false);
 				isMagnetic = false;
-				rigidBody.drag = 0f;
+				rigidBody.linearDamping = 0f;
 				rigidBody.useGravity = false;
 				rigidBody.isKinematic = true;
 				sphereColl.enabled = false;
@@ -330,7 +330,7 @@ namespace ClubPenguin.Collectibles
 
 		private void checkVelocity()
 		{
-			if (!hasLanded && !(rigidBody.velocity.magnitude > 0.2f))
+			if (!hasLanded && !(rigidBody.linearVelocity.magnitude > 0.2f))
 			{
 				changeState(SceneryState.READY_FOR_PICKUP);
 				if (AutomaticPickup)
@@ -412,7 +412,7 @@ namespace ClubPenguin.Collectibles
 		private void hide()
 		{
 			changeState(SceneryState.INVISIBLE);
-			rigidBody.velocity = Vector3.zero;
+			rigidBody.linearVelocity = Vector3.zero;
 			base.gameObject.transform.position = originalPos;
 			setVisibleSpecialObjects(false);
 		}

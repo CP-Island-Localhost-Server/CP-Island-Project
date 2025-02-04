@@ -29,9 +29,9 @@ namespace ClubPenguin.Locomotion
 
 		private EventDispatcher dispatcher;
 
-		private PhysicMaterial physicMaterial;
+		private PhysicsMaterial physicMaterial;
 
-		private PhysicMaterialCombine physicMaterialCombine;
+		private PhysicsMaterialCombine physicMaterialCombine;
 
 		private float bounciness;
 
@@ -178,8 +178,8 @@ namespace ClubPenguin.Locomotion
 		{
 			if (base.IsSliding && mode == Mode.PhysicsDriven)
 			{
-				Vector3 vector = pilotBody.velocity.normalized * wsForce.magnitude;
-				pilotBody.velocity += vector;
+				Vector3 vector = pilotBody.linearVelocity.normalized * wsForce.magnitude;
+				pilotBody.linearVelocity += vector;
 			}
 		}
 
@@ -189,7 +189,7 @@ namespace ClubPenguin.Locomotion
 			{
 				if (prevFixedSpeed == 0f && pilotBody != null)
 				{
-					prevFixedSpeed = pilotBody.velocity.magnitude;
+					prevFixedSpeed = pilotBody.linearVelocity.magnitude;
 				}
 				else
 				{
@@ -214,8 +214,8 @@ namespace ClubPenguin.Locomotion
 				mode = Mode.PhysicsDriven;
 				elapsedTime = 0f;
 				curSpringVel = 0f;
-				originalDrag = pilotBody.drag;
-				pilotBody.velocity = Vector3.zero;
+				originalDrag = pilotBody.linearDamping;
+				pilotBody.linearVelocity = Vector3.zero;
 				spawnParticles();
 			}
 			else
@@ -223,7 +223,7 @@ namespace ClubPenguin.Locomotion
 				base.switchToPhysics();
 			}
 			pilot.layer = LayerMask.NameToLayer("NoncollidingTube");
-			pilotBody.drag = myMutableData.RaceTrackProperties.Drag;
+			pilotBody.linearDamping = myMutableData.RaceTrackProperties.Drag;
 			Collider component2 = pilot.GetComponent<Collider>();
 			if (component2 != null)
 			{
@@ -357,7 +357,7 @@ namespace ClubPenguin.Locomotion
 				else if (firstTrackDir)
 				{
 					steerVel = lateralRotation * (steerInput.x * trackDir * myMutableData.LateralThrustScale);
-					if (pilotBody.velocity.sqrMagnitude < constantForwardThrustThresholdSquared)
+					if (pilotBody.linearVelocity.sqrMagnitude < constantForwardThrustThresholdSquared)
 					{
 						steerVel += myMutableData.ConstantForwardThrust * interpolatedTrackDir;
 					}
@@ -380,13 +380,13 @@ namespace ClubPenguin.Locomotion
 			{
 				if (base.IsSliding && mode == Mode.PhysicsDriven)
 				{
-					pilotBody.velocity += steerVel;
+					pilotBody.linearVelocity += steerVel;
 				}
-				Vector3 velocity = pilotBody.velocity;
+				Vector3 velocity = pilotBody.linearVelocity;
 				if (velocity.y < TERMINAL_VELOCITY)
 				{
 					velocity.y = TERMINAL_VELOCITY;
-					pilotBody.velocity = velocity;
+					pilotBody.linearVelocity = velocity;
 				}
 			}
 		}
@@ -442,11 +442,11 @@ namespace ClubPenguin.Locomotion
 				}
 				if (pilotBody != null)
 				{
-					Vector3 vector = pilotBody.velocity;
+					Vector3 vector = pilotBody.linearVelocity;
 					vector.y = 0f;
 					vector = ((fixedSpeed == 0f) ? Vector3.ClampMagnitude(vector, maxSpeed) : (vector.normalized * interpolatedFixedSpeed));
-					vector.y = pilotBody.velocity.y;
-					pilotBody.velocity = vector;
+					vector.y = pilotBody.linearVelocity.y;
+					pilotBody.linearVelocity = vector;
 				}
 				if (firstTrackDir)
 				{

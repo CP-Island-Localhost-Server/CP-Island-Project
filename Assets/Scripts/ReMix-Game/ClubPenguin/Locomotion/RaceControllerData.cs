@@ -20,7 +20,7 @@ namespace ClubPenguin.Locomotion
 		[Tooltip("Override the tube's PhysicMaterial properties")]
 		public float Bounciness = 0f;
 
-		public PhysicMaterialCombine BounceCombine = PhysicMaterialCombine.Minimum;
+		public PhysicsMaterialCombine BounceCombine = PhysicsMaterialCombine.Minimum;
 
 		public RaceTrackProperties.Properties RaceTrackProperties;
 

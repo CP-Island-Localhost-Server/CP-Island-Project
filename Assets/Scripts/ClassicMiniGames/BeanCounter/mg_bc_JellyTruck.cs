@@ -203,7 +203,7 @@ namespace BeanCounter
 			Rigidbody2D component = _bag.GetComponent<Rigidbody2D>();
 			Rigidbody2D component2 = m_penguin.GetComponent<Rigidbody2D>();
 			_bag.gameObject.SetActive(true);
-			component.velocity = Vector2.zero;
+			component.linearVelocity = Vector2.zero;
 			component.position = new Vector2(component2.position.x, component2.position.y + 3f);
 			component.AddForce(new Vector2(200f, 600f));
 			SpriteRenderer[] componentsInChildren = _bag.GetComponentsInChildren<SpriteRenderer>();

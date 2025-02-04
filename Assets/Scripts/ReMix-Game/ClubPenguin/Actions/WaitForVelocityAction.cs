@@ -66,7 +66,7 @@ namespace ClubPenguin.Actions
 			}
 			else if (rbody != null)
 			{
-				vector = rbody.velocity;
+				vector = rbody.linearVelocity;
 			}
 			else
 			{

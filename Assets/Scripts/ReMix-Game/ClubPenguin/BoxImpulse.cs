@@ -81,7 +81,7 @@ namespace ClubPenguin
 			{
 				if (Behaviour == ImpulseType.SnapVelocity)
 				{
-					attachedRigidbody.velocity = vector;
+					attachedRigidbody.linearVelocity = vector;
 				}
 				else
 				{

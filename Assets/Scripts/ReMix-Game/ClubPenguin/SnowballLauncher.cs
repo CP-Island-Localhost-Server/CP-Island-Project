@@ -45,7 +45,7 @@ namespace ClubPenguin
 			if (gameObject != null)
 			{
 				gameObject.transform.position = position;
-				gameObject.GetComponent<Rigidbody>().velocity = velocity;
+				gameObject.GetComponent<Rigidbody>().linearVelocity = velocity;
 			}
 		}
 	}

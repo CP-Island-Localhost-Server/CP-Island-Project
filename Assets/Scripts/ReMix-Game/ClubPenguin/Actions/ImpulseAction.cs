@@ -76,7 +76,7 @@ namespace ClubPenguin.Actions
 					{
 						component.transform.position = StartTransform.position;
 						component.transform.rotation = StartTransform.rotation;
-						component.velocity = Vector3.zero;
+						component.linearVelocity = Vector3.zero;
 						component.angularVelocity = Vector3.zero;
 						component.WakeUp();
 					}

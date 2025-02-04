@@ -80,7 +80,7 @@ public class BeachBall : MonoBehaviour
 	{
 		if (rb != null)
 		{
-			rb.velocity = Vector3.zero;
+			rb.linearVelocity = Vector3.zero;
 		}
 		CoroutineRunner.Start(resetBeachBall(hitTarget), this, "ResetOutOfBoundsBeachBall");
 	}

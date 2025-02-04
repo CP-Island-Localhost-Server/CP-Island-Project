@@ -389,9 +389,9 @@ namespace ClubPenguin.Locomotion
 			if (base.enabled && IsSliding && mode == Mode.PhysicsDriven && !IsAirborne && isSupportedByWater)
 			{
 				accumulatedVarTime = 0f;
-				Vector3 velocity = pilotBody.velocity;
+				Vector3 velocity = pilotBody.linearVelocity;
 				velocity.y += mutableData.JumpSpeed;
-				pilotBody.velocity = velocity;
+				pilotBody.linearVelocity = velocity;
 				isSupportedByWater = false;
 				jumpRequest.Reset();
 			}
@@ -413,7 +413,7 @@ namespace ClubPenguin.Locomotion
 			mode = Mode.PhysicsDriven;
 			elapsedTime = 0f;
 			curSpringVel = 0f;
-			originalDrag = pilotBody.drag;
+			originalDrag = pilotBody.linearDamping;
 			IsAirborne = false;
 			animator.SetBool(AnimationHashes.Params.SlideAirborne, IsAirborne);
 			if (!isLocalPlayer)
@@ -475,7 +475,7 @@ namespace ClubPenguin.Locomotion
 			{
 				newPos.y = pilotTransform.position.y + extrapPilotOffset.y;
 				pilotTransform.position = newPos;
-				pilotBody.velocity = new Vector3(0f, pilotBody.velocity.y, 0f);
+				pilotBody.linearVelocity = new Vector3(0f, pilotBody.linearVelocity.y, 0f);
 				sledTransform.position = pilotTransform.position + mutableData.SledOffsetFromPilot;
 			}
 			else
@@ -493,7 +493,7 @@ namespace ClubPenguin.Locomotion
 				{
 					newPos.y += extrapPilotOffset.y;
 					pilotTransform.position = newPos;
-					pilotBody.velocity = VECTOR3_ZERO;
+					pilotBody.linearVelocity = VECTOR3_ZERO;
 					sledTransform.position = pilotTransform.position + mutableData.SledOffsetFromPilot;
 				}
 				else
@@ -562,27 +562,27 @@ namespace ClubPenguin.Locomotion
 			{
 				if (steerVel != VECTOR3_ZERO)
 				{
-					pilotBody.velocity += steerVel * hackFixedUpdateChangeMultipler;
+					pilotBody.linearVelocity += steerVel * hackFixedUpdateChangeMultipler;
 					CapVelocity();
 				}
 			}
-			else if (pilotBody.velocity.magnitude <= mutableData.MaxManualSpeedBeforeMomentumTakeover)
+			else if (pilotBody.linearVelocity.magnitude <= mutableData.MaxManualSpeedBeforeMomentumTakeover)
 			{
-				pilotBody.velocity += steerVel * hackFixedUpdateChangeMultipler;
+				pilotBody.linearVelocity += steerVel * hackFixedUpdateChangeMultipler;
 			}
 			else
 			{
-				pilotBody.velocity = (pilotBody.velocity + steerVel * hackFixedUpdateChangeMultipler).normalized * pilotBody.velocity.magnitude;
+				pilotBody.linearVelocity = (pilotBody.linearVelocity + steerVel * hackFixedUpdateChangeMultipler).normalized * pilotBody.linearVelocity.magnitude;
 			}
 		}
 
 		private void transitionToWater()
 		{
 			isFloatingOnWater = true;
-			pilotBody.drag = mutableData.WaterProperties.Drag;
-			Vector3 velocity = pilotBody.velocity;
+			pilotBody.linearDamping = mutableData.WaterProperties.Drag;
+			Vector3 velocity = pilotBody.linearVelocity;
 			velocity.y = 0f;
-			pilotBody.velocity = velocity;
+			pilotBody.linearVelocity = velocity;
 			curSpeedOnWater = Mathf.Min(velocity.magnitude, maxSpeedOnWaterWhenSteering);
 			CapVelocity();
 			isSupportedByWater = true;
@@ -590,7 +590,7 @@ namespace ClubPenguin.Locomotion
 
 		private void transitionToLand()
 		{
-			pilotBody.drag = originalDrag;
+			pilotBody.linearDamping = originalDrag;
 			isFloatingOnWater = false;
 		}
 
@@ -679,8 +679,8 @@ namespace ClubPenguin.Locomotion
 				else
 				{
 					accumulatedVarTime += Time.deltaTime;
-					extrapPilotOffset += pilotBody.velocity * accumulatedVarTime;
-					position += pilotBody.velocity * accumulatedVarTime;
+					extrapPilotOffset += pilotBody.linearVelocity * accumulatedVarTime;
+					position += pilotBody.linearVelocity * accumulatedVarTime;
 				}
 				Vector3 position2 = position;
 				float num = isFloatingOnWater ? mutableData.WaterProperties.SurfaceOffset : 0f;
@@ -713,7 +713,7 @@ namespace ClubPenguin.Locomotion
 						if (position2.y < position.y)
 						{
 							position2.y = position.y;
-							curSpringVel = pilotBody.velocity.y;
+							curSpringVel = pilotBody.linearVelocity.y;
 							curSpringAccel = mutableData.StartingSpringAccel;
 						}
 					}
@@ -725,7 +725,7 @@ namespace ClubPenguin.Locomotion
 							animator.SetBool(AnimationHashes.Params.SlideAirborne, IsAirborne);
 						}
 						position2.y = position.y;
-						curSpringVel = pilotBody.velocity.y;
+						curSpringVel = pilotBody.linearVelocity.y;
 						curSpringAccel = mutableData.StartingSpringAccel;
 					}
 				}
@@ -744,7 +744,7 @@ namespace ClubPenguin.Locomotion
 				{
 					updateMaxSpeedOnWater(Time.deltaTime);
 				}
-				float magnitude = pilotBody.velocity.magnitude;
+				float magnitude = pilotBody.linearVelocity.magnitude;
 				magnitude = Mathf.Lerp(b: (!(magnitude < mutableData.MinSpeedForSlowLoopAnim)) ? Mathf.Clamp01((magnitude - mutableData.MinSpeedForSlowLoopAnim) / (minSpeedForFastLoopAnim - mutableData.MinSpeedForSlowLoopAnim)) : 0f, a: animator.GetFloat(AnimationHashes.Params.NormSpeed), t: mutableData.IdleLoopTransitionSmoothing * Time.deltaTime);
 				animator.SetFloat(AnimationHashes.Params.NormSpeed, magnitude);
 			}
@@ -761,7 +761,7 @@ namespace ClubPenguin.Locomotion
 		{
 			if (waterRipples != null)
 			{
-				if (isFloatingOnWater && Mathf.Abs(pilotBody.velocity.y) < 0.01f)
+				if (isFloatingOnWater && Mathf.Abs(pilotBody.linearVelocity.y) < 0.01f)
 				{
 					if (waterRipples.isStopped)
 					{
@@ -801,7 +801,7 @@ namespace ClubPenguin.Locomotion
 			}
 			if (!string.IsNullOrEmpty(mutableData.Audio.VelocityMagEventName))
 			{
-				float num = pilotBody.velocity.magnitude / 10f;
+				float num = pilotBody.linearVelocity.magnitude / 10f;
 				if (num > 2f)
 				{
 					num = 2f;
@@ -810,7 +810,7 @@ namespace ClubPenguin.Locomotion
 			}
 			if (!string.IsNullOrEmpty(mutableData.Audio.YVelocityEventName))
 			{
-				EventManager.Instance.SetParameter(mutableData.Audio.YVelocityEventName, mutableData.Audio.YVelocityRTP, pilotBody.velocity.y, base.gameObject);
+				EventManager.Instance.SetParameter(mutableData.Audio.YVelocityEventName, mutableData.Audio.YVelocityRTP, pilotBody.linearVelocity.y, base.gameObject);
 			}
 		}
 
@@ -862,7 +862,7 @@ namespace ClubPenguin.Locomotion
 			Vector3 vECTOR3_ZERO = VECTOR3_ZERO;
 			Vector3 vECTOR3_ZERO2 = VECTOR3_ZERO;
 			Vector3 forward = thisTransform.forward;
-			Vector3 b = (!(steerVel == VECTOR3_ZERO)) ? steerVel.normalized : pilotBody.velocity.normalized;
+			Vector3 b = (!(steerVel == VECTOR3_ZERO)) ? steerVel.normalized : pilotBody.linearVelocity.normalized;
 			forward = Vector3.Lerp(forward, b, Time.deltaTime * mutableData.RotationSmoothing);
 			vECTOR3_ZERO = ((!(vector != forward) || !(vector != -forward)) ? Vector3.Cross(vector, base.transform.up) : Vector3.Cross(forward, vector));
 			vECTOR3_ZERO2 = Vector3.Cross(vector, vECTOR3_ZERO);
@@ -873,11 +873,11 @@ namespace ClubPenguin.Locomotion
 		{
 			if (isFloatingOnWater)
 			{
-				Vector3 vector = pilotBody.velocity;
+				Vector3 vector = pilotBody.linearVelocity;
 				vector.y = 0f;
 				vector = Vector3.ClampMagnitude(vector, curSpeedOnWater);
-				vector.y = pilotBody.velocity.y;
-				pilotBody.velocity = vector;
+				vector.y = pilotBody.linearVelocity.y;
+				pilotBody.linearVelocity = vector;
 			}
 		}
 
@@ -885,7 +885,7 @@ namespace ClubPenguin.Locomotion
 		{
 			if (IsSliding && mode == Mode.PhysicsDriven && (!isFloatingOnWater || !(steerVel != VECTOR3_ZERO)))
 			{
-				pilotBody.velocity += wsForce;
+				pilotBody.linearVelocity += wsForce;
 				CapVelocity();
 			}
 		}
@@ -894,7 +894,7 @@ namespace ClubPenguin.Locomotion
 		{
 			if (IsSliding && mode == Mode.PhysicsDriven && (!isFloatingOnWater || !(steerVel != VECTOR3_ZERO) || (!(pusher == null) && !(pusher.GetComponent<Action>() == null))))
 			{
-				pilotBody.velocity = wsForce;
+				pilotBody.linearVelocity = wsForce;
 				CapVelocity();
 			}
 		}
@@ -907,7 +907,7 @@ namespace ClubPenguin.Locomotion
 				if (component != null)
 				{
 					mutableData.WaterProperties = component.properties;
-					pilotBody.drag = mutableData.WaterProperties.Drag;
+					pilotBody.linearDamping = mutableData.WaterProperties.Drag;
 				}
 			}
 		}
